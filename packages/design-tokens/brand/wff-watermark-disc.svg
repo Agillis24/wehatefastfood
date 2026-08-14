@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <circle cx="500" cy="500" r="492" fill="#F6F2E8"/>
+  <circle cx="500" cy="500" r="460" fill="#FF2D62"/>
+  <clipPath id="disc"><circle cx="500" cy="500" r="460"/></clipPath>
+  <g clip-path="url(#disc)">
+    <g transform="translate(500,500) scale(0.76) translate(-500,-517)">
+      <path d="M 500 830 C 500 830 175 625 175 400 C 175 275 268 205 358 205 C 425 205 476 246 500 298 C 524 246 575 205 642 205 C 732 205 825 275 825 400 C 825 625 500 830 500 830 Z" fill="#F6F2E8"/>
+      <g transform="rotate(-19 500 500)">
+        <rect x="60" y="546" width="880" height="100" rx="6" fill="#16120F"/>
+      </g>
+    </g>
+  </g>
+</svg>

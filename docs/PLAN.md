@@ -149,15 +149,20 @@ wehatefastfood/
 │  │  ├─ src/  config.ts, glossary.ts, hash.ts, prompt.ts,
 │  │  │        store/memory.ts, store/upstash.ts
 │  │  └─ src/__tests__/
-│  └─ design-tokens/
+│  └─ design-tokens/              [+] the cross-channel visual constants: colour,
+│     │                               the -19deg strike angle, AND the brand marks
 │     ├─ tokens.json                  single source of truth
-│     └─ src/build.mjs                emits tokens.css + tokens.export.json
-├─ brand/                        [+] delivered logo assets, root-level because the
-│  │                                 video and social pipelines consume them too
-│  ├─ wff-avatar-primary.svg  wff-avatar-dark.svg  wff-avatar-mono.svg
-│  ├─ wff-favicon.svg
-│  ├─ wff-wordmark-light.svg  wff-wordmark-dark.svg
-│  └─ wff-youtube-banner.svg
+│     ├─ src/build.mjs                emits tokens.css + tokens.export.json
+│     └─ brand/                   [+] client-delivered marks, SVG plus 1080 PNG.
+│        │                            Lives here, not at the repo root, because
+│        │                            the video and social pipelines already
+│        │                            import this package for the tokens.
+│        ├─ wff-avatar-primary.svg   wff-avatar-dark.svg   wff-avatar-mono.svg
+│        ├─ wff-watermark-disc.svg   wff-watermark-light.svg
+│        ├─ wff-favicon.svg
+│        ├─ wff-wordmark-light.svg   wff-wordmark-dark.svg
+│        ├─ wff-youtube-banner.svg
+│        └─ *-1080.png                rasterised by scripts/export-brand-png.mjs
 ├─ content/
 │  ├─ chains/   items/<chain>/   additives/   ingredients/   articles/
 │  ├─ glossary.json
@@ -170,6 +175,8 @@ wehatefastfood/
 │  ├─ search-index.mjs       social-cards.mjs   export-video-brief.mjs
 │  ├─ contrast.mjs            [+] WCAG audit of the palette; every ratio quoted
 │  │                              in docs/BRAND.md is this script's real output
+│  ├─ export-brand-png.mjs    [+] rasterises the brand SVGs to PNG via resvg,
+│  │                              alpha preserved; shares resvg with social:cards
 │  └─ budget-check.mjs        [+] fails CI if item-page JS exceeds budget
 ├─ exports/                       [+] gitignored except the one committed example
 │  ├─ video-briefs/.gitkeep
@@ -200,13 +207,14 @@ wehatefastfood/
 | `@upstash/redis` | Translation cache, behind env, optional. |
 | `@vercel/og` | OG images, per §10. |
 | `@anthropic-ai/sdk` | Implied by §7, "via the Anthropic API". |
+| `@resvg/resvg-js` | **Settled 2026-08-14** when the client asked for transparent 1080 PNG exports of the brand marks. Already used by `scripts/export-brand-png.mjs`, and the same rasteriser the OG and social-card pipeline needs, so it costs nothing extra later. Verified on this machine: exact colour reproduction, alpha channel preserved. |
 
 ### Needs your approval — not in §4
 
 | Package | Why I want it | If you say no |
 |---|---|---|
 | `@next/mdx`, `remark-frontmatter`, `remark-mdx-frontmatter` | `/learn/[slug]` is specified as MDX with importable interactive components. This is the smallest way to get that. | Articles become JSON plus a restricted rich-text renderer; we lose inline components. |
-| `satori`, `@resvg/resvg-js` | `@vercel/og` renders at request time. §10 says OG images are generated **at build time**, and §11 needs 1080×1080 and 1080×1350 PNGs written to `exports/`. These two packages are what `@vercel/og` wraps; using them directly lets one code path produce all four sizes as static files, and removes our last runtime dependency on Vercel. | We use `@vercel/og` at runtime for OG and write a second, divergent code path for social cards. Worse. |
+| `satori` | Turns JSX into SVG for the OG and social cards. Pairs with resvg below. | We use `@vercel/og` at runtime for OG and write a second, divergent code path for social cards. Worse. |
 | `size-limit`, `@size-limit/file` | Enforces the ≤130 kB budget in CI from Phase 1 rather than discovering the breach in Phase 6. | I hand-roll `scripts/budget-check.mjs` over the Next build manifest, roughly 60 lines, no dependency. Genuinely happy either way. |
 
 ### Explicitly not adding
@@ -237,6 +245,7 @@ All cross-platform: `node scripts/*.mjs` or a bare binary. No shell operators an
 | `social:cards -- --item=<chain>/<item>` | Writes OG, 1080×1080 and 1080×1350 to `exports/social/`. |
 | `export:video-brief -- --item=<chain>/<item>` | Writes `exports/video-briefs/<chain>-<item>.json`. |
 | `tokens:build` | `tokens.json` → CSS custom properties + `tokens.export.json`. |
+| `brand:png` | Rasterises `packages/design-tokens/brand/*.svg` to 1080 px PNG, alpha preserved. Optional filter argument, e.g. `-- watermark`. |
 
 ---
 
@@ -330,14 +339,19 @@ home → chains → chain → item; market switch changes the numbers **and** th
 
 ---
 
-## 11. Open questions — answered with recommendations
+## 11. Decisions
 
-Full argument in the chat message accompanying this document; recorded here so a future session has it.
+**Settled by the client 2026-08-14.** These are no longer proposals. Anything that contradicts them is a bug.
 
-1. **Default market → GB**, with US as the first companion market.
-2. **Core locales → the eight stand, with `cs` promoted to pilot locale.** Czech is the only locale the client can personally review, so it runs first and alone: it is the acceptance test for the whole tier-1 pipeline — glossary handling, do-not-translate terms, voice preservation, placeholder integrity — before a single token is spent on the other seven. Still to settle: `pt-PT` vs `pt-BR` and `es-ES` vs `es-419`.
-3. **Design direction → Specimen dossier**, signature element the **Specimen Card**. Full argument in `docs/BRAND.md`.
-4. **First real chain → McDonald's**, GB and US, so the diff view has a payload immediately.
-5. **Nutri-Score → no for v1**, because computing it would require estimating inputs the chains do not publish.
-6. **Hosting → Vercel**, built so Cloudflare Pages stays a genuine fallback.
-7. **Seven things in the brief I would change.** The one that matters most is the scope of tier-2 translation.
+1. **Default market → GB.** US is the first companion market. The FSA thresholds and EU/UK reference intakes are therefore the primary set; US figures are converted for display with the constant stated on the page.
+2. **`content-researcher` may fetch, with limits.** It must respect `robots.txt`, rate-limit itself, and fetch only pages the client has explicitly pointed it at — no crawling, no bulk traversal. It stores the citation and URL, never a copy of a chain's database. This is what keeps us clear of the sui generis database right in §12 of the brief. Encode these limits in the agent definition itself, not merely in documentation.
+3. **Tier-2 translation is narrowed.** UI strings and factual fields only. `evidenceSummary`, `notableDivergence`, `ourTake` and article bodies stay in English with an honest notice. All tier-2 pages carry `noindex`. The endpoint ships with a build-time manifest allowlist, a locale allowlist and per-IP rate limiting before it is ever public.
+4. **Illustration is flat vector.** No halftone, no comic outline-and-shade. This supersedes §8 of the brief, which asked for a comic treatment, because the delivered mark has no texture and two visual languages would read as two projects. Recorded in `docs/BRAND.md` §7.
+
+### Standing recommendations, not yet contradicted
+
+5. **Core locales → the eight stand, with `cs` promoted to pilot locale.** Czech is the only locale the client can personally review, so it runs first and alone: it is the acceptance test for the whole tier-1 pipeline — glossary handling, do-not-translate terms, voice preservation, placeholder integrity — before a single token is spent on the other seven. Still to settle: `pt-PT` vs `pt-BR` and `es-ES` vs `es-419`.
+6. **Design direction → evidence poster**, signature element the **Specimen Card**, system geometry the **−19° strike** taken from the delivered mark. Full argument in `docs/BRAND.md`.
+7. **First real chain → McDonald's**, GB and US, so the diff view has a payload immediately.
+8. **Nutri-Score → no for v1**, because computing it would require estimating inputs the chains do not publish.
+9. **Hosting → Vercel**, built so Cloudflare Pages stays a genuine fallback.

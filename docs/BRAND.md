@@ -217,7 +217,7 @@ Spacing scale, 4 px base: `4 8 12 16 24 32 48 64 96`. Nothing off-scale.
 
 ## 6. The mark and the wordmark
 
-**Delivered by the client, 2026-08-14.** Files live in `brand/` at the repo root, outside the web app, because the video and social pipelines consume them too.
+**Delivered by the client, 2026-08-14.** Files live in `packages/design-tokens/brand/`, at the client's direction — the same package the video and social pipelines already import for the colour tokens and `--angle-strike`, so the marks and the constants that govern them travel together.
 
 ### The mark
 
@@ -238,6 +238,12 @@ Geometry is pure paths and rects, no text, so it renders identically on every ma
 | `wff-wordmark-light.svg` | paper | Wordmark for the website. |
 | `wff-wordmark-dark.svg` | ink | Wordmark for video and dark bands. |
 | `wff-youtube-banner.svg` | ink | 2560 × 1440 channel banner, mark plus wordmark plus tagline. |
+| `wff-watermark-disc.svg` | **transparent** | Video watermark, disc form. Paper ring, pink field, paper heart, ink strike. Reads against any footage. |
+| `wff-watermark-light.svg` | **transparent** | Video watermark, silhouette form. Paper heart, pink strike. For dark or busy footage where the disc is too heavy. |
+
+**PNG exports.** `npm run brand:png` rasterises to 1080 × 1080 via resvg, alpha preserved. Verified by decoding the output: watermark corners are genuinely `alpha = 0`, and the heart renders as exactly `#F6F2E8` with no colour drift. The avatars export opaque, correctly — they paint a full-canvas ground and are not watermarks.
+
+Never add a background when exporting a watermark. The transparency *is* the asset.
 
 The favicon simplification is the right call and should be preserved: at 16 px the patty bands turn to mush, while the heart silhouette and the diagonal survive. That is the small-size degradation — heart plus slash, nothing else. There is no need for a lettered fallback.
 
