@@ -13,6 +13,14 @@ const isWindows = process.platform === 'win32';
 
 const STEPS = [
   { name: 'tokens', cmd: process.execPath, args: ['packages/design-tokens/src/build.mjs'] },
+  // Packages must be compiled before content validation, because the validator
+  // imports @wff/content's built output - the same entry point the video and
+  // social pipelines use, so this exercises the real contract.
+  {
+    name: 'packages',
+    cmd: process.execPath,
+    args: ['node_modules/typescript/bin/tsc', '--build', 'packages/content', 'packages/i18n'],
+  },
   { name: 'content', cmd: process.execPath, args: ['scripts/content-validate.mjs'] },
   { name: 'search', cmd: process.execPath, args: ['scripts/search-index.mjs'] },
   { name: 'next', cmd: 'npm', args: ['run', 'build', '--workspace=@wff/web'] },

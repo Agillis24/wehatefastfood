@@ -1,32 +1,56 @@
-import { readdir } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
-import path from 'node:path';
-
 /**
- * Phase 2 replaces this with the real validator: Zod schemas, reference-graph
- * resolution, the source requirements and the nutrition sanity checks.
+ * Content validation gate.
  *
- * Until then it enforces the one rule that can already be broken: real content
- * must not appear outside content/_seed/, and seed content must not leak out of
- * it. Getting that wrong publishes fake numbers, which is the single worst
- * failure mode this project has.
+ * Errors fail the build. Warnings are printed loudly and do not - they mark
+ * things a human should look at, not things that are definitely wrong.
+ *
+ * Reads the built output of @wff/content, which is the same entry point the
+ * video and social pipelines use, so this exercises the real contract.
  */
 
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createRepository } from '@wff/content';
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const CONTENT = path.join(ROOT, 'content');
+const CONTENT_ROOT = path.join(ROOT, 'content');
 
-let entries;
-try {
-  entries = await readdir(CONTENT, { withFileTypes: true });
-} catch {
-  console.log('content: no content/ directory yet - Phase 2 creates it');
-  process.exit(0);
+const repo = await createRepository({ contentRoot: CONTENT_ROOT, now: new Date() });
+const issues = await repo.getIssues();
+
+const errors = issues.filter((i) => i.level === 'error');
+const warnings = issues.filter((i) => i.level === 'warning');
+
+const byFile = (list) => {
+  const map = new Map();
+  for (const issue of list) map.set(issue.file, [...(map.get(issue.file) ?? []), issue]);
+  return [...map.entries()].sort(([a], [b]) => a.localeCompare(b));
+};
+
+const render = (list, heading) => {
+  if (list.length === 0) return;
+  console.log(`\n${heading}`);
+  for (const [file, group] of byFile(list)) {
+    console.log(`  ${file}`);
+    for (const issue of group) {
+      console.log(`    ${issue.path ? `${issue.path}: ` : ''}${issue.message}`);
+    }
+  }
+};
+
+render(warnings, `WARNINGS (${warnings.length}) - look at these, they do not fail the build`);
+render(errors, `ERRORS (${errors.length}) - these fail the build`);
+
+const chains = await repo.listChains();
+const items = await repo.listItems();
+const additives = await repo.listAdditives();
+
+console.log(
+  `\ncontent: ${chains.length} chains, ${items.length} items, ${additives.length} additives, ` +
+    `${errors.length} errors, ${warnings.length} warnings`,
+);
+
+if (errors.length > 0) {
+  console.error('\ncontent: FAILED');
+  process.exit(1);
 }
-
-const real = entries.filter((e) => e.name !== '_seed' && !e.name.startsWith('.'));
-if (real.length === 0) {
-  console.log('content: empty (seed only) - Phase 2 adds schemas and the real validator');
-  process.exit(0);
-}
-
-console.log(`content: ${real.length} top-level entries; full validation lands in Phase 2`);

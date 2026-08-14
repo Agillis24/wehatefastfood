@@ -1,0 +1,15 @@
+{
+  "slug": "example-potato",
+  "names": ["example potato"],
+  "whatItIs": "Potato, cut and fried. SEED DATA — NOT REAL.",
+  "isAdditive": false,
+  "sources": [
+    {
+      "title": "Example ingredient declaration (SEED DATA — NOT REAL)",
+      "publisher": "EXAMPLE BURGER CO (SEED DATA — NOT REAL)",
+      "url": "https://example.invalid/example-ingredient-declaration",
+      "retrievedOn": "2026-08-14",
+      "type": "company-disclosure"
+    }
+  ]
+}

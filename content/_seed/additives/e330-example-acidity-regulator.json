@@ -1,0 +1,32 @@
+{
+  "slug": "e330-example-acidity-regulator",
+  "eNumber": "E330",
+  "names": ["EXAMPLE ACIDITY REGULATOR (SEED DATA — NOT REAL)"],
+  "functionalClass": ["acidity-regulator", "antioxidant"],
+  "whatItIs": "SEED DATA — NOT REAL. Placeholder text.",
+  "whyItIsInYourFood": "SEED DATA — NOT REAL. Placeholder text.",
+  "evidenceSummary": "SEED DATA — NOT REAL. Placeholder text.",
+  "evidenceStrength": "well-established",
+  "regulatoryStatus": {
+    "eu": "SEED DATA — NOT REAL",
+    "us": "SEED DATA — NOT REAL",
+    "uk": "SEED DATA — NOT REAL"
+  },
+  "notableDivergence": null,
+  "sources": [
+    {
+      "title": "Example regulator listing (SEED DATA — NOT REAL)",
+      "publisher": "EXAMPLE REGULATOR (SEED DATA — NOT REAL)",
+      "url": "https://example.invalid/example-regulator-listing",
+      "retrievedOn": "2026-08-14",
+      "type": "regulator"
+    },
+    {
+      "title": "Example database entry (SEED DATA — NOT REAL)",
+      "publisher": "EXAMPLE DATABASE (SEED DATA — NOT REAL)",
+      "url": "https://example.invalid/example-database-entry",
+      "retrievedOn": "2026-08-14",
+      "type": "database"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "example-cola",
+  "chainSlug": "example-burger-co",
+  "name": "EXAMPLE COLA (SEED DATA — NOT REAL)",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "GB",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 500,
+          "energyKJ": 879,
+          "energyKcal": 210,
+          "fatG": 0,
+          "saturatesG": 0,
+          "carbohydrateG": 53,
+          "sugarsG": 53,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.05,
+          "sodiumMg": 20
+        },
+        {
+          "basis": "per-100ml",
+          "servingSizeG": 100,
+          "energyKJ": 176,
+          "energyKcal": 42,
+          "fatG": 0,
+          "saturatesG": 0,
+          "carbohydrateG": 10.6,
+          "sugarsG": 10.6,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.01,
+          "sodiumMg": 4
+        }
+      ],
+      "ingredientRefs": ["example-carbonated-water", "example-sugar"],
+      "additiveRefs": ["e330-example-acidity-regulator"],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Example GB nutrition table (SEED DATA — NOT REAL)",
+          "publisher": "EXAMPLE BURGER CO (SEED DATA — NOT REAL)",
+          "url": "https://example.invalid/example-gb-nutrition-table",
+          "retrievedOn": "2026-08-14",
+          "type": "company-disclosure"
+        }
+      ],
+      "verifiedOn": "2026-08-14",
+      "status": "partial"
+    },
+    {
+      "market": "US",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 500,
+          "energyKJ": 879,
+          "energyKcal": 210,
+          "fatG": 0,
+          "saturatesG": 0,
+          "carbohydrateG": 53,
+          "sugarsG": 53,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.05,
+          "sodiumMg": 20
+        },
+        {
+          "basis": "per-100ml",
+          "servingSizeG": 100,
+          "energyKJ": 176,
+          "energyKcal": 42,
+          "fatG": 0,
+          "saturatesG": 0,
+          "carbohydrateG": 10.6,
+          "sugarsG": 10.6,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.01,
+          "sodiumMg": 4
+        }
+      ],
+      "ingredientRefs": ["example-carbonated-water", "example-sugar"],
+      "additiveRefs": ["e330-example-acidity-regulator"],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Example US nutrition table (SEED DATA — NOT REAL)",
+          "publisher": "EXAMPLE BURGER CO (SEED DATA — NOT REAL)",
+          "url": "https://example.invalid/example-us-nutrition-table",
+          "retrievedOn": "2026-08-14",
+          "type": "company-disclosure"
+        }
+      ],
+      "verifiedOn": "2026-08-14",
+      "status": "partial"
+    }
+  ]
+}

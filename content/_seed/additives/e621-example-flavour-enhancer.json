@@ -1,0 +1,32 @@
+{
+  "slug": "e621-example-flavour-enhancer",
+  "eNumber": "E621",
+  "names": ["EXAMPLE FLAVOUR ENHANCER (SEED DATA — NOT REAL)"],
+  "functionalClass": ["flavour-enhancer"],
+  "whatItIs": "SEED DATA — NOT REAL. Placeholder text standing in for a plain-language description.",
+  "whyItIsInYourFood": "SEED DATA — NOT REAL. Placeholder standing in for the commercial reason, which is the interesting part of a real entry.",
+  "evidenceSummary": "SEED DATA — NOT REAL. No evidence is described because none was reviewed.",
+  "evidenceStrength": "mixed",
+  "regulatoryStatus": {
+    "eu": "SEED DATA — NOT REAL",
+    "us": "SEED DATA — NOT REAL",
+    "uk": "SEED DATA — NOT REAL"
+  },
+  "notableDivergence": null,
+  "sources": [
+    {
+      "title": "Example regulator opinion (SEED DATA — NOT REAL)",
+      "publisher": "EXAMPLE REGULATOR (SEED DATA — NOT REAL)",
+      "url": "https://example.invalid/example-regulator-opinion",
+      "retrievedOn": "2026-08-14",
+      "type": "regulator"
+    },
+    {
+      "title": "Example review article (SEED DATA — NOT REAL)",
+      "publisher": "EXAMPLE JOURNAL (SEED DATA — NOT REAL)",
+      "url": "https://example.invalid/example-review-article",
+      "retrievedOn": "2026-08-14",
+      "type": "peer-reviewed"
+    }
+  ]
+}

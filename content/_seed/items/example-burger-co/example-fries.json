@@ -1,0 +1,102 @@
+{
+  "slug": "example-fries",
+  "chainSlug": "example-burger-co",
+  "name": "EXAMPLE FRIES (SEED DATA — NOT REAL)",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "GB",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": 1757,
+          "energyKcal": 420,
+          "fatG": 20,
+          "saturatesG": 3,
+          "carbohydrateG": 52,
+          "sugarsG": 1,
+          "fibreG": 5,
+          "proteinG": 5,
+          "saltG": 0.9,
+          "sodiumMg": 360
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1172,
+          "energyKcal": 280,
+          "fatG": 13.33,
+          "saturatesG": 2,
+          "carbohydrateG": 34.67,
+          "sugarsG": 0.67,
+          "fibreG": 3.33,
+          "proteinG": 3.33,
+          "saltG": 0.6,
+          "sodiumMg": 240
+        }
+      ],
+      "ingredientRefs": ["example-potato", "example-sunflower-oil"],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Example GB nutrition table (SEED DATA — NOT REAL)",
+          "publisher": "EXAMPLE BURGER CO (SEED DATA — NOT REAL)",
+          "url": "https://example.invalid/example-gb-nutrition-table",
+          "retrievedOn": "2026-08-14",
+          "type": "company-disclosure"
+        }
+      ],
+      "verifiedOn": "2026-08-14",
+      "status": "partial"
+    },
+    {
+      "market": "US",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": 1757,
+          "energyKcal": 420,
+          "fatG": 20,
+          "saturatesG": 3,
+          "carbohydrateG": 52,
+          "sugarsG": 1,
+          "fibreG": 5,
+          "proteinG": 5,
+          "saltG": 0.9,
+          "sodiumMg": 360
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1172,
+          "energyKcal": 280,
+          "fatG": 13.33,
+          "saturatesG": 2,
+          "carbohydrateG": 34.67,
+          "sugarsG": 0.67,
+          "fibreG": 3.33,
+          "proteinG": 3.33,
+          "saltG": 0.6,
+          "sodiumMg": 240
+        }
+      ],
+      "ingredientRefs": ["example-potato", "example-sunflower-oil"],
+      "additiveRefs": ["e330-example-acidity-regulator"],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Example US nutrition table (SEED DATA — NOT REAL)",
+          "publisher": "EXAMPLE BURGER CO (SEED DATA — NOT REAL)",
+          "url": "https://example.invalid/example-us-nutrition-table",
+          "retrievedOn": "2026-08-14",
+          "type": "company-disclosure"
+        }
+      ],
+      "verifiedOn": "2026-08-14",
+      "status": "partial"
+    }
+  ]
+}

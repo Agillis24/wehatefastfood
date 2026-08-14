@@ -112,7 +112,19 @@ Use the slash commands in `.claude/commands/`. They exist so that the rules abov
 
 ## Current state
 
-Phase 1 complete: monorepo, tokens, Next app shell with `[locale]` routing, brand assets, CI, checks green.
-Phase 2 next: Zod schemas, loaders, validator, `content:coverage`, seed data, nutrition maths tests.
+Phases 0-2 complete. Phase 3 next: home, chains index, chain page, and the item page with the
+Specimen Card, reality check, traffic lights and ingredient drawer.
 
-Measured baseline worth knowing: the home page is **104 kB First Load JS** against a 130 kB item-page budget. That leaves roughly 26 kB for the item page's islands, which is why search must stay lazy and off that route.
+Two measurements worth carrying forward:
+
+- The home page is **104 kB First Load JS** against a 130 kB item-page budget, leaving roughly
+  26 kB for the item page's islands. Search must stay lazy and off that route.
+- `content/reference/fsa-thresholds.json` and `reference-intakes.json` are **`status: "unverified"`**.
+  They were written from working knowledge, not transcribed from the source documents with a human
+  checking. Anything computed from them must be labelled unverified in the UI until someone opens
+  the DHSC/FSA guidance and Annex XIII of Regulation (EU) 1169/2011, confirms every value, and
+  flips the status. `npm run content:validate` warns about this on every run, by design.
+
+One known modelling wrinkle: `servingSizeG` carries millilitres for drinks. The field name comes
+from BRIEF §5 and was kept rather than diverging from the contract; the maths is unaffected because
+`toPer100` only ever divides by it.

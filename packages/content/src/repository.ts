@@ -1,40 +1,22 @@
+import path from 'node:path';
+import { loadContent, type ContentBundle, type Issue } from './loaders.js';
+import { buildGraph, type ContentGraph } from './graph.js';
+import type { Chain, MenuItem, Additive, Ingredient } from './schemas/entities.js';
+import type { FsaThresholds, ReferenceIntakes } from './schemas/reference.js';
+
 /**
  * The seam between the content files and everything that reads them.
  *
- * The v1 implementation (Phase 2) reads JSON and MDX off the filesystem at
- * module init. This interface exists so a headless CMS can be dropped in behind
- * it later without touching a single page component - which is why it is async
- * even though the first implementation is synchronous.
+ * Deliberately async and repository-shaped even though the v1 implementation is
+ * synchronous filesystem reads, so a headless CMS can be dropped in behind it
+ * without touching a single page component.
  *
  * NOTHING IN THIS PACKAGE MAY IMPORT NEXT.JS. The video and social pipelines
- * run under plain Node and consume this package directly. Enforced by
- * eslint.config.mjs and by src/__tests__/no-next-import.test.ts.
+ * run under plain Node and consume this package directly.
  */
 
-/** ISO 3166-1 alpha-2, uppercase. The jurisdiction a set of figures describes. */
 export type Market = string;
-
-/** How complete our data is for a given record. */
 export type DataStatus = 'verified' | 'partial' | 'unpublished';
-
-/**
- * Phase 2 replaces these with the Zod-inferred types from src/schemas.
- * They are deliberately opaque here so nothing starts depending on a shape
- * that has not been designed yet.
- */
-export interface Chain {
-  readonly slug: string;
-}
-export interface MenuItem {
-  readonly slug: string;
-  readonly chainSlug: string;
-}
-export interface Additive {
-  readonly slug: string;
-}
-export interface Ingredient {
-  readonly slug: string;
-}
 
 export interface ContentRepository {
   getChain(slug: string): Promise<Chain | undefined>;
@@ -42,19 +24,101 @@ export interface ContentRepository {
 
   getItem(chainSlug: string, itemSlug: string): Promise<MenuItem | undefined>;
   listItemsForChain(chainSlug: string): Promise<readonly MenuItem[]>;
+  listItems(): Promise<readonly MenuItem[]>;
 
   getAdditive(slug: string): Promise<Additive | undefined>;
   listAdditives(): Promise<readonly Additive[]>;
 
   getIngredient(slug: string): Promise<Ingredient | undefined>;
+  listIngredients(): Promise<readonly Ingredient[]>;
 
-  /**
-   * Reverse index over the content graph. Powers the "found in" back-links on
-   * decoder pages, so an additive entry can list the products it appears in
-   * without anyone maintaining that list by hand.
-   */
+  /** Reverse index over the content graph. Powers the "found in" back-links. */
   listItemsUsingAdditive(additiveSlug: string): Promise<readonly MenuItem[]>;
 
   /** Markets we actually hold data for. Never inferred, never guessed. */
   listMarketsForItem(chainSlug: string, itemSlug: string): Promise<readonly Market[]>;
+
+  getFsaThresholds(): Promise<FsaThresholds | null>;
+  getReferenceIntakes(): Promise<ReferenceIntakes | null>;
+
+  /** Everything the validator found. Empty is the only acceptable error list. */
+  getIssues(): Promise<readonly Issue[]>;
 }
+
+export type RepositoryOptions = {
+  /** Absolute path to the content/ directory. */
+  contentRoot: string;
+  /** Include content/_seed/. False in production builds. */
+  includeSeed?: boolean;
+  /** Injected so staleness checks are deterministic in tests. */
+  now?: Date;
+};
+
+export function defaultContentRoot(): string {
+  return path.resolve(process.cwd(), 'content');
+}
+
+export async function createRepository(options: RepositoryOptions): Promise<ContentRepository> {
+  const now = options.now ?? new Date();
+  const includeSeed = options.includeSeed ?? true;
+
+  const raw = await loadContent(options.contentRoot);
+  const bundle: ContentBundle = includeSeed
+    ? raw
+    : {
+        ...raw,
+        chains: raw.chains.filter((c) => !c.isSeed),
+        items: raw.items.filter((i) => !i.isSeed),
+        additives: raw.additives.filter((a) => !a.isSeed),
+        ingredients: raw.ingredients.filter((i) => !i.isSeed),
+      };
+
+  const graph: ContentGraph = buildGraph(bundle, now);
+  const issues: Issue[] = [...bundle.issues, ...graph.issues];
+
+  const chains = bundle.chains.map((c) => c.data);
+  const items = bundle.items.map((i) => i.data);
+  const additives = bundle.additives.map((a) => a.data);
+  const ingredients = bundle.ingredients.map((i) => i.data);
+
+  const itemAt = (chainSlug: string, slug: string) =>
+    items.find((i) => i.chainSlug === chainSlug && i.slug === slug);
+
+  return {
+    getChain: async (slug) => chains.find((c) => c.slug === slug),
+    listChains: async () => chains,
+
+    getItem: async (chainSlug, itemSlug) => itemAt(chainSlug, itemSlug),
+    listItemsForChain: async (chainSlug) => items.filter((i) => i.chainSlug === chainSlug),
+    listItems: async () => items,
+
+    getAdditive: async (slug) => additives.find((a) => a.slug === slug),
+    listAdditives: async () => additives,
+
+    getIngredient: async (slug) => ingredients.find((i) => i.slug === slug),
+    listIngredients: async () => ingredients,
+
+    listItemsUsingAdditive: async (additiveSlug) => {
+      const keys = graph.itemsByAdditive.get(additiveSlug) ?? [];
+      return keys
+        .map((key) => {
+          const [chainSlug, slug] = key.split('/');
+          return chainSlug !== undefined && slug !== undefined
+            ? itemAt(chainSlug, slug)
+            : undefined;
+        })
+        .filter((i): i is MenuItem => i !== undefined);
+    },
+
+    listMarketsForItem: async (chainSlug, itemSlug) =>
+      itemAt(chainSlug, itemSlug)?.variants.map((v) => v.market) ?? [],
+
+    getFsaThresholds: async () => bundle.fsaThresholds,
+    getReferenceIntakes: async () => bundle.referenceIntakes,
+
+    getIssues: async () => issues,
+  };
+}
+
+export { loadContent, buildGraph };
+export type { ContentBundle, ContentGraph, Issue };
