@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "leadIn": "Pick a chain. Pick an item.",
+    "thesis": "See what is actually in it, what those things do, and why they are there.",
+    "cta": "Browse the chains"
+  },
+  "scaffold": {
+    "title": "Foundation only",
+    "body": "Phase 1 is the skeleton: workspaces, tokens, routing, checks. No content has been published yet, and nothing on this page is a real figure.",
+    "phase": "Phase {n} of 6"
+  },
+  "decoder": {
+    "title": "The decoder",
+    "body": "Every additive, what it is, and the commercial reason a company put it in your food."
+  },
+  "video": {
+    "title": "Latest video",
+    "empty": "The channel does not exist yet. This slot is reserved."
+  },
+  "newsletter": {
+    "title": "Get told when we publish",
+    "disabled": "Not connected to anything yet. We would rather show you a disabled box than pretend to store your address."
+  }
+}

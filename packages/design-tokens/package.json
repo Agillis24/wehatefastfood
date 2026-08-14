@@ -1,0 +1,21 @@
+{
+  "name": "@wff/design-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./tokens.export.json",
+    "./tokens.css": "./tokens.css",
+    "./tokens.json": "./tokens.json",
+    "./brand/*": "./brand/*"
+  },
+  "files": [
+    "tokens.json",
+    "tokens.css",
+    "tokens.export.json",
+    "brand"
+  ],
+  "scripts": {
+    "build": "node src/build.mjs"
+  }
+}

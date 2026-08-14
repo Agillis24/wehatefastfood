@@ -1,0 +1,52 @@
+{
+  "brand": {
+    "name": "We Hate Fast Food",
+    "tagline": "What's actually in it — and why they put it there.",
+    "wordmarkWe": "WE",
+    "wordmarkLove": "LOVE",
+    "wordmarkHate": "HATE",
+    "wordmarkFastFood": "FAST FOOD"
+  },
+  "nav": {
+    "chains": "Chains",
+    "decoder": "Decoder",
+    "compare": "Compare",
+    "learn": "Learn",
+    "about": "About",
+    "methodology": "Methodology",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "market": {
+    "label": "Market",
+    "change": "Change market",
+    "noDataTitle": "We do not hold data for this market",
+    "noDataBody": "Figures differ by country and we will not show you another country's numbers as if they were this one's. Here is what we do hold.",
+    "verifiedOn": "Verified {date}",
+    "basisPerServing": "per serving",
+    "basisPer100g": "per 100 g",
+    "basisPer100ml": "per 100 ml"
+  },
+  "data": {
+    "high": "HIGH",
+    "medium": "MED",
+    "low": "LOW",
+    "unpublished": "Not published",
+    "justTheNumbers": "Just the numbers",
+    "justTheNumbersHint": "Turns off the illustrated visualisations and leaves the figures.",
+    "sources": "Sources",
+    "retrieved": "Retrieved {date}"
+  },
+  "disclaimer": {
+    "notAffiliated": "Not affiliated with, endorsed by, or sponsored by any company named on this site. Company and product names are used only to identify the products discussed.",
+    "notMedical": "This is not medical or dietary advice.",
+    "figuresChange": "Figures change. This page states the market and the date we verified it — check the company's current published figures before relying on them.",
+    "support": "Support with eating and food"
+  },
+  "footer": {
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "sources": "All sources"
+  }
+}

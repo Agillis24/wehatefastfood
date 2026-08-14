@@ -33,11 +33,11 @@ One restraint, and it matters: **the strike is the brand's gesture, never a verd
 
 ### Why not the other two
 
-**"Menu board at 2 a.m." — rejected on two counts.** First, functional: it is a dark ground with amber and red as its chromatic identity, and our traffic-light system needs red, amber and green to mean something specific and *only* that. If the whole page is already amber-on-black, the one element that must be unmistakable becomes invisible. Second, legal and editorial: backlit signage chromatics are the visual language of the chains themselves. §12 forbids brand colour identities and trade dress. Building the entire site out of a stylised version of their signage is the same mistake at a larger scale, and it makes us look like fans rather than auditors.
+**"Menu board at 2 a.m." — rejected on two counts.** First, functional: it is a dark ground with amber and red as its chromatic identity, and our traffic-light system needs red, amber and green to mean something specific and _only_ that. If the whole page is already amber-on-black, the one element that must be unmistakable becomes invisible. Second, legal and editorial: backlit signage chromatics are the visual language of the chains themselves. §12 forbids brand colour identities and trade dress. Building the entire site out of a stylised version of their signage is the same mistake at a larger scale, and it makes us look like fans rather than auditors.
 
 **"Regulatory notice" — rejected on credibility.** The device is strong and I nearly took it. The problem is specific: our pages will be screenshotted and shared out of context, and a site that dresses its own claims in the typography of an official government warning will be read as an official government warning. For a project whose single asset is being trusted, deliberately borrowing regulatory authority we do not have is the one aesthetic risk we cannot take. It would also make the "where regulators disagree, we show both" feature incoherent — you cannot referee two regulators while cosplaying as a third.
 
-**Why the evidence half survives both rejections.** Whatever the register, the direction has to be *about our method rather than about their product*. It says: we looked at this, we recorded it, here is the file, here is the date, here is where it came from. That is exactly the promise in `/methodology`, rendered as a visual system — and it is what keeps the poster register from sliding into the rage-blog it would otherwise resemble. Three practical virtues carry over unchanged: a light ground is the readable choice for dense numerics on a cheap phone in daylight; flat hard-edged artwork renders identically at any scale and inside satori; and the card is a physical object, so it crops to 16:9 for video and 4:5 for Instagram without redesign.
+**Why the evidence half survives both rejections.** Whatever the register, the direction has to be _about our method rather than about their product_. It says: we looked at this, we recorded it, here is the file, here is the date, here is where it came from. That is exactly the promise in `/methodology`, rendered as a visual system — and it is what keeps the poster register from sliding into the rage-blog it would otherwise resemble. Three practical virtues carry over unchanged: a light ground is the readable choice for dense numerics on a cheap phone in daylight; flat hard-edged artwork renders identically at any scale and inside satori; and the card is a physical object, so it crops to 16:9 for video and 4:5 for Instagram without redesign.
 
 ### One deliberate borrowing
 
@@ -74,7 +74,7 @@ A Specimen Card is a bordered card carrying, in fixed order:
 
 **Two surfaces, one component.** On paper for the website; on ink for video frames and the Instagram crops that need to punch. The fills and text colours of the traffic lights are identical across both — only the chip hairline flips (§4). Nothing else about the card changes, which is the whole point of it existing.
 
-**The interior — the quantity stack — is the actual hook.** Sugar drawn as stacked cubes at 4 g each, salt as levelled teaspoons at 6 g each, saturated fat as pats of butter at 5 g each, all three flat-vector in the mark's language and at *true relative scale to each other*, so the eye compares them without being told to. Partial units are drawn partial: 9 g of sugar is two cubes and a quarter cube, not "2.25 cubes" rounded to a lie. Every stack carries a plain sentence in the DOM immediately after it, which is what a screen reader gets and what the "Just the numbers" mode leaves behind:
+**The interior — the quantity stack — is the actual hook.** Sugar drawn as stacked cubes at 4 g each, salt as levelled teaspoons at 6 g each, saturated fat as pats of butter at 5 g each, all three flat-vector in the mark's language and at _true relative scale to each other_, so the eye compares them without being told to. Partial units are drawn partial: 9 g of sugar is two cubes and a quarter cube, not "2.25 cubes" rounded to a lie. Every stack carries a plain sentence in the DOM immediately after it, which is what a screen reader gets and what the "Just the numbers" mode leaves behind:
 
 > This portion contains 9 g of sugar, about two and a quarter 4 g cubes.
 
@@ -90,18 +90,18 @@ No exercise equivalents, ever. The unit is always a physical quantity of the sub
 
 ### The palette, as it exists in the assets
 
-| Token | Hex | Where it appears in the assets |
-|---|---|---|
-| `--c-pink` | `#FF2D62` | Avatar ground, `HATE`, the slash stroke, the banner's diagonal bands |
-| `--c-paper` | `#F6F2E8` | The heart fill, the light ground, type on the dark ground |
-| `--c-ink` | `#16120F` | The dark ground, type on the light ground, the patty band, the slash |
-| `--c-grey-dark` | `#8C8377` | Struck-out `LOVE` on the ink ground |
-| `--c-grey-light` | `#B9B2A4` | Struck-out `LOVE` on paper; the tagline on ink |
-| `--c-white` | `#FFFFFF` | Mono avatar **only** — single-colour reproduction, never in the UI |
+| Token            | Hex       | Where it appears in the assets                                       |
+| ---------------- | --------- | -------------------------------------------------------------------- |
+| `--c-pink`       | `#FF2D62` | Avatar ground, `HATE`, the slash stroke, the banner's diagonal bands |
+| `--c-paper`      | `#F6F2E8` | The heart fill, the light ground, type on the dark ground            |
+| `--c-ink`        | `#16120F` | The dark ground, type on the light ground, the patty band, the slash |
+| `--c-grey-dark`  | `#8C8377` | Struck-out `LOVE` on the ink ground                                  |
+| `--c-grey-light` | `#B9B2A4` | Struck-out `LOVE` on paper; the tagline on ink                       |
+| `--c-white`      | `#FFFFFF` | Mono avatar **only** — single-colour reproduction, never in the UI   |
 
 ### Two surfaces, and they are not equivalent
 
-The assets ship a light identity *and* a dark one. That is not redundancy, it is the channel split:
+The assets ship a light identity _and_ a dark one. That is not redundancy, it is the channel split:
 
 - **Paper `#F6F2E8` — the website.** Reading, data, long sessions, daylight, cheap screens.
 - **Ink `#16120F` — video, YouTube, and deliberate punctuation.** The banner, the video frames, and on the site a small number of full-bleed bands (home hero, footer) that tie the channels together.
@@ -110,21 +110,21 @@ The site does **not** get a user-facing dark mode. Dark is a surface we choose p
 
 **Measured on paper `#F6F2E8`:**
 
-| Foreground | Ratio | Verdict |
-|---|---|---|
-| `--c-ink` | **16.66 : 1** | AA body ✓ |
-| `--c-pink` | 3.24 : 1 | Large text and non-text only |
-| `--c-grey-dark` | 3.34 : 1 | Large text and non-text only |
-| `--c-grey-light` | **1.88 : 1** | Decorative only — never text |
+| Foreground       | Ratio         | Verdict                      |
+| ---------------- | ------------- | ---------------------------- |
+| `--c-ink`        | **16.66 : 1** | AA body ✓                    |
+| `--c-pink`       | 3.24 : 1      | Large text and non-text only |
+| `--c-grey-dark`  | 3.34 : 1      | Large text and non-text only |
+| `--c-grey-light` | **1.88 : 1**  | Decorative only — never text |
 
 **Measured on ink `#16120F`:**
 
-| Foreground | Ratio | Verdict |
-|---|---|---|
-| `--c-paper` | **16.66 : 1** | AA body ✓ |
-| `--c-grey-light` | **8.84 : 1** | AA body ✓ |
-| `--c-pink` | **5.15 : 1** | AA body ✓ |
-| `--c-grey-dark` | **4.99 : 1** | AA body ✓ |
+| Foreground       | Ratio         | Verdict   |
+| ---------------- | ------------- | --------- |
+| `--c-paper`      | **16.66 : 1** | AA body ✓ |
+| `--c-grey-light` | **8.84 : 1**  | AA body ✓ |
+| `--c-pink`       | **5.15 : 1**  | AA body ✓ |
+| `--c-grey-dark`  | **4.99 : 1**  | AA body ✓ |
 
 ### The single most useful fact in this palette
 
@@ -134,13 +134,13 @@ Pink is 5.15 : 1 on the dark ground — full body text, legally and legibly. It 
 
 Consequences on paper:
 
-| Use | Allowed | Why |
-|---|---|---|
-| Highlighted word inside body text | **Pink marker block, ink text** | Ink on pink is 5.15 : 1. Also the better gesture — a highlighter stroke, not coloured text. |
-| Display type, ≥ 24 px or ≥ 18.66 px bold | **Pink letterforms** | 3.24 : 1 clears the large-text bar. Wordmark, section numbers, pull quotes. |
-| Link inside running prose | **Ink text, pink underline** | Pink carries the signal as a rule; ink carries the reading. |
-| Paper text on a pink fill | **Never** | 3.24 : 1. Pink fills take ink, never paper. |
-| Rules, icons, focus rings, chart marks | **Pink** | Non-text, 3 : 1 bar met. |
+| Use                                      | Allowed                         | Why                                                                                         |
+| ---------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------- |
+| Highlighted word inside body text        | **Pink marker block, ink text** | Ink on pink is 5.15 : 1. Also the better gesture — a highlighter stroke, not coloured text. |
+| Display type, ≥ 24 px or ≥ 18.66 px bold | **Pink letterforms**            | 3.24 : 1 clears the large-text bar. Wordmark, section numbers, pull quotes.                 |
+| Link inside running prose                | **Ink text, pink underline**    | Pink carries the signal as a rule; ink carries the reading.                                 |
+| Paper text on a pink fill                | **Never**                       | 3.24 : 1. Pink fills take ink, never paper.                                                 |
+| Rules, icons, focus rings, chart marks   | **Pink**                        | Non-text, 3 : 1 bar met.                                                                    |
 
 Consequences on ink: pink is unrestricted, including body copy — which is exactly why the video and YouTube surfaces are dark.
 
@@ -148,14 +148,14 @@ Consequences on ink: pink is unrestricted, including body copy — which is exac
 
 The two brand greys are authored for specific jobs in the mark and do not cover the UI:
 
-- `--c-grey-light` at **1.88 : 1** on paper is invisible as text. Its only legitimate use on paper is the struck-out `LOVE`, where it is *meant* to recede and the strike carries the meaning. It is never a UI colour on the light surface.
+- `--c-grey-light` at **1.88 : 1** on paper is invisible as text. Its only legitimate use on paper is the struck-out `LOVE`, where it is _meant_ to recede and the strike carries the meaning. It is never a UI colour on the light surface.
 - `--c-grey-dark` at **3.34 : 1** on paper fails body text.
 
 So the light surface needs one derived member of the same warm-grey family:
 
-| Token | Hex | Role | Measured on paper |
-|---|---|---|---|
-| `--c-muted` | `#5C5648` | Secondary text, meta rails, hairlines | **6.52 : 1** ✓ |
+| Token       | Hex       | Role                                  | Measured on paper |
+| ----------- | --------- | ------------------------------------- | ----------------- |
+| `--c-muted` | `#5C5648` | Secondary text, meta rails, hairlines | **6.52 : 1** ✓    |
 
 On the ink surface, `--c-grey-light` already fills that role at 8.84 : 1 and no derivation is needed.
 
@@ -163,20 +163,32 @@ Focus ring: 2 px `--c-pink`, 2 px offset, on everything, never removed. It clear
 
 ### Reserved functional — traffic lights
 
-The pink creates a collision the original palette did not have: `#FF2D62` and an FSA red are both hot reds, and a reader must never wonder whether a pink thing is a `HIGH` warning. Measured separation between the brand pink and candidate reds: `#B3261E` → 1.81 : 1 (too close), `#8C1D18` → 2.52 : 1, `#7A1410` → **3.00 : 1**. So the FSA red goes deep oxblood, far enough down in value that pink and red never read as the same ink.
+> **Corrected 2026-08-14.** This section previously justified the FSA red by its WCAG **contrast ratio** against the brand pink, requiring 3.00 : 1 as "separation". That was the wrong instrument and the conclusion it produced was wrong. Kept visible rather than quietly rewritten, because the mistake is instructive and easy to repeat.
 
-| Token | Hex | Text on it | Measured |
-|---|---|---|---|
-| `--c-tl-high` | `#7A1410` | `--c-paper` | **9.71 : 1** |
-| `--c-tl-med` | `#D98C00` | `--c-ink` | **6.83 : 1** |
-| `--c-tl-low` | `#1B5E34` | `--c-paper` | **6.96 : 1** |
+**Contrast ratio cannot tell you whether two colours are distinguishable.** It is a ratio of relative luminance — it measures lightness and knows nothing about hue. The control case settles it: `#FF0000` and `#7A0000` are the _same hue_, and WCAG scores them 2.87 : 1, indistinguishable from a supposedly-passing pair. Under simulated protanopia their perceptual difference is **ΔE2000 = 0.0**. Literally one colour.
 
-Four rules, to be enforced as constants in code rather than left to discipline:
+So separation is now measured with `scripts/color-separation.mjs`: CIEDE2000 under normal vision **and** under simulated protanopia, deuteranopia and tritanopia (Viénot, Brettel & Mollon 1999), reporting the worst case. A palette is only as safe as its worst pair for its worst reader.
+
+**What that revealed.** The old criterion pushed the red down to `#7A1410`, and that over-correction had a real cost: against `--color-ink` it measures **ΔE 0.8 under protanopia** — the HIGH chip and black were the same colour to roughly one man in a hundred.
+
+| Token             | Hex       | Text on it      | Text contrast |
+| ----------------- | --------- | --------------- | ------------- |
+| `--color-tl-high` | `#B5301F` | `--color-paper` | **5.51 : 1**  |
+| `--color-tl-med`  | `#D98C00` | `--color-ink`   | **6.83 : 1**  |
+| `--color-tl-low`  | `#1B5E34` | `--color-paper` | **6.96 : 1**  |
+
+Worst-case ΔE2000 across all four vision types, after the change: **8.8**, up from 0.8.
+
+**The honest limit.** 8.8 is the best available, not a clean pass. The candidate search showed a genuine vice: darker reds separate from amber but collapse into the ink under protanopia, lighter reds separate from the ink but collapse into amber under deuteranopia. Red-versus-amber confusion is the classic dichromat failure and **no hex value fixes it.**
+
+Which means the mandatory `HIGH` / `MED` / `LOW` text label is not a redundancy for the colour — **it is the mechanism, and the colour is the redundancy.** Anything that weakens or shrinks that label is removing the only thing that actually works.
+
+Four rules, enforced as constants in code rather than left to discipline:
 
 1. **Amber never carries paper text** — it takes ink text. Red and green take paper text. The asymmetry is the accessible answer, not an oversight.
-2. **Amber is never a text colour on paper** — `#D98C00` as type on beige is 2.44 : 1. Amber-flavoured prose uses `--c-ink`.
-3. **Every chip carries a 1.5 px hairline, and the hairline flips with the surface.** On paper the hairline is `--c-ink`, because amber against paper is only 2.44 : 1 — below the 3 : 1 non-text bar, so the boundary must never depend on fill contrast alone. On ink the hairline is `--c-paper`, because the oxblood is 1.72 : 1 against the dark ground and would otherwise dissolve into it. The fills and their text colours stay identical across both surfaces; only the hairline changes. That is what lets one component serve the website and the video frames.
-4. **Pink never appears inside the traffic-light module, and the traffic-light reds never appear outside it.** The semaphore is a bounded, ruled box. Contained, the two reds cannot be confused; scattered, they always will be. This rule matters more on ink, where pink is unrestricted everywhere else on the surface.
+2. **Amber is never a text colour on paper** — `#D98C00` as type on beige is 2.44 : 1. Amber-flavoured prose uses `--color-ink`.
+3. **Every chip carries a 1.5 px hairline, and the hairline flips with the surface.** On paper the hairline is `--color-ink`, because amber against paper is only 2.44 : 1, below the 3 : 1 non-text bar, so the boundary must never depend on fill contrast alone. On ink the hairline is `--color-paper`. Fills and text colours stay identical across both surfaces; only the hairline changes. That is what lets one component serve the website and the video frames.
+4. **Pink never appears inside the traffic-light module, and the traffic-light reds never appear outside it.** The semaphore is a bounded, ruled box. This still holds — but note it is now a _tidiness_ rule, not the safety mechanism. The safety mechanism is the text label.
 
 And the non-negotiable from §2 of the brief: every traffic light carries its `HIGH` / `MED` / `LOW` label as text, always, at every size, including inside the OG image where nobody can hover.
 
@@ -186,11 +198,11 @@ And the non-negotiable from §2 of the brief: every traffic light carries its `H
 
 Three roles, three families, all open-licensed and self-hosted — self-hosting is a privacy requirement, not just a performance one, since a runtime font request is a third-party request.
 
-| Role | Family | Why this one |
-|---|---|---|
-| **Display** | **Archivo** (variable, `wdth` 62–125, `wght` 400–900) | The width axis *is* the brand device. The wordmark sits at `wdth 62 / wght 900` for stamped, ultra-condensed impact; headings relax to 75–100. One variable file covers the whole display range, so we get a wide expressive range for roughly 35 kB. Grotesque, industrial, no nostalgia. |
-| **Body** | **Public Sans** (variable) | It is the typeface of the US Web Design System — literally the type of official public documentation. On a site about disclosure, prose that quietly wears the clothes of a public notice is the right register, and unlike the "regulatory notice" direction it does this at a whisper rather than a shout. Excellent at 16–17 px on a cheap screen. |
-| **Data** | **IBM Plex Mono** (400, 600) | Every numeral, E-number, date, specimen ID, threshold table and source citation. Real technical-document character, genuine tabular figures, and monospace is what makes the numbers look *recorded* rather than *composed*. This is a data site; the data face does the heavy lifting and the display face is used sparingly. |
+| Role        | Family                                                | Why this one                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Display** | **Archivo** (variable, `wdth` 62–125, `wght` 400–900) | The width axis _is_ the brand device. The wordmark sits at `wdth 62 / wght 900` for stamped, ultra-condensed impact; headings relax to 75–100. One variable file covers the whole display range, so we get a wide expressive range for roughly 35 kB. Grotesque, industrial, no nostalgia.                                                            |
+| **Body**    | **Public Sans** (variable)                            | It is the typeface of the US Web Design System — literally the type of official public documentation. On a site about disclosure, prose that quietly wears the clothes of a public notice is the right register, and unlike the "regulatory notice" direction it does this at a whisper rather than a shout. Excellent at 16–17 px on a cheap screen. |
+| **Data**    | **IBM Plex Mono** (400, 600)                          | Every numeral, E-number, date, specimen ID, threshold table and source citation. Real technical-document character, genuine tabular figures, and monospace is what makes the numbers look _recorded_ rather than _composed_. This is a data site; the data face does the heavy lifting and the display face is used sparingly.                        |
 
 **The delivered assets confirm the display choice.** They ask for `DejaVu Sans Condensed, Arial Black, Helvetica` — a heavy condensed grotesque, all caps, tight letterspacing. That is a placeholder stack rather than a licensed choice (see the bug in §6), but the intent is unambiguous, and Archivo at a narrow width axis with weight 900 hits it while being a real self-hosted webfont with `latin-ext` coverage. No change to the plan; the assets validate it.
 
@@ -223,31 +235,31 @@ Spacing scale, 4 px base: `4 8 12 16 24 32 48 64 96`. Nothing off-scale.
 
 A heart in `--c-paper`, crossed by a black patty band with two thin pink gaps above and below it, struck through by a diagonal bar at −19° in ink with a pink stroke.
 
-It carries the whole thesis in one shape. The heart is `LOVE`. The bands turn the heart into a burger cross-section. The diagonal is the strike, the same gesture as the wordmark's crossed-out `LOVE`, borrowed from prohibition signage. It resolves as *the thing we are supposed to love, sectioned and cancelled* — which is the site in one glance, and it does it without a single letterform, so it needs no translation in any locale.
+It carries the whole thesis in one shape. The heart is `LOVE`. The bands turn the heart into a burger cross-section. The diagonal is the strike, the same gesture as the wordmark's crossed-out `LOVE`, borrowed from prohibition signage. It resolves as _the thing we are supposed to love, sectioned and cancelled_ — which is the site in one glance, and it does it without a single letterform, so it needs no translation in any locale.
 
 Geometry is pure paths and rects, no text, so it renders identically on every machine and inside satori. All internal edges clear the 3 : 1 non-text bar: heart on pink ground 3.24 : 1, patty on heart 16.66 : 1, slash on pink 5.15 : 1.
 
 ### Asset inventory
 
-| File | Surface | Use |
-|---|---|---|
-| `wff-avatar-primary.svg` | pink ground | Primary avatar. Social profiles, the default mark. |
-| `wff-avatar-dark.svg` | ink ground | Dark-surface avatar. Pink patty on the paper heart. |
-| `wff-avatar-mono.svg` | transparent | Single-colour reproduction. Stamps, watermarks, print, embroidery. |
-| `wff-favicon.svg` | pink ground | Favicon. Drops the patty bands and keeps heart plus slash. |
-| `wff-wordmark-light.svg` | paper | Wordmark for the website. |
-| `wff-wordmark-dark.svg` | ink | Wordmark for video and dark bands. |
-| `wff-youtube-banner.svg` | ink | 2560 × 1440 channel banner, mark plus wordmark plus tagline. |
-| `wff-watermark-disc.svg` | **transparent** | Video watermark, disc form. Paper ring, pink field, paper heart, ink strike. Reads against any footage. |
+| File                      | Surface         | Use                                                                                                               |
+| ------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `wff-avatar-primary.svg`  | pink ground     | Primary avatar. Social profiles, the default mark.                                                                |
+| `wff-avatar-dark.svg`     | ink ground      | Dark-surface avatar. Pink patty on the paper heart.                                                               |
+| `wff-avatar-mono.svg`     | transparent     | Single-colour reproduction. Stamps, watermarks, print, embroidery.                                                |
+| `wff-favicon.svg`         | pink ground     | Favicon. Drops the patty bands and keeps heart plus slash.                                                        |
+| `wff-wordmark-light.svg`  | paper           | Wordmark for the website.                                                                                         |
+| `wff-wordmark-dark.svg`   | ink             | Wordmark for video and dark bands.                                                                                |
+| `wff-youtube-banner.svg`  | ink             | 2560 × 1440 channel banner, mark plus wordmark plus tagline.                                                      |
+| `wff-watermark-disc.svg`  | **transparent** | Video watermark, disc form. Paper ring, pink field, paper heart, ink strike. Reads against any footage.           |
 | `wff-watermark-light.svg` | **transparent** | Video watermark, silhouette form. Paper heart, pink strike. For dark or busy footage where the disc is too heavy. |
 
 **PNG exports.** `npm run brand:png` rasterises to 1080 × 1080 via resvg, alpha preserved. Verified by decoding the output: watermark corners are genuinely `alpha = 0`, and the heart renders as exactly `#F6F2E8` with no colour drift. The avatars export opaque, correctly — they paint a full-canvas ground and are not watermarks.
 
-Never add a background when exporting a watermark. The transparency *is* the asset.
+Never add a background when exporting a watermark. The transparency _is_ the asset.
 
 The favicon simplification is the right call and should be preserved: at 16 px the patty bands turn to mush, while the heart silhouette and the diagonal survive. That is the small-size degradation — heart plus slash, nothing else. There is no need for a lettered fallback.
 
-**Tagline, as delivered:** *"What's actually in it — and why they put it there."* This is now the site's tagline of record and should be used verbatim, including on `/about` and in the OG description. It is a do-not-translate-loosely string: it goes in `content/glossary.json` as translate-consistently, not as free text.
+**Tagline, as delivered:** _"What's actually in it — and why they put it there."_ This is now the site's tagline of record and should be used verbatim, including on `/about` and in the OG description. It is a do-not-translate-loosely string: it goes in `content/glossary.json` as translate-consistently, not as free text.
 
 ### Wordmark construction, and a bug in it
 
@@ -255,9 +267,9 @@ Four text lines: `WE` small and letterspaced, `LOVE` in the recessive grey with 
 
 **Measured problem.** The delivered wordmarks use live `<text>` with `font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif"`. DejaVu Sans Condensed is a Linux font. On Windows and macOS the stack falls through to a non-condensed face, every glyph gets wider, and the hand-positioned strike rect no longer matches the word it is striking. Rendered and measured in-browser on Windows:
 
-| Element | Renders | Strike rect |
-|---|---|---|
-| `LOVE` | x 76 → **554** | x 60 → **512** |
+| Element | Renders        | Strike rect    |
+| ------- | -------------- | -------------- |
+| `LOVE`  | x 76 → **554** | x 60 → **512** |
 
 The strike stops 42 px short, so the `E` of `LOVE` is left unstruck — the one thing in the mark that must not fail. `FAST FOOD` renders to x 1092 inside a 1200 viewBox, leaving 108 px of margin, so a slightly wider fallback also clips the wordmark.
 
@@ -284,7 +296,7 @@ Skipped entirely under `prefers-reduced-motion`, where the resolved state render
 - **Objects, not people.** Food, cubes, teaspoons, butter pats, molecules, factory equipment. We never draw bodies. That is the design-level enforcement of the no-body-shaming rule.
 - **Fixed cast of measure objects** — the 4 g sugar cube, the 6 g salt teaspoon, the 5 g butter pat — drawn once, reused everywhere, at consistent relative scale, so the reader learns the vocabulary across items and any comparison between two items is honest.
 
-*Open for the client: if you want the comic feel the brief originally described, the cheapest honest way back is a single halftone texture used on illustration only and never on the mark or the UI. It should be a deliberate decision, not a drift. My recommendation is to stay flat — it matches your mark, it costs fewer bytes, and it survives being rendered at 48 px and at 1920 px without retouching.*
+_Open for the client: if you want the comic feel the brief originally described, the cheapest honest way back is a single halftone texture used on illustration only and never on the mark or the UI. It should be a deliberate decision, not a drift. My recommendation is to stay flat — it matches your mark, it costs fewer bytes, and it survives being rendered at 48 px and at 1920 px without retouching._
 
 ---
 
@@ -391,11 +403,11 @@ Nothing else moves. No parallax, no counters ticking up (a number that animates 
 
 - Colour is never the only carrier: every traffic light has its text label, every diff row has a `+` / `−` glyph as well as a colour, every quantity stack has its sentence.
 - Focus ring is a 2 px `--c-pink` outline with a 2 px offset, on everything, never removed. At 3.24 : 1 against the paper it clears the non-text bar.
-- Pink is never the only carrier of emphasis: an emphasised phrase is a pink block *and* the sentence still reads correctly if the colour is stripped.
+- Pink is never the only carrier of emphasis: an emphasised phrase is a pink block _and_ the sentence still reads correctly if the colour is stripped.
 - "Just the numbers" is a first-class mode, persisted, that hides all illustrative visualisations and leaves the tables and sentences. It is in the sticky rail on desktop and directly under the card on mobile, not buried in a settings page.
 - CSS logical properties everywhere so RTL is a `dir` attribute, not a rebuild.
 - Target size 24 × 24 px minimum (WCAG 2.2), and 44 px for the ingredient chips, which are the most-tapped things on the site.
-- Every SVG visualisation is `aria-hidden` with the sentence beside it as the accessible text — a screen reader should get the *fact*, not a description of the drawing.
+- Every SVG visualisation is `aria-hidden` with the sentence beside it as the accessible text — a screen reader should get the _fact_, not a description of the drawing.
 
 ---
 
@@ -403,7 +415,7 @@ Nothing else moves. No parallax, no counters ticking up (a number that animates 
 
 - **YouTube.** Channel art is `brand/wff-youtube-banner.svg`; the avatar is `brand/wff-avatar-primary.svg`. Video frames use the **ink surface**, where pink is unrestricted (§4). The Specimen Card is the opening frame at 1920 × 1080, the quantity stack builds in the same order with the same objects, and `tokens.export.json` supplies the exact hexes and `--angle-strike` so the video is not a near-match but the same system.
 - **Instagram.** Profile picture is `brand/wff-avatar-primary.svg`. The card crops to 1080 × 1080 (card only) and 1080 × 1350 (card plus one stamped headline). `npm run social:cards` emits both from the same component that renders the page, choosing the paper or ink surface per post.
-- **Everywhere.** The tagline of record is *"What's actually in it — and why they put it there."* — verbatim, and in `content/glossary.json` as a translate-consistently term.
+- **Everywhere.** The tagline of record is _"What's actually in it — and why they put it there."_ — verbatim, and in `content/glossary.json` as a translate-consistently term.
 - **Never** a chain logo, a photograph of packaging, or their colours, in any channel.
 
 ---

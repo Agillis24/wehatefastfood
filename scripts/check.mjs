@@ -1,0 +1,91 @@
+/**
+ * The definition of done, per BRIEF §0.7.
+ *
+ * Runs every gate and reports all failures rather than stopping at the first,
+ * so one run tells you everything that is wrong.
+ *
+ * Every gate is spawned as `node <local bin entrypoint>` with an argv array.
+ * No shell, no `npx`, no `&&`, no inline env assignment - so it behaves
+ * identically in PowerShell, and it does not trip Node's DEP0190 warning about
+ * unescaped arguments under `shell: true`.
+ */
+
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const bin = (p) => path.join(ROOT, 'node_modules', ...p.split('/'));
+
+/** @type {{name: string, args: string[], why: string}[]} */
+const GATES = [
+  {
+    name: 'tokens',
+    args: ['packages/design-tokens/src/build.mjs'],
+    why: 'tokens.css and tokens.export.json must match tokens.json',
+  },
+  {
+    name: 'typecheck',
+    args: [bin('typescript/bin/tsc'), '--build'],
+    why: 'TypeScript strict across every workspace',
+  },
+  {
+    name: 'lint',
+    args: [bin('eslint/bin/eslint.js'), '.'],
+    why: 'includes the no-bare-strings and no-framework-in-content rules',
+  },
+  {
+    name: 'format',
+    args: [bin('prettier/bin/prettier.cjs'), '--check', '.'],
+    why: 'formatting is not a review topic',
+  },
+  {
+    name: 'secrets',
+    args: ['scripts/secrets-scan.mjs'],
+    why: 'no secret may be NEXT_PUBLIC_ or committed',
+  },
+  {
+    name: 'content',
+    args: ['scripts/content-validate.mjs'],
+    why: 'every fact carries a source, every reference resolves',
+  },
+  {
+    name: 'test',
+    args: [bin('vitest/vitest.mjs'), 'run', '--passWithNoTests'],
+    why: 'unit tests',
+  },
+];
+
+function run(gate) {
+  return new Promise((resolve) => {
+    const started = Date.now();
+    const child = spawn(process.execPath, gate.args, { cwd: ROOT, stdio: 'inherit' });
+    child.on('close', (code) => resolve({ ...gate, code: code ?? 1, ms: Date.now() - started }));
+    child.on('error', (err) => {
+      console.error(`\n${gate.name}: failed to start - ${err.message}`);
+      resolve({ ...gate, code: 1, ms: Date.now() - started });
+    });
+  });
+}
+
+const results = [];
+for (const gate of GATES) {
+  console.log(`\n--- ${gate.name}  (${gate.why})`);
+  results.push(await run(gate));
+}
+
+console.log('\n=== check ===');
+const failed = results.filter((r) => r.code !== 0);
+for (const r of results) {
+  console.log(
+    `  ${r.code === 0 ? 'PASS' : 'FAIL'}  ${r.name.padEnd(10)} ${String(r.ms).padStart(6)} ms`,
+  );
+}
+
+if (failed.length > 0) {
+  console.error(
+    `\n${failed.length} of ${results.length} gates failed: ${failed.map((f) => f.name).join(', ')}`,
+  );
+  process.exit(1);
+}
+console.log(`\nAll ${results.length} gates passed.`);

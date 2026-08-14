@@ -11,7 +11,7 @@
 In priority order, because these conflict and the order decides the arguments:
 
 1. **Credibility.** A single fabricated or unsourced number ends the project. Every choice below that looks paranoid is paranoid on purpose.
-2. **Authoring throughput.** The site is worthless without content, and content arrives one item at a time, in sessions, by hand. The repo *is* the CMS, so the authoring loop (`/add-item` → validate → coverage report) has to be as polished as the public pages.
+2. **Authoring throughput.** The site is worthless without content, and content arrives one item at a time, in sessions, by hand. The repo _is_ the CMS, so the authoring loop (`/add-item` → validate → coverage report) has to be as polished as the public pages.
 3. **Legibility on a cheap phone.** 360 px, slow 4G, one thumb.
 4. **Portability of the content layer.** The video and social pipelines are real future consumers. `packages/content` must run under plain Node with no Next.js in the import graph.
 
@@ -35,14 +35,14 @@ Everything else — animation, breadth of locales, feature count — yields to t
 
 ### 2.2 The decision the brief under-specifies: locale ≠ market
 
-The brief treats language and data jurisdiction as if they travel together. They do not, and conflating them produces a bug that silently corrupts shared links: a German reader looking at UK data sends a link to a friend whose cookie says `US`, and the friend sees *different numbers under the same URL*. On a site whose promise is "this is what is actually in it", that is disqualifying.
+The brief treats language and data jurisdiction as if they travel together. They do not, and conflating them produces a bug that silently corrupts shared links: a German reader looking at UK data sends a link to a friend whose cookie says `US`, and the friend sees _different numbers under the same URL_. On a site whose promise is "this is what is actually in it", that is disqualifying.
 
 **Rule for the whole codebase:**
 
-| | What it is | Where it lives | Who chooses |
-|---|---|---|---|
-| `locale` | The language of the prose | URL path segment `/[locale]/…` | Reader, persisted in cookie |
-| `market` | The jurisdiction the *data* describes | URL search param `?m=GB`, part of the canonical URL | Reader; cookie supplies only the **default** |
+|          | What it is                            | Where it lives                                      | Who chooses                                  |
+| -------- | ------------------------------------- | --------------------------------------------------- | -------------------------------------------- |
+| `locale` | The language of the prose             | URL path segment `/[locale]/…`                      | Reader, persisted in cookie                  |
+| `market` | The jurisdiction the _data_ describes | URL search param `?m=GB`, part of the canonical URL | Reader; cookie supplies only the **default** |
 
 - The cookie sets the default on first arrival at a page with no `?m=`. The moment a market is chosen, it is written into the URL and every internal link carries it.
 - Canonical URL for an item is `/{locale}/chains/{chain}/{item}?m={market}`. Each `(item, market)` pair is a distinct static page with its own `verifiedOn`, its own structured data, its own OG image.
@@ -73,7 +73,7 @@ content/**.mdx     │        │      (packages/content)├── search index 
 - Cache key `t:{locale}:{namespace}:{contentHash}` — permanent, because the hash changes whenever the English changes.
 - **Abuse control, which the brief does not mention and which we need before this endpoint is public:** the handler accepts only `(namespace, contentHash)` pairs present in a build-time manifest, only locales on a fixed allowlist, and is rate-limited per IP. Without this it is an unauthenticated endpoint that spends money on demand.
 - Returned JSON is validated against the source key set before caching. Key mismatch → reject, log, serve English.
-- See §11.7 for my recommendation to narrow *what* tier 2 is allowed to translate.
+- See §11.7 for my recommendation to narrow _what_ tier 2 is allowed to translate.
 
 ### 2.5 Secrets hygiene
 
@@ -191,31 +191,31 @@ wehatefastfood/
 
 ### Approved by §4 of the brief — adding without further discussion
 
-| Package | Why |
-|---|---|
-| `next`, `react`, `react-dom` | Framework, per §4. |
-| `typescript`, `@types/*` | Strict mode. |
-| `tailwindcss` v4, `@tailwindcss/postcss` | Styling, configured from design tokens. |
-| `zod` | Content schemas and the validator. |
-| `next-intl` | Routing and message catalogues. |
-| `minisearch` | Client search, lazy-loaded on two routes only. |
-| `vitest` | Unit tests. |
-| `@playwright/test` | Smoke suite. |
-| `eslint`, `@eslint/js`, `typescript-eslint`, `eslint-config-next`, `eslint-plugin-react` | Lint, including the no-bare-strings rule. |
-| `prettier` | Formatting. |
-| `simple-git-hooks`, `lint-staged` | Windows-friendly hooks. |
-| `@upstash/redis` | Translation cache, behind env, optional. |
-| `@vercel/og` | OG images, per §10. |
-| `@anthropic-ai/sdk` | Implied by §7, "via the Anthropic API". |
-| `@resvg/resvg-js` | **Settled 2026-08-14** when the client asked for transparent 1080 PNG exports of the brand marks. Already used by `scripts/export-brand-png.mjs`, and the same rasteriser the OG and social-card pipeline needs, so it costs nothing extra later. Verified on this machine: exact colour reproduction, alpha channel preserved. |
+| Package                                                                                  | Why                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `next`, `react`, `react-dom`                                                             | Framework, per §4.                                                                                                                                                                                                                                                                                                              |
+| `typescript`, `@types/*`                                                                 | Strict mode.                                                                                                                                                                                                                                                                                                                    |
+| `tailwindcss` v4, `@tailwindcss/postcss`                                                 | Styling, configured from design tokens.                                                                                                                                                                                                                                                                                         |
+| `zod`                                                                                    | Content schemas and the validator.                                                                                                                                                                                                                                                                                              |
+| `next-intl`                                                                              | Routing and message catalogues.                                                                                                                                                                                                                                                                                                 |
+| `minisearch`                                                                             | Client search, lazy-loaded on two routes only.                                                                                                                                                                                                                                                                                  |
+| `vitest`                                                                                 | Unit tests.                                                                                                                                                                                                                                                                                                                     |
+| `@playwright/test`                                                                       | Smoke suite.                                                                                                                                                                                                                                                                                                                    |
+| `eslint`, `@eslint/js`, `typescript-eslint`, `eslint-config-next`, `eslint-plugin-react` | Lint, including the no-bare-strings rule.                                                                                                                                                                                                                                                                                       |
+| `prettier`                                                                               | Formatting.                                                                                                                                                                                                                                                                                                                     |
+| `simple-git-hooks`, `lint-staged`                                                        | Windows-friendly hooks.                                                                                                                                                                                                                                                                                                         |
+| `@upstash/redis`                                                                         | Translation cache, behind env, optional.                                                                                                                                                                                                                                                                                        |
+| `@vercel/og`                                                                             | OG images, per §10.                                                                                                                                                                                                                                                                                                             |
+| `@anthropic-ai/sdk`                                                                      | Implied by §7, "via the Anthropic API".                                                                                                                                                                                                                                                                                         |
+| `@resvg/resvg-js`                                                                        | **Settled 2026-08-14** when the client asked for transparent 1080 PNG exports of the brand marks. Already used by `scripts/export-brand-png.mjs`, and the same rasteriser the OG and social-card pipeline needs, so it costs nothing extra later. Verified on this machine: exact colour reproduction, alpha channel preserved. |
 
 ### Needs your approval — not in §4
 
-| Package | Why I want it | If you say no |
-|---|---|---|
-| `@next/mdx`, `remark-frontmatter`, `remark-mdx-frontmatter` | `/learn/[slug]` is specified as MDX with importable interactive components. This is the smallest way to get that. | Articles become JSON plus a restricted rich-text renderer; we lose inline components. |
-| `satori` | Turns JSX into SVG for the OG and social cards. Pairs with resvg below. | We use `@vercel/og` at runtime for OG and write a second, divergent code path for social cards. Worse. |
-| `size-limit`, `@size-limit/file` | Enforces the ≤130 kB budget in CI from Phase 1 rather than discovering the breach in Phase 6. | I hand-roll `scripts/budget-check.mjs` over the Next build manifest, roughly 60 lines, no dependency. Genuinely happy either way. |
+| Package                                                     | Why I want it                                                                                                     | If you say no                                                                                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `@next/mdx`, `remark-frontmatter`, `remark-mdx-frontmatter` | `/learn/[slug]` is specified as MDX with importable interactive components. This is the smallest way to get that. | Articles become JSON plus a restricted rich-text renderer; we lose inline components.                                             |
+| `satori`                                                    | Turns JSX into SVG for the OG and social cards. Pairs with resvg below.                                           | We use `@vercel/og` at runtime for OG and write a second, divergent code path for social cards. Worse.                            |
+| `size-limit`, `@size-limit/file`                            | Enforces the ≤130 kB budget in CI from Phase 1 rather than discovering the breach in Phase 6.                     | I hand-roll `scripts/budget-check.mjs` over the Next build manifest, roughly 60 lines, no dependency. Genuinely happy either way. |
 
 ### Explicitly not adding
 
@@ -230,22 +230,22 @@ wehatefastfood/
 
 All cross-platform: `node scripts/*.mjs` or a bare binary. No shell operators anywhere.
 
-| Script | Does |
-|---|---|
-| `dev` | `next dev` in `apps/web`. |
-| `build` | tokens → content validate → search index → `next build`. Fails on any content error. |
-| `check` | typecheck + lint + `content:validate` + `test` + secrets scan + budget check. **The definition of done.** |
-| `test` | Vitest, all workspaces. |
-| `test:e2e` | Playwright smoke suite. |
-| `content:validate` | Schema, reference graph, sanity checks. Errors fail, warnings print. |
-| `content:coverage` | The table that drives our working sessions: per chain — items held, markets held, missing fields, `verifiedOn` ages, additives lacking a second source. |
-| `i18n:extract` | Finds message keys, reports untranslated and orphaned. |
-| `i18n:translate` | Tier-1 translation run. Requires `ANTHROPIC_API_KEY`. |
-| `search:index` | Builds the client search JSON. |
-| `social:cards -- --item=<chain>/<item>` | Writes OG, 1080×1080 and 1080×1350 to `exports/social/`. |
-| `export:video-brief -- --item=<chain>/<item>` | Writes `exports/video-briefs/<chain>-<item>.json`. |
-| `tokens:build` | `tokens.json` → CSS custom properties + `tokens.export.json`. |
-| `brand:png` | Rasterises `packages/design-tokens/brand/*.svg` to 1080 px PNG, alpha preserved. Optional filter argument, e.g. `-- watermark`. |
+| Script                                        | Does                                                                                                                                                    |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dev`                                         | `next dev` in `apps/web`.                                                                                                                               |
+| `build`                                       | tokens → content validate → search index → `next build`. Fails on any content error.                                                                    |
+| `check`                                       | typecheck + lint + `content:validate` + `test` + secrets scan + budget check. **The definition of done.**                                               |
+| `test`                                        | Vitest, all workspaces.                                                                                                                                 |
+| `test:e2e`                                    | Playwright smoke suite.                                                                                                                                 |
+| `content:validate`                            | Schema, reference graph, sanity checks. Errors fail, warnings print.                                                                                    |
+| `content:coverage`                            | The table that drives our working sessions: per chain — items held, markets held, missing fields, `verifiedOn` ages, additives lacking a second source. |
+| `i18n:extract`                                | Finds message keys, reports untranslated and orphaned.                                                                                                  |
+| `i18n:translate`                              | Tier-1 translation run. Requires `ANTHROPIC_API_KEY`.                                                                                                   |
+| `search:index`                                | Builds the client search JSON.                                                                                                                          |
+| `social:cards -- --item=<chain>/<item>`       | Writes OG, 1080×1080 and 1080×1350 to `exports/social/`.                                                                                                |
+| `export:video-brief -- --item=<chain>/<item>` | Writes `exports/video-briefs/<chain>-<item>.json`.                                                                                                      |
+| `tokens:build`                                | `tokens.json` → CSS custom properties + `tokens.export.json`.                                                                                           |
+| `brand:png`                                   | Rasterises `packages/design-tokens/brand/*.svg` to 1080 px PNG, alpha preserved. Optional filter argument, e.g. `-- watermark`.                         |
 
 ---
 
@@ -265,7 +265,7 @@ All cross-platform: `node scripts/*.mjs` or a bare binary. No shell operators an
 
 - `verifiedOn` older than 365 days.
 - `saturatesG > fatG`; `sugarsG > carbohydrateG`; `fibreG + sugarsG > carbohydrateG`.
-- `sodiumMg` versus `saltG × 400` outside ±5 %. *Note: 400 is the EU FIC regulatory convention (salt = sodium × 2.5). The chemical ratio is 393.4. We use the regulatory constant and say so on the page, because US labels declare sodium while EU and UK labels declare salt, and we convert between them.*
+- `sodiumMg` versus `saltG × 400` outside ±5 %. _Note: 400 is the EU FIC regulatory convention (salt = sodium × 2.5). The chemical ratio is 393.4. We use the regulatory constant and say so on the page, because US labels declare sodium while EU and UK labels declare salt, and we convert between them._
 - Atwater energy check outside ±20 %: `4·protein + 4·carbohydrate + 9·fat + 2·fibre` versus `energyKcal`.
 - An item has exactly one market variant, i.e. the diff feature has nothing to show.
 
@@ -309,25 +309,25 @@ home → chains → chain → item; market switch changes the numbers **and** th
 
 ## 9. Risk register
 
-| Risk | Severity | Mitigation |
-|---|---|---|
-| Machine-translated evidence claims are wrong in a language nobody reviews | **Critical** | Narrow tier 2 (§11.7a); `noindex` tier 2; never machine-translate evidence or editorial fields. |
-| JS budget missed on the item page | High | Measured at Phase 3, go/no-go, options stated above. |
-| A chain publishes new figures and ours silently go stale | High | `verifiedOn` on every variant, visible on the page, warned at 365 days, listed by `content:coverage`. |
-| Trademark or trade-dress complaint | High | Text-only names, no logos, colours or photos, disclaimer on every chain page and in the footer, `accentToken` constrained (§11.7f). |
-| Sui generis database right | Medium | Manual, selective, attributed entries with our own analysis. No bulk import, and no fetching tooling without your explicit approval. |
-| Translate endpoint abused | Medium | Manifest allowlist, locale allowlist and rate limit, all before it is public. |
-| Content authoring becomes the bottleneck | Medium | Slash commands and `content:coverage` are treated as product, built in Phases 1–2, not deferred. |
+| Risk                                                                      | Severity     | Mitigation                                                                                                                           |
+| ------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Machine-translated evidence claims are wrong in a language nobody reviews | **Critical** | Narrow tier 2 (§11.7a); `noindex` tier 2; never machine-translate evidence or editorial fields.                                      |
+| JS budget missed on the item page                                         | High         | Measured at Phase 3, go/no-go, options stated above.                                                                                 |
+| A chain publishes new figures and ours silently go stale                  | High         | `verifiedOn` on every variant, visible on the page, warned at 365 days, listed by `content:coverage`.                                |
+| Trademark or trade-dress complaint                                        | High         | Text-only names, no logos, colours or photos, disclaimer on every chain page and in the footer, `accentToken` constrained (§11.7f).  |
+| Sui generis database right                                                | Medium       | Manual, selective, attributed entries with our own analysis. No bulk import, and no fetching tooling without your explicit approval. |
+| Translate endpoint abused                                                 | Medium       | Manifest allowlist, locale allowlist and rate limit, all before it is public.                                                        |
+| Content authoring becomes the bottleneck                                  | Medium       | Slash commands and `content:coverage` are treated as product, built in Phases 1–2, not deferred.                                     |
 
 ---
 
 ## 10. Phase task lists
 
 **Phase 1 — Foundation.** Workspaces, TS strict, ESLint flat config including the no-bare-strings rule, Tailwind v4 wired to `tokens.json`, `tokens:build`, Next app with the `[locale]` shell and the wordmark rendering, `CLAUDE.md`, five slash commands, three subagent definitions, CI, git hooks, an empty-but-passing `check`.
-*Done when:* `npm run check` and `npm run build` pass on an app with no content.
+_Done when:_ `npm run check` and `npm run build` pass on an app with no content.
 
 **Phase 2 — Content layer.** All Zod schemas, `ContentRepository`, reference graph and reverse index, `content:validate`, `content:coverage`, the nutrition maths module, unit tests, and one obviously-fake seed chain — `EXAMPLE BURGER CO (SEED DATA — NOT REAL)` — with three items across two markets, so the diff view has something to render in Phase 4.
-*Done when:* the validator catches every §6 rule in tests, and the coverage table prints.
+_Done when:_ the validator catches every §6 rule in tests, and the coverage table prints.
 
 **Phase 3 — Core pages.** Home, chains index, chain page, item page with the Specimen Card, reality check, traffic lights, intake arcs, ingredient chips and drawer, our-take box, sources, disclaimers, "Just the numbers" toggle, market switcher. Mobile and desktop. Plus the JS budget measurement and go/no-go.
 

@@ -17,21 +17,24 @@ const L = (hex) => {
   );
 };
 const CR = (a, b) => {
-  const la = L(a), lb = L(b);
+  const la = L(a),
+    lb = L(b);
   return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
 };
 
 // --- The palette, as extracted from brand/*.svg ---
 export const PALETTE = {
-  pink:      '#FF2D62', // brand accent. avatar ground, HATE, strike stroke
-  paper:     '#F6F2E8', // cream. heart fill, light ground, type on dark
-  ink:       '#16120F', // near-black. dark ground, type on light, patty band
-  greyDark:  '#8C8377', // struck-out LOVE on the ink ground
+  pink: '#FF2D62', // brand accent. avatar ground, HATE, strike stroke
+  paper: '#F6F2E8', // cream. heart fill, light ground, type on dark
+  ink: '#16120F', // near-black. dark ground, type on light, patty band
+  greyDark: '#8C8377', // struck-out LOVE on the ink ground
   greyLight: '#B9B2A4', // struck-out LOVE on paper; tagline on ink
-  white:     '#FFFFFF', // mono avatar only, never in the UI
+  white: '#FFFFFF', // mono avatar only, never in the UI
 };
 
-const AA_BODY = 4.5, AA_LARGE = 3.0, AA_NONTEXT = 3.0;
+const AA_BODY = 4.5,
+  AA_LARGE = 3.0,
+  AA_NONTEXT = 3.0;
 const pad = (s, n) => String(s).padEnd(n);
 const f = (n) => n.toFixed(2).padStart(6);
 
@@ -40,8 +43,14 @@ function row(label, fg, bg, need = AA_BODY) {
   const ok = r >= need;
   const note =
     need === AA_BODY
-      ? ok ? 'AA body' : r >= AA_LARGE ? 'large/non-text only' : 'FAIL'
-      : ok ? 'AA non-text' : 'FAIL';
+      ? ok
+        ? 'AA body'
+        : r >= AA_LARGE
+          ? 'large/non-text only'
+          : 'FAIL'
+      : ok
+        ? 'AA non-text'
+        : 'FAIL';
   console.log(`  ${pad(label, 34)} ${f(r)}:1  ${ok ? 'PASS' : 'FAIL'}  ${note}`);
   return { label, ratio: r, ok };
 }

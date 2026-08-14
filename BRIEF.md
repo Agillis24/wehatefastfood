@@ -19,7 +19,7 @@
 
 ## 1. What we are building
 
-**wehatefastfood.com** — an independent, evidence-based, deliberately opinionated resource that makes fast-food nutrition and ingredients *legible to a normal human being*.
+**wehatefastfood.com** — an independent, evidence-based, deliberately opinionated resource that makes fast-food nutrition and ingredients _legible to a normal human being_.
 
 The core loop: **pick a chain → pick a menu item → see what is actually in it, what those things do, and why they are there** — rendered as something you understand in three seconds, not a table of grams you scroll past.
 
@@ -27,7 +27,7 @@ This website is the hub of a wider project that will later include a no-face You
 
 **Audience:** curious general public, parents, people who eat fast food regularly and are not planning to stop. Not nutritionists, not dieters.
 
-**Voice:** dry, sharp, funny, specific. We are hostile to *the industry* — its formulation choices, its portion inflation, its marketing — and never to the person eating the food. Snark is aimed upward. Every claim is sourced. Think investigative reporting with a good art director, not a wellness blog.
+**Voice:** dry, sharp, funny, specific. We are hostile to _the industry_ — its formulation choices, its portion inflation, its marketing — and never to the person eating the food. Snark is aimed upward. Every claim is sourced. Think investigative reporting with a good art director, not a wellness blog.
 
 **Brand mark:** the wordmark reads `WE ~~LOVE~~ HATE FAST FOOD` — "LOVE" struck through, "HATE" stamped over it. Build it as inline SVG (not a raster file) so it can be animated, recoloured, and reused at any size across web, video and social.
 
@@ -35,15 +35,15 @@ This website is the hub of a wider project that will later include a no-face You
 
 ## 2. Non-negotiable principles
 
-| Principle | What it means in code |
-|---|---|
-| **Sourced or absent** | Every nutrition number and every factual claim carries `source` (URL + publisher + retrieval date) and `verifiedOn`. Content validation fails the build if a fact lacks a source. |
-| **No trademark infringement** | Chain names appear as **text only**, in our own typeface. Never their logos, brand colours as brand identifiers, packaging photos, mascots, or trade dress. Product imagery is our own comic-style illustration. A visible "not affiliated with, endorsed by, or sponsored by" notice sits in the footer and on every chain page. |
-| **Never body-shaming** | No exercise-equivalent framing ("run 45 minutes to burn this off"), no "guilt", no good/bad food moralising, no BMI, no weight-loss angle anywhere in copy or components. The frame is always *what is in it and why the company put it there*. Include a "Just the numbers" toggle that turns off all illustrative visualisations for people who prefer plain data. |
-| **Evidence, not scare-mongering** | Every additive entry carries an explicit `evidenceStrength` field (`well-established` / `mixed` / `emerging` / `contested`) and the current EU/US/UK regulatory status. Where regulators disagree, say so and show both. Never imply a hazard the evidence doesn't support — that is how this project loses its credibility permanently. |
-| **Accessible** | WCAG 2.2 AA. Colour is never the only carrier of meaning (traffic lights always carry a `HIGH` / `MED` / `LOW` text label). Every visualisation has an equivalent readable sentence in the DOM. Keyboard-operable everything. `prefers-reduced-motion` respected. |
-| **Fast on a cheap phone** | Mobile-first from a 360 px baseline. Static generation by default. Performance budget: LCP < 2.0 s on simulated Moto G / Slow 4G; ≤ 130 kB gzipped JS on an item page; zero layout shift. Interactive parts are islands, not a client-rendered app. |
-| **Private** | No third-party trackers, no ad SDKs, no cookie banner needed. Cookieless analytics only (Plausible or self-hosted Umami, behind an env var, disabled by default in dev). |
+| Principle                         | What it means in code                                                                                                                                                                                                                                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sourced or absent**             | Every nutrition number and every factual claim carries `source` (URL + publisher + retrieval date) and `verifiedOn`. Content validation fails the build if a fact lacks a source.                                                                                                                                                                                    |
+| **No trademark infringement**     | Chain names appear as **text only**, in our own typeface. Never their logos, brand colours as brand identifiers, packaging photos, mascots, or trade dress. Product imagery is our own comic-style illustration. A visible "not affiliated with, endorsed by, or sponsored by" notice sits in the footer and on every chain page.                                    |
+| **Never body-shaming**            | No exercise-equivalent framing ("run 45 minutes to burn this off"), no "guilt", no good/bad food moralising, no BMI, no weight-loss angle anywhere in copy or components. The frame is always _what is in it and why the company put it there_. Include a "Just the numbers" toggle that turns off all illustrative visualisations for people who prefer plain data. |
+| **Evidence, not scare-mongering** | Every additive entry carries an explicit `evidenceStrength` field (`well-established` / `mixed` / `emerging` / `contested`) and the current EU/US/UK regulatory status. Where regulators disagree, say so and show both. Never imply a hazard the evidence doesn't support — that is how this project loses its credibility permanently.                             |
+| **Accessible**                    | WCAG 2.2 AA. Colour is never the only carrier of meaning (traffic lights always carry a `HIGH` / `MED` / `LOW` text label). Every visualisation has an equivalent readable sentence in the DOM. Keyboard-operable everything. `prefers-reduced-motion` respected.                                                                                                    |
+| **Fast on a cheap phone**         | Mobile-first from a 360 px baseline. Static generation by default. Performance budget: LCP < 2.0 s on simulated Moto G / Slow 4G; ≤ 130 kB gzipped JS on an item page; zero layout shift. Interactive parts are islands, not a client-rendered app.                                                                                                                  |
+| **Private**                       | No third-party trackers, no ad SDKs, no cookie banner needed. Cookieless analytics only (Plausible or self-hosted Umami, behind an env var, disabled by default in dev).                                                                                                                                                                                             |
 
 ---
 
@@ -83,7 +83,7 @@ wehatefastfood/
 
 - **Next.js 15 (App Router) + React 19 + TypeScript in `strict` mode.** Static generation everywhere it is possible; route handlers only for the translation endpoint.
 - **Tailwind CSS v4**, configured entirely from `packages/design-tokens`. No hard-coded hex values anywhere in components.
-- **Content:** local JSON + MDX, validated by **Zod**. No CMS in phase 1 — I will be adding chains and items with you in Claude Code, so the authoring interface *is* the repo plus the slash commands. Design the loaders so a headless CMS could be swapped in behind them later.
+- **Content:** local JSON + MDX, validated by **Zod**. No CMS in phase 1 — I will be adding chains and items with you in Claude Code, so the authoring interface _is_ the repo plus the slash commands. Design the loaders so a headless CMS could be swapped in behind them later.
 - **Routing/i18n:** `next-intl`.
 - **Charts and visualisations:** hand-written SVG/CSS. **No charting library.** These visuals are the product; they must be exactly right and cost almost no bytes.
 - **Motion:** CSS transitions by default. `motion` (framer-motion) only if a specific interaction genuinely needs it — justify each use.
@@ -103,28 +103,28 @@ Define these in `packages/content/src/schemas/`. This is the spine of the whole 
 // Every factual assertion in the repo carries one of these.
 const Source = z.object({
   title: z.string(),
-  publisher: z.string(),            // "McDonald's Corporation", "EFSA", "FDA"
+  publisher: z.string(), // "McDonald's Corporation", "EFSA", "FDA"
   url: z.string().url(),
-  retrievedOn: z.string().date(),   // when WE looked at it
+  retrievedOn: z.string().date(), // when WE looked at it
   publishedOn: z.string().date().optional(),
-  type: z.enum(['company-disclosure','regulator','peer-reviewed','journalism','database']),
+  type: z.enum(['company-disclosure', 'regulator', 'peer-reviewed', 'journalism', 'database']),
 });
 
 const Chain = z.object({
-  slug: z.string(),                  // "example-burger-co"
-  name: z.string(),                  // text only — never a logo
+  slug: z.string(), // "example-burger-co"
+  name: z.string(), // text only — never a logo
   foundedYear: z.number().int().optional(),
   hqCountry: z.string().length(2).optional(),
-  marketsCovered: z.array(z.string().length(2)),  // ISO country codes we hold data for
+  marketsCovered: z.array(z.string().length(2)), // ISO country codes we hold data for
   oneLiner: z.string().max(140),
-  longIntro: z.string(),             // authored in EN, translated downstream
-  accentToken: z.string(),           // OUR token name, never their brand colour
-  dataStatus: z.enum(['verified','partial','unpublished']),
+  longIntro: z.string(), // authored in EN, translated downstream
+  accentToken: z.string(), // OUR token name, never their brand colour
+  dataStatus: z.enum(['verified', 'partial', 'unpublished']),
   sources: z.array(Source).min(1),
 });
 
 const NutritionFacts = z.object({
-  basis: z.enum(['per-serving','per-100g','per-100ml']),
+  basis: z.enum(['per-serving', 'per-100g', 'per-100ml']),
   servingSizeG: z.number().nullable(),
   energyKJ: z.number().nullable(),
   energyKcal: z.number().nullable(),
@@ -141,43 +141,69 @@ const NutritionFacts = z.object({
 // A single item can be formulated DIFFERENTLY per market. This is one of the
 // most interesting stories the site can tell, so it must be first-class from day one.
 const MarketVariant = z.object({
-  market: z.string().length(2),      // "US", "GB", "DE"
-  nutrition: z.array(NutritionFacts).min(1),   // per-serving AND per-100g where available
-  ingredientRefs: z.array(z.string()),          // → content/ingredients
-  additiveRefs: z.array(z.string()),            // → content/additives (E-numbers / INS)
+  market: z.string().length(2), // "US", "GB", "DE"
+  nutrition: z.array(NutritionFacts).min(1), // per-serving AND per-100g where available
+  ingredientRefs: z.array(z.string()), // → content/ingredients
+  additiveRefs: z.array(z.string()), // → content/additives (E-numbers / INS)
   allergens: z.array(z.string()),
   sources: z.array(Source).min(1),
   verifiedOn: z.string().date(),
-  status: z.enum(['verified','partial','unpublished']),
+  status: z.enum(['verified', 'partial', 'unpublished']),
 });
 
 const MenuItem = z.object({
   slug: z.string(),
   chainSlug: z.string(),
   name: z.string(),
-  category: z.enum(['burger','chicken','fries-sides','pizza','wrap','breakfast','dessert','drink','sauce','other']),
-  ourTake: z.string().optional(),    // short editorial note — clearly separated from facts in the UI
+  category: z.enum([
+    'burger',
+    'chicken',
+    'fries-sides',
+    'pizza',
+    'wrap',
+    'breakfast',
+    'dessert',
+    'drink',
+    'sauce',
+    'other',
+  ]),
+  ourTake: z.string().optional(), // short editorial note — clearly separated from facts in the UI
   variants: z.array(MarketVariant).min(1),
-  illustration: z.string().optional(),  // path to OUR illustration, never a company photo
+  illustration: z.string().optional(), // path to OUR illustration, never a company photo
 });
 
 const Additive = z.object({
-  slug: z.string(),                  // "e621-monosodium-glutamate"
+  slug: z.string(), // "e621-monosodium-glutamate"
   eNumber: z.string().nullable(),
-  names: z.array(z.string()),        // all the names it hides behind on labels
-  functionalClass: z.array(z.enum([
-    'preservative','emulsifier','stabiliser','colour','flavour-enhancer','sweetener',
-    'acidity-regulator','anticaking','antioxidant','raising-agent','thickener','humectant','other'
-  ])),
-  whatItIs: z.string(),              // plain language, ~60 words, no jargon
-  whyItIsInYourFood: z.string(),     // the commercial reason — this is the interesting part
+  names: z.array(z.string()), // all the names it hides behind on labels
+  functionalClass: z.array(
+    z.enum([
+      'preservative',
+      'emulsifier',
+      'stabiliser',
+      'colour',
+      'flavour-enhancer',
+      'sweetener',
+      'acidity-regulator',
+      'anticaking',
+      'antioxidant',
+      'raising-agent',
+      'thickener',
+      'humectant',
+      'other',
+    ]),
+  ),
+  whatItIs: z.string(), // plain language, ~60 words, no jargon
+  whyItIsInYourFood: z.string(), // the commercial reason — this is the interesting part
   evidenceSummary: z.string(),
-  evidenceStrength: z.enum(['well-established','mixed','emerging','contested']),
+  evidenceStrength: z.enum(['well-established', 'mixed', 'emerging', 'contested']),
   regulatoryStatus: z.object({
-    eu: z.string(), us: z.string(), uk: z.string(),
-  }),                                // e.g. "Authorised, ADI 0–XX mg/kg bw"
-  notableDivergence: z.string().nullable(),  // where regulators disagree, and why
-  sources: z.array(Source).min(2),   // two independent sources minimum for additives
+    eu: z.string(),
+    us: z.string(),
+    uk: z.string(),
+  }), // e.g. "Authorised, ADI 0–XX mg/kg bw"
+  notableDivergence: z.string().nullable(), // where regulators disagree, and why
+  sources: z.array(Source).min(2), // two independent sources minimum for additives
 });
 ```
 
@@ -199,15 +225,15 @@ All routes under `/[locale]/`. Everything statically generated.
 
 **`/chains` — Index.** All chains as a scannable grid with data-coverage badges (`12 items documented`, `partial`). Filter by country and category. Honest about what we don't have yet.
 
-**`/chains/[chain]`** — Chain header (text wordmark in *our* type), one-paragraph intro, market selector (this drives which variant data is shown site-wide, persisted in a cookie), category tabs, item grid where each card shows the item name, kcal, and a compact traffic-light strip.
+**`/chains/[chain]`** — Chain header (text wordmark in _our_ type), one-paragraph intro, market selector (this drives which variant data is shown site-wide, persisted in a cookie), category tabs, item grid where each card shows the item name, kcal, and a compact traffic-light strip.
 
 **`/chains/[chain]/[item]` — the centrepiece.** Get this page right and the project works. Sections, in order:
 
 1. **Header** — item name, chain, serving size, market selector, `verifiedOn` date.
 2. **The reality check** — the signature visualisation. Sugar as stacked cubes (1 cube = 4 g), salt as levelled teaspoons (1 tsp = 6 g salt), saturated fat as pats of butter (1 pat = 5 g). Animated on scroll into view, static under `prefers-reduced-motion`, each with a plain-text equivalent sentence in the DOM. **No exercise equivalents.**
-3. **Traffic lights** — UK FSA front-of-pack thresholds for fat, saturates, sugars and salt, computed per 100 g *and* per portion, with the numeric thresholds shown so the reader can check our maths. Text labels alongside colour.
+3. **Traffic lights** — UK FSA front-of-pack thresholds for fat, saturates, sugars and salt, computed per 100 g _and_ per portion, with the numeric thresholds shown so the reader can check our maths. Text labels alongside colour.
 4. **Reference intake context** — percentage of adult reference intakes, presented neutrally as arcs with numbers. No "you've used up X % of your day" language.
-5. **What's actually in it** — the ingredient list rendered as tappable chips. Additives are visually distinguished. Tapping opens a drawer with the decoder entry (no navigation away). Group by functional class with a heading like *"Five ingredients are here to make it survive a freezer."*
+5. **What's actually in it** — the ingredient list rendered as tappable chips. Additives are visually distinguished. Tapping opens a drawer with the decoder entry (no navigation away). Group by functional class with a heading like _"Five ingredients are here to make it survive a freezer."_
 6. **Same product, different country** — when two or more market variants exist, a diff view showing which additives/ingredients appear in one market and not another. This is the single most shareable feature on the site; build it properly.
 7. **Our take** — clearly demarcated editorial box, visually distinct from everything above it.
 8. **Sources** — every source listed, dated, linked. Non-negotiable, always visible, never collapsed by default on desktop.
@@ -294,7 +320,7 @@ Do not build these pipelines. Do build the interfaces they will plug into:
 - Keep `packages/content` free of any Next.js import so a Node-based video pipeline can consume it directly.
 - Reserve `/watch/[slug]` in the route plan (video landing pages), unimplemented for now.
 
-I have an existing Claude Code project — *"YouTube Video agent orchestration system"* — which will consume these. Don't assume anything about its internals; if I point you at that repo later, adapt the export schema to it rather than the other way round.
+I have an existing Claude Code project — _"YouTube Video agent orchestration system"_ — which will consume these. Don't assume anything about its internals; if I point you at that repo later, adapt the export schema to it rather than the other way round.
 
 ---
 

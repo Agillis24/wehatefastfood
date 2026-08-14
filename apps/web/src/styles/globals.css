@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+@import '@wff/design-tokens/tokens.css';
+
+/*
+ * Surfaces. See docs/BRAND.md §4.
+ *
+ * `paper` is the website. `ink` is video, YouTube and the deliberate
+ * punctuation bands. These are contexts we choose, not a preference the reader
+ * toggles - there is no dark mode to maintain twice.
+ *
+ * The one rule that must survive every future edit: on paper, pink is a
+ * pointer, never body text (3.24:1). On ink, pink is body text (5.15:1).
+ */
+
+@layer base {
+  :root {
+    --surface-bg: var(--color-paper);
+    --surface-fg: var(--color-ink);
+    --surface-muted: var(--color-muted);
+    --surface-rule: var(--color-muted);
+  }
+
+  [data-surface='ink'] {
+    --surface-bg: var(--color-ink);
+    --surface-fg: var(--color-paper);
+    --surface-muted: var(--color-grey-light);
+    --surface-rule: var(--color-grey-dark);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--surface-bg);
+    color: var(--surface-fg);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    /* Logical properties throughout, so RTL is a dir attribute and not a rebuild. */
+    text-align: start;
+  }
+
+  /* Numerals must never reflow as they change. */
+  [data-numeric],
+  .font-data {
+    font-family: var(--font-data);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Never removed. Clears the 3:1 non-text bar on both surfaces. */
+  :focus-visible {
+    outline: 2px solid var(--color-pink);
+    outline-offset: 2px;
+  }
+
+  /* WCAG 2.2 target size. Ingredient chips get more; nothing gets less. */
+  a,
+  button,
+  summary,
+  [role='button'] {
+    min-block-size: 24px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /*
+   * Pink emphasis inside running prose. A pink marker block carrying ink text
+   * measures 5.15:1 and passes AA; pink letterforms on paper measure 3.24:1 and
+   * do not. This is the accessible way to do what the brand asks for, and it is
+   * also the better gesture - a highlighter stroke rather than coloured text.
+   */
+  .mark-pink {
+    background-color: var(--color-pink);
+    color: var(--color-ink);
+    padding-inline: 0.2em;
+    padding-block: 0.05em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* The brand angle, as a divider. One angle, used everywhere. */
+  .rule-strike {
+    block-size: var(--hairline);
+    background-color: var(--surface-rule);
+    transform: rotate(var(--angle-strike));
+    transform-origin: center;
+  }
+}

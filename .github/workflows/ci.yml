@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # Windows is the primary development environment, so it is also what CI
+    # runs. A pipeline that only proves the code works on Linux does not prove
+    # the thing we need proved.
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Advisory only. Next 15 carries transitive postcss and sharp advisories
+      # with no patched 15.x release; moving to 16 is a stack decision, not a
+      # CI decision. Failing every build on it would just train us to ignore CI.
+      - name: Audit (advisory)
+        continue-on-error: true
+        run: npm audit --audit-level=high

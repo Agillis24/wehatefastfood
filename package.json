@@ -1,0 +1,67 @@
+{
+  "name": "wehatefastfood",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@wff/web",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "typecheck": "tsc --build --verbose",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "tokens:build": "node packages/design-tokens/src/build.mjs",
+    "brand:png": "node scripts/export-brand-png.mjs",
+    "contrast": "node scripts/contrast.mjs",
+    "content:validate": "node scripts/content-validate.mjs",
+    "content:coverage": "node scripts/content-coverage.mjs",
+    "i18n:extract": "node scripts/i18n-extract.mjs",
+    "i18n:translate": "node scripts/i18n-translate.mjs",
+    "search:index": "node scripts/search-index.mjs",
+    "social:cards": "node scripts/social-cards.mjs",
+    "export:video-brief": "node scripts/export-video-brief.mjs",
+    "secrets:scan": "node scripts/secrets-scan.mjs",
+    "budget:check": "node scripts/budget-check.mjs",
+    "prepare": "node scripts/install-git-hooks.mjs"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,mjs,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@next/eslint-plugin-next": "^15.1.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "lint-staged": "^15.3.0",
+    "prettier": "^3.4.0",
+    "simple-git-hooks": "^2.11.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.19.0",
+    "vitest": "^4.1.10"
+  }
+}
