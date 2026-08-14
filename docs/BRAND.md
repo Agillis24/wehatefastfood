@@ -15,7 +15,9 @@ Every design decision below is testable against that sentence. If an element imp
 
 ## 2. Direction: **Specimen dossier**
 
-The food is treated as a laboratory sample that has been logged, photographed, weighed and filed. Clinical card stock, hairline rules, monospace data, a stamped evidence mark, and comic-ink illustration as the only warm thing on the page.
+The food is treated as a sample that has been logged, weighed and filed. Hairline rules, monospace data, a stamped evidence mark, and comic-ink illustration.
+
+The client-set beige (§4) pulls the register one step away from the laboratory and towards the **filed paper** end of the same idea — tray liner, receipt roll, an evidence folder that has been handled. That is a better fit than clinical white, not a compromise: it removes the last risk of the "regulatory notice" problem below (nobody mistakes warm beige for an official form), it is easier on the eyes for long reading on a cheap screen, and the hot pink lands on it far harder than it would on white.
 
 ### Why not the other two
 
@@ -70,33 +72,49 @@ No exercise equivalents, ever. The unit is always a physical quantity of the sub
 
 ## 4. Colour
 
-Four brand tokens, one muted, plus a reserved functional set. The important constraint, and the one that shaped the palette: **red, amber and green are functional and reserved for the traffic lights.** The brand accent therefore has to live outside that band. That single rule is what keeps this from becoming another "near-black plus one acid accent" site.
+**Set by the client, 2026-08-14.** Three brand colours are fixed: beige ground, near-black type, hot pink for emphasis. Everything below is the accessible system built around them; the ratios are computed, not estimated (`scripts/contrast.mjs`).
 
-### Brand
+### Brand — fixed
 
-| Token | Hex | Role | Contrast |
+| Token | Hex | Role | Measured |
 |---|---|---|---|
-| `--c-ink` | `#131512` | All type, all illustration line work. Near-black with a faint green cast — comic ink on paper is never pure black. | 17.9 : 1 on card, 11.1 : 1 on board |
-| `--c-card` | `#FCFCFA` | Specimen card stock. The surface where data lives. | — |
-| `--c-board` | `#C6CBC3` | Page ground. Cool grey-green, the colour of a laboratory bench mat. Keeps the whole thing clinical rather than cosy. | — |
-| `--c-stamp` | `#2E24C4` | The one accent. Aniline stamp-pad blue-violet. Links, the HATE overprint, status marks, focus rings. | 9.4 : 1 on card |
-| `--c-muted` | `#5C6157` | Secondary text, meta rails, rules. | 6.2 : 1 on card |
+| `--c-paper` | `#F6F2E8` | Page ground and card stock. Warm beige — tray liner and receipt paper rather than clinical white. | — |
+| `--c-ink` | `#16120F` | All type, all illustration line work. | **16.66 : 1** on paper |
+| `--c-pink` | `#FF2D62` | Emphasis: highlighted words, the HATE overprint, links, focus rings, the one loud thing per screen. | 3.24 : 1 on paper |
+| `--c-muted` | `#5C5648` | Secondary text, meta rails, hairlines. Warm grey that belongs to the beige rather than fighting it. | **6.52 : 1** on paper |
 
-Card on board is only 1.6 : 1, which is deliberate — cards are separated by a 1.5 px `--c-ink` hairline, not by fill contrast, so the boundary passes the 3 : 1 non-text requirement and the page reads as filed paper rather than as floating panels.
+### The rule the pink forces: pink is a fill, not an ink
+
+`#FF2D62` on `#F6F2E8` measures **3.24 : 1**. That clears the 3 : 1 bar for large text and for non-text UI, and **fails the 4.5 : 1 bar for body text**. Since WCAG 2.2 AA is non-negotiable in §2 of the brief, emphasis inside running prose cannot be pink letterforms.
+
+It can be a pink block with black letters on it: `--c-ink` on `--c-pink` measures **5.15 : 1** and passes comfortably. So:
+
+| Use | Allowed | Why |
+|---|---|---|
+| Highlighted word inside body text | **Pink marker block, ink text** | 5.15 : 1. Also the better gesture — a highlighter stroke, not coloured text. |
+| Display type, ≥ 24 px or ≥ 18.66 px bold | **Pink letterforms** | 3.24 : 1 clears the large-text bar. Wordmark, section numbers, big pull quotes. |
+| Body-size text, links inline in prose | **Ink text + pink underline** | Pink carries the signal as a rule, ink carries the reading. |
+| Beige text on pink | **Never** | 3.24 : 1. Pink fills take ink, never paper. |
+| Rules, icons, focus rings, chart marks | **Pink** | Non-text, 3 : 1 bar met. |
+
+Focus ring: 2 px `--c-pink`, 2 px offset, on everything, never removed.
 
 ### Reserved functional — traffic lights
 
-| Token | Hex | Text on it | Contrast |
+The pink creates a collision the original palette did not have: `#FF2D62` and an FSA red are both hot reds, and a reader must never wonder whether a pink thing is a `HIGH` warning. Measured separation between the brand pink and candidate reds: `#B3261E` → 1.81 : 1 (too close), `#8C1D18` → 2.52 : 1, `#7A1410` → **3.00 : 1**. So the FSA red goes deep oxblood, far enough down in value that pink and red never read as the same ink.
+
+| Token | Hex | Text on it | Measured |
 |---|---|---|---|
-| `--c-tl-high` | `#B3261E` | `--c-card` | 6.4 : 1 |
-| `--c-tl-med` | `#F0A500` | `--c-ink` | 8.8 : 1 |
-| `--c-tl-low` | `#1E6E3C` | `--c-card` | 6.1 : 1 |
-| `--c-tl-med-text` | `#7A4E00` | on `--c-card` | 7.0 : 1 |
+| `--c-tl-high` | `#7A1410` | `--c-paper` | **9.71 : 1** |
+| `--c-tl-med` | `#D98C00` | `--c-ink` | **6.83 : 1** |
+| `--c-tl-low` | `#1B5E34` | `--c-paper` | **6.96 : 1** |
 
-Two rules that fall straight out of those numbers, and that I want in the code as lint-enforced constants:
+Four rules, to be enforced as constants in code rather than left to discipline:
 
-1. **Amber never carries white text** — white on `#F0A500` is 2.0 : 1 and fails badly. Amber chips take ink text. Red and green chips take card-white text. This asymmetry is not a mistake, it is the accessible answer.
-2. **Amber is never used as text colour on the card** — `#F0A500` as type on `#FCFCFA` is 2.0 : 1. When we need amber-flavoured prose, we use `--c-tl-med-text`.
+1. **Amber never carries paper text** — it takes ink text. Red and green take paper text. The asymmetry is the accessible answer, not an oversight.
+2. **Amber is never a text colour on paper** — `#D98C00` as type on beige is 2.44 : 1. Amber-flavoured prose uses `--c-ink`.
+3. **Every chip carries a 1.5 px `--c-ink` hairline.** Amber against beige is only 2.44 : 1, below the 3 : 1 non-text bar, so the chip boundary must never depend on fill contrast alone. Applying the hairline to all three keeps them a set.
+4. **Pink never appears inside the traffic-light module, and the traffic-light reds never appear outside it.** The semaphore is a bounded, ruled box. Contained, the two reds cannot be confused; scattered, they always will be.
 
 And the non-negotiable from §2 of the brief: every traffic light carries its `HIGH` / `MED` / `LOW` label as text, always, at every size, including inside the OG image where nobody can hover.
 
@@ -142,7 +160,9 @@ Inline SVG, drawn from live text nodes so it can be recoloured, animated and res
             ↑ strike     ↑ stamp
 ```
 
-Construction: `WE`, `LOVE`, `HATE`, `FAST FOOD` as four `<text>` elements in Archivo at `wdth 62 / wght 900`. `LOVE` in `--c-muted` with a 3 px `--c-ink` strike rule drawn as a `<rect>`. `HATE` in `--c-stamp`, rotated −2.5°, overlapping `LOVE` by about 15 % of its width, with a subtle ink-density texture so it reads as pressed rather than typeset.
+Construction: `WE`, `LOVE`, `HATE`, `FAST FOOD` as four `<text>` elements in Archivo at `wdth 62 / wght 900`. `LOVE` in `--c-muted` with a 3 px `--c-ink` strike rule drawn as a `<rect>`. `HATE` in `--c-pink`, rotated −2.5°, overlapping `LOVE` by about 15 % of its width, with a subtle ink-density texture so it reads as pressed rather than typeset. The wordmark is always display-size, which is exactly the case where pink letterforms are permitted (§4).
+
+*Pending: the client is supplying a logo and banner. When they land, this section is reconciled against them — the drawn mark either becomes the logo or is retired in its favour.*
 
 **On load** (skipped entirely under `prefers-reduced-motion`, where the resolved state renders immediately): the strike rule draws left to right over 260 ms, then `HATE` stamps in — scale 1.06 → 1.00, opacity 0 → 1, 140 ms, one bounce-free ease-out. Total under 450 ms. It resolves once per session, not on every navigation.
 
@@ -261,7 +281,8 @@ Nothing else moves. No parallax, no counters ticking up (a number that animates 
 ## 10. Accessibility, baked in rather than audited on
 
 - Colour is never the only carrier: every traffic light has its text label, every diff row has a `+` / `−` glyph as well as a colour, every quantity stack has its sentence.
-- Focus ring is a 2 px `--c-stamp` outline with a 2 px offset, on everything, never removed.
+- Focus ring is a 2 px `--c-pink` outline with a 2 px offset, on everything, never removed. At 3.24 : 1 against the paper it clears the non-text bar.
+- Pink is never the only carrier of emphasis: an emphasised phrase is a pink block *and* the sentence still reads correctly if the colour is stripped.
 - "Just the numbers" is a first-class mode, persisted, that hides all illustrative visualisations and leaves the tables and sentences. It is in the sticky rail on desktop and directly under the card on mobile, not buried in a settings page.
 - CSS logical properties everywhere so RTL is a `dir` attribute, not a rebuild.
 - Target size 24 × 24 px minimum (WCAG 2.2), and 44 px for the ingredient chips, which are the most-tapped things on the site.
@@ -279,4 +300,4 @@ Nothing else moves. No parallax, no counters ticking up (a number that animates 
 
 ## 12. What we will never do
 
-Recorded so a future session does not drift back into it: exercise equivalents; before/after bodies; scales, waistlines or BMI; the words "guilt", "cheat", "clean" or "toxic" as a category; a single letter or number grade that ranks a food good or bad; red used for anything that is not a measured FSA `HIGH`; a stock photograph; a competitor's brand colour used to identify them; a claim without a source.
+Recorded so a future session does not drift back into it: exercise equivalents; before/after bodies; scales, waistlines or BMI; the words "guilt", "cheat", "clean" or "toxic" as a category; a single letter or number grade that ranks a food good or bad; the FSA oxblood used for anything that is not a measured `HIGH`; brand pink used inside the traffic-light module, or pink letterforms at body size; a stock photograph; a competitor's brand colour used to identify them; a claim without a source.

@@ -327,7 +327,7 @@ home → chains → chain → item; market switch changes the numbers **and** th
 Full argument in the chat message accompanying this document; recorded here so a future session has it.
 
 1. **Default market → GB**, with US as the first companion market.
-2. **Core locales → confirm the eight**, but translate late, and settle `pt-PT` vs `pt-BR` and `es-ES` vs `es-419` now.
+2. **Core locales → the eight stand, with `cs` promoted to pilot locale.** Czech is the only locale the client can personally review, so it runs first and alone: it is the acceptance test for the whole tier-1 pipeline — glossary handling, do-not-translate terms, voice preservation, placeholder integrity — before a single token is spent on the other seven. Still to settle: `pt-PT` vs `pt-BR` and `es-ES` vs `es-419`.
 3. **Design direction → Specimen dossier**, signature element the **Specimen Card**. Full argument in `docs/BRAND.md`.
 4. **First real chain → McDonald's**, GB and US, so the diff view has a payload immediately.
 5. **Nutri-Score → no for v1**, because computing it would require estimating inputs the chains do not publish.
