@@ -11,6 +11,8 @@ const CATALOGUES = {
   en: async () => ({
     ...(await import('@wff/i18n/messages/en/common.json')).default,
     home: (await import('@wff/i18n/messages/en/home.json')).default,
+    item: (await import('@wff/i18n/messages/en/item.json')).default,
+    chains: (await import('@wff/i18n/messages/en/chains.json')).default,
   }),
 } satisfies Record<AvailableLocale, () => Promise<Record<string, unknown>>>;
 

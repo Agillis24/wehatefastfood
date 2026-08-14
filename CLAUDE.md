@@ -67,7 +67,7 @@ docs/                  PLAN.md ARCHITECTURE.md CONTENT_GUIDE.md BRAND.md LEGAL.m
 
 ## Things that will bite you
 
-**`locale` and `market` are different axes.** Locale is the language, and lives in the URL path. Market is the jurisdiction the _figures_ describe, and lives in the URL query (`?m=GB`). A cookie may set the default; it may never be the only carrier, or a shared link shows different numbers to different readers. See `docs/PLAN.md` §2.2.
+**`locale` and `market` are different axes, and both live in the path.** `/{locale}/chains/{chain}/{item}/{market}`. A cookie may set a default; it may never be the only carrier, or a shared link shows different numbers to different readers. Market is a path segment rather than a query parameter because Next cannot statically prerender per query value. See `docs/PLAN.md` §2.2.
 
 **`packages/content` must not import `next`, `react` or `react-dom`.** Enforced by ESLint. The video pipeline runs under plain Node.
 
@@ -112,8 +112,12 @@ Use the slash commands in `.claude/commands/`. They exist so that the rules abov
 
 ## Current state
 
-Phases 0-2 complete. Phase 3 next: home, chains index, chain page, and the item page with the
-Specimen Card, reality check, traffic lights and ingredient drawer.
+Phases 0-3 complete. Phase 4 next: decoder, compare, search, market-diff view.
+
+**The item page ships zero client JavaScript.** Visualisations are server-rendered SVG, the additive
+drawer is a native `<details>`, the market switcher is a row of links, and plain-data mode is a CSS
+checkbox driven by `:has()`. Measured: 107 kB First Load JS against a 130 kB budget. Keep it that
+way - the first `'use client'` on this route spends a budget that is currently entirely unspent.
 
 Two measurements worth carrying forward:
 

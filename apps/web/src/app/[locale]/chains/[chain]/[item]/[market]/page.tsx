@@ -1,0 +1,301 @@
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import {
+  FSA_NUTRIENTS,
+  bandFor,
+  referenceIntakePercent,
+  resolvePer100,
+  pickBasis,
+  type Additive,
+  type BandResult,
+  type Chain,
+  type Ingredient,
+  type MenuItem,
+  type MarketVariant,
+  type Source,
+} from '@wff/content';
+import { AVAILABLE_LOCALES } from '@/i18n/routing';
+import { getContent } from '@/lib/content';
+import { itemPath } from '@/lib/url';
+import { absoluteUrl } from '@/lib/site';
+import { grams, isoDate } from '@/lib/format';
+import { RealityCheck } from '@/components/data/RealityCheck';
+import { ReferenceIntake } from '@/components/data/ReferenceIntake';
+import { TrafficLights } from '@/components/data/TrafficLights';
+import { IngredientChips } from '@/components/content/IngredientChips';
+import { SourceList } from '@/components/content/SourceList';
+import {
+  Disclaimers,
+  MarketSwitcher,
+  PlainToggle,
+  SiteFooter,
+  SiteHeader,
+} from '@/components/ui/Chrome';
+
+/**
+ * The centrepiece. Get this page right and the project works.
+ *
+ * Statically generated once per (locale, chain, item, MARKET) - the market is a
+ * path segment precisely so each set of figures is its own real page with its
+ * own canonical URL. See lib/url.ts.
+ *
+ * Zero client JavaScript: the visualisations are server-rendered SVG, the
+ * additive drawer is a native <details>, the market switcher is a row of links
+ * and plain-data mode is a CSS checkbox.
+ */
+
+type Params = { locale: string; chain: string; item: string; market: string };
+
+export async function generateStaticParams() {
+  const repo = await getContent();
+  const items = await repo.listItems();
+
+  return AVAILABLE_LOCALES.flatMap((locale) =>
+    items.flatMap((item) =>
+      item.variants.map((variant) => ({
+        locale,
+        chain: item.chainSlug,
+        item: item.slug,
+        market: variant.market,
+      })),
+    ),
+  );
+}
+
+async function load(params: Params) {
+  const repo = await getContent();
+  const item = await repo.getItem(params.chain, params.item);
+  if (!item) return null;
+
+  const chain = await repo.getChain(params.chain);
+  if (!chain) return null;
+
+  const variant = item.variants.find((v) => v.market === params.market.toUpperCase());
+  const thresholds = await repo.getFsaThresholds();
+  const intakes = await repo.getReferenceIntakes();
+
+  const ingredients: Ingredient[] = [];
+  const additives: Additive[] = [];
+  if (variant) {
+    for (const ref of variant.ingredientRefs) {
+      const found = await repo.getIngredient(ref);
+      if (found) ingredients.push(found);
+    }
+    for (const ref of variant.additiveRefs) {
+      const found = await repo.getAdditive(ref);
+      if (found) additives.push(found);
+    }
+  }
+
+  return { item, chain, variant, thresholds, intakes, ingredients, additives };
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const resolved = await params;
+  const data = await load(resolved);
+  const t = await getTranslations({ locale: resolved.locale, namespace: 'brand' });
+  if (!data) return { title: t('name') };
+
+  return {
+    title: `${data.item.name} - ${data.chain.name}`,
+    description: t('tagline'),
+    alternates: {
+      canonical: absoluteUrl(
+        itemPath(resolved.locale, resolved.chain, resolved.item, resolved.market.toUpperCase()),
+      ),
+    },
+  };
+}
+
+export default async function ItemPage({ params }: { params: Promise<Params> }) {
+  const resolved = await params;
+  setRequestLocale(resolved.locale);
+
+  const data = await load(resolved);
+  if (!data) notFound();
+
+  const isDrink = data.item.category === 'drink';
+  const per100 = data.variant ? resolvePer100(data.variant.nutrition) : null;
+  const serving = data.variant ? (pickBasis(data.variant.nutrition, 'per-serving') ?? null) : null;
+
+  const bands: BandResult[] =
+    per100 && data.thresholds
+      ? FSA_NUTRIENTS.map((n) => bandFor(n, per100, serving, isDrink, data.thresholds!)).filter(
+          (b): b is BandResult => b !== null,
+        )
+      : [];
+
+  const intakeRows =
+    serving && data.intakes
+      ? (
+          [
+            ['energy', 'energyKcal'],
+            ['fat', 'fatG'],
+            ['saturates', 'saturatesG'],
+            ['sugars', 'sugarsG'],
+            ['salt', 'saltG'],
+          ] as const
+        ).map(([label, key]) => ({
+          key: label,
+          rawKey: key,
+          percent: referenceIntakePercent(serving, key, data.intakes!),
+          reference: String(data.intakes![key]),
+        }))
+      : [];
+
+  return (
+    <ItemView
+      locale={resolved.locale}
+      marketParam={resolved.market.toUpperCase()}
+      item={data.item}
+      chain={data.chain}
+      variant={data.variant}
+      bands={bands}
+      intakeRows={intakeRows}
+      ingredients={data.ingredients}
+      additives={data.additives}
+      isDrink={isDrink}
+      servingG={serving?.servingSizeG ?? null}
+      realityRows={[
+        { kind: 'sugar' as const, grams: serving?.sugarsG ?? null },
+        { kind: 'salt' as const, grams: serving?.saltG ?? null },
+        { kind: 'saturates' as const, grams: serving?.saturatesG ?? null },
+      ]}
+      provisional={data.thresholds?.status !== 'verified'}
+    />
+  );
+}
+
+type ViewProps = {
+  locale: string;
+  marketParam: string;
+  item: MenuItem;
+  chain: Chain;
+  variant: MarketVariant | undefined;
+  bands: BandResult[];
+  intakeRows: { key: string; rawKey: string; percent: number | null; reference: string }[];
+  ingredients: Ingredient[];
+  additives: Additive[];
+  isDrink: boolean;
+  servingG: number | null;
+  realityRows: { kind: 'sugar' | 'salt' | 'saturates'; grams: number | null }[];
+  provisional: boolean;
+};
+
+function ItemView(props: ViewProps) {
+  const t = useTranslations('item.header');
+  const tIntake = useTranslations('item.intake');
+  const tSources = useTranslations('item.sources');
+  const tTake = useTranslations('item.ourTake');
+  const { locale, item, chain, variant } = props;
+
+  const markets = item.variants.map((v) => v.market);
+
+  // An identifier, not prose, so it is composed here rather than inside JSX -
+  // which is also what the no-bare-strings rule is telling us by refusing it.
+  const specimenId = `${chain.slug.slice(0, 3).toUpperCase()}-${props.marketParam}`;
+
+  return (
+    <>
+      <SiteHeader locale={locale} />
+
+      <main id="main" className="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-8">
+        <header className="flex flex-col gap-3">
+          <p className="font-data text-xs tracking-widest uppercase">
+            {chain.name}
+            {' · '}
+            <span data-numeric>{t('specimen')}</span> <span data-numeric>{specimenId}</span>
+          </p>
+          <h1 className="font-display text-4xl leading-none font-black sm:text-6xl">{item.name}</h1>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <MarketSwitcher
+              locale={locale}
+              chain={item.chainSlug}
+              item={item.slug}
+              markets={markets}
+              current={props.marketParam}
+            />
+            <PlainToggle />
+          </div>
+
+          {variant ? (
+            <p className="font-data text-xs text-[var(--surface-muted)]" data-numeric>
+              {t('verified')} {isoDate(locale, variant.verifiedOn)}
+              {props.servingG !== null
+                ? ` · ${t('servingSize')} ${grams(locale, props.servingG)}`
+                : ''}
+            </p>
+          ) : null}
+        </header>
+
+        <div className="rule-strike" aria-hidden="true" />
+
+        {variant === undefined ? (
+          <section className="flex flex-col gap-3 border-[1.5px] border-ink p-4">
+            <h2 className="font-display text-2xl font-extrabold">{t('noDataTitle')}</h2>
+            <p>{t('noDataBody')}</p>
+            <p className="font-data text-sm">
+              {t('marketsWeHold')} <span data-numeric>{markets.join(', ')}</span>
+            </p>
+          </section>
+        ) : (
+          <>
+            <RealityCheck rows={props.realityRows} locale={locale} />
+
+            <TrafficLights
+              bands={props.bands}
+              locale={locale}
+              isDrink={props.isDrink}
+              provisional={props.provisional}
+            />
+
+            <ReferenceIntake
+              rows={props.intakeRows.map((r) => ({
+                key: r.key,
+                label: tIntake(r.key as 'energy'),
+                percent: r.percent,
+                reference: r.reference,
+              }))}
+              locale={locale}
+            />
+
+            <IngredientChips
+              ingredients={props.ingredients}
+              additives={props.additives}
+              allergens={variant.allergens}
+            />
+
+            {item.ourTake !== undefined ? (
+              <section
+                aria-labelledby="take-title"
+                className="border-s-4 border-pink bg-[var(--color-paper)] ps-4"
+              >
+                <h2 id="take-title" className="font-display text-2xl font-extrabold">
+                  {tTake('title')}
+                </h2>
+                <p className="font-data text-xs text-[var(--surface-muted)]">{tTake('label')}</p>
+                <p className="mt-2">{item.ourTake}</p>
+              </section>
+            ) : null}
+
+            <SourceList
+              locale={locale}
+              groups={[
+                { heading: tSources('forThisMarket'), sources: variant.sources as Source[] },
+                { heading: tSources('forTheChain'), sources: chain.sources as Source[] },
+              ]}
+            />
+          </>
+        )}
+
+        <div className="rule-strike" aria-hidden="true" />
+        <Disclaimers />
+      </main>
+
+      <SiteFooter locale={locale} />
+    </>
+  );
+}

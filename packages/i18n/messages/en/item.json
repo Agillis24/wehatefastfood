@@ -1,0 +1,93 @@
+{
+  "header": {
+    "servingSize": "Serving size",
+    "market": "Market",
+    "verified": "Verified",
+    "specimen": "Specimen",
+    "unverifiedThresholds": "Our copy of the official thresholds has not yet been checked against the source document by a human. Treat these bands as provisional.",
+    "noDataTitle": "We do not hold data for this market",
+    "noDataBody": "Figures differ by country, and we will not show you one country's numbers as if they were another's.",
+    "marketsWeHold": "Markets we hold for this item:"
+  },
+  "reality": {
+    "title": "What is in this portion",
+    "sugar": "Sugar",
+    "salt": "Salt",
+    "saturates": "Saturated fat",
+    "cubeUnit": "{count} sugar cubes of {grams} g each",
+    "spoonUnit": "{count} level teaspoons of salt, {grams} g each",
+    "patUnit": "{count} pats of butter, {grams} g each",
+    "sentence": "This portion contains {value} of {nutrient} - about {units}.",
+    "notPublished": "{nutrient} is not published for this market."
+  },
+  "lights": {
+    "title": "Traffic lights",
+    "subtitle": "UK front-of-pack bands. The thresholds are shown so you can check our arithmetic.",
+    "per100": "per 100 g",
+    "per100ml": "per 100 ml",
+    "perPortion": "per portion",
+    "nutrient": "Nutrient",
+    "band": "Band",
+    "thresholds": "Thresholds",
+    "lowAtOrBelow": "LOW at or below {value} g",
+    "highAbove": "HIGH above {value} g",
+    "portionRule": "Raised to HIGH by the portion rule: more than {value} g in one portion.",
+    "notPublished": "Not published"
+  },
+  "intake": {
+    "title": "Reference intake",
+    "subtitle": "Percentage of an adult reference intake, for one portion.",
+    "ofReference": "{percent} of the {reference} reference intake",
+    "energy": "Energy",
+    "fat": "Fat",
+    "saturates": "Saturates",
+    "sugars": "Sugars",
+    "salt": "Salt"
+  },
+  "ingredients": {
+    "title": "What is actually in it",
+    "additive": "Additive",
+    "openEntry": "What is this?",
+    "whatItIs": "What it is",
+    "whyItIsHere": "Why it is in your food",
+    "evidence": "Evidence",
+    "regulatory": "Regulatory status",
+    "divergence": "Where regulators disagree",
+    "eu": "EU",
+    "us": "US",
+    "uk": "UK",
+    "none": "No ingredient list recorded for this market yet.",
+    "groupHeading": "{count, plural, one {# ingredient is} other {# ingredients are}} here to do a job: {classes}.",
+    "allergens": "Allergens"
+  },
+  "ourTake": {
+    "title": "Our take",
+    "label": "This section is our opinion. Everything above it is sourced fact."
+  },
+  "sources": {
+    "title": "Sources",
+    "retrieved": "retrieved {date}",
+    "published": "published {date}",
+    "forThisMarket": "For the figures on this page",
+    "forTheChain": "For the company"
+  },
+  "nutrition": {
+    "title": "The published panel",
+    "basis": "Basis",
+    "energy": "Energy",
+    "fat": "Fat",
+    "saturates": "of which saturates",
+    "carbohydrate": "Carbohydrate",
+    "sugars": "of which sugars",
+    "fibre": "Fibre",
+    "protein": "Protein",
+    "salt": "Salt",
+    "sodium": "Sodium",
+    "saltNote": "Where a company declares sodium rather than salt, we convert with the EU convention: salt = sodium x 2.5."
+  },
+  "plain": {
+    "on": "Just the numbers",
+    "off": "Show the illustrations",
+    "hint": "Turns off the illustrated visualisations and leaves every figure."
+  }
+}

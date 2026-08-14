@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "Chains",
+    "subtitle": "What we hold, and what we do not. The gaps are listed on purpose.",
+    "empty": "No chains documented yet.",
+    "itemsDocumented": "{count, plural, =0 {nothing documented} one {# item documented} other {# items documented}}",
+    "markets": "Markets"
+  },
+  "chain": {
+    "backToChains": "All chains",
+    "items": "Items",
+    "noItems": "No items documented for this chain yet.",
+    "kcal": "kcal",
+    "notPublished": "not published",
+    "coverage": "Data coverage"
+  },
+  "status": {
+    "verified": "Verified",
+    "partial": "Partial",
+    "unpublished": "Not published"
+  }
+}

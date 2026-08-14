@@ -98,3 +98,33 @@
     transform-origin: center;
   }
 }
+
+@layer components {
+  /*
+   * "Just the numbers" - zero JavaScript.
+   *
+   * A checkbox drives it and :has() hides everything marked [data-viz]. The
+   * plain sentence beside each visualisation is never marked, so it always
+   * survives: turning the pictures off must never remove a fact.
+   *
+   * Known limit: this does not persist across navigation. Doing that needs
+   * either a cookie (which forces dynamic rendering) or a small client island.
+   * Deferred to Phase 6 rather than spent from the item page's JS budget now.
+   */
+  .plain-toggle {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  main:has(.plain-toggle:checked) [data-viz] {
+    display: none;
+  }
+
+  .plain-toggle:focus-visible + label {
+    outline: 2px solid var(--color-pink);
+    outline-offset: 2px;
+  }
+}

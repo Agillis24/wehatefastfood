@@ -39,14 +39,16 @@ The brief treats language and data jurisdiction as if they travel together. They
 
 **Rule for the whole codebase:**
 
-|          | What it is                            | Where it lives                                      | Who chooses                                  |
-| -------- | ------------------------------------- | --------------------------------------------------- | -------------------------------------------- |
-| `locale` | The language of the prose             | URL path segment `/[locale]/…`                      | Reader, persisted in cookie                  |
-| `market` | The jurisdiction the _data_ describes | URL search param `?m=GB`, part of the canonical URL | Reader; cookie supplies only the **default** |
+|          | What it is                              | Where it lives                 | Who chooses                 |
+| -------- | --------------------------------------- | ------------------------------ | --------------------------- |
+| `locale` | The language of the prose               | URL path segment `/[locale]/…` | Reader, persisted in cookie |
+| `market` | The jurisdiction the _figures_ describe | URL path segment               | Reader, explicitly          |
 
-- The cookie sets the default on first arrival at a page with no `?m=`. The moment a market is chosen, it is written into the URL and every internal link carries it.
-- Canonical URL for an item is `/{locale}/chains/{chain}/{item}?m={market}`. Each `(item, market)` pair is a distinct static page with its own `verifiedOn`, its own structured data, its own OG image.
-- If an item has no variant for the requested market, we do not fall back silently. We render an explicit "We do not hold data for this market" state with a link to the markets we do hold.
+> **Corrected in Phase 3.** This section originally put the market in a query string (`?m=GB`). That does not survive contact with the requirement that everything be statically generated: Next cannot prerender a page per query value, and reading `searchParams` opts the whole route into dynamic rendering. The market therefore became a path segment. The principle is unchanged and better served - the URL names the jurisdiction, and each pair is now a genuinely separate, separately cacheable page.
+
+- Canonical URL for an item is `/{locale}/chains/{chain}/{item}/{market}`. Each `(item, market)` pair is a distinct static page with its own `verifiedOn`, its own structured data and its own OG image.
+- The chain page shows figures for the chain's **primary market**, named explicitly on the page. A per-market chain route would multiply the routes without adding anything the item page does not already do.
+- If an item has no variant for the requested market, we do not fall back silently. We render an explicit "We do not hold data for this market" state listing the markets we do hold.
 
 ### 2.3 Content pipeline
 
