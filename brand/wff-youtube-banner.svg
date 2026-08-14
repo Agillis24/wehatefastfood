@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1440" width="2560" height="1440"><rect width="2560" height="1440" fill="#16120F"/>
+  <g opacity="0.14">
+    <g transform="rotate(-19 1280 720)">
+      <rect x="-400" y="120" width="3400" height="150" fill="#FF2D62"/>
+      <rect x="-400" y="1180" width="3400" height="150" fill="#FF2D62"/>
+    </g>
+  </g>
+  <clipPath id="bm"><circle cx="800" cy="720" r="150"/></clipPath>
+  <g clip-path="url(#bm)"><g transform="translate(650,570) scale(0.3)">
+    <rect width="1000" height="1000" fill="#FF2D62"/>
+  <clipPath id="hb"><path d="M 500 830 C 500 830 175 625 175 400 C 175 275 268 205 358 205 C 425 205 476 246 500 298 C 524 246 575 205 642 205 C 732 205 825 275 825 400 C 825 625 500 830 500 830 Z"/></clipPath>
+  <g clip-path="url(#hb)"><rect x="0" y="0" width="1000" height="1000" fill="#F6F2E8"/><rect x="120" y="348" width="760" height="24" fill="#FF2D62"/><rect x="120" y="372" width="760" height="96" fill="#16120F"/><rect x="120" y="468" width="760" height="24" fill="#FF2D62"/></g>
+  <g transform="rotate(-19 500 500)">
+    <rect x="80" y="546" width="840" height="96" rx="6"
+          fill="#16120F" stroke="#FF2D62" stroke-width="20"/>
+  </g>
+  </g></g>
+  <g transform="translate(1010,536) scale(0.62)">
+
+  <text x="80" y="140" font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif" font-weight="bold" font-size="72" letter-spacing="6" fill="#F6F2E8">WE</text>
+  <text x="76" y="330" font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif" font-weight="bold" font-size="160" letter-spacing="2" fill="#8C8377">LOVE</text>
+  <rect x="60" y="262" width="452" height="28" fill="#F6F2E8"/>
+  <g transform="rotate(-7 640 300)">
+    <text x="404" y="356" font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif" font-weight="bold" font-size="176" letter-spacing="2" fill="#FF2D62">HATE</text>
+  </g>
+  <text x="76" y="520" font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif" font-weight="bold" font-size="160" letter-spacing="2" fill="#F6F2E8">FAST FOOD</text>
+  </g>
+  <text x="1047" y="906" font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif" font-weight="bold" font-size="36" letter-spacing="1" fill="#B9B2A4">What's actually in it — and why they put it there.</text>
+</svg>

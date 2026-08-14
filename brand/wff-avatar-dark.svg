@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000"><rect width="1000" height="1000" fill="#16120F"/>
+  <clipPath id="hd"><path d="M 500 830 C 500 830 175 625 175 400 C 175 275 268 205 358 205 C 425 205 476 246 500 298 C 524 246 575 205 642 205 C 732 205 825 275 825 400 C 825 625 500 830 500 830 Z"/></clipPath>
+  <g clip-path="url(#hd)"><rect x="0" y="0" width="1000" height="1000" fill="#F6F2E8"/><rect x="120" y="348" width="760" height="24" fill="#16120F"/><rect x="120" y="372" width="760" height="96" fill="#FF2D62"/><rect x="120" y="468" width="760" height="24" fill="#16120F"/></g>
+  <g transform="rotate(-19 500 500)">
+    <rect x="80" y="546" width="840" height="96" rx="6"
+          fill="#FF2D62" stroke="#16120F" stroke-width="20"/>
+  </g>
+</svg>

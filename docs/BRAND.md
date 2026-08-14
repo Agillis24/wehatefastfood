@@ -72,32 +72,80 @@ No exercise equivalents, ever. The unit is always a physical quantity of the sub
 
 ## 4. Colour
 
-**Set by the client, 2026-08-14.** Three brand colours are fixed: beige ground, near-black type, hot pink for emphasis. Everything below is the accessible system built around them; the ratios are computed, not estimated (`scripts/contrast.mjs`).
+**Extracted from the delivered brand assets, 2026-08-14** (`brand/*.svg`), not proposed. Every ratio below is the real output of `node scripts/contrast.mjs`. Nothing here is estimated.
 
-### Brand — fixed
+### The palette, as it exists in the assets
 
-| Token | Hex | Role | Measured |
-|---|---|---|---|
-| `--c-paper` | `#F6F2E8` | Page ground and card stock. Warm beige — tray liner and receipt paper rather than clinical white. | — |
-| `--c-ink` | `#16120F` | All type, all illustration line work. | **16.66 : 1** on paper |
-| `--c-pink` | `#FF2D62` | Emphasis: highlighted words, the HATE overprint, links, focus rings, the one loud thing per screen. | 3.24 : 1 on paper |
-| `--c-muted` | `#5C5648` | Secondary text, meta rails, hairlines. Warm grey that belongs to the beige rather than fighting it. | **6.52 : 1** on paper |
+| Token | Hex | Where it appears in the assets |
+|---|---|---|
+| `--c-pink` | `#FF2D62` | Avatar ground, `HATE`, the slash stroke, the banner's diagonal bands |
+| `--c-paper` | `#F6F2E8` | The heart fill, the light ground, type on the dark ground |
+| `--c-ink` | `#16120F` | The dark ground, type on the light ground, the patty band, the slash |
+| `--c-grey-dark` | `#8C8377` | Struck-out `LOVE` on the ink ground |
+| `--c-grey-light` | `#B9B2A4` | Struck-out `LOVE` on paper; the tagline on ink |
+| `--c-white` | `#FFFFFF` | Mono avatar **only** — single-colour reproduction, never in the UI |
 
-### The rule the pink forces: pink is a fill, not an ink
+### Two surfaces, and they are not equivalent
 
-`#FF2D62` on `#F6F2E8` measures **3.24 : 1**. That clears the 3 : 1 bar for large text and for non-text UI, and **fails the 4.5 : 1 bar for body text**. Since WCAG 2.2 AA is non-negotiable in §2 of the brief, emphasis inside running prose cannot be pink letterforms.
+The assets ship a light identity *and* a dark one. That is not redundancy, it is the channel split:
 
-It can be a pink block with black letters on it: `--c-ink` on `--c-pink` measures **5.15 : 1** and passes comfortably. So:
+- **Paper `#F6F2E8` — the website.** Reading, data, long sessions, daylight, cheap screens.
+- **Ink `#16120F` — video, YouTube, and deliberate punctuation.** The banner, the video frames, and on the site a small number of full-bleed bands (home hero, footer) that tie the channels together.
+
+The site does **not** get a user-facing dark mode. Dark is a surface we choose per context, not a preference we maintain twice.
+
+**Measured on paper `#F6F2E8`:**
+
+| Foreground | Ratio | Verdict |
+|---|---|---|
+| `--c-ink` | **16.66 : 1** | AA body ✓ |
+| `--c-pink` | 3.24 : 1 | Large text and non-text only |
+| `--c-grey-dark` | 3.34 : 1 | Large text and non-text only |
+| `--c-grey-light` | **1.88 : 1** | Decorative only — never text |
+
+**Measured on ink `#16120F`:**
+
+| Foreground | Ratio | Verdict |
+|---|---|---|
+| `--c-paper` | **16.66 : 1** | AA body ✓ |
+| `--c-grey-light` | **8.84 : 1** | AA body ✓ |
+| `--c-pink` | **5.15 : 1** | AA body ✓ |
+| `--c-grey-dark` | **4.99 : 1** | AA body ✓ |
+
+### The single most useful fact in this palette
+
+**On ink, pink can talk. On paper, pink can only point.**
+
+Pink is 5.15 : 1 on the dark ground — full body text, legally and legibly. It is 3.24 : 1 on paper, which fails AA for body text. The same colour is a voice on one surface and a pointer on the other, and every layout decision follows from that.
+
+Consequences on paper:
 
 | Use | Allowed | Why |
 |---|---|---|
-| Highlighted word inside body text | **Pink marker block, ink text** | 5.15 : 1. Also the better gesture — a highlighter stroke, not coloured text. |
-| Display type, ≥ 24 px or ≥ 18.66 px bold | **Pink letterforms** | 3.24 : 1 clears the large-text bar. Wordmark, section numbers, big pull quotes. |
-| Body-size text, links inline in prose | **Ink text + pink underline** | Pink carries the signal as a rule, ink carries the reading. |
-| Beige text on pink | **Never** | 3.24 : 1. Pink fills take ink, never paper. |
+| Highlighted word inside body text | **Pink marker block, ink text** | Ink on pink is 5.15 : 1. Also the better gesture — a highlighter stroke, not coloured text. |
+| Display type, ≥ 24 px or ≥ 18.66 px bold | **Pink letterforms** | 3.24 : 1 clears the large-text bar. Wordmark, section numbers, pull quotes. |
+| Link inside running prose | **Ink text, pink underline** | Pink carries the signal as a rule; ink carries the reading. |
+| Paper text on a pink fill | **Never** | 3.24 : 1. Pink fills take ink, never paper. |
 | Rules, icons, focus rings, chart marks | **Pink** | Non-text, 3 : 1 bar met. |
 
-Focus ring: 2 px `--c-pink`, 2 px offset, on everything, never removed.
+Consequences on ink: pink is unrestricted, including body copy — which is exactly why the video and YouTube surfaces are dark.
+
+### Derived UI greys
+
+The two brand greys are authored for specific jobs in the mark and do not cover the UI:
+
+- `--c-grey-light` at **1.88 : 1** on paper is invisible as text. Its only legitimate use on paper is the struck-out `LOVE`, where it is *meant* to recede and the strike carries the meaning. It is never a UI colour on the light surface.
+- `--c-grey-dark` at **3.34 : 1** on paper fails body text.
+
+So the light surface needs one derived member of the same warm-grey family:
+
+| Token | Hex | Role | Measured on paper |
+|---|---|---|---|
+| `--c-muted` | `#5C5648` | Secondary text, meta rails, hairlines | **6.52 : 1** ✓ |
+
+On the ink surface, `--c-grey-light` already fills that role at 8.84 : 1 and no derivation is needed.
+
+Focus ring: 2 px `--c-pink`, 2 px offset, on everything, never removed. It clears the 3 : 1 non-text bar on both surfaces.
 
 ### Reserved functional — traffic lights
 
@@ -113,8 +161,8 @@ Four rules, to be enforced as constants in code rather than left to discipline:
 
 1. **Amber never carries paper text** — it takes ink text. Red and green take paper text. The asymmetry is the accessible answer, not an oversight.
 2. **Amber is never a text colour on paper** — `#D98C00` as type on beige is 2.44 : 1. Amber-flavoured prose uses `--c-ink`.
-3. **Every chip carries a 1.5 px `--c-ink` hairline.** Amber against beige is only 2.44 : 1, below the 3 : 1 non-text bar, so the chip boundary must never depend on fill contrast alone. Applying the hairline to all three keeps them a set.
-4. **Pink never appears inside the traffic-light module, and the traffic-light reds never appear outside it.** The semaphore is a bounded, ruled box. Contained, the two reds cannot be confused; scattered, they always will be.
+3. **Every chip carries a 1.5 px hairline, and the hairline flips with the surface.** On paper the hairline is `--c-ink`, because amber against paper is only 2.44 : 1 — below the 3 : 1 non-text bar, so the boundary must never depend on fill contrast alone. On ink the hairline is `--c-paper`, because the oxblood is 1.72 : 1 against the dark ground and would otherwise dissolve into it. The fills and their text colours stay identical across both surfaces; only the hairline changes. That is what lets one component serve the website and the video frames.
+4. **Pink never appears inside the traffic-light module, and the traffic-light reds never appear outside it.** The semaphore is a bounded, ruled box. Contained, the two reds cannot be confused; scattered, they always will be. This rule matters more on ink, where pink is unrestricted everywhere else on the surface.
 
 And the non-negotiable from §2 of the brief: every traffic light carries its `HIGH` / `MED` / `LOW` label as text, always, at every size, including inside the OG image where nobody can hover.
 
@@ -129,6 +177,8 @@ Three roles, three families, all open-licensed and self-hosted — self-hosting 
 | **Display** | **Archivo** (variable, `wdth` 62–125, `wght` 400–900) | The width axis *is* the brand device. The wordmark sits at `wdth 62 / wght 900` for stamped, ultra-condensed impact; headings relax to 75–100. One variable file covers the whole display range, so we get a wide expressive range for roughly 35 kB. Grotesque, industrial, no nostalgia. |
 | **Body** | **Public Sans** (variable) | It is the typeface of the US Web Design System — literally the type of official public documentation. On a site about disclosure, prose that quietly wears the clothes of a public notice is the right register, and unlike the "regulatory notice" direction it does this at a whisper rather than a shout. Excellent at 16–17 px on a cheap screen. |
 | **Data** | **IBM Plex Mono** (400, 600) | Every numeral, E-number, date, specimen ID, threshold table and source citation. Real technical-document character, genuine tabular figures, and monospace is what makes the numbers look *recorded* rather than *composed*. This is a data site; the data face does the heavy lifting and the display face is used sparingly. |
+
+**The delivered assets confirm the display choice.** They ask for `DejaVu Sans Condensed, Arial Black, Helvetica` — a heavy condensed grotesque, all caps, tight letterspacing. That is a placeholder stack rather than a licensed choice (see the bug in §6), but the intent is unambiguous, and Archivo at a narrow width axis with weight 900 hits it while being a real self-hosted webfont with `latin-ext` coverage. No change to the plan; the assets validate it.
 
 **Non-Latin scripts.** We subset to `latin` + `latin-ext` (which covers `cs` and `pl` correctly). Tier-2 languages in Cyrillic, Greek, Arabic, CJK and Devanagari fall back to a documented system stack — we are not shipping 200 scripts. Arabic gets an explicit `font-family` override and is tested in the Playwright suite.
 
@@ -151,22 +201,56 @@ Spacing scale, 4 px base: `4 8 12 16 24 32 48 64 96`. Nothing off-scale.
 
 ---
 
-## 6. The wordmark
+## 6. The mark and the wordmark
 
-Inline SVG, drawn from live text nodes so it can be recoloured, animated and rescaled, per §1 of the brief.
+**Delivered by the client, 2026-08-14.** Files live in `brand/` at the repo root, outside the web app, because the video and social pipelines consume them too.
 
-```
-     WE  ██LOVE██  HATE  FAST FOOD
-            ↑ strike     ↑ stamp
-```
+### The mark
 
-Construction: `WE`, `LOVE`, `HATE`, `FAST FOOD` as four `<text>` elements in Archivo at `wdth 62 / wght 900`. `LOVE` in `--c-muted` with a 3 px `--c-ink` strike rule drawn as a `<rect>`. `HATE` in `--c-pink`, rotated −2.5°, overlapping `LOVE` by about 15 % of its width, with a subtle ink-density texture so it reads as pressed rather than typeset. The wordmark is always display-size, which is exactly the case where pink letterforms are permitted (§4).
+A heart in `--c-paper`, crossed by a black patty band with two thin pink gaps above and below it, struck through by a diagonal bar at −19° in ink with a pink stroke.
 
-*Pending: the client is supplying a logo and banner. When they land, this section is reconciled against them — the drawn mark either becomes the logo or is retired in its favour.*
+It carries the whole thesis in one shape. The heart is `LOVE`. The bands turn the heart into a burger cross-section. The diagonal is the strike, the same gesture as the wordmark's crossed-out `LOVE`, borrowed from prohibition signage. It resolves as *the thing we are supposed to love, sectioned and cancelled* — which is the site in one glance, and it does it without a single letterform, so it needs no translation in any locale.
 
-**On load** (skipped entirely under `prefers-reduced-motion`, where the resolved state renders immediately): the strike rule draws left to right over 260 ms, then `HATE` stamps in — scale 1.06 → 1.00, opacity 0 → 1, 140 ms, one bounce-free ease-out. Total under 450 ms. It resolves once per session, not on every navigation.
+Geometry is pure paths and rects, no text, so it renders identically on every machine and inside satori. All internal edges clear the 3 : 1 non-text bar: heart on pink ground 3.24 : 1, patty on heart 16.66 : 1, slash on pink 5.15 : 1.
 
-At small sizes and in the favicon, the mark degrades to `W~H` — the strike surviving as the tilde.
+### Asset inventory
+
+| File | Surface | Use |
+|---|---|---|
+| `wff-avatar-primary.svg` | pink ground | Primary avatar. Social profiles, the default mark. |
+| `wff-avatar-dark.svg` | ink ground | Dark-surface avatar. Pink patty on the paper heart. |
+| `wff-avatar-mono.svg` | transparent | Single-colour reproduction. Stamps, watermarks, print, embroidery. |
+| `wff-favicon.svg` | pink ground | Favicon. Drops the patty bands and keeps heart plus slash. |
+| `wff-wordmark-light.svg` | paper | Wordmark for the website. |
+| `wff-wordmark-dark.svg` | ink | Wordmark for video and dark bands. |
+| `wff-youtube-banner.svg` | ink | 2560 × 1440 channel banner, mark plus wordmark plus tagline. |
+
+The favicon simplification is the right call and should be preserved: at 16 px the patty bands turn to mush, while the heart silhouette and the diagonal survive. That is the small-size degradation — heart plus slash, nothing else. There is no need for a lettered fallback.
+
+**Tagline, as delivered:** *"What's actually in it — and why they put it there."* This is now the site's tagline of record and should be used verbatim, including on `/about` and in the OG description. It is a do-not-translate-loosely string: it goes in `content/glossary.json` as translate-consistently, not as free text.
+
+### Wordmark construction, and a bug in it
+
+Four text lines: `WE` small and letterspaced, `LOVE` in the recessive grey with a horizontal ink strike rect across it, `HATE` in `--c-pink` rotated −7° and overlapping `LOVE`, then `FAST FOOD`. The wordmark is always display-size, which is exactly the case where pink letterforms are permitted (§4).
+
+**Measured problem.** The delivered wordmarks use live `<text>` with `font-family="DejaVu Sans Condensed, Arial Black, Helvetica, sans-serif"`. DejaVu Sans Condensed is a Linux font. On Windows and macOS the stack falls through to a non-condensed face, every glyph gets wider, and the hand-positioned strike rect no longer matches the word it is striking. Rendered and measured in-browser on Windows:
+
+| Element | Renders | Strike rect |
+|---|---|---|
+| `LOVE` | x 76 → **554** | x 60 → **512** |
+
+The strike stops 42 px short, so the `E` of `LOVE` is left unstruck — the one thing in the mark that must not fail. `FAST FOOD` renders to x 1092 inside a 1200 viewBox, leaving 108 px of margin, so a slightly wider fallback also clips the wordmark.
+
+**Fix, in Phase 1:**
+
+1. Rebuild the wordmark in the real display face (Archivo, narrow width axis, weight 900 — it matches the delivered proportions and is a proper self-hosted webfont).
+2. Ship the static assets in `brand/` with **text converted to outlines**, so they are font-independent everywhere, including satori, OG images and any video tool.
+3. In the app, render the wordmark as a React component with the strike drawn from the measured text box rather than a fixed width, so it stays correct at any size and in any locale.
+4. Generate `clipPath` ids with React's `useId`. The delivered files already avoid collisions by hand (`hp`, `hd`, `hm`, `hf`, `hb`), but inlining several marks into one DOM will break that the moment anyone copies a file.
+
+### Motion
+
+Skipped entirely under `prefers-reduced-motion`, where the resolved state renders immediately. The strike rule draws left to right over 260 ms, then `HATE` stamps in — scale 1.06 → 1.00, opacity 0 → 1, 140 ms, ease-out, no bounce. Under 450 ms total. It resolves once per session, not on every navigation.
 
 ---
 
