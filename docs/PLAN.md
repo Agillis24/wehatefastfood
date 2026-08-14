@@ -152,6 +152,12 @@ wehatefastfood/
 │  └─ design-tokens/
 │     ├─ tokens.json                  single source of truth
 │     └─ src/build.mjs                emits tokens.css + tokens.export.json
+├─ brand/                        [+] delivered logo assets, root-level because the
+│  │                                 video and social pipelines consume them too
+│  ├─ wff-avatar-primary.svg  wff-avatar-dark.svg  wff-avatar-mono.svg
+│  ├─ wff-favicon.svg
+│  ├─ wff-wordmark-light.svg  wff-wordmark-dark.svg
+│  └─ wff-youtube-banner.svg
 ├─ content/
 │  ├─ chains/   items/<chain>/   additives/   ingredients/   articles/
 │  ├─ glossary.json
@@ -162,7 +168,9 @@ wehatefastfood/
 │  ├─ content-validate.mjs   content-coverage.mjs
 │  ├─ i18n-extract.mjs       i18n-translate.mjs
 │  ├─ search-index.mjs       social-cards.mjs   export-video-brief.mjs
-│  └─ budget-check.mjs            [+] fails CI if item-page JS exceeds budget
+│  ├─ contrast.mjs            [+] WCAG audit of the palette; every ratio quoted
+│  │                              in docs/BRAND.md is this script's real output
+│  └─ budget-check.mjs        [+] fails CI if item-page JS exceeds budget
 ├─ exports/                       [+] gitignored except the one committed example
 │  ├─ video-briefs/.gitkeep
 │  └─ social/.gitkeep

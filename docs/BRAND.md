@@ -13,11 +13,23 @@ Every design decision below is testable against that sentence. If an element imp
 
 ---
 
-## 2. Direction: **Specimen dossier**
+## 2. Direction: **Evidence poster**
 
-The food is treated as a sample that has been logged, weighed and filed. Hairline rules, monospace data, a stamped evidence mark, and comic-ink illustration.
+> **Revised 2026-08-14, after the brand assets arrived.** This section originally proposed "specimen dossier" — clinical white, laboratory register, comic halftone. The delivered mark contradicts it, and the mark is the fixed point, so the direction bends to the mark rather than the other way round. The reasoning for rejecting the other two directions is unchanged and kept below, because it still holds.
 
-The client-set beige (§4) pulls the register one step away from the laboratory and towards the **filed paper** end of the same idea — tray liner, receipt roll, an evidence folder that has been handled. That is a better fit than clinical white, not a compromise: it removes the last risk of the "regulatory notice" problem below (nobody mistakes warm beige for an official form), it is easier on the eyes for long reading on a cheap screen, and the hot pink lands on it far harder than it would on white.
+**What the delivered mark actually is:** flat vector, hard edges, zero texture, bold geometry, a saturated pink, a heart borrowed from pop and cancelled by a prohibition slash. That is not a laboratory. It is a **poster** — the visual language of signage, protest print and warning marks, where meaning is carried by shape and contrast rather than by texture and rule-work.
+
+**What survives from the original direction, and must:** the evidentiary discipline. Monospace numerals, visible verification dates, specimen numbers, sources always on the page, the tone of something recorded rather than composed. That was never about looking like a lab — it was about looking like we did the work, and it survives the change of register intact.
+
+So: **evidence poster.** Poster in its shapes and its confidence, evidence in its numbers and its receipts. The boldness lives in the mark, the pink and the geometry; everything numeric around it stays quiet, monospaced and disciplined.
+
+### The geometry the assets hand us
+
+The mark's slash sits at **−19°**, and the banner repeats that exact angle in its background bands. That is not decoration, it is a system: one angle, used everywhere, becomes the thing the eye recognises before it reads a word.
+
+`--angle-strike: -19deg` becomes a design token. It cuts section dividers, the edges of the dark punctuation bands, and the corner treatment of the Specimen Card. Used consistently it does what a signature element is supposed to do — makes a page identifiable from across a room, or from a thumbnail.
+
+One restraint, and it matters: **the strike is the brand's gesture, never a verdict on a food.** Striking through a chain's own marketing claim is fair game. Striking through a nutrition figure is not — that is the good/bad moralising §12 forbids, dressed up as geometry.
 
 ### Why not the other two
 
@@ -25,7 +37,7 @@ The client-set beige (§4) pulls the register one step away from the laboratory 
 
 **"Regulatory notice" — rejected on credibility.** The device is strong and I nearly took it. The problem is specific: our pages will be screenshotted and shared out of context, and a site that dresses its own claims in the typography of an official government warning will be read as an official government warning. For a project whose single asset is being trusted, deliberately borrowing regulatory authority we do not have is the one aesthetic risk we cannot take. It would also make the "where regulators disagree, we show both" feature incoherent — you cannot referee two regulators while cosplaying as a third.
 
-**Why "specimen dossier" wins.** It is the only one of the three that is *about our method rather than about their product*. It says: we looked at this, we recorded it, here is the file, here is the date, here is where it came from. That is exactly the promise in `/methodology`, rendered as a visual system. It also has three practical virtues: a light ground is the readable choice for dense numerics on a cheap phone in daylight; comic-ink illustration sits on a lab card more naturally than on any other surface; and the card is a physical object, so it crops to 16:9 for video and 4:5 for Instagram without redesign.
+**Why the evidence half survives both rejections.** Whatever the register, the direction has to be *about our method rather than about their product*. It says: we looked at this, we recorded it, here is the file, here is the date, here is where it came from. That is exactly the promise in `/methodology`, rendered as a visual system — and it is what keeps the poster register from sliding into the rage-blog it would otherwise resemble. Three practical virtues carry over unchanged: a light ground is the readable choice for dense numerics on a cheap phone in daylight; flat hard-edged artwork renders identically at any scale and inside satori; and the card is a physical object, so it crops to 16:9 for video and 4:5 for Instagram without redesign.
 
 ### One deliberate borrowing
 
@@ -44,7 +56,7 @@ A Specimen Card is a bordered card carrying, in fixed order:
 │ SPECIMEN  MCD-GB-0114        VERIFIED 14 AUG │  ← Plex Mono, meta rail
 ├──────────────────────────────────────────────┤
 │                                              │
-│              [ comic-ink illustration ]      │  ← our drawing, never a photo
+│           [ flat vector illustration ]       │  ← our artwork, never a photo
 │                                              │
 ├──────────────────────────────────────────────┤
 │  BIG MAC                                     │  ← Archivo, condensed, ink
@@ -55,12 +67,14 @@ A Specimen Card is a bordered card carrying, in fixed order:
 │  sugar      ▪▪▪▪▪▪▪▪▪            9 g  ≈ 2¼   │  ← the quantity stack
 │  salt       ◗◗                 2.3 g  ≈ ⅜    │
 │  saturates  ▬▬▬                 9 g  ≈ 1¾    │
-├──────────────────────────────────────────────┤
+├────────────────────────────────────────────╱─┤  ← −19° cut, the brand angle
 │  FAT  MED   SAT  HIGH   SUG  LOW   SALT MED  │  ← traffic lights, text + colour
 └──────────────────────────────────────────────┘
 ```
 
-**The interior — the quantity stack — is the actual hook.** Sugar drawn as stacked cubes at 4 g each, salt as levelled teaspoons at 6 g each, saturated fat as pats of butter at 5 g each, all three drawn in the same comic ink at *true relative scale to each other*, so the eye compares them without being told to. Partial units are drawn partial: 9 g of sugar is two cubes and a quarter cube, not "2.25 cubes" rounded to a lie. Every stack carries a plain sentence in the DOM immediately after it, which is what a screen reader gets and what the "Just the numbers" mode leaves behind:
+**Two surfaces, one component.** On paper for the website; on ink for video frames and the Instagram crops that need to punch. The fills and text colours of the traffic lights are identical across both — only the chip hairline flips (§4). Nothing else about the card changes, which is the whole point of it existing.
+
+**The interior — the quantity stack — is the actual hook.** Sugar drawn as stacked cubes at 4 g each, salt as levelled teaspoons at 6 g each, saturated fat as pats of butter at 5 g each, all three flat-vector in the mark's language and at *true relative scale to each other*, so the eye compares them without being told to. Partial units are drawn partial: 9 g of sugar is two cubes and a quarter cube, not "2.25 cubes" rounded to a lie. Every stack carries a plain sentence in the DOM immediately after it, which is what a screen reader gets and what the "Just the numbers" mode leaves behind:
 
 > This portion contains 9 g of sugar, about two and a quarter 4 g cubes.
 
@@ -256,10 +270,15 @@ Skipped entirely under `prefers-reduced-motion`, where the resolved state render
 
 ## 7. Illustration system
 
-- **Comic ink.** Confident single-weight `--c-ink` outline, flat fills, one halftone dot screen at 12 % ink for shading. No gradients, no soft shadows, no 3D.
-- **Everything is our own drawing.** Never a photograph, never packaging, never a mascot, never a logo shape. This is a §12 requirement, and it is also the thing that makes the video channel possible for free.
-- **Objects, not people.** We draw food, cubes, teaspoons, butter pats, molecules and factory equipment. We do not draw bodies. That is the design-level enforcement of the no-body-shaming rule.
-- **Fixed cast of measure objects** — the 4 g sugar cube, the 6 g salt teaspoon, the 5 g butter pat — drawn once, reused everywhere, at consistent relative scale, so the reader learns the vocabulary across items and the comparison between two items is honest.
+**Revised to follow the mark.** The brief (§8) asked for a comic/halftone treatment. The delivered mark has no texture at all — flat vector, hard edges, four colours, nothing else. Two incompatible languages on one page would look like two projects, so the illustration follows the mark.
+
+- **Flat geometric vector.** Hard edges, flat fills, no outline-and-shade, no halftone, no gradients, no soft shadows, no 3D. Form is carried by silhouette and by the four palette colours.
+- **Palette-locked.** Illustrations use `--c-ink`, `--c-paper`, `--c-pink` and nothing else on the light surface, mirrored on the dark. A drawing that needs a fifth colour is a drawing that is too complicated.
+- **Everything is our own artwork.** Never a photograph, never packaging, never a mascot, never a logo shape. A §12 requirement, and also the thing that makes the video channel possible for free.
+- **Objects, not people.** Food, cubes, teaspoons, butter pats, molecules, factory equipment. We never draw bodies. That is the design-level enforcement of the no-body-shaming rule.
+- **Fixed cast of measure objects** — the 4 g sugar cube, the 6 g salt teaspoon, the 5 g butter pat — drawn once, reused everywhere, at consistent relative scale, so the reader learns the vocabulary across items and any comparison between two items is honest.
+
+*Open for the client: if you want the comic feel the brief originally described, the cheapest honest way back is a single halftone texture used on illustration only and never on the mark or the UI. It should be a deliberate decision, not a drift. My recommendation is to stay flat — it matches your mark, it costs fewer bytes, and it survives being rendered at 48 px and at 1920 px without retouching.*
 
 ---
 
@@ -376,8 +395,9 @@ Nothing else moves. No parallax, no counters ticking up (a number that animates 
 
 ## 11. The same system in the other two channels
 
-- **YouTube.** The Specimen Card is the opening frame at 1920 × 1080; the quantity stack builds in the same order with the same objects; `tokens.export.json` supplies the exact hexes so the video is not a near-match.
-- **Instagram.** The card crops to 1080 × 1080 (card only) and 1080 × 1350 (card plus one stamped headline). `npm run social:cards` emits both from the same component that renders the page.
+- **YouTube.** Channel art is `brand/wff-youtube-banner.svg`; the avatar is `brand/wff-avatar-primary.svg`. Video frames use the **ink surface**, where pink is unrestricted (§4). The Specimen Card is the opening frame at 1920 × 1080, the quantity stack builds in the same order with the same objects, and `tokens.export.json` supplies the exact hexes and `--angle-strike` so the video is not a near-match but the same system.
+- **Instagram.** Profile picture is `brand/wff-avatar-primary.svg`. The card crops to 1080 × 1080 (card only) and 1080 × 1350 (card plus one stamped headline). `npm run social:cards` emits both from the same component that renders the page, choosing the paper or ink surface per post.
+- **Everywhere.** The tagline of record is *"What's actually in it — and why they put it there."* — verbatim, and in `content/glossary.json` as a translate-consistently term.
 - **Never** a chain logo, a photograph of packaging, or their colours, in any channel.
 
 ---
