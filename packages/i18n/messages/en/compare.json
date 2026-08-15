@@ -1,0 +1,22 @@
+{
+  "title": "Compare",
+  "subtitle": "Up to three items side by side. The address bar holds the selection, so the comparison is shareable.",
+  "empty": "Nothing selected yet. Open an item and use its compare link, or edit the address directly.",
+  "howTo": "The address takes the form /compare/{market}/{chain}~{item}/{chain}~{item}",
+  "market": "Market",
+  "nutrient": "Nutrient",
+  "perPortion": "Per portion",
+  "notPublished": "not published",
+  "noVariant": "no data for {market}",
+  "tooMany": "We show the first three. The rest of the selection is ignored rather than squeezed.",
+  "row": {
+    "energy": "Energy",
+    "fat": "Fat",
+    "saturates": "Saturates",
+    "sugars": "Sugars",
+    "salt": "Salt",
+    "serving": "Serving"
+  },
+  "bandsFor": "Bands for {name}",
+  "unknownItem": "We do not hold {slug}."
+}

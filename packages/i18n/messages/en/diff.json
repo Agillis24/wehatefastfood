@@ -1,0 +1,13 @@
+{
+  "title": "Same product, different country",
+  "subtitle": "What the recipe carries in one market and not in another. Both lists come from the companies' own published declarations.",
+  "onlyIn": "Only in {market}",
+  "inBoth": "In both",
+  "nothingDiffers": "The declarations we hold for {a} and {b} list the same additives and ingredients.",
+  "needTwoMarkets": "We hold data for only one market for this item, so there is nothing to compare yet.",
+  "compareWith": "Compare with {market}",
+  "added": "Added",
+  "absent": "Absent",
+  "shared": "Shared",
+  "caution": "A difference here is a difference in what each company chose to declare, which is not always the same thing as a difference in the recipe. Declaration rules differ by country."
+}

@@ -26,6 +26,7 @@ import { ReferenceIntake } from '@/components/data/ReferenceIntake';
 import { TrafficLights } from '@/components/data/TrafficLights';
 import { IngredientChips } from '@/components/content/IngredientChips';
 import { SourceList } from '@/components/content/SourceList';
+import { MarketDiff, type DiffEntry, type MarketComparison } from '@/components/data/MarketDiff';
 import {
   Disclaimers,
   MarketSwitcher,
@@ -89,7 +90,45 @@ async function load(params: Params) {
     }
   }
 
-  return { item, chain, variant, thresholds, intakes, ingredients, additives };
+  // --- market diff -----------------------------------------------------
+  // Labels are resolved for every slug referenced by ANY variant, not just the
+  // one on screen, or the other market's column would list bare slugs.
+  const labels = new Map<string, DiffEntry>();
+  for (const v of item.variants) {
+    for (const ref of v.ingredientRefs) {
+      if (labels.has(ref)) continue;
+      const found = await repo.getIngredient(ref);
+      if (found) labels.set(ref, { slug: ref, label: found.names[0] ?? ref, isAdditive: false });
+    }
+    for (const ref of v.additiveRefs) {
+      if (labels.has(ref)) continue;
+      const found = await repo.getAdditive(ref);
+      if (found) labels.set(ref, { slug: ref, label: found.names[0] ?? ref, isAdditive: true });
+    }
+  }
+
+  const entriesOf = (v: (typeof item.variants)[number]) =>
+    new Set([...v.ingredientRefs, ...v.additiveRefs]);
+
+  const comparisons: MarketComparison[] = [];
+  if (variant) {
+    const here = entriesOf(variant);
+    for (const other of item.variants) {
+      if (other.market === variant.market) continue;
+      const there = entriesOf(other);
+      const resolve = (slugs: string[]) =>
+        slugs.map((slug) => labels.get(slug)).filter((e): e is DiffEntry => e !== undefined);
+
+      comparisons.push({
+        otherMarket: other.market,
+        onlyHere: resolve([...here].filter((slug) => !there.has(slug))),
+        onlyThere: resolve([...there].filter((slug) => !here.has(slug))),
+        shared: resolve([...here].filter((slug) => there.has(slug))),
+      });
+    }
+  }
+
+  return { item, chain, variant, thresholds, intakes, ingredients, additives, comparisons };
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -156,6 +195,7 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
       intakeRows={intakeRows}
       ingredients={data.ingredients}
       additives={data.additives}
+      comparisons={data.comparisons}
       isDrink={isDrink}
       servingG={serving?.servingSizeG ?? null}
       realityRows={[
@@ -178,6 +218,7 @@ type ViewProps = {
   intakeRows: { key: string; rawKey: string; percent: number | null; reference: string }[];
   ingredients: Ingredient[];
   additives: Additive[];
+  comparisons: MarketComparison[];
   isDrink: boolean;
   servingG: number | null;
   realityRows: { kind: 'sugar' | 'salt' | 'saturates'; grams: number | null }[];
@@ -267,6 +308,8 @@ function ItemView(props: ViewProps) {
               additives={props.additives}
               allergens={variant.allergens}
             />
+
+            <MarketDiff market={props.marketParam} comparisons={props.comparisons} />
 
             {item.ourTake !== undefined ? (
               <section

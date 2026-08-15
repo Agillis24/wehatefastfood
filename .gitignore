@@ -19,3 +19,6 @@ exports/video-briefs/*
 
 .DS_Store
 Thumbs.db
+
+# Generated at build time by scripts/search-index.mjs
+apps/web/public/search-index.json

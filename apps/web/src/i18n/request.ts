@@ -13,6 +13,9 @@ const CATALOGUES = {
     home: (await import('@wff/i18n/messages/en/home.json')).default,
     item: (await import('@wff/i18n/messages/en/item.json')).default,
     chains: (await import('@wff/i18n/messages/en/chains.json')).default,
+    decoder: (await import('@wff/i18n/messages/en/decoder.json')).default,
+    diff: (await import('@wff/i18n/messages/en/diff.json')).default,
+    compare: (await import('@wff/i18n/messages/en/compare.json')).default,
   }),
 } satisfies Record<AvailableLocale, () => Promise<Record<string, unknown>>>;
 

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { isRtl } from '@wff/i18n';
 import { AVAILABLE_LOCALES, routing, type AvailableLocale } from '@/i18n/routing';
@@ -44,13 +43,18 @@ export default async function LocaleLayout({
   // Required for static rendering; without it every page opts into dynamic.
   setRequestLocale(locale as AvailableLocale);
 
-  const messages = await getMessages();
-
   return (
     <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} data-surface="paper">
-      <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
-      </body>
+      {/*
+        NO NextIntlClientProvider HERE, deliberately.
+        Providing it at the layout serialises the ENTIRE message catalogue into
+        every page, including the pages that use none of it - measured at +14 kB
+        on the item page once the decoder and compare catalogues existed. Server
+        components read messages directly from the request config and need no
+        provider. The one client component that does need messages wraps itself
+        in a provider carrying only its own namespace.
+      */}
+      <body>{children}</body>
     </html>
   );
 }
