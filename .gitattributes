@@ -1,0 +1,12 @@
+# Normalise line endings in the repository to LF.
+#
+# Without this, a Windows checkout produces CRLF working files while the blobs
+# are LF, and `prettier --check` with endOfLine: "lf" fails on CI while passing
+# locally - or the reverse. Pinning it here makes the two machines agree.
+* text=auto eol=lf
+
+# Binary, never touched.
+*.png binary
+*.jpg binary
+*.woff binary
+*.woff2 binary

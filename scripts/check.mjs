@@ -25,6 +25,16 @@ const GATES = [
     why: 'tokens.css and tokens.export.json must match tokens.json',
   },
   {
+    // MUST come before i18n and typecheck. The scripts import the BUILT output
+    // of the workspace packages, and dist/ is gitignored - so on a fresh clone
+    // (which is what CI is) nothing exists until this runs. A local machine
+    // hides this completely, because dist/ is already sitting there from the
+    // last build. Found by CI on the first push, not by testing.
+    name: 'packages',
+    args: [bin('typescript/bin/tsc'), '--build', 'packages/content', 'packages/i18n'],
+    why: 'scripts and the app import the built packages, and dist/ is gitignored',
+  },
+  {
     name: 'i18n',
     args: ['scripts/i18n-extract.mjs'],
     why: 'regenerates the tier-2 manifest and checks catalogues for drift',
