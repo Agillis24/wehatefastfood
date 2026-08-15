@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { SITE_ORIGIN } from '@/lib/site';
+import { isIndexable } from '@/lib/launch';
 
 /**
  * One entry per (locale, page). Item pages are per (locale, item, MARKET),
@@ -13,6 +14,9 @@ import { SITE_ORIGIN } from '@/lib/site';
  * opposite of what the sitemap is for.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Nothing to advertise while the site is closed to crawlers.
+  if (!(await isIndexable())) return [];
+
   const repo = await getContent();
   const chains = await repo.listChains();
   const items = await repo.listItems();

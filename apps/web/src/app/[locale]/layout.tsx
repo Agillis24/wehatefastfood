@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { isRtl } from '@wff/i18n';
 import { AVAILABLE_LOCALES, routing, type AvailableLocale } from '@/i18n/routing';
 import { SITE_ORIGIN } from '@/lib/site';
+import { isIndexable } from '@/lib/launch';
 import '@/styles/globals.css';
 
 export function generateStaticParams() {
@@ -17,13 +18,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'brand' });
+  const indexable = await isIndexable();
 
   return {
     metadataBase: new URL(SITE_ORIGIN),
     title: { default: t('name'), template: `%s - ${t('name')}` },
     description: t('tagline'),
     icons: { icon: '/favicon.svg' },
-    robots: { index: true, follow: true },
+    // Belt as well as braces: robots.txt closes the site, and every page says
+    // so itself. A crawler that ignores one is unlikely to ignore both.
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
   };
 }
 
