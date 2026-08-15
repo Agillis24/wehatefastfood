@@ -36,6 +36,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      # Rebuilds with seed content included - see scripts/e2e.mjs for why.
+      - name: Smoke tests
+        run: npm run test:e2e
+
   audit:
     runs-on: ubuntu-latest
     steps:

@@ -55,6 +55,11 @@ const GATES = [
     why: 'every fact carries a source, every reference resolves',
   },
   {
+    name: 'budget',
+    args: ['scripts/budget-check.mjs'],
+    why: 'first-load JS per route; skips silently when there is no build yet',
+  },
+  {
     name: 'test',
     args: [bin('vitest/vitest.mjs'), 'run', '--passWithNoTests'],
     why: 'unit tests',

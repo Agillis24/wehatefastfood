@@ -112,26 +112,23 @@ Use the slash commands in `.claude/commands/`. They exist so that the rules abov
 
 ## Current state
 
-Phases 0-5 complete. Phase 6 next: SEO and structured data, OG and social cards, the video-brief
-export, an accessibility audit, performance budgets in CI, the Playwright smoke suite, deployment.
+**All six phases complete.** `npm run check` is 9 gates; `npm run build` succeeds; 20 Playwright
+smoke tests pass on mobile and desktop. Every route measures 104.8 kB gzipped first-load JS against
+a 130 kB budget, and `npm run budget:check` now enforces that rather than merely reporting it.
 
-**The site has zero client components, and that is load-bearing.** Every route measures 107 kB
-First Load JS against a 130 kB budget. Measured, not assumed: adding one `'use client'` component
-to the decoder page pushed EVERY route to 118 kB, including the item page that does not use it,
-because the first client component anywhere pulls the React client runtime into the shared bundle.
-Removing it restored 107 kB exactly. Before adding an island, ask whether the job needs React - the
-decoder filter, the additive drawer, the market switcher, the language picker and plain-data mode
-are all interactive and all cost nothing.
+Next is the thing all of it was for: adding real chains and real products, one at a time, with
+`/add-chain` and `/add-item`. `npm run content:coverage` is the table that drives those sessions.
 
-**Never interpolate a noun into a sentence.** Czech proved why: "contains {value} of {nutrient}"
-renders as "obsahuje 9 g cukr" where the genitive "cukru" is required. Give each case its own
-complete message. Pass counts to ICU as numbers, not preformatted strings, or the plural category
-cannot be selected - Czech needs `many` for decimals.
+### Blocking launch
 
-Still open from Phase 2: `content/reference/fsa-thresholds.json` and `reference-intakes.json` are
-`status: "unverified"`. They were written from working knowledge, not transcribed from the source
-documents with a human checking. The UI labels anything derived from them as provisional and
-`npm run content:validate` warns on every run, by design. Traffic lights cannot be called verified
-until someone confirms those numbers.
+1. **`content/reference/fsa-thresholds.json` and `reference-intakes.json` are `status: "unverified"`.**
+   Written from working knowledge, not transcribed from the source documents with a human checking.
+   They decide whether a food shows red or amber. The UI labels anything derived from them as
+   provisional and the validator warns on every run, by design.
+2. **The Czech is a first draft.** `packages/i18n/messages/cs/_provenance.json` has
+   `reviewedByHuman: false`.
+3. **Fonts are not self-hosted yet.** Archivo, Public Sans and IBM Plex Mono are named in the
+   tokens; the site currently renders in fallbacks.
+4. **Seed data must be deleted** once the first real chain lands.
 
-Also open: `messages/cs/_provenance.json` has `reviewedByHuman: false`. The Czech is a first draft.
+See `docs/ROADMAP.md` for the rest.

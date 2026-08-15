@@ -26,6 +26,7 @@ import { ReferenceIntake } from '@/components/data/ReferenceIntake';
 import { TrafficLights } from '@/components/data/TrafficLights';
 import { IngredientChips } from '@/components/content/IngredientChips';
 import { SourceList } from '@/components/content/SourceList';
+import { ItemStructuredData } from '@/components/content/StructuredData';
 import { MarketDiff, type DiffEntry, type MarketComparison } from '@/components/data/MarketDiff';
 import {
   Disclaimers,
@@ -198,6 +199,7 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
       comparisons={data.comparisons}
       isDrink={isDrink}
       servingG={serving?.servingSizeG ?? null}
+      serving={serving}
       realityRows={[
         { kind: 'sugar' as const, grams: serving?.sugarsG ?? null },
         { kind: 'salt' as const, grams: serving?.saltG ?? null },
@@ -221,6 +223,7 @@ type ViewProps = {
   comparisons: MarketComparison[];
   isDrink: boolean;
   servingG: number | null;
+  serving: import('@wff/content').NutritionFacts | null;
   realityRows: { kind: 'sugar' | 'salt' | 'saturates'; grams: number | null }[];
   provisional: boolean;
 };
@@ -240,6 +243,14 @@ function ItemView(props: ViewProps) {
 
   return (
     <>
+      <ItemStructuredData
+        locale={locale}
+        chain={chain}
+        item={item}
+        market={props.marketParam}
+        serving={props.serving}
+        verifiedOn={variant?.verifiedOn ?? null}
+      />
       <SiteHeader locale={locale} />
 
       <main id="main" className="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-8">
