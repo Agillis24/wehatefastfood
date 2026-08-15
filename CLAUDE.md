@@ -112,23 +112,21 @@ Use the slash commands in `.claude/commands/`. They exist so that the rules abov
 
 ## Current state
 
-Phases 0-3 complete. Phase 4 next: decoder, compare, search, market-diff view.
+Phases 0-4 complete. Phase 5 next: i18n - the tier-1 pipeline, the on-demand translation endpoint,
+the language picker and RTL.
 
-**The item page ships zero client JavaScript.** Visualisations are server-rendered SVG, the additive
-drawer is a native `<details>`, the market switcher is a row of links, and plain-data mode is a CSS
-checkbox driven by `:has()`. Measured: 107 kB First Load JS against a 130 kB budget. Keep it that
-way - the first `'use client'` on this route spends a budget that is currently entirely unspent.
+**The site has zero client components, and that is load-bearing.** Every route measures 107 kB
+First Load JS against a 130 kB budget. This is measured, not assumed: adding one `'use client'`
+component to the decoder page pushed EVERY route to 118 kB, including the item page that does not
+use it, because the first client component anywhere pulls the React client runtime into the shared
+bundle. Removing it restored 107 kB exactly.
 
-Two measurements worth carrying forward:
+So before adding an island, ask whether the job actually needs React. The decoder filter, the
+additive drawer, the market switcher and plain-data mode are all interactive and all cost nothing.
+If an island is genuinely required, budget 11 kB for the first one plus its own weight, and say so.
 
-- The home page is **104 kB First Load JS** against a 130 kB item-page budget, leaving roughly
-  26 kB for the item page's islands. Search must stay lazy and off that route.
-- `content/reference/fsa-thresholds.json` and `reference-intakes.json` are **`status: "unverified"`**.
-  They were written from working knowledge, not transcribed from the source documents with a human
-  checking. Anything computed from them must be labelled unverified in the UI until someone opens
-  the DHSC/FSA guidance and Annex XIII of Regulation (EU) 1169/2011, confirms every value, and
-  flips the status. `npm run content:validate` warns about this on every run, by design.
-
-One known modelling wrinkle: `servingSizeG` carries millilitres for drinks. The field name comes
-from BRIEF §5 and was kept rather than diverging from the contract; the maths is unaffected because
-`toPer100` only ever divides by it.
+Still open from Phase 2: `content/reference/fsa-thresholds.json` and `reference-intakes.json` are
+`status: "unverified"`. They were written from working knowledge, not transcribed from the source
+documents with a human checking. The UI labels anything derived from them as provisional and
+`npm run content:validate` warns on every run, by design. Traffic lights cannot be called verified
+until someone confirms those numbers.
