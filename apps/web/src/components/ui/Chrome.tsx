@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { Wordmark } from '@/components/brand/Wordmark';
 import { chainsPath, homePath, itemPath } from '@/lib/url';
+import { AVAILABLE_LOCALES } from '@/i18n/routing';
+import { LANGUAGE_NAMES } from '@/lib/languages';
 
 /**
  * Site chrome. Server components, zero JavaScript.
@@ -119,7 +121,52 @@ export function Disclaimers({ withMedical = true }: { withMedical?: boolean }) {
   );
 }
 
-export function SiteFooter({ locale }: { locale: string }) {
+/**
+ * Language picker.
+ *
+ * Tier-1 locales are links to THE SAME PAGE in the other language, which is why
+ * every page hands the footer its own locale-less path. Dropping a reader on
+ * the home page because they changed language is a small betrayal that is
+ * completely avoidable.
+ *
+ * A <details> rather than a listbox: zero JavaScript, keyboard-operable, and it
+ * scales to the full tier-2 list without a search box that would need a runtime.
+ */
+export function LanguagePicker({ locale, path }: { locale: string; path: string }) {
+  const t = useTranslations('language');
+
+  return (
+    <details className="font-data text-sm">
+      <summary className="inline-flex min-h-11 cursor-pointer list-none items-center border-[1.5px] border-ink px-3">
+        {t('label')}
+        <span className="ms-2 font-semibold">{LANGUAGE_NAMES[locale] ?? locale}</span>
+      </summary>
+
+      <div className="mt-2 flex flex-col gap-2 border-[1.5px] border-ink p-3">
+        <p className="text-xs tracking-widest uppercase">{t('reviewed')}</p>
+        <ul className="flex flex-wrap gap-2">
+          {AVAILABLE_LOCALES.map((available) => (
+            <li key={available}>
+              <Link
+                href={`/${available}${path}`}
+                hrefLang={available}
+                aria-current={available === locale ? 'true' : undefined}
+                className={`inline-flex min-h-11 items-center border-[1.5px] border-ink px-3 ${
+                  available === locale ? 'bg-ink text-paper' : ''
+                }`}
+              >
+                {LANGUAGE_NAMES[available] ?? available}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="text-xs text-[var(--surface-muted)]">{t('moreComing')}</p>
+      </div>
+    </details>
+  );
+}
+
+export function SiteFooter({ locale, path = '' }: { locale: string; path?: string }) {
   const t = useTranslations('footer');
   const tDisclaimer = useTranslations('disclaimer');
 
@@ -139,6 +186,7 @@ export function SiteFooter({ locale }: { locale: string }) {
             </Link>
           ))}
         </nav>
+        <LanguagePicker locale={locale} path={path} />
         <Disclaimers />
         {/* Discreet, not preachy, and never on the same line as a calorie count. */}
         <p className="text-xs text-[var(--surface-muted)]">{tDisclaimer('support')}</p>

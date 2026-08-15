@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { grams, unitCount } from '@/lib/format';
+import { grams } from '@/lib/format';
 
 /**
  * The quantity stack - the thing people screenshot.
@@ -105,7 +105,20 @@ type Row = { kind: Kind; grams: number | null };
 export function RealityCheck({ rows, locale }: { rows: Row[]; locale: string }) {
   const t = useTranslations('item.reality');
 
-  const unitKey = { sugar: 'cubeUnit', salt: 'spoonUnit', saturates: 'patUnit' } as const;
+  /**
+   * One complete sentence per nutrient, rather than one sentence with the
+   * nutrient interpolated.
+   *
+   * Czech showed why: "obsahuje 9 g cukr" is wrong, it needs the genitive
+   * "cukru", and an inflected language cannot take a nominative label from a
+   * heading and drop it into a sentence slot. Interpolating nouns into
+   * sentences only looks like it works in English.
+   */
+  const sentenceKey = {
+    sugar: 'sentenceSugar',
+    salt: 'sentenceSalt',
+    saturates: 'sentenceSaturates',
+  } as const;
 
   return (
     <section aria-labelledby="reality-title" className="flex flex-col gap-5">
@@ -127,17 +140,15 @@ export function RealityCheck({ rows, locale }: { rows: Row[]; locale: string }) 
           );
         }
 
-        // The unit count is formatted to a string before it reaches ICU.
-        // Passing it as a number makes ICU choose a plural form for a fraction,
-        // which is unreliable across locales, and prints 0.417 where 0.42 is
-        // the honest precision for a figure we derived by division.
-        const sentence = t('sentence', {
+        // Rounded to two decimals BEFORE ICU sees it, so the plural category is
+        // chosen for the number the reader is actually shown. Passed as a
+        // number, not a string, or ICU cannot select a category at all - and
+        // Czech needs `many` for decimals to get the case right.
+        const count = Math.round((row.grams / UNIT_GRAMS[row.kind]) * 100) / 100;
+        const sentence = t(sentenceKey[row.kind], {
           value: grams(locale, row.grams),
-          nutrient: label.toLocaleLowerCase(locale),
-          units: t(unitKey[row.kind], {
-            count: unitCount(locale, row.grams / UNIT_GRAMS[row.kind]),
-            grams: UNIT_GRAMS[row.kind],
-          }),
+          count,
+          grams: UNIT_GRAMS[row.kind],
         });
 
         return (

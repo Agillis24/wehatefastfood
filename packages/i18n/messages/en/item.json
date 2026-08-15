@@ -14,11 +14,10 @@
     "sugar": "Sugar",
     "salt": "Salt",
     "saturates": "Saturated fat",
-    "cubeUnit": "{count} sugar cubes of {grams} g each",
-    "spoonUnit": "{count} level teaspoons of salt, {grams} g each",
-    "patUnit": "{count} pats of butter, {grams} g each",
-    "sentence": "This portion contains {value} of {nutrient} - about {units}.",
-    "notPublished": "{nutrient} is not published for this market."
+    "notPublished": "{nutrient} is not published for this market.",
+    "sentenceSugar": "This portion contains {value} of sugar - about {count, plural, one {# sugar cube} other {# sugar cubes}}, {grams} g each.",
+    "sentenceSalt": "This portion contains {value} of salt - about {count, plural, one {# level teaspoon} other {# level teaspoons}}, {grams} g each.",
+    "sentenceSaturates": "This portion contains {value} of saturated fat - about {count, plural, one {# pat of butter} other {# pats of butter}}, {grams} g each."
   },
   "lights": {
     "title": "Traffic lights",

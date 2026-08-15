@@ -48,5 +48,13 @@
     "legal": "Legal",
     "privacy": "Privacy",
     "sources": "All sources"
+  },
+  "language": {
+    "label": "Language",
+    "reviewed": "Reviewed translations",
+    "moreComing": "More languages are coming. We only list one when a catalogue exists and someone has looked at it - an English page under a foreign flag is worse than not offering it.",
+    "machineTranslated": "This page was machine-translated and has not been reviewed.",
+    "readOriginal": "Read the English original",
+    "notTranslated": "Left in English on purpose: this passage describes evidence or is our own opinion, and we do not machine-translate either into a language nobody on the project can check."
   }
 }

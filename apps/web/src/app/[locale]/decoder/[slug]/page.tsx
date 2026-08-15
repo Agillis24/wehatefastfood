@@ -172,7 +172,7 @@ function EntryView({
         <div className="rule-strike" aria-hidden="true" />
         <Disclaimers withMedical={true} />
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path={`/decoder/${additive.slug}`} />
     </>
   );
 }

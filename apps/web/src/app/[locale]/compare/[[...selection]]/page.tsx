@@ -105,6 +105,10 @@ function CompareView({
   columns: Column[];
   truncated: boolean;
 }) {
+  const comparePath =
+    columns.length === 0
+      ? '/compare'
+      : `/compare/${market}/${columns.map((c) => c.slug).join('/')}`;
   const t = useTranslations('compare');
   const tRow = useTranslations('compare.row');
 
@@ -224,7 +228,7 @@ function CompareView({
         <div className="rule-strike" aria-hidden="true" />
         <Disclaimers />
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path={comparePath} />
     </>
   );
 }

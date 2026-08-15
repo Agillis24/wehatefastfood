@@ -111,7 +111,7 @@ function ChainView({
         <div className="rule-strike" aria-hidden="true" />
         <Disclaimers withMedical={false} />
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path={`/chains/${chain.slug}`} />
     </>
   );
 }

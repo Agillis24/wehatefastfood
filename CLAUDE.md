@@ -112,21 +112,26 @@ Use the slash commands in `.claude/commands/`. They exist so that the rules abov
 
 ## Current state
 
-Phases 0-4 complete. Phase 5 next: i18n - the tier-1 pipeline, the on-demand translation endpoint,
-the language picker and RTL.
+Phases 0-5 complete. Phase 6 next: SEO and structured data, OG and social cards, the video-brief
+export, an accessibility audit, performance budgets in CI, the Playwright smoke suite, deployment.
 
 **The site has zero client components, and that is load-bearing.** Every route measures 107 kB
-First Load JS against a 130 kB budget. This is measured, not assumed: adding one `'use client'`
-component to the decoder page pushed EVERY route to 118 kB, including the item page that does not
-use it, because the first client component anywhere pulls the React client runtime into the shared
-bundle. Removing it restored 107 kB exactly.
+First Load JS against a 130 kB budget. Measured, not assumed: adding one `'use client'` component
+to the decoder page pushed EVERY route to 118 kB, including the item page that does not use it,
+because the first client component anywhere pulls the React client runtime into the shared bundle.
+Removing it restored 107 kB exactly. Before adding an island, ask whether the job needs React - the
+decoder filter, the additive drawer, the market switcher, the language picker and plain-data mode
+are all interactive and all cost nothing.
 
-So before adding an island, ask whether the job actually needs React. The decoder filter, the
-additive drawer, the market switcher and plain-data mode are all interactive and all cost nothing.
-If an island is genuinely required, budget 11 kB for the first one plus its own weight, and say so.
+**Never interpolate a noun into a sentence.** Czech proved why: "contains {value} of {nutrient}"
+renders as "obsahuje 9 g cukr" where the genitive "cukru" is required. Give each case its own
+complete message. Pass counts to ICU as numbers, not preformatted strings, or the plural category
+cannot be selected - Czech needs `many` for decimals.
 
 Still open from Phase 2: `content/reference/fsa-thresholds.json` and `reference-intakes.json` are
 `status: "unverified"`. They were written from working knowledge, not transcribed from the source
 documents with a human checking. The UI labels anything derived from them as provisional and
 `npm run content:validate` warns on every run, by design. Traffic lights cannot be called verified
 until someone confirms those numbers.
+
+Also open: `messages/cs/_provenance.json` has `reviewedByHuman: false`. The Czech is a first draft.

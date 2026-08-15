@@ -1,0 +1,53 @@
+{
+  "index": {
+    "title": "Dekodér",
+    "subtitle": "Každé aditivum, které jsme zdokumentovali: co to je a jaký obchodní důvod firmu vedl k tomu dát vám ho do jídla.",
+    "search": "Hledat v dekodéru",
+    "searchHint": "Hledejte podle názvu, E-čísla nebo podle toho, co látka dělá.",
+    "results": "{count, plural, =0 {Nic neodpovídá} one {# záznam} few {# záznamy} other {# záznamů}}",
+    "clear": "Zrušit",
+    "filterClass": "K čemu slouží",
+    "filterEvidence": "Důkazy",
+    "filterAll": "Vše",
+    "empty": "Zatím není zdokumentované žádné aditivum.",
+    "foundInCount": "{count, plural, =0 {zatím bez vazby na položku} one {v # položce} few {ve # položkách} other {ve # položkách}}"
+  },
+  "entry": {
+    "back": "Všechny záznamy",
+    "whatItIs": "Co to je",
+    "whyItIsHere": "Proč to je ve vašem jídle",
+    "evidence": "Důkazy",
+    "evidenceStrength": "Síla důkazů",
+    "regulatory": "Regulatorní status",
+    "divergence": "Kde se regulátoři neshodnou",
+    "noDivergence": "U tohoto záznamu jsme nezaznamenali neshodu mezi regulátory.",
+    "foundIn": "Vyskytuje se v",
+    "notFoundIn": "Zatím bez vazby na položku, kterou máme.",
+    "alsoKnownAs": "Na etiketách také jako",
+    "eu": "EU",
+    "us": "USA",
+    "uk": "UK"
+  },
+  "evidence": {
+    "well-established": "Dobře doložené",
+    "mixed": "Smíšené",
+    "emerging": "Nové",
+    "contested": "Sporné",
+    "caveat": "Síla důkazů je naše čtení uvedených zdrojů, ne verdikt o bezpečnosti. Když se regulátoři neshodnou, ukazujeme obě stanoviska místo toho, abychom si jedno vybrali."
+  },
+  "class": {
+    "preservative": "Konzervant",
+    "emulsifier": "Emulgátor",
+    "stabiliser": "Stabilizátor",
+    "colour": "Barvivo",
+    "flavour-enhancer": "Zvýrazňovač chuti",
+    "sweetener": "Sladidlo",
+    "acidity-regulator": "Regulátor kyselosti",
+    "anticaking": "Protispékavá látka",
+    "antioxidant": "Antioxidant",
+    "raising-agent": "Kypřicí látka",
+    "thickener": "Zahušťovadlo",
+    "humectant": "Zvlhčující látka",
+    "other": "Jiné"
+  }
+}

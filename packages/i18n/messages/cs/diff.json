@@ -1,0 +1,13 @@
+{
+  "title": "Stejný výrobek, jiná země",
+  "subtitle": "Co receptura nese v jednom trhu a v druhém ne. Oba seznamy pocházejí z vlastních zveřejněných deklarací firem.",
+  "onlyIn": "Jen v {market}",
+  "inBoth": "V obou",
+  "nothingDiffers": "Deklarace, které máme pro {a} a {b}, uvádějí stejná aditiva i složky.",
+  "needTwoMarkets": "Pro tuto položku máme data jen z jednoho trhu, takže zatím není co porovnávat.",
+  "compareWith": "Porovnat s {market}",
+  "added": "Přidáno",
+  "absent": "Nic",
+  "shared": "Společné",
+  "caution": "Rozdíl zde je rozdíl v tom, co se která firma rozhodla deklarovat, což není vždy totéž co rozdíl v receptuře. Pravidla pro deklarování se mezi zeměmi liší."
+}

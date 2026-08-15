@@ -1,0 +1,80 @@
+{
+  "$comment": "Injected into every translation prompt, tier 1 and tier 2. A term in doNotTranslate that comes back translated is a rejected translation, not a stylistic quibble: an E-number that becomes 'E-číslo 621' stops matching a label, and a chain name that gets localised stops being the thing the reader is holding.",
+  "doNotTranslate": [
+    {
+      "term": "We Hate Fast Food",
+      "why": "The project name. It is a wordmark, not a sentence."
+    },
+    {
+      "term": "What's actually in it — and why they put it there.",
+      "why": "The tagline of record. Translate it only in the tier-1 catalogues where a reviewed rendering exists; never paraphrase it ad hoc."
+    },
+    {
+      "term": "E-numbers",
+      "why": "E100, E621, E330 and so on are regulatory identifiers. They are the same characters in every language and must never be transliterated, spaced or localised."
+    },
+    {
+      "term": "Chain and product names",
+      "why": "A reader is looking for the thing written on the box in front of them. Translating 'Big Mac' or 'McDonald's' makes the page unfindable and is also how a nominative use starts looking like something else."
+    },
+    {
+      "term": "HIGH",
+      "why": "Front-of-pack band labels are translated ONLY through the catalogue key data.high/medium/low, so every surface agrees. Never translated inline."
+    },
+    {
+      "term": "MED",
+      "why": "See HIGH."
+    },
+    {
+      "term": "LOW",
+      "why": "See HIGH."
+    },
+    {
+      "term": "FSA",
+      "why": "Food Standards Agency. An institution's name, kept as its own abbreviation, expanded on first use if the target language needs it."
+    },
+    {
+      "term": "EFSA",
+      "why": "European Food Safety Authority. As FSA."
+    },
+    {
+      "term": "SEED DATA — NOT REAL",
+      "why": "A safety marker. If it is ever translated, a reviewer may not recognise fake data as fake."
+    }
+  ],
+  "translateConsistently": [
+    {
+      "term": "serving",
+      "note": "The portion a company declares. Must be distinguished from 'portion' only if the target language distinguishes them; otherwise pick one word and hold it."
+    },
+    {
+      "term": "saturates",
+      "note": "Saturated fat. Use the term that appears on that market's own nutrition labels, not a literal translation."
+    },
+    {
+      "term": "reference intake",
+      "note": "The EU labelling term (formerly GDA). Use the official term of the target language's labelling regime."
+    },
+    {
+      "term": "traffic lights",
+      "note": "The front-of-pack colour scheme. Where the target market has no such scheme, describe it rather than invent a name."
+    },
+    {
+      "term": "additive",
+      "note": "A substance with an E-number or an equivalent regulatory identity. Not a synonym for 'ingredient'."
+    },
+    {
+      "term": "ingredient",
+      "note": "Anything on the declaration that is not an additive."
+    },
+    {
+      "term": "verified",
+      "note": "Means a human checked it against the source on a stated date. Never soften to 'checked' or 'confirmed'."
+    },
+    {
+      "term": "not published",
+      "note": "Means the company does not publish the figure. It never means zero, unknown or unavailable."
+    }
+  ],
+  "voice": "Dry, sharp, specific. Hostile to the industry and never to the reader. Do not add enthusiasm, warnings or advice that is not in the source. If the source states a limitation, the translation states it too."
+}

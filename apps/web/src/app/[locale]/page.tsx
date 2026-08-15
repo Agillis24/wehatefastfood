@@ -104,7 +104,7 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
         <Disclaimers withMedical={false} />
       </main>
 
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path="" />
     </>
   );
 }

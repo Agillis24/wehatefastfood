@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "Řetězce",
+    "subtitle": "Co máme a co nemáme. Mezery uvádíme schválně.",
+    "empty": "Zatím není zdokumentovaný žádný řetězec.",
+    "itemsDocumented": "{count, plural, =0 {nic zdokumentováno} one {# položka zdokumentována} few {# položky zdokumentovány} other {# položek zdokumentováno}}",
+    "markets": "Trhy"
+  },
+  "chain": {
+    "backToChains": "Všechny řetězce",
+    "items": "Položky",
+    "noItems": "Pro tento řetězec zatím nemáme zdokumentovanou žádnou položku.",
+    "kcal": "kcal",
+    "notPublished": "nezveřejněno",
+    "coverage": "Pokrytí daty"
+  },
+  "status": {
+    "verified": "Ověřeno",
+    "partial": "Částečné",
+    "unpublished": "Nezveřejněno"
+  }
+}

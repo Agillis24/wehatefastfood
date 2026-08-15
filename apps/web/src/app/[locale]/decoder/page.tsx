@@ -186,7 +186,7 @@ function DecoderView({
 
         <DecoderFilterScript />
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path="/decoder" />
     </>
   );
 }

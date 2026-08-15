@@ -1,0 +1,60 @@
+{
+  "brand": {
+    "name": "We Hate Fast Food",
+    "tagline": "Co v tom doopravdy je — a proč to tam dali.",
+    "wordmarkWe": "WE",
+    "wordmarkLove": "LOVE",
+    "wordmarkHate": "HATE",
+    "wordmarkFastFood": "FAST FOOD"
+  },
+  "nav": {
+    "chains": "Řetězce",
+    "decoder": "Dekodér",
+    "compare": "Porovnat",
+    "learn": "Články",
+    "about": "O projektu",
+    "methodology": "Metodika",
+    "skipToContent": "Přejít na obsah",
+    "openMenu": "Otevřít nabídku",
+    "closeMenu": "Zavřít nabídku"
+  },
+  "market": {
+    "label": "Trh",
+    "change": "Změnit trh",
+    "noDataTitle": "Pro tento trh data nemáme",
+    "noDataBody": "Hodnoty se mezi zeměmi liší a čísla z jedné země vám nebudeme ukazovat jako čísla z jiné.",
+    "verifiedOn": "Ověřeno {date}",
+    "basisPerServing": "na porci",
+    "basisPer100g": "na 100 g",
+    "basisPer100ml": "na 100 ml"
+  },
+  "data": {
+    "high": "VYSOKÝ",
+    "medium": "STŘEDNÍ",
+    "low": "NÍZKÝ",
+    "unpublished": "Nezveřejněno",
+    "justTheNumbers": "Jen čísla",
+    "justTheNumbersHint": "Vypne ilustrativní vizualizace a nechá samotné hodnoty.",
+    "sources": "Zdroje",
+    "retrieved": "staženo {date}"
+  },
+  "disclaimer": {
+    "notAffiliated": "Nejsme spojeni se žádnou firmou uvedenou na tomto webu, ani jí podporováni či sponzorováni. Názvy firem a výrobků používáme výhradně k označení produktů, o kterých píšeme.",
+    "notMedical": "Toto nejsou lékařská ani výživová doporučení.",
+    "figuresChange": "Hodnoty se mění. Tato stránka uvádí trh i datum, kdy jsme je ověřovali — než se na ně spolehnete, zkontrolujte aktuální údaje zveřejněné firmou.",
+    "support": "Pomoc při potížích s jídlem"
+  },
+  "footer": {
+    "legal": "Právní informace",
+    "privacy": "Soukromí",
+    "sources": "Všechny zdroje"
+  },
+  "language": {
+    "label": "Jazyk",
+    "reviewed": "Zkontrolované překlady",
+    "moreComing": "Další jazyky přibudou. Uvádíme jen ty, pro které existuje katalog a někdo se na něj podíval — anglická stránka pod cizí vlajkou je horší než ji nenabídnout.",
+    "machineTranslated": "Tuto stránku přeložil stroj a nikdo ji nekontroloval.",
+    "readOriginal": "Přečíst anglický originál",
+    "notTranslated": "Záměrně ponecháno anglicky: tato pasáž popisuje důkazy nebo je to náš názor, a ani jedno nedáváme strojově přeložit do jazyka, který nikdo z projektu neumí zkontrolovat."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "header": {
+    "servingSize": "Velikost porce",
+    "market": "Trh",
+    "verified": "Ověřeno",
+    "specimen": "Vzorek",
+    "unverifiedThresholds": "Naši kopii oficiálních prahů zatím nikdo neporovnal se zdrojovým dokumentem. Berte tato pásma jako předběžná.",
+    "noDataTitle": "Pro tento trh data nemáme",
+    "noDataBody": "Hodnoty se mezi zeměmi liší a čísla z jedné země vám nebudeme ukazovat jako čísla z jiné.",
+    "marketsWeHold": "Trhy, které pro tuto položku máme:"
+  },
+  "reality": {
+    "title": "Co je v této porci",
+    "sugar": "Cukr",
+    "salt": "Sůl",
+    "saturates": "Nasycené tuky",
+    "notPublished": "{nutrient} — pro tento trh nezveřejněno.",
+    "sentenceSugar": "Tato porce obsahuje {value} cukru — přibližně {count, plural, one {# kostku} few {# kostky} many {# kostky} other {# kostek}} po {grams} g.",
+    "sentenceSalt": "Tato porce obsahuje {value} soli — přibližně {count, plural, one {# zarovnanou čajovou lžičku} few {# zarovnané čajové lžičky} many {# zarovnané čajové lžičky} other {# zarovnaných čajových lžiček}} po {grams} g.",
+    "sentenceSaturates": "Tato porce obsahuje {value} nasycených tuků — přibližně {count, plural, one {# kostičku másla} few {# kostičky másla} many {# kostičky másla} other {# kostiček másla}} po {grams} g."
+  },
+  "lights": {
+    "title": "Semafory",
+    "subtitle": "Britská pásma pro označení na přední straně obalu. Prahy uvádíme, abyste si náš výpočet mohli zkontrolovat.",
+    "per100": "na 100 g",
+    "per100ml": "na 100 ml",
+    "perPortion": "na porci",
+    "nutrient": "Živina",
+    "band": "Pásmo",
+    "thresholds": "Prahy",
+    "lowAtOrBelow": "NÍZKÝ do {value} g včetně",
+    "highAbove": "VYSOKÝ nad {value} g",
+    "portionRule": "Zvednuto na VYSOKÝ pravidlem pro porci: více než {value} g v jedné porci.",
+    "notPublished": "Nezveřejněno"
+  },
+  "intake": {
+    "title": "Referenční příjem",
+    "subtitle": "Podíl na denním referenčním příjmu dospělého, pro jednu porci.",
+    "ofReference": "{percent} z referenčního příjmu {reference}",
+    "energy": "Energie",
+    "fat": "Tuky",
+    "saturates": "Nasycené",
+    "sugars": "Cukry",
+    "salt": "Sůl"
+  },
+  "ingredients": {
+    "title": "Co v tom doopravdy je",
+    "additive": "Aditivum",
+    "openEntry": "Co to je?",
+    "whatItIs": "Co to je",
+    "whyItIsHere": "Proč to je ve vašem jídle",
+    "evidence": "Důkazy",
+    "regulatory": "Regulatorní status",
+    "divergence": "Kde se regulátoři neshodnou",
+    "eu": "EU",
+    "us": "USA",
+    "uk": "UK",
+    "none": "Pro tento trh zatím nemáme zaznamenané složení.",
+    "groupHeading": "{count, plural, one {# složka je} few {# složky jsou} other {# složek je}} tady kvůli konkrétní práci: {classes}.",
+    "allergens": "Alergeny"
+  },
+  "ourTake": {
+    "title": "Náš pohled",
+    "label": "Tato část je náš názor. Všechno nad ní jsou doložená fakta."
+  },
+  "sources": {
+    "title": "Zdroje",
+    "retrieved": "staženo {date}",
+    "published": "vydáno {date}",
+    "forThisMarket": "K hodnotám na této stránce",
+    "forTheChain": "K firmě"
+  },
+  "nutrition": {
+    "title": "Zveřejněná tabulka",
+    "basis": "Vztaženo na",
+    "energy": "Energie",
+    "fat": "Tuky",
+    "saturates": "z toho nasycené",
+    "carbohydrate": "Sacharidy",
+    "sugars": "z toho cukry",
+    "fibre": "Vláknina",
+    "protein": "Bílkoviny",
+    "salt": "Sůl",
+    "sodium": "Sodík",
+    "saltNote": "Pokud firma uvádí sodík místo soli, přepočítáváme podle konvence EU: sůl = sodík × 2,5."
+  },
+  "plain": {
+    "on": "Jen čísla",
+    "off": "Zobrazit ilustrace",
+    "hint": "Vypne ilustrativní vizualizace a nechá všechny hodnoty."
+  }
+}

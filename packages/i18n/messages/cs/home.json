@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "leadIn": "Vyberte řetězec. Vyberte položku.",
+    "thesis": "Uvidíte, co v tom doopravdy je, co to dělá a proč to tam je.",
+    "cta": "Projít řetězce"
+  },
+  "scaffold": {
+    "title": "Zatím jen kostra",
+    "body": "Web se staví po fázích. Zatím nebyl zveřejněn žádný obsah a žádné číslo na této stránce není skutečné.",
+    "phase": "Fáze {n} ze 6"
+  },
+  "decoder": {
+    "title": "Dekodér",
+    "body": "Každé aditivum, co to je, a obchodní důvod, proč vám ho firma dala do jídla."
+  },
+  "video": {
+    "title": "Poslední video",
+    "empty": "Kanál zatím neexistuje. Toto místo je pro něj rezervované."
+  },
+  "newsletter": {
+    "title": "Dáme vědět, až něco vydáme",
+    "disabled": "Zatím není na nic napojené. Radši vám ukážeme vypnuté políčko, než abychom předstírali, že vaši adresu ukládáme."
+  }
+}

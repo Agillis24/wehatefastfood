@@ -22,6 +22,9 @@ const STEPS = [
     args: ['node_modules/typescript/bin/tsc', '--build', 'packages/content', 'packages/i18n'],
   },
   { name: 'content', cmd: process.execPath, args: ['scripts/content-validate.mjs'] },
+  // The manifest is the tier-2 allowlist and is imported by the translate
+  // route, so it has to exist before the app compiles.
+  { name: 'i18n', cmd: process.execPath, args: ['scripts/i18n-extract.mjs'] },
   { name: 'search', cmd: process.execPath, args: ['scripts/search-index.mjs'] },
   { name: 'next', cmd: 'npm', args: ['run', 'build', '--workspace=@wff/web'] },
 ];

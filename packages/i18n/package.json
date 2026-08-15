@@ -10,7 +10,12 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./messages/*": "./messages/*"
+    "./messages/*": "./messages/*",
+    "./generated/manifest.json": "./generated/manifest.json",
+    "./translation": {
+      "types": "./dist/translation.d.ts",
+      "default": "./dist/translation.js"
+    }
   },
   "scripts": {
     "build": "tsc --build"

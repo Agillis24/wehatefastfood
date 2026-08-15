@@ -75,7 +75,7 @@ function ChainsView({
           </ul>
         )}
       </main>
-      <SiteFooter locale={locale} />
+      <SiteFooter locale={locale} path="/chains" />
     </>
   );
 }

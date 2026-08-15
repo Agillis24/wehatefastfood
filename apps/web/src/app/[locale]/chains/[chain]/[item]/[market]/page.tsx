@@ -338,7 +338,10 @@ function ItemView(props: ViewProps) {
         <Disclaimers />
       </main>
 
-      <SiteFooter locale={locale} />
+      <SiteFooter
+        locale={locale}
+        path={`/chains/${item.chainSlug}/${item.slug}/${props.marketParam}`}
+      />
     </>
   );
 }

@@ -25,6 +25,11 @@ const GATES = [
     why: 'tokens.css and tokens.export.json must match tokens.json',
   },
   {
+    name: 'i18n',
+    args: ['scripts/i18n-extract.mjs'],
+    why: 'regenerates the tier-2 manifest and checks catalogues for drift',
+  },
+  {
     name: 'typecheck',
     args: [bin('typescript/bin/tsc'), '--build'],
     why: 'TypeScript strict across every workspace',
