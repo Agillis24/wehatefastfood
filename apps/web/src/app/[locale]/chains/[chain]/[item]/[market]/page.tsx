@@ -19,6 +19,7 @@ import {
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { pageMetadata } from '@/lib/metadata';
+import { itemOgImage } from '@/lib/og';
 import { grams, isoDate } from '@/lib/format';
 import { RealityCheck } from '@/components/data/RealityCheck';
 import { ReferenceIntake } from '@/components/data/ReferenceIntake';
@@ -157,8 +158,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     data.item.ourTake ??
     meta('description', { item: data.item.name, chain: data.chain.name, market });
 
+  // Its own Specimen Card when one was rendered; the site-wide card otherwise.
+  const image = itemOgImage(resolved.chain, resolved.item, market);
+
   return pageMetadata({
     locale: resolved.locale,
+    ...(image ? { image } : {}),
     path: `/chains/${resolved.chain}/${resolved.item}/${market}`,
     // The market is in the title because two of these pages differ only by it.
     title: `${data.item.name} - ${data.chain.name} (${market})`,

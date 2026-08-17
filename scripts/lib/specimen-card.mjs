@@ -76,11 +76,25 @@ function stack(kind, grams, x, y, size, colours) {
   let out = '';
   for (let i = 0; i < whole; i += 1) out += glyph(kind, x + i * step, y, size, colours);
 
+  /*
+   * A partial unit is the WHOLE unit ghosted, with the fraction solid on top -
+   * the way a half-filled star reads as half.
+   *
+   * Clipping alone was tried in both this file and the web component, and it is
+   * wrong for the same reason in both: a teaspoon carries its meaning in its
+   * outline, so 0.42 of one comes out as a crescent that reads as a rendering
+   * fault rather than as a quantity, and its handle falls outside the clip and
+   * disappears entirely. Fixed in RealityCheck.tsx first; this is the same fix
+   * in the second implementation of the same drawing.
+   */
   if (fraction > 0.02 && whole < MAX_GLYPHS) {
     const cx = x + whole * step;
     const id = `c${kind}${Math.round(cx)}${Math.round(y)}`;
     out +=
-      `<clipPath id="${id}"><rect x="${cx.toFixed(1)}" y="${y.toFixed(1)}" width="${(fraction * size).toFixed(1)}" height="${size.toFixed(1)}"/></clipPath>` +
+      // The unit that would be there, so the fraction has something to be a
+      // fraction OF. Faint enough to read as absent.
+      `<g opacity="0.3">${glyph(kind, cx, y, size, colours)}</g>` +
+      `<clipPath id="${id}"><rect x="${cx.toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(fraction * size, 3).toFixed(1)}" height="${size.toFixed(1)}"/></clipPath>` +
       `<g clip-path="url(#${id})">${glyph(kind, cx, y, size, colours)}</g>`;
   }
   return out;

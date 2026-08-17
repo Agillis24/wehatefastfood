@@ -60,6 +60,23 @@ const STEPS = [
   },
   { name: 'content', cmd: process.execPath, args: ['scripts/content-validate.mjs'] },
   { name: 'search', cmd: process.execPath, args: ['scripts/search-index.mjs'] },
+  /*
+   * Share cards, and the manifest generateMetadata reads. BEFORE next, because
+   * the pages import the manifest at build time - after it, every page would
+   * fall back to the generic card and nothing would say so.
+   *
+   * --seed follows the same flag as the rest of the build: a seed build renders
+   * seed cards, a real build renders real ones and nothing else.
+   */
+  {
+    name: 'social',
+    cmd: process.execPath,
+    args: [
+      'scripts/social-cards.mjs',
+      '--web=true',
+      `--seed=${process.env['WFF_INCLUDE_SEED'] === '1' ? 'true' : 'false'}`,
+    ],
+  },
   { name: 'next', cmd: 'npm', args: ['run', 'build', '--workspace=@wff/web'] },
 ];
 
