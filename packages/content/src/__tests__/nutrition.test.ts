@@ -51,7 +51,6 @@ const T: FsaThresholds = {
       type: 'regulator',
     },
   ],
-  portionAppliesAboveG: 100,
   food: {
     per100g: {
       fat: { lowMax: 3, highMin: 17.5 },
@@ -60,6 +59,7 @@ const T: FsaThresholds = {
       salt: { lowMax: 0.3, highMin: 1.5 },
     },
     perPortionHigh: { fat: 21, saturates: 6, sugars: 27, salt: 1.8 },
+    portionAppliesAboveG: 100,
   },
   drink: {
     per100ml: {
@@ -69,6 +69,7 @@ const T: FsaThresholds = {
       salt: { lowMax: 0.3, highMin: 0.75 },
     },
     perPortionHigh: { fat: 10.5, saturates: 3, sugars: 13.5, salt: 0.9 },
+    portionAppliesAboveMl: 150,
   },
 };
 
@@ -266,5 +267,51 @@ describe('reference intakes', () => {
 
   it('returns null for an unpublished value', () => {
     expect(referenceIntakePercent(facts(), 'fatG', RI)).toBeNull();
+  });
+});
+
+/**
+ * The per-portion threshold is not one number.
+ *
+ * The guidance prints "portion size criteria apply to portions/serving sizes
+ * greater than 100g" under the food table and "greater than 150ml" under the
+ * drinks table. This repo held a single value for both until 2026-08-17, which
+ * made every drink portion between 100 ml and 150 ml eligible for a red it had
+ * not earned. Verified against the source PDF; see docs/REFERENCE_VERIFICATION.md.
+ */
+describe('the per-portion threshold differs between foods and drinks', () => {
+  // Per 100 ml this drink is amber; per portion it exceeds the red cut-off.
+  const per100 = facts({ basis: 'per-100ml', sugarsG: 5 });
+  const serving = (sizeG: number) =>
+    facts({ basis: 'per-serving', servingSizeG: sizeG, sugarsG: 20 });
+
+  it('leaves a 120 ml drink portion alone, because 120 is not above 150', () => {
+    const band = bandFor('sugars', per100, serving(120), true, T);
+    expect(band?.band).toBe('medium');
+    expect(band?.drivenByPortion).toBe(false);
+  });
+
+  it('applies the portion rule to a 200 ml drink', () => {
+    const band = bandFor('sugars', per100, serving(200), true, T);
+    expect(band?.band).toBe('high');
+    expect(band?.drivenByPortion).toBe(true);
+  });
+
+  it('is strictly greater than: exactly 150 ml does not trigger it', () => {
+    expect(bandFor('sugars', per100, serving(150), true, T)?.drivenByPortion).toBe(false);
+    expect(bandFor('sugars', per100, serving(150.1), true, T)?.drivenByPortion).toBe(true);
+  });
+
+  it('still uses 100 g for a food, so a 120 g food portion does trigger it', () => {
+    // The food per-portion cut-off is 27 g, not the drinks table's 13.5 g.
+    const foodPer100 = facts({ basis: 'per-100g', sugarsG: 10 });
+    const foodServing = facts({ basis: 'per-serving', servingSizeG: 120, sugarsG: 30 });
+    const band = bandFor('sugars', foodPer100, foodServing, false, T);
+    expect(band?.band).toBe('high');
+    expect(band?.drivenByPortion).toBe(true);
+
+    // ...and 100 g exactly does not, for the same strict-inequality reason.
+    const atBoundary = facts({ basis: 'per-serving', servingSizeG: 100, sugarsG: 30 });
+    expect(bandFor('sugars', foodPer100, atBoundary, false, T)?.drivenByPortion).toBe(false);
   });
 });

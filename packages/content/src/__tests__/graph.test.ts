@@ -37,7 +37,6 @@ const emptyBundle = (): ContentBundle => ({
   ingredients: [],
   fsaThresholds: {
     ...refMeta,
-    portionAppliesAboveG: 100,
     food: { per100g: nutrientBands, perPortionHigh: portionHigh },
     drink: { per100ml: nutrientBands, perPortionHigh: portionHigh },
   },

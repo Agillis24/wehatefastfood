@@ -176,6 +176,11 @@ export function bandFor(
   const limits = isDrink ? thresholds.drink.per100ml[nutrient] : thresholds.food.per100g[nutrient];
   const portionHigh = (isDrink ? thresholds.drink : thresholds.food).perPortionHigh[nutrient];
 
+  // 100 g for foods, 150 ml for drinks. Two numbers, not one - see the schema.
+  const portionApplies = isDrink
+    ? thresholds.drink.portionAppliesAboveMl
+    : thresholds.food.portionAppliesAboveG;
+
   let band: FsaBand = per100 <= limits.lowMax ? 'low' : per100 > limits.highMin ? 'high' : 'medium';
 
   const portionSize = servingFacts?.servingSizeG ?? null;
@@ -184,7 +189,7 @@ export function bandFor(
   let drivenByPortion = false;
   if (
     portionSize !== null &&
-    portionSize > thresholds.portionAppliesAboveG &&
+    portionSize > portionApplies &&
     perPortion !== null &&
     perPortion > portionHigh &&
     band !== 'high'

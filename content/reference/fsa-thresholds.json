@@ -1,33 +1,69 @@
 {
   "status": "unverified",
-  "note": "UK front-of-pack traffic-light thresholds. STATUS IS 'unverified' AND THAT IS NOT A FORMALITY: these values were written from working knowledge, not transcribed from the source document in front of a human. Nothing computed from them may be presented as verified until someone opens the DHSC/FSA guidance, checks every number, sets status to 'verified' and fills verifiedOn. The UI must show an explicit caveat while this says 'unverified'. See docs/CONTENT_GUIDE.md.",
+  "note": "UK front-of-pack traffic-light criteria, Tables 2 and 3 (pages 19-20) of the guidance PDF, which is dated \"Updated November 2016\" and carries no withdrawal notice on gov.uk. STATUS IS STILL 'unverified', and that word now means something narrower than it did. On 2026-08-17 all 26 figures were transcribed three times independently, directly from the source PDF, by readers who were never shown these values, and two adversarial readers then tried and failed to refute the result: every figure was unanimous and every one matched what was already here. Two adversarial findings were acted on - the portion-size threshold is 100g for foods but 150ml for drinks (it was one number for both, which made drink portions between 100 and 150ml eligible for a red they had not earned), and the boundary operators are now written down: LOW is '<= lowMax' INCLUSIVE, HIGH is '> highMin' EXCLUSIVE, so a value exactly on the high cut-off is MEDIUM. What has still not happened is a human opening the PDF. Until it does, the UI keeps its caveat. See docs/REFERENCE_VERIFICATION.md.",
   "verifiedOn": null,
   "sources": [
     {
       "title": "Guide to creating a front of pack (FoP) nutrition label for pre-packed products sold through retail outlets",
-      "publisher": "Department of Health and Social Care, Food Standards Agency, Welsh Government, Food Standards Scotland",
-      "url": "https://www.gov.uk/government/publications/front-of-pack-nutrition-labelling-guidance",
-      "retrievedOn": "2026-08-14",
+      "publisher": "Department of Health, Food Standards Agency, and the devolved administrations of Scotland, Northern Ireland and Wales",
+      "url": "https://assets.publishing.service.gov.uk/media/5a80cd03ed915d74e33fc7c5/FoP_Nutrition_labelling_UK_guidance.pdf",
+      "retrievedOn": "2026-08-17",
+      "publishedOn": "2013-06-19",
       "type": "regulator"
     }
   ],
-  "portionAppliesAboveG": 100,
   "food": {
     "per100g": {
-      "fat": { "lowMax": 3.0, "highMin": 17.5 },
-      "saturates": { "lowMax": 1.5, "highMin": 5.0 },
-      "sugars": { "lowMax": 5.0, "highMin": 22.5 },
-      "salt": { "lowMax": 0.3, "highMin": 1.5 }
+      "fat": {
+        "lowMax": 3,
+        "highMin": 17.5
+      },
+      "saturates": {
+        "lowMax": 1.5,
+        "highMin": 5
+      },
+      "sugars": {
+        "lowMax": 5,
+        "highMin": 22.5
+      },
+      "salt": {
+        "lowMax": 0.3,
+        "highMin": 1.5
+      }
     },
-    "perPortionHigh": { "fat": 21.0, "saturates": 6.0, "sugars": 27.0, "salt": 1.8 }
+    "perPortionHigh": {
+      "fat": 21,
+      "saturates": 6,
+      "sugars": 27,
+      "salt": 1.8
+    },
+    "portionAppliesAboveG": 100
   },
   "drink": {
     "per100ml": {
-      "fat": { "lowMax": 1.5, "highMin": 8.75 },
-      "saturates": { "lowMax": 0.75, "highMin": 2.5 },
-      "sugars": { "lowMax": 2.5, "highMin": 11.25 },
-      "salt": { "lowMax": 0.3, "highMin": 0.75 }
+      "fat": {
+        "lowMax": 1.5,
+        "highMin": 8.75
+      },
+      "saturates": {
+        "lowMax": 0.75,
+        "highMin": 2.5
+      },
+      "sugars": {
+        "lowMax": 2.5,
+        "highMin": 11.25
+      },
+      "salt": {
+        "lowMax": 0.3,
+        "highMin": 0.75
+      }
     },
-    "perPortionHigh": { "fat": 10.5, "saturates": 3.0, "sugars": 13.5, "salt": 0.9 }
+    "perPortionHigh": {
+      "fat": 10.5,
+      "saturates": 3,
+      "sugars": 13.5,
+      "salt": 0.9
+    },
+    "portionAppliesAboveMl": 150
   }
 }
