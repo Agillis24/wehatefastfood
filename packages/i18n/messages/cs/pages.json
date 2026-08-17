@@ -1,0 +1,215 @@
+{
+  "about": {
+    "title": "O projektu",
+    "lede": "Nezávislý záznam o tom, co ve fast foodu doopravdy je — a proč to tam firmy, které ho prodávají, daly.",
+    "sections": [
+      {
+        "heading": "Proč to vzniklo",
+        "body": [
+          "Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Zároveň je to rozeseté po PDF souborech zvlášť pro každou zemi, schované pod marketingovým textem, uvedené na 100 g, když sníte 340 g, a vysázené písmem, za které by se styděla i lékárna.",
+          "Tenhle web dělá tu nudnou část. Přečíst údaje, zapsat číslo, uvést, odkud pochází, a srozumitelně říct, co tam která složka dělá."
+        ]
+      },
+      {
+        "heading": "Pro koho to je",
+        "body": [
+          "Pro kohokoli, kdo chce vědět, co jí. Jiná kvalifikace potřeba není.",
+          "Nenajdete tu žádnou dietu, žádný plán, žádné „předtím a potom“. Žádné jídlo tu není označené za dobré nebo špatné, nikomu neříkáme, kolik má vážit, a nejsou tu pohybové ekvivalenty — nikdy se tu nedočtete, že kvůli mléčnému koktejlu máte jít na čtyřicet minut běhat. Co s těmi čísly uděláte, je vaše věc."
+        ]
+      },
+      {
+        "heading": "Postoj",
+        "body": [
+          "Jsme nepřátelští vůči odvětví: vůči recepturám stavěným kolem ceny a trvanlivosti, vůči porcím, které vyrostly, zatímco cena zůstala povědomá, vůči marketingu, který utratí za slovo „čerstvé“ víc než kuchyně.",
+          "Nejsme nepřátelští vůči nikomu, kdo to jí. Je to levné, rychlé, všude a často je to jediné, co je po ruce. Rýpáme směrem nahoru."
+        ]
+      },
+      {
+        "heading": "Nezávislost",
+        "body": [
+          "Žádná reklama, žádné affiliate odkazy, žádné sponzorství a žádné peníze od jakékoli firmy, která je tu jmenovaná. Na tomhle webu si nic nekoupíte.",
+          "Kód i data za každou stránkou jsou veřejné, takže cokoli se tu tvrdí, jde ověřit proti tomu, z čeho to vzniklo."
+        ]
+      },
+      {
+        "heading": "Když se spleteme",
+        "body": [
+          "Spleteme se. Receptury se mění potichu a někdy si zdroj přečteme špatně.",
+          "Když se to stane, oprava je rychlá a viditelná: znovu přečíst zdroj, opravit stránku, aktualizovat datum kontroly. To, že firma změnila výrobek, je samo o sobě informace, kterou stojí za to zaznamenat — staré číslo s datem, kdy jsme ho četli, je doklad, ne ostuda."
+        ]
+      }
+    ],
+    "repoLink": "Zdrojový kód a data na GitHubu"
+  },
+  "methodology": {
+    "title": "Metodika",
+    "lede": "Jak se číslo dostane na tenhle web, co znamená, když už tu je, a co s ním odmítáme dělat.",
+    "sections": [
+      {
+        "heading": "Odkud čísla pocházejí",
+        "body": [
+          "V tomto pořadí: vlastní zveřejněné nutriční údaje firmy, pak regulační úřady, pak recenzovaný výzkum. Každé číslo má svůj zdroj a každý zdroj má datum, kdy jsme ho četli my — ne datum, kdy vyšel. Řetězce mění receptury potichu, takže rozhoduje, kdy se na to naposledy díval člověk.",
+          "Záznamy přidáváme po jednom, ručně, protože někdo rozhodl, že tahle položka stojí za zdokumentování. Neprocházíme weby automaticky, nekopírujeme hromadně a nikdy nereprodukujeme celou nutriční tabulku firmy. Jednotlivý údaj je fakt. Sestavená databáze je něčí práce."
+        ]
+      },
+      {
+        "heading": "Na 100 g a na porci",
+        "body": [
+          "Uvádíme obojí, protože každé odpovídá na jinou otázku. Na 100 g se porovnávají dvě jídla mezi sebou. Na porci je to, co skutečně sníte — a je to číslo, které by odvětví radši nevidělo sečtené.",
+          "Když firma zveřejní jen jeden základ, stránka řekne který, a neodvozujeme z něj nic, co z něj poctivě odvodit nejde."
+        ]
+      },
+      {
+        "heading": "Semafor",
+        "body": [
+          "Barvy vycházejí z britských kritérií pro označení na přední straně obalu. Pro tuky, nasycené tuky, cukry a sůl je jídlo nízké, střední nebo vysoké na 100 g; nápoje se posuzují podle vlastních, nižších hranic.",
+          "Jedno pravidlo umí barvu posunout jedině nahoru. Když jediná porce nese víc, než je hranice pro porci, ukazuje se jako vysoká i tam, kde by hodnota na 100 g říkala střední — velká porce jen středního jídla není střední množství. Opačně to pravidlo nefunguje nikdy: nic se nesnižuje kvůli tomu, že je porce malá.",
+          "Hodnota přesně na hranici patří do vyššího pásma."
+        ]
+      },
+      {
+        "heading": "Sůl, sodík a číslo 2,5",
+        "body": [
+          "Některé trhy zveřejňují sůl, jiné sodík. Je to totéž měření v jiném kabátě: sůl se rovná sodíku vynásobenému 2,5, což je přepočet, který definují evropská pravidla pro označování.",
+          "Zaznamenáváme to, co firma skutečně zveřejnila, a přepočítanou hodnotu označujeme jako přepočítanou. Když firma zveřejní obojí a neshoduje se to, rozpor označíme, místo abychom ho potichu zprůměrovali."
+        ]
+      },
+      {
+        "heading": "Referenční hodnoty příjmu",
+        "body": [
+          "Procenta se počítají proti evropské referenční hodnotě příjmu pro průměrného dospělého: 2000 kcal, tedy 8400 kJ na den. To je konvence pro označování, ne doporučení mířené na vás. Neví nic o vašem věku, vaší velikosti ani o tom, co jste dnes ještě jedli."
+        ]
+      },
+      {
+        "heading": "Sloupec množství",
+        "body": [
+          "Cukr kreslíme jako kostky po 4 g, sůl jako zarovnané čajové lžičky po 6 g, nasycené tuky jako kostičky másla po 5 g — a všechny tři ve skutečném vzájemném měřítku, aby je oko porovnalo samo, bez vyzvání.",
+          "Zlomky kreslíme jako zlomky. Devět gramů cukru jsou dvě kostky a čtvrtina, ne „asi dvě“.",
+          "Jednotkou je vždycky fyzické množství té samé látky. Nikdy ne množství vašeho času, vašeho úsilí nebo vašeho těla."
+        ]
+      },
+      {
+        "heading": "Co je předběžné a proč to říkáme",
+        "body": [
+          "Tabulky hranic, které rozhodují o barvách semaforu, a referenční hodnoty příjmu za procenty zatím nikdo řádek po řádku neporovnal se zdrojovými dokumenty. Dokud se to nestane, je všechno, co z nich vychází, na příslušné stránce označené jako předběžné.",
+          "Ta značka není formalita. Číslo, které rozhoduje o tom, jestli se jídlo ukáže červeně, je přesně ten druh čísla, který si tenhle web nemůže dovolit brát na dobré slovo — ani od sebe samého."
+        ]
+      },
+      {
+        "heading": "Aditiva",
+        "body": [
+          "Každý záznam v dekodéru má aspoň dva zdroje od dvou různých vydavatelů a uvádí zvlášť stav v EU, ve Velké Británii a v USA. Když se regulátoři neshodnou, ukazujeme obě stanoviska a nevybíráme si.",
+          "Síla důkazů je naše čtení zdrojů uvedených na té stránce. Není to verdikt o bezpečnosti a není to lékařská rada.",
+          "„Není povoleno v EU“ velmi často znamená, že nikdo nepodal potřebnou dokumentaci, ne že se něco prokázalo jako škodlivé. Zaměnit tyhle dvě věci je chyba, která by celý web připravila o hodnotu, takže ji bereme jako vážné pochybení, ne jako nuanci."
+        ]
+      },
+      {
+        "heading": "Co dělat nebudeme",
+        "body": [
+          "Žádné odhadované hodnoty. Když něco nemáme ze zdroje, stránka to řekne a na jeho místě neukáže nic.",
+          "Žádný Nutri-Score. K jeho výpočtu je potřeba vláknina a podíl ovoce a zeleniny, což řetězce nezveřejňují — muselo by se to odhadovat, a odhadování je ta jediná věc, kterou tenhle projekt dělat nebude.",
+          "Žádné pohybové ekvivalenty, žádné BMI, žádné hubnutí a žádná dobrá a špatná jídla."
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "Právní informace",
+    "lede": "Pozice, ke které se tenhle web hlásí. Není to právní poradenství ani smlouva.",
+    "sections": [
+      {
+        "heading": "Žádné propojení",
+        "body": [
+          "Tenhle web není propojený s žádnou firmou, která je na něm jmenovaná, ani jí není podporovaný nebo sponzorovaný. Názvy firem a výrobků patří jejich vlastníkům a používáme je výhradně k označení výrobků, o kterých je řeč. K tomu názvy jsou.",
+          "Názvy se objevují jako text, vysázený naším písmem. Žádná loga, žádní maskoti, žádné fotografie obalů a žádná firemní barva použitá tak, aby firmu zastupovala."
+        ]
+      },
+      {
+        "heading": "Nutriční údaje",
+        "body": [
+          "Jednotlivý nutriční údaj je fakt a tak s ním zacházíme: zaznamenaný výběrově, po jedné položce, vždy s odkazem na zdroj, ze kterého pochází, a vždy zveřejněný spolu s naším vlastním rozborem.",
+          "Nereprodukujeme nutriční databázi ani celou tabulku menu žádné firmy, neprocházíme weby automaticky a respektujeme robots.txt."
+        ]
+      },
+      {
+        "heading": "Obrazový materiál",
+        "body": [
+          "Každá ilustrace je naše vlastní plošná vektorová kresba. Žádné fotografie značkových obalů, žádné firemní produktové fotky a žádné ilustrační fotobanky vydávané za skutečnou položku."
+        ]
+      },
+      {
+        "heading": "Není to lékařská ani výživová rada",
+        "body": [
+          "Nic na tomhle webu není lékařská, výživová ani dietní rada a nic z toho nenahrazuje odborníka, který zná vaši situaci. Pokud máte zdravotní potíže, jste těhotná nebo pracujete na svém vztahu k jídlu, mluvte s někým kvalifikovaným, ne s webovou stránkou."
+        ]
+      },
+      {
+        "heading": "Čísla se mění",
+        "body": [
+          "U každé sady údajů je uvedený trh, kterého se týkají, a datum, kdy jsme je naposledy ověřovali. Receptury se mění, porce se mění a firmy to zpravidla neohlašují. Než se na nějaké číslo spolehnete, ověřte si aktuální údaje zveřejněné firmou."
+        ]
+      },
+      {
+        "heading": "Naše vlastní texty a kresby",
+        "body": [
+          "Texty, kresby i kód jsou naše. Údaje citované od firmy nebo od úřadu patří tomu, kdo je zveřejnil, a jsou uvedené na stránce, která je používá."
+        ]
+      },
+      {
+        "heading": "Když jsme něco popletli",
+        "body": [
+          "Dejte nám vědět — zvlášť pokud se to týká vaší firmy — a my to opravíme a napíšeme, že jsme to opravili. Mít pravdu je pro tenhle projekt důležitější než se hájit, protože mít pravdu je jediný důvod ho číst."
+        ]
+      }
+    ],
+    "repoLink": "Nahlásit opravu na GitHubu"
+  },
+  "privacy": {
+    "title": "Soukromí",
+    "lede": "Krátká verze: tenhle web o vás nic nesbírá, protože k tomu nemá čím.",
+    "sections": [
+      {
+        "heading": "Žádné cookies, žádné úložiště, žádné účty",
+        "body": [
+          "Nejsou tu žádné cookies. Do úložiště vašeho prohlížeče se nic nezapisuje. Není tu účet, který by šlo založit, formulář, který by šlo odeslat, ani diskuze nebo newsletter.",
+          "Váš jazyk i trh, jehož čísla čtete, jsou součástí adresy stránky, ne něčím, co si o vás pamatujeme. Proto taky odkaz, který někomu pošlete, ukáže příjemci přesně to, co ukázal vám."
+        ]
+      },
+      {
+        "heading": "Žádná analytika, žádné trackery, žádné třetí strany",
+        "body": [
+          "Web nenačítá nic od nikoho jiného: žádnou analytiku, žádnou reklamu, žádné tag managery, žádná cizí písma a žádné cizí skripty. Každá stránka je statický soubor a všechno, co potřebuje, pochází z této domény.",
+          "Pokud se někdy zapne bezcookiová analytika, bude jmenovaná na této stránce dřív, než se zapne."
+        ]
+      },
+      {
+        "heading": "Co vidí hosting",
+        "body": [
+          "Stránky servíruje GitHub Pages. Jako každý webový server dostane GitHub váš požadavek a může si zaznamenat technické údaje, například IP adresu a prohlížeč. To je zpracování na straně GitHubu podle jeho zásad ochrany soukromí. My tyhle logy nedostáváme a nemáme k nim přístup."
+        ]
+      },
+      {
+        "heading": "Odkazy ven",
+        "body": [
+          "Na zdroje odkazujeme proto, abyste si je mohli ověřit sami. Jakmile odkaz otevřete, jste na cizím webu a pod jeho pravidly — do toho, co sbírá on, nemáme co mluvit."
+        ]
+      },
+      {
+        "heading": "Změny",
+        "body": ["Pokud se na tomhle něco změní, změní se nejdřív tahle stránka."]
+      }
+    ],
+    "hostLink": "Zásady ochrany soukromí GitHubu"
+  },
+  "sources": {
+    "title": "Všechny zdroje",
+    "lede": "Každý dokument, ze kterého na tomhle webu pochází nějaké číslo, v jednom seznamu. Generuje se ze stejných záznamů, ze kterých se staví stránky, takže se od nich nemůže potichu rozejít.",
+    "empty": "Zatím žádné zdroje, protože zatím není zveřejněný žádný obsah.",
+    "count": "{count, plural, =0 {Žádné dokumenty} one {# dokument} few {# dokumenty} many {# dokumentu} other {# dokumentů}}",
+    "groupChains": "Řetězce",
+    "groupItems": "Položky menu",
+    "groupIngredients": "Složky",
+    "groupAdditives": "Záznamy v dekodéru",
+    "note": "Dokument citovaný na víc stránkách je v seznamu jednou. Každé datum je den, kdy jsme ho četli."
+  }
+}

@@ -30,6 +30,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/chains',
     '/decoder',
     '/compare',
+    '/about',
+    '/methodology',
+    '/sources',
+    '/legal',
+    '/privacy',
     ...chains.map((chain) => `/chains/${chain.slug}`),
     ...additives.map((additive) => `/decoder/${additive.slug}`),
     ...items.flatMap((item) =>

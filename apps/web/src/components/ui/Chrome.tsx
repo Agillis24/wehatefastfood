@@ -171,6 +171,8 @@ export function SiteFooter({ locale, path = '' }: { locale: string; path?: strin
   const tDisclaimer = useTranslations('disclaimer');
 
   const links = [
+    { key: 'about', href: `/${locale}/about` },
+    { key: 'methodology', href: `/${locale}/methodology` },
     { key: 'legal', href: `/${locale}/legal` },
     { key: 'privacy', href: `/${locale}/privacy` },
     { key: 'sources', href: `/${locale}/sources` },

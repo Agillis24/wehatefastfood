@@ -27,6 +27,19 @@ export const SITE_ORIGIN: string =
 /** Hosts that must 301 to SITE_ORIGIN. Asserted by the Phase 6 deploy checks. */
 export const REDIRECT_HOSTS: readonly string[] = ['wehatefastfood.com'];
 
+/**
+ * The public repository.
+ *
+ * Named on /about, /legal and /privacy as the way to check what is claimed and
+ * to report a correction, so it is a load-bearing link rather than a credit: if
+ * it ever moves, the transparency claim on three pages moves with it.
+ */
+export const REPO_URL = 'https://github.com/Agillis24/wehatefastfood';
+
+/** Named on /privacy, because GitHub is who actually receives the request. */
+export const HOST_PRIVACY_URL =
+  'https://docs.github.com/site-policy/privacy-policies/github-privacy-statement';
+
 export function absoluteUrl(pathname: string): string {
   return new URL(pathname, SITE_ORIGIN).toString();
 }

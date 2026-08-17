@@ -1,0 +1,215 @@
+{
+  "about": {
+    "title": "About",
+    "lede": "An independent record of what is actually in fast food, and why the companies selling it put those things there.",
+    "sections": [
+      {
+        "heading": "Why this exists",
+        "body": [
+          "None of this is secret. It is published, because the law says it has to be. It is also scattered across country-specific PDFs, buried under marketing copy, given per 100 g when you are eating 340 g, and set in type that would embarrass a pharmacist.",
+          "This site does the boring part. Read the disclosure, record the figure, cite where it came from, and say plainly what each ingredient is doing in there."
+        ]
+      },
+      {
+        "heading": "Who it is for",
+        "body": [
+          "Anyone who wants to know what they are eating. That is the entire qualification.",
+          "There is no diet here, no plan, no before-and-after. No food is called good or bad, nobody is told what to weigh, and there are no exercise equivalents — you will never be told to run for forty minutes because of a milkshake. What you do with the numbers is your business."
+        ]
+      },
+      {
+        "heading": "The attitude",
+        "body": [
+          "We are hostile to an industry: to recipes designed around cost and shelf life, to portions that grew while the price stayed familiar, to marketing that spends more on the word fresh than the kitchen does.",
+          "We are not hostile to anyone eating the food. It is cheap, it is fast, it is everywhere, and often it is the only thing within reach. The snark points up."
+        ]
+      },
+      {
+        "heading": "Independence",
+        "body": [
+          "No advertising, no affiliate links, no sponsorship, and no money from any company named here. There is nothing on this site to buy.",
+          "The code and the data behind every page are public, so anything asserted here can be checked against the thing that produced it."
+        ]
+      },
+      {
+        "heading": "Being wrong",
+        "body": [
+          "We will be. Recipes change quietly, and we will sometimes read a document badly.",
+          "When it happens the correction is fast and visible: re-read the source, fix the page, update the date it was checked. A company changing its product is itself worth recording — the old figure, with the date we read it, is evidence rather than an embarrassment."
+        ]
+      }
+    ],
+    "repoLink": "Source code and data on GitHub"
+  },
+  "methodology": {
+    "title": "Methodology",
+    "lede": "How a number gets onto this site, what it means once it is here, and what we refuse to do with it.",
+    "sections": [
+      {
+        "heading": "Where the figures come from",
+        "body": [
+          "In order of preference: the company's own published nutrition disclosure, then regulators, then peer-reviewed research. Every figure carries its source, and every source carries the date we read it — not the date it was published. Chains reformulate quietly, so what matters is when a person last looked.",
+          "Entries are added one at a time, by hand, because someone decided that item was worth documenting. We do not crawl, we do not bulk-copy, and we never reproduce a company's full nutrition table. An individual figure is a fact. A compiled database is somebody's work."
+        ]
+      },
+      {
+        "heading": "Per 100 g and per portion",
+        "body": [
+          "Both appear, because they answer different questions. Per 100 g is how two foods are compared to each other. Per portion is what you actually eat, and it is the number the industry would rather you did not add up.",
+          "Where a company publishes only one basis, the page says which one, and we derive nothing that cannot be derived honestly from it."
+        ]
+      },
+      {
+        "heading": "The traffic lights",
+        "body": [
+          "The colours follow the UK front-of-pack criteria. For each of fat, saturates, sugars and salt, a food is low, medium or high per 100 g, and drinks are judged against their own lower thresholds.",
+          "One rule can only ever move a colour upward. If a single portion carries more than the portion threshold, it is shown as high even where the per-100 g figure would say medium — a large serving of a merely medium food is not a medium amount. The rule never runs the other way: nothing is downgraded for being a small portion.",
+          "A value sitting exactly on a boundary takes the higher band."
+        ]
+      },
+      {
+        "heading": "Salt, sodium, and the 2.5",
+        "body": [
+          "Some markets publish salt, others publish sodium. They are the same measurement in different clothes: salt equals sodium multiplied by 2.5, which is the conversion the EU labelling rules define.",
+          "We record whichever the company actually published, and a converted value is shown as converted. Where a company publishes both and they disagree with each other, the disagreement is flagged rather than quietly averaged away."
+        ]
+      },
+      {
+        "heading": "Reference intakes",
+        "body": [
+          "Percentages are measured against the EU reference intake for an average adult: 2000 kcal, 8400 kJ a day. That is a labelling convention, not a recommendation aimed at you. It knows nothing about your age, your size, or anything else you ate today."
+        ]
+      },
+      {
+        "heading": "The quantity stack",
+        "body": [
+          "Sugar is drawn as 4 g cubes, salt as 6 g level teaspoons, saturated fat as 5 g pats of butter, and all three are drawn at true relative scale to one another so the eye can compare them without being told to.",
+          "Fractions are drawn as fractions. Nine grams of sugar is two cubes and a quarter, not about two.",
+          "The unit is always a physical quantity of the substance itself. It is never a quantity of your time, your effort, or your body."
+        ]
+      },
+      {
+        "heading": "What is provisional, and why we say so",
+        "body": [
+          "The threshold tables that decide the traffic-light colours, and the reference intakes behind the percentages, have not yet been checked line by line against the source documents by a person. Until that is done, everything derived from them is labelled provisional on the page where it appears.",
+          "That label is not a formality. A number that decides whether a food shows red is exactly the kind of number this site cannot afford to have taken on trust, including from itself."
+        ]
+      },
+      {
+        "heading": "Additives",
+        "body": [
+          "Every decoder entry carries at least two sources from two different publishers, and states the position in the EU, the UK and the US separately. Where regulators disagree, both positions are shown and we do not pick one.",
+          "Evidence strength is our reading of the sources listed on that page. It is not a safety verdict and it is not medical advice.",
+          "Not authorised in the EU very often means nobody has filed the paperwork, not that anything was found to be harmful. Treating those two as the same thing is the mistake that would make this site worthless, so we treat it as a serious error rather than a nuance."
+        ]
+      },
+      {
+        "heading": "What we will not do",
+        "body": [
+          "No estimated figures. If we do not have it from a source, the page says so and shows nothing in its place.",
+          "No Nutri-Score. Computing one needs fibre and fruit-and-vegetable percentages that chains do not publish, so it would mean estimating the inputs — and estimating is the one thing this project will not do.",
+          "No exercise equivalents, no BMI, no weight-loss framing, and no good and bad foods."
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "lede": "The position this site works to. It is not legal advice and it is not a contract.",
+    "sections": [
+      {
+        "heading": "No affiliation",
+        "body": [
+          "This site is not affiliated with, endorsed by, or sponsored by any company named on it. Company and product names belong to their owners and are used here only to identify the products under discussion. That is what names are for.",
+          "Names appear as text, set in our own typeface. No logos, no mascots, no packaging photography, and no company's colour used to stand in for the company."
+        ]
+      },
+      {
+        "heading": "Nutrition figures",
+        "body": [
+          "An individual nutrition figure is a fact, and we treat it as one: recorded selectively, one item at a time, always attributed to the disclosure it came from, and always published alongside our own analysis.",
+          "We do not reproduce any company's nutrition database or full menu table, we do not crawl, and we respect robots.txt."
+        ]
+      },
+      {
+        "heading": "Imagery",
+        "body": [
+          "Every illustration here is our own flat-vector artwork. No photographs of branded packaging, no company product photography, and no stock photography standing in for the real item."
+        ]
+      },
+      {
+        "heading": "Not medical or dietary advice",
+        "body": [
+          "Nothing on this site is medical, nutritional or dietary advice, and none of it replaces a qualified professional who knows your circumstances. If you have a health condition, are pregnant, or are working on your relationship with food, talk to someone qualified rather than to a website."
+        ]
+      },
+      {
+        "heading": "Figures change",
+        "body": [
+          "Every set of figures names the market it describes and the date we last checked it. Recipes change, portions change, and companies rarely announce it. Before you rely on a number, check the company's current published figures."
+        ]
+      },
+      {
+        "heading": "Our own words and pictures",
+        "body": [
+          "The writing, the artwork and the code are ours. Figures quoted from a company or a regulator belong to whoever published them and are attributed on the page that uses them."
+        ]
+      },
+      {
+        "heading": "If we have got something wrong",
+        "body": [
+          "Tell us, especially if it concerns your company, and we will fix it and say that we did. Being right matters more to this project than being defensive, because being right is the only reason to read it."
+        ]
+      }
+    ],
+    "repoLink": "Report a correction on GitHub"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "lede": "The short version: this site does not collect anything about you, because it has nothing to collect it with.",
+    "sections": [
+      {
+        "heading": "No cookies, no storage, no accounts",
+        "body": [
+          "There are no cookies. Nothing is written to your browser's storage. There is no account to create, no form to submit, no comment box and no mailing list.",
+          "Your language and the market whose figures you are reading are both part of the page's address rather than something remembered about you. That is also why a link you share shows the person you sent it to exactly what it showed you."
+        ]
+      },
+      {
+        "heading": "No analytics, no trackers, no third parties",
+        "body": [
+          "The site loads nothing from anybody else: no analytics, no advertising, no tag managers, no third-party fonts and no third-party scripts. Every page is a static file and everything it needs comes from this domain.",
+          "If cookieless analytics is ever switched on, it will be named on this page before it is."
+        ]
+      },
+      {
+        "heading": "What the host can see",
+        "body": [
+          "The pages are served by GitHub Pages. Like any web server, GitHub receives your request and may log technical details such as your IP address and your browser. That is GitHub's processing under GitHub's privacy statement. We do not receive those logs and have no access to them."
+        ]
+      },
+      {
+        "heading": "Links out",
+        "body": [
+          "Sources are linked so that you can check them yourself. Once you follow a link you are on somebody else's site, under their rules, and we have no say in what they collect."
+        ]
+      },
+      {
+        "heading": "Changes",
+        "body": ["If any of this changes, this page changes first."]
+      }
+    ],
+    "hostLink": "GitHub Privacy Statement"
+  },
+  "sources": {
+    "title": "All sources",
+    "lede": "Every document behind every figure on this site, in one list. It is generated from the same records the pages are built from, so it cannot quietly drift out of step with them.",
+    "empty": "No sources yet, because nothing has been published yet.",
+    "count": "{count, plural, =0 {No documents} one {# document} other {# documents}}",
+    "groupChains": "Chains",
+    "groupItems": "Menu items",
+    "groupIngredients": "Ingredients",
+    "groupAdditives": "Decoder entries",
+    "note": "A document cited by more than one page is listed once. Every date is the day we read it."
+  }
+}

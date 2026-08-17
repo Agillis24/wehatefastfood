@@ -16,6 +16,7 @@ const CATALOGUES: Record<AvailableLocale, () => Promise<Record<string, unknown>>
     decoder: (await import('@wff/i18n/messages/en/decoder.json')).default,
     diff: (await import('@wff/i18n/messages/en/diff.json')).default,
     compare: (await import('@wff/i18n/messages/en/compare.json')).default,
+    pages: (await import('@wff/i18n/messages/en/pages.json')).default,
   }),
   cs: async () => ({
     ...(await import('@wff/i18n/messages/cs/common.json')).default,
@@ -25,6 +26,7 @@ const CATALOGUES: Record<AvailableLocale, () => Promise<Record<string, unknown>>
     decoder: (await import('@wff/i18n/messages/cs/decoder.json')).default,
     diff: (await import('@wff/i18n/messages/cs/diff.json')).default,
     compare: (await import('@wff/i18n/messages/cs/compare.json')).default,
+    pages: (await import('@wff/i18n/messages/cs/pages.json')).default,
   }),
 };
 

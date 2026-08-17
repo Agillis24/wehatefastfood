@@ -142,3 +142,42 @@ test('the decoder filter actually filters, with JavaScript on', async ({ page })
   await page.locator('#decoder-query').fill('');
   await expect(entries.filter({ visible: true })).toHaveCount(total);
 });
+
+test('every footer link resolves, in both locales', async ({ page }) => {
+  // The footer shipped to production linking to /legal, /privacy and /sources
+  // before any of them existed, so every reader who trusted the chrome got a
+  // 404. A link in the site's own furniture is a promise the site makes about
+  // itself; this test is what keeps that promise checkable.
+  for (const locale of ['en', 'cs']) {
+    await page.goto(`/${locale}/`);
+    const hrefs = await page
+      .locator('footer nav a')
+      .evaluateAll((links) =>
+        links.map((a) => (a as HTMLAnchorElement).getAttribute('href') ?? ''),
+      );
+    expect(hrefs.length).toBeGreaterThan(0);
+
+    for (const href of hrefs) {
+      const response = await page.goto(href);
+      expect(response?.status(), `${href} should not be a dead link`).toBeLessThan(400);
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    }
+  }
+});
+
+test('the privacy page does not outlive its own claim', async ({ page, baseURL }) => {
+  // /privacy states that the site loads nothing from anybody else. That is a
+  // promise about every page, so it is asserted rather than trusted: if someone
+  // adds an analytics snippet or a hosted font, this fails before a reader is
+  // told something untrue.
+  const ownHost = new URL(baseURL ?? 'http://localhost').host;
+  const foreign: string[] = [];
+  page.on('request', (request) => {
+    if (new URL(request.url()).host !== ownHost) foreign.push(request.url());
+  });
+
+  for (const path of ['/en/', '/en/privacy/', ITEM, '/en/decoder/']) {
+    await page.goto(path);
+  }
+  expect(foreign, 'no page may load anything from a third party').toEqual([]);
+});
