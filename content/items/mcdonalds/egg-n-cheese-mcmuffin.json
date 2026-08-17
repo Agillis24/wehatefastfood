@@ -1,0 +1,41 @@
+{
+  "slug": "egg-n-cheese-mcmuffin",
+  "chainSlug": "mcdonalds",
+  "name": "Egg 'N Cheese McMuffin",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 120,
+          "energyKJ": null,
+          "energyKcal": 280,
+          "fatG": 12,
+          "saturatesG": 5,
+          "carbohydrateG": 28,
+          "sugarsG": 2,
+          "fibreG": 2,
+          "proteinG": 14,
+          "saltG": null,
+          "sodiumMg": 510
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Egg 'N Cheese McMuffin - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

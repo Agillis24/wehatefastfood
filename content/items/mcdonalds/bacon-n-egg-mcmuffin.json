@@ -1,0 +1,41 @@
+{
+  "slug": "bacon-n-egg-mcmuffin",
+  "chainSlug": "mcdonalds",
+  "name": "Bacon 'N Egg McMuffin",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 124,
+          "energyKJ": null,
+          "energyKcal": 310,
+          "fatG": 15,
+          "saturatesG": 6,
+          "carbohydrateG": 28,
+          "sugarsG": 3,
+          "fibreG": 2,
+          "proteinG": 16,
+          "saltG": null,
+          "sodiumMg": 670
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Bacon 'N Egg McMuffin - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

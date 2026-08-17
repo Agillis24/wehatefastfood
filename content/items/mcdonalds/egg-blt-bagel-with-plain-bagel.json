@@ -1,0 +1,41 @@
+{
+  "slug": "egg-blt-bagel-with-plain-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Egg BLT Bagel with Plain Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 208,
+          "energyKJ": null,
+          "energyKcal": 550,
+          "fatG": 27,
+          "saturatesG": 10,
+          "carbohydrateG": 57,
+          "sugarsG": 10,
+          "fibreG": 3,
+          "proteinG": 23,
+          "saltG": null,
+          "sodiumMg": 860
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Egg BLT Bagel with Plain Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

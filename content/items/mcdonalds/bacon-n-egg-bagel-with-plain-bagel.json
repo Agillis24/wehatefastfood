@@ -1,0 +1,41 @@
+{
+  "slug": "bacon-n-egg-bagel-with-plain-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Bacon 'N Egg Bagel with Plain Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 186,
+          "energyKJ": null,
+          "energyKcal": 540,
+          "fatG": 24,
+          "saturatesG": 11,
+          "carbohydrateG": 57,
+          "sugarsG": 9,
+          "fibreG": 3,
+          "proteinG": 25,
+          "saltG": null,
+          "sodiumMg": 990
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Bacon 'N Egg Bagel with Plain Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

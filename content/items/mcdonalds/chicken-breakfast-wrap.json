@@ -1,0 +1,41 @@
+{
+  "slug": "chicken-breakfast-wrap",
+  "chainSlug": "mcdonalds",
+  "name": "Chicken Breakfast Wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 239,
+          "energyKJ": null,
+          "energyKcal": 680,
+          "fatG": 42,
+          "saturatesG": 10,
+          "carbohydrateG": 60,
+          "sugarsG": 3,
+          "fibreG": 4,
+          "proteinG": 17,
+          "saltG": null,
+          "sodiumMg": 1200
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Chicken Breakfast Wrap - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "mighty-mcgriddles",
+  "chainSlug": "mcdonalds",
+  "name": "Mighty McGriddles",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 210,
+          "energyKJ": null,
+          "energyKcal": 590,
+          "fatG": 36,
+          "saturatesG": 15,
+          "carbohydrateG": 43,
+          "sugarsG": 15,
+          "fibreG": 1,
+          "proteinG": 24,
+          "saltG": null,
+          "sodiumMg": 1590
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Mighty McGriddles - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

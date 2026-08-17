@@ -1,0 +1,41 @@
+{
+  "slug": "sesame-egg-blt-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Sesame Egg BLT Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 207,
+          "energyKJ": null,
+          "energyKcal": 570,
+          "fatG": 28,
+          "saturatesG": 10,
+          "carbohydrateG": 57,
+          "sugarsG": 9,
+          "fibreG": 3,
+          "proteinG": 23,
+          "saltG": null,
+          "sodiumMg": 870
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sesame Egg BLT Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

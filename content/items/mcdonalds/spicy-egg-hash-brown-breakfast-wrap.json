@@ -1,0 +1,41 @@
+{
+  "slug": "spicy-egg-hash-brown-breakfast-wrap",
+  "chainSlug": "mcdonalds",
+  "name": "Spicy Egg & Hash Brown Breakfast Wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 265,
+          "energyKJ": null,
+          "energyKcal": 630,
+          "fatG": 39,
+          "saturatesG": 10,
+          "carbohydrateG": 54,
+          "sugarsG": 5,
+          "fibreG": 4,
+          "proteinG": 17,
+          "saltG": null,
+          "sodiumMg": 1060
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Spicy Egg & Hash Brown Breakfast Wrap - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

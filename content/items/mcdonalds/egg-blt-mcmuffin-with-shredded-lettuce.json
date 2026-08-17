@@ -1,0 +1,41 @@
+{
+  "slug": "egg-blt-mcmuffin-with-shredded-lettuce",
+  "chainSlug": "mcdonalds",
+  "name": "Egg BLT McMuffin with Shredded Lettuce",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 165,
+          "energyKJ": null,
+          "energyKcal": 360,
+          "fatG": 19,
+          "saturatesG": 7,
+          "carbohydrateG": 30,
+          "sugarsG": 3,
+          "fibreG": 2,
+          "proteinG": 16,
+          "saltG": null,
+          "sodiumMg": 700
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Egg BLT McMuffin with Shredded Lettuce - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

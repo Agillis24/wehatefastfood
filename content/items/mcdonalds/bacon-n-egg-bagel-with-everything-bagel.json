@@ -1,0 +1,41 @@
+{
+  "slug": "bacon-n-egg-bagel-with-everything-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Bacon 'N Egg Bagel with Everything Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 184,
+          "energyKJ": null,
+          "energyKcal": 550,
+          "fatG": 26,
+          "saturatesG": 11,
+          "carbohydrateG": 54,
+          "sugarsG": 7,
+          "fibreG": 3,
+          "proteinG": 26,
+          "saltG": null,
+          "sodiumMg": 950
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Bacon 'N Egg Bagel with Everything Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

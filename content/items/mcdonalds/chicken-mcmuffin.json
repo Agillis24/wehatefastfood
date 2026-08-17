@@ -1,0 +1,41 @@
+{
+  "slug": "chicken-mcmuffin",
+  "chainSlug": "mcdonalds",
+  "name": "Chicken McMuffin",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 125,
+          "energyKJ": null,
+          "energyKcal": 360,
+          "fatG": 18,
+          "saturatesG": 6,
+          "carbohydrateG": 35,
+          "sugarsG": 2,
+          "fibreG": 2,
+          "proteinG": 14,
+          "saltG": null,
+          "sodiumMg": 730
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Chicken McMuffin - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

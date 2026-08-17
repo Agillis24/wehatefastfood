@@ -1,0 +1,41 @@
+{
+  "slug": "everything-bagel-with-butter",
+  "chainSlug": "mcdonalds",
+  "name": "Everything Bagel with Butter",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 102,
+          "energyKJ": null,
+          "energyKcal": 330,
+          "fatG": 9,
+          "saturatesG": 4.5,
+          "carbohydrateG": 52,
+          "sugarsG": 6,
+          "fibreG": 3,
+          "proteinG": 10,
+          "saltG": null,
+          "sodiumMg": 340
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Everything Bagel with Butter - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

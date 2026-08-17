@@ -1,0 +1,41 @@
+{
+  "slug": "sesame-bagel-with-regular-cream-cheese-product",
+  "chainSlug": "mcdonalds",
+  "name": "Sesame Bagel with Regular Cream Cheese Product",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 135,
+          "energyKJ": null,
+          "energyKcal": 380,
+          "fatG": 11,
+          "saturatesG": 6,
+          "carbohydrateG": 57,
+          "sugarsG": 10,
+          "fibreG": 3,
+          "proteinG": 13,
+          "saltG": null,
+          "sodiumMg": 500
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sesame Bagel with Regular Cream Cheese Product - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
