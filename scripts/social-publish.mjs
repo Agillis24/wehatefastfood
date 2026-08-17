@@ -388,6 +388,46 @@ async function main() {
     die(`the image at ${imageUrl} is served as "${contentType}"; Meta's reference lists JPEG`);
   }
 
+  /*
+   * Missing credentials are named IN THE DRY RUN, not saved up for the moment
+   * after someone types --confirm.
+   *
+   * The identity lines above simply do not appear when a token is absent, which
+   * reads as "nothing to report" rather than "nothing configured" - so the dry
+   * run looked like a pass and the failure waited for the one command that
+   * cannot be taken back.
+   */
+  /*
+   * A token never contains whitespace or quotes. Anything that does is not a
+   * token - most often a shell command that was pasted into a Read-Host prompt
+   * and written to the file verbatim, which is easy to do and impossible to see
+   * afterwards because nobody prints a credential to check it.
+   *
+   * Meta's answer to it is "Cannot parse access token", which sounds like an
+   * expiry and is not.
+   */
+  const suspect = (name) => {
+    const value = process.env[name] ?? '';
+    if (value === '' || !/[s"']/.test(value)) return null;
+    return `${name} contains whitespace or quotes, so it is not a token - it looks like something else got pasted (${value.length} characters)`;
+  };
+
+  const missing = [];
+  for (const name of ['IG_ACCESS_TOKEN', 'FB_PAGE_ACCESS_TOKEN']) {
+    const problem = suspect(name);
+    if (problem) missing.push(problem);
+  }
+
+  if (targets.includes('ig')) {
+    if (!process.env['IG_ACCESS_TOKEN']) missing.push('IG_ACCESS_TOKEN');
+    if (!account) missing.push('the Instagram account could not be read with that token');
+  }
+  if (targets.includes('fb')) {
+    if (!process.env['FB_PAGE_ID']) missing.push('FB_PAGE_ID');
+    if (!process.env['FB_PAGE_ACCESS_TOKEN']) missing.push('FB_PAGE_ACCESS_TOKEN');
+    else if (!page) missing.push('the Page could not be read with FB_PAGE_ACCESS_TOKEN');
+  }
+
   // --- the plan, printed whether or not it is going to run ------------------
 
   console.log(`
@@ -416,6 +456,19 @@ ${caption
   .join('\n')}
   ---------------------------------------------------------------------------
 `);
+
+  if (missing.length > 0) {
+    die(
+      `not configured for ${targets.map((t) => NETWORKS[t].label).join(' + ')}`,
+      [
+        'Missing or unusable:',
+        ...missing.map((m) => `  - ${m}`),
+        '',
+        'Fill them in .env.local. docs/SOCIAL_PUBLISHING.md has where each comes',
+        'from. Run with --to=ig or --to=fb to work on one network at a time.',
+      ].join('\n'),
+    );
+  }
 
   if (args.get('confirm') !== 'true') {
     console.log(`  DRY RUN. Nothing was sent.
