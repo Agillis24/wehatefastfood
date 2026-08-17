@@ -42,6 +42,21 @@ import { TRIPTYCH_COPY, HASHTAGS } from './lib/instagram-copy.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'packages', 'design-tokens', 'brand', 'instagram');
 
+/**
+ * A second copy, served by the site.
+ *
+ * The Instagram Content Publishing API does not accept an upload: it is given a
+ * URL and fetches the image itself, so "media must be hosted on a publicly
+ * accessible server at the time of the attempt". A tile that exists only in the
+ * repo cannot be posted by scripts/ig-publish.mjs.
+ *
+ * Committed rather than gitignored, unlike the per-item share cards. There are
+ * three of them, they change when the brand changes rather than when a figure
+ * does, and the publish script needs their URLs to be stable and predictable
+ * rather than content-hashed.
+ */
+const WEB_OUT = path.join(ROOT, 'apps', 'web', 'public', 'social');
+
 const TILE_W = 1080;
 const TILE_H = 1350;
 const PANELS = 3;
@@ -175,10 +190,12 @@ async function render(svg, width, file) {
     .render()
     .asPng();
   await writeFile(path.join(OUT, file), png);
+  await writeFile(path.join(WEB_OUT, file), png);
   return png.length;
 }
 
 await mkdir(OUT, { recursive: true });
+await mkdir(WEB_OUT, { recursive: true });
 
 // The three tiles, plus the whole banner so the join can be checked in one look.
 const NAMES = ['wff-ig-1-left.png', 'wff-ig-2-centre.png', 'wff-ig-3-right.png'];

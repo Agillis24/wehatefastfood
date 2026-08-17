@@ -34,7 +34,8 @@
     "secrets:scan": "node scripts/secrets-scan.mjs",
     "budget:check": "node scripts/budget-check.mjs",
     "prepare": "node scripts/install-git-hooks.mjs",
-    "serve": "node scripts/serve-static.mjs"
+    "serve": "node scripts/serve-static.mjs",
+    "ig:publish": "node scripts/ig-publish.mjs"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
