@@ -37,6 +37,7 @@ import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
+import sharp from 'sharp';
 import { TRIPTYCH_COPY, HASHTAGS } from './lib/instagram-copy.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -182,6 +183,25 @@ function svgFor(offsetX, width) {
   );
 }
 
+/**
+ * JPEG settings, and they are not the defaults for a reason.
+ *
+ * This is flat vector art: hard edges, saturated pink on near-black. JPEG's
+ * default 4:2:0 chroma subsampling throws away three quarters of the colour
+ * resolution, which on that particular pair produces visible fringing along
+ * every letter edge - the one place a wordmark cannot afford it. 4:4:4 keeps
+ * the colour at full resolution and costs a few kB on an image this flat.
+ *
+ * The JPEG exists only because Meta's content-publishing reference lists JPEG
+ * as the image format. The PNG remains the real asset for everything else.
+ */
+async function toJpeg(png, file) {
+  return sharp(png)
+    .flatten({ background: INK })
+    .jpeg({ quality: 92, chromaSubsampling: '4:4:4', mozjpeg: true })
+    .toFile(path.join(WEB_OUT, file.replace(/.png$/, '.jpg')));
+}
+
 async function render(svg, width, file) {
   const png = new Resvg(svg, {
     fitTo: { mode: 'width', value: width },
@@ -189,9 +209,15 @@ async function render(svg, width, file) {
   })
     .render()
     .asPng();
+
   await writeFile(path.join(OUT, file), png);
   await writeFile(path.join(WEB_OUT, file), png);
-  return png.length;
+
+  // Only the three tiles are ever posted; the wide preview is for checking the
+  // join and would just be dead weight in the export.
+  const jpeg = file.includes('preview') ? null : await toJpeg(png, file);
+
+  return { png: png.length, jpeg: jpeg?.size ?? null };
 }
 
 await mkdir(OUT, { recursive: true });
@@ -201,13 +227,16 @@ await mkdir(WEB_OUT, { recursive: true });
 const NAMES = ['wff-ig-1-left.png', 'wff-ig-2-centre.png', 'wff-ig-3-right.png'];
 
 for (let i = 0; i < PANELS; i += 1) {
-  const bytes = await render(svgFor(P(i), TILE_W), TILE_W, NAMES[i]);
-  console.log(`${NAMES[i].padEnd(24)} ${TILE_W}x${TILE_H}  ${(bytes / 1024).toFixed(1)} kB`);
+  const { png, jpeg } = await render(svgFor(P(i), TILE_W), TILE_W, NAMES[i]);
+  console.log(
+    `${NAMES[i].padEnd(24)} ${TILE_W}x${TILE_H}  ${(png / 1024).toFixed(1)} kB png  ` +
+      `${(jpeg / 1024).toFixed(1)} kB jpg`,
+  );
 }
 
-const previewBytes = await render(svgFor(0, FULL_W), FULL_W, 'wff-ig-preview.png');
+const preview = await render(svgFor(0, FULL_W), FULL_W, 'wff-ig-preview.png');
 console.log(
-  `${'wff-ig-preview.png'.padEnd(24)} ${FULL_W}x${TILE_H}  ${(previewBytes / 1024).toFixed(1)} kB`,
+  `${'wff-ig-preview.png'.padEnd(24)} ${FULL_W}x${TILE_H}  ${(preview.png / 1024).toFixed(1)} kB png`,
 );
 
 /*
