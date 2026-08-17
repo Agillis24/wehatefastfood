@@ -135,9 +135,19 @@ function die(message, hint) {
   throw new Bail(message);
 }
 
-/** Meta returns errors as JSON. The token must never appear in one. */
+/** A GET, for reads. Graph does not reliably answer a read over POST. */
+async function read(url, params) {
+  return request(`${url}?${new URLSearchParams(params)}`, undefined);
+}
+
+/** A POST, for writes. */
 async function call(url, params) {
-  const response = await fetch(url, { method: 'POST', body: new URLSearchParams(params) });
+  return request(url, new URLSearchParams(params));
+}
+
+/** Meta returns errors as JSON. The token must never appear in one. */
+async function request(url, body) {
+  const response = await fetch(url, body ? { method: 'POST', body } : undefined);
   const text = await response.text();
 
   let parsed;
@@ -154,17 +164,24 @@ async function call(url, params) {
      * when the user logs out, changes their password or revokes the app. The
      * failure then looks like a scope problem and is not one, so it is named.
      */
-    const hint =
-      error.type === 'OAuthException'
-        ? [
-            'The token was rejected. It may have expired, or been invalidated by a',
-            'password change, a logout, or a revoked authorisation - "no expiration',
-            'date" means no timestamp, not immortal.',
-            '',
-            'An expired token cannot be exchanged for a new one. You have to log in',
-            'again and re-issue it: see docs/SOCIAL_PUBLISHING.md.',
-          ].join('\n')
-        : undefined;
+    /*
+     * Keyed on the MESSAGE, not on error.type. Meta labels a great many
+     * unrelated failures OAuthException - "Media ID is not available" among
+     * them - so typing on it told the reader their token had expired when the
+     * real problem was that a container had not finished processing. A hint
+     * that fires on the wrong error is worse than none.
+     */
+    const aboutTheToken = /token|session|expired|permission/i.test(error.message ?? '');
+    const hint = aboutTheToken
+      ? [
+          'The token was rejected. It may have expired, or been invalidated by a',
+          'password change, a logout, or a revoked authorisation - "no expiration',
+          'date" means no timestamp, not immortal.',
+          '',
+          'An expired token cannot be exchanged for a new one. You have to log in',
+          'again and re-issue it: see docs/SOCIAL_PUBLISHING.md.',
+        ].join('\n')
+      : undefined;
     die(`Meta returned ${response.status}: ${error.message ?? JSON.stringify(parsed)}`, hint);
   }
   return parsed;
@@ -224,6 +241,48 @@ async function publishInstagram({ imageUrl, caption, altText, account }) {
     access_token: token,
   });
   if (!container.id) die(`no container id came back: ${JSON.stringify(container)}`);
+
+  /*
+   * WAIT FOR THE CONTAINER. Creating one does not mean it is ready.
+   *
+   * Meta fetches the image from our URL and processes it asynchronously, so
+   * media_publish immediately after create fails with "Media ID is not
+   * available" - which sounds like the id is wrong and is not; it is not
+   * finished yet. Poll status_code until FINISHED.
+   *
+   * IN_PROGRESS  still processing
+   * FINISHED     ready to publish
+   * ERROR        processing failed; status carries why
+   * EXPIRED      created but not published within 24 hours
+   */
+  const started = Date.now();
+  for (;;) {
+    const status = await read(`${IG_API}/${container.id}`, {
+      fields: 'status_code,status',
+      access_token: token,
+    });
+
+    if (status.status_code === 'FINISHED') break;
+
+    if (status.status_code === 'ERROR' || status.status_code === 'EXPIRED') {
+      die(
+        `the container came back ${status.status_code}: ${status.status ?? 'no detail given'}`,
+        'Nothing was published. This is usually the image: Meta fetches it from\nthe URL itself, so it has to be publicly reachable JPEG under 8 MB.',
+      );
+    }
+
+    // A minute is far longer than a 40 kB JPEG needs, so reaching it means
+    // something is stuck rather than slow.
+    if (Date.now() - started > 60_000) {
+      die(
+        `the container was still ${status.status_code} after 60 seconds`,
+        'Nothing was published. The container stays valid for 24 hours, so this\nis worth simply retrying before investigating.',
+      );
+    }
+
+    process.stdout.write('  instagram: container still processing...\r');
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  }
 
   console.log(`  instagram: publishing container ${container.id}...`);
   const published = await call(`${IG_API}/${userId}/media_publish`, {
