@@ -64,7 +64,12 @@ const rl = createInterface({ input: process.stdin, output, terminal: true });
 
 /** Trimmed, unquoted, and checked for the shape a credential cannot have. */
 async function askSecret(label, kind = 'token') {
-  process.stdout.write(`${label}: `);
+  /*
+   * Say that it is hidden. A muted prompt looks broken the first time you meet
+   * one - you paste, nothing appears, and the reasonable conclusion is that the
+   * paste failed rather than that the echo is off.
+   */
+  process.stdout.write(`${label} (hidden - paste and press Enter): `);
   muted = true;
   const typed = await rl.question('');
   muted = false;
