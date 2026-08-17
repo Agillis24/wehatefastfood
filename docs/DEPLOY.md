@@ -43,53 +43,63 @@ Nothing is required. The site builds and runs with none of these set — that wa
 
 ---
 
-## 3. Domain — registered at Český hosting (muj.cesky-hosting.cz)
+## 3. Domain — Český hosting (muj.cesky-hosting.cz)
 
-Canonical is `www`. Both hosts must resolve, but only one may be canonical, or every page competes with a duplicate of itself in search.
+### The zone as it stands, checked 2026-08-15
 
-### Before touching anything: check for email
+```
+NS    ns1.thinline.cz, ns2.thinline.cz, ns3.cesky-hosting.eu
+A     wehatefastfood.com        91.239.200.81
+AAAA  wehatefastfood.com        2001:67c:e94:0:1:5bef:c851:1
+A     www.wehatefastfood.com    91.239.200.81
+AAAA  www.wehatefastfood.com    2001:67c:e94:0:1:5bef:c851:1
+MX    wehatefastfood.com        ...mx2.emailprofi.seznam.cz  (10)
+MX    wehatefastfood.com        ...mx1.emailprofi.seznam.cz  (20)
+TXT   (none)
+DNSSEC inactive
+```
 
-**If any mailbox or forwarder uses `@wehatefastfood.com`, do not move the nameservers to Vercel.** Delegating nameservers moves _all_ DNS, and the MX records that deliver your mail live there too. Mail stops the moment the delegation propagates, and it fails silently — senders get bounces you never see.
+**There is mail on this domain** — Seznam Email Profi. That settles the nameserver question: **keep Český hosting as the nameservers and change individual records.** Delegating the zone to Vercel would take the MX records with it, and mail would stop silently.
 
-Two safe paths:
+### The trap: the AAAA records
 
-|                 | Keep Český hosting nameservers | Delegate to Vercel                               |
-| --------------- | ------------------------------ | ------------------------------------------------ |
-| What you change | just two records               | the whole zone                                   |
-| Email           | untouched                      | you must recreate MX, SPF, DKIM, DMARC at Vercel |
-| Recommended     | **yes**                        | only if the domain has no mail                   |
+The apex and `www` each have an **AAAA** record pointing at Český hosting. Vercel publishes an IPv4 address for an apex and does not give you an AAAA to replace it with.
 
-**Take the first one.** Change two records and leave everything else alone.
+If you change only the A records and leave the AAAA records alone, then **every visitor whose network prefers IPv6 — which is most mobile networks — still reaches Český hosting's parking page.** Everyone else reaches the site. It looks like it works, right up until someone tells you it does not, and it is miserable to diagnose because it depends on the visitor's connection rather than on anything you can see from here.
 
-### The two records
+Delete them. Both.
 
-In the Český hosting admin (`muj.cesky-hosting.cz`), open the DNS record editor for `wehatefastfood.com` and set:
+### Exact changes
 
-| Name           | Type    | Value                                                      |
-| -------------- | ------- | ---------------------------------------------------------- |
-| `www`          | `CNAME` | the hostname Vercel shows, normally `cname.vercel-dns.com` |
-| `@` (the apex) | `A`     | the IPv4 address Vercel shows                              |
+| Record                             | Now                            | Do                                      |
+| ---------------------------------- | ------------------------------ | --------------------------------------- |
+| `wehatefastfood.com` **A**         | `91.239.200.81`                | **change** to the IPv4 Vercel shows you |
+| `wehatefastfood.com` **AAAA**      | `2001:67c:e94:0:1:5bef:c851:1` | **delete**                              |
+| `www.wehatefastfood.com` **A**     | `91.239.200.81`                | **delete**                              |
+| `www.wehatefastfood.com` **AAAA**  | `2001:67c:e94:0:1:5bef:c851:1` | **delete**                              |
+| `www.wehatefastfood.com` **CNAME** | —                              | **add** → `cname.vercel-dns.com`        |
+| **MX** × 2                         | Seznam Email Profi             | **do not touch**                        |
+| **DNSSEC**                         | inactive                       | leave inactive for now                  |
 
-Use **exactly** what the Vercel dashboard displays when you add the domain. Do not copy an address out of a blog post or out of this file — Vercel changes them, and a stale A record is a site that resolves to somebody else's server.
+Take the apex IPv4 from the Vercel dashboard when you add the domain, not from this file — Vercel changes it, and a stale A record points the domain at somebody else's server.
 
-The apex must be an `A` record, not a `CNAME`. DNS does not allow a CNAME at the zone apex alongside the SOA and NS records that have to be there.
+Český hosting's own UI states the rule that forces the order on `www`: a subdomain with a CNAME cannot have any other record. **Delete the A and AAAA first, then add the CNAME.**
 
-If a conflicting `A` or `CNAME` already exists for `@` or `www`, pointing at Český hosting's own web servers, **replace** it. Two records for the same name is not a fallback, it is a coin toss.
+DNSSEC stays off. Turning it on takes days to propagate fully and would be one more moving part during a cutover; it can be enabled later once the records are stable.
 
-### In Vercel
+### Order of operations
 
-1. Add `www.wehatefastfood.com` as the **primary** domain.
-2. Add `wehatefastfood.com` and set it to **redirect to `www`**, permanent.
+1. **Vercel first.** Add `www.wehatefastfood.com` as the primary domain, and `wehatefastfood.com` set to redirect to it permanently. Vercel shows the records it wants and waits.
+2. **Then Český hosting.** Make the five changes above.
+3. Wait. Allow an hour for the old records to age out of resolver caches.
 
-### Then wait, and check
-
-Propagation is usually minutes and occasionally hours. Český hosting's default TTL is typically 3600 s, so if you had records there before, allow an hour.
+### Then check
 
 ```bash
 curl -sI https://wehatefastfood.com | head -3
 ```
 
-Expect `301` or `308` with `location: https://www.wehatefastfood.com/`.
+Expect `301` or `308` to `https://www.wehatefastfood.com/`.
 
 ```bash
 curl -sI https://www.wehatefastfood.com | head -3
@@ -97,7 +107,17 @@ curl -sI https://www.wehatefastfood.com | head -3
 
 Expect `200`.
 
-`REDIRECT_HOSTS` in `apps/web/src/lib/site.ts` records this decision in code, so it is not only a dashboard setting nobody can find later.
+And confirm the IPv6 trap is closed — this must return no address:
+
+```bash
+nslookup -type=AAAA www.wehatefastfood.com 8.8.8.8
+```
+
+`REDIRECT_HOSTS` in `apps/web/src/lib/site.ts` records the www decision in code, so it is not only a dashboard setting nobody can find later.
+
+### Unrelated, but visible from here: no SPF record
+
+The zone publishes no TXT records, so the domain has no SPF policy while sending mail through Seznam. That makes outbound mail more likely to be filtered. Nothing to do with the website and it can wait, but worth a TXT record from Seznam Email Profi's own instructions at some point.
 
 ---
 
