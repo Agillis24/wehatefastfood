@@ -1,13 +1,15 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pickBasis, type Chain, type MenuItem } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { chainsPath, itemPath } from '@/lib/url';
 import { num } from '@/lib/format';
 import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { pageMetadata } from '@/lib/metadata';
 
 /**
  * Chain page.
@@ -26,6 +28,26 @@ export async function generateStaticParams() {
   return AVAILABLE_LOCALES.flatMap((locale) =>
     chains.map((chain) => ({ locale, chain: chain.slug })),
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; chain: string }>;
+}): Promise<Metadata> {
+  const { locale, chain: chainSlug } = await params;
+  const repo = await getContent();
+  const chain = await repo.getChain(chainSlug);
+
+  const t = await getTranslations({ locale, namespace: 'brand' });
+  if (!chain) return { title: t('name') };
+
+  return pageMetadata({
+    locale,
+    path: `/chains/${chain.slug}`,
+    title: chain.name,
+    description: chain.longIntro,
+  });
 }
 
 export default async function ChainPage({

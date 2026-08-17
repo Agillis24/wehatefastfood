@@ -89,5 +89,8 @@
     "on": "Jen čísla",
     "off": "Zobrazit ilustrace",
     "hint": "Vypne ilustrativní vizualizace a nechá všechny hodnoty."
+  },
+  "meta": {
+    "description": "Co je v položce {item} u řetězce {chain} na trhu {market} — hodnoty, odkud pocházejí a kdy jsme je ověřovali."
   }
 }

@@ -49,7 +49,12 @@
     "methodology": "Metodika",
     "legal": "Právní informace",
     "privacy": "Soukromí",
-    "sources": "Všechny zdroje"
+    "sources": "Všechny zdroje",
+    "social": {
+      "youtube": "We Hate Fast Food na YouTube",
+      "instagram": "We Hate Fast Food na Instagramu",
+      "facebook": "We Hate Fast Food na Facebooku"
+    }
   },
   "language": {
     "label": "Jazyk",

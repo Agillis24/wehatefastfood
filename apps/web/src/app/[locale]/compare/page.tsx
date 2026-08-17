@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { CompareScript } from '@/components/ui/CompareScript';
 import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { pageMetadata } from '@/lib/metadata';
 
 /**
  * Compare, up to three items.
@@ -17,6 +19,21 @@ import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
 
 export function generateStaticParams() {
   return AVAILABLE_LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'compare' });
+  return pageMetadata({
+    locale,
+    path: '/compare',
+    title: t('title'),
+    description: t('subtitle'),
+  });
 }
 
 export default async function ComparePage({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,11 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { FUNCTIONAL_CLASSES, type Additive } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { DecoderFilterScript } from '@/components/ui/DecoderFilterScript';
 import { SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { pageMetadata } from '@/lib/metadata';
 
 /**
  * The decoder index.
@@ -25,6 +27,21 @@ const COMBINING_MARKS = /[̀-ͯ]/g;
 
 export function generateStaticParams() {
   return AVAILABLE_LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'decoder.index' });
+  return pageMetadata({
+    locale,
+    path: '/decoder',
+    title: t('title'),
+    description: t('subtitle'),
+  });
 }
 
 export default async function DecoderPage({ params }: { params: Promise<{ locale: string }> }) {

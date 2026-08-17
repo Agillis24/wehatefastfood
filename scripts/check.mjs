@@ -65,6 +65,13 @@ const GATES = [
     why: 'every fact carries a source, every reference resolves',
   },
   {
+    // Reads apps/web/out, so it only does anything after a build. It skips
+    // quietly rather than failing on a fresh clone; CI builds before checking.
+    name: 'seo',
+    args: ['scripts/seo-check.mjs'],
+    why: 'every exported page needs a canonical, Open Graph and a reflexive hreflang set',
+  },
+  {
     name: 'budget',
     args: ['scripts/budget-check.mjs'],
     why: 'first-load JS per route; skips silently when there is no build yet',

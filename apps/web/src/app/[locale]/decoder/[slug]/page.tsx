@@ -1,13 +1,15 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Additive, MenuItem, Source } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { itemPath } from '@/lib/url';
 import { SourceList } from '@/components/content/SourceList';
 import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { pageMetadata } from '@/lib/metadata';
 
 /**
  * A decoder entry, plus the "found in" back-links generated from the content
@@ -23,6 +25,35 @@ export async function generateStaticParams() {
   return AVAILABLE_LOCALES.flatMap((locale) =>
     additives.map((additive) => ({ locale, slug: additive.slug })),
   );
+}
+
+/**
+ * These pages answer "what is E621 and why is it in my food", which is the
+ * question an assistant is most likely to be asked and to quote an answer for.
+ * They shipped with no generateMetadata at all: no title, no description, no
+ * canonical - invisible to every consumer that reads a head rather than a body.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const repo = await getContent();
+  const additive = await repo.getAdditive(slug);
+
+  const t = await getTranslations({ locale, namespace: 'brand' });
+  if (!additive) return { title: t('name') };
+
+  const name = additive.names[0] ?? slug;
+
+  return pageMetadata({
+    locale,
+    path: `/decoder/${additive.slug}`,
+    // The E-number is what people search for, so it leads.
+    title: additive.eNumber === null ? name : `${additive.eNumber} - ${name}`,
+    description: additive.whatItIs,
+  });
 }
 
 export default async function DecoderEntryPage({

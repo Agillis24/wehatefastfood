@@ -4,8 +4,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Source } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
-import { absoluteUrl } from '@/lib/site';
 import { SourceEntry } from '@/components/content/SourceList';
+import { pageMetadata } from '@/lib/metadata';
 import { StaticPage } from '@/components/content/StaticPage';
 
 /**
@@ -31,11 +31,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.sources' });
-  return {
-    title: t('title'),
-    description: t('lede'),
-    alternates: { canonical: absoluteUrl(`/${locale}/sources/`) },
-  };
+  return pageMetadata({ locale, path: '/sources', title: t('title'), description: t('lede') });
 }
 
 export default async function SourcesPage({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SocialLinks } from '@/components/ui/SocialLinks';
 import { useTranslations } from 'next-intl';
 import { Wordmark } from '@/components/brand/Wordmark';
 import { chainsPath, homePath, itemPath } from '@/lib/url';
@@ -188,7 +189,10 @@ export function SiteFooter({ locale, path = '' }: { locale: string; path?: strin
             </Link>
           ))}
         </nav>
-        <LanguagePicker locale={locale} path={path} />
+        <div className="flex flex-wrap items-center gap-6">
+          <LanguagePicker locale={locale} path={path} />
+          <SocialLinks />
+        </div>
         <Disclaimers />
         {/* Discreet, not preachy, and never on the same line as a calorie count. */}
         <p className="text-xs text-[var(--surface-muted)]">{tDisclaimer('support')}</p>

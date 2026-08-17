@@ -1,15 +1,37 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Chain } from '@wff/content';
 import { Wordmark } from '@/components/brand/Wordmark';
 import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { SiteStructuredData } from '@/components/content/StructuredData';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { chainPath, chainsPath } from '@/lib/url';
+import { pageMetadata } from '@/lib/metadata';
 
 export function generateStaticParams() {
   return AVAILABLE_LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'brand' });
+  const home = await getTranslations({ locale, namespace: 'home' });
+
+  return pageMetadata({
+    locale,
+    path: '',
+    // Absolute, or the layout template makes it "We Hate Fast Food - We Hate Fast Food".
+    title: t('name'),
+    absoluteTitle: true,
+    description: `${home('hero.leadIn')} ${home('hero.thesis')}`,
+  });
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -29,6 +51,7 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
 
   return (
     <>
+      <SiteStructuredData locale={locale} name={brand('name')} description={brand('tagline')} />
       <SiteHeader locale={locale} />
 
       <main id="main" className="mx-auto flex max-w-5xl flex-col gap-12 px-4 py-10">

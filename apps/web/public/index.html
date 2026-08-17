@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--
       Root redirect.
 
@@ -9,11 +10,60 @@
       locale. The meta refresh does it without JavaScript; the script only
       improves on it by honouring the browser's own language preference, and
       the link is there for anyone both meta refresh and script fail for.
+
+      THIS FILE INHERITS NOTHING. It is copied verbatim into the export and
+      never passes through the Next Metadata API, so lib/metadata.ts cannot
+      reach it and neither can lib/launch.ts. Every tag below is hand-kept, and
+      that is the trade: this is the ONE address that goes in the YouTube
+      description, the Instagram bio and every link anybody types from memory,
+      and it had no Open Graph tags at all. Every unfurler was falling back to
+      whatever it could scrape, and none of them run JavaScript or reliably
+      follow a meta refresh - so the tags have to be on this document itself.
+
+      If the tagline, the share image or the locale list changes, change it here
+      too. There is no test that can catch this one, because the file is data.
     -->
     <meta http-equiv="refresh" content="0; url=/en/" />
-    <link rel="canonical" href="https://www.wehatefastfood.com/en/" />
-    <meta name="robots" content="noindex" />
+
     <title>We Hate Fast Food</title>
+    <meta name="description" content="What's actually in it — and why they put it there." />
+    <link rel="canonical" href="https://www.wehatefastfood.com/en/" />
+
+    <link rel="alternate" hreflang="en" href="https://www.wehatefastfood.com/en/" />
+    <link rel="alternate" hreflang="cs" href="https://www.wehatefastfood.com/cs/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.wehatefastfood.com/en/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="We Hate Fast Food" />
+    <meta property="og:title" content="We Hate Fast Food" />
+    <meta property="og:description" content="What's actually in it — and why they put it there." />
+    <meta property="og:url" content="https://www.wehatefastfood.com/en/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:image" content="https://www.wehatefastfood.com/og/wff-share.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="We Hate Fast Food — what's actually in it, and why they put it there."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="We Hate Fast Food" />
+    <meta name="twitter:description" content="What's actually in it — and why they put it there." />
+    <meta name="twitter:image" content="https://www.wehatefastfood.com/og/wff-share.png" />
+
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#16120F" />
+
+    <!--
+      REMOVE THIS LINE AT LAUNCH. It is listed as its own step in docs/DEPLOY.md
+      because nothing else here is driven by isIndexable(), so opening the rest
+      of the site leaves this page closed and the apex silently out of the index.
+    -->
+    <meta name="robots" content="noindex" />
+
     <script>
       (function () {
         var reviewed = ['en', 'cs'];

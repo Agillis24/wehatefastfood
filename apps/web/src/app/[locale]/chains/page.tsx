@@ -1,16 +1,33 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Chain, MenuItem } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { chainPath } from '@/lib/url';
 import { SiteFooter, SiteHeader } from '@/components/ui/Chrome';
+import { pageMetadata } from '@/lib/metadata';
 
 /** All chains, with honest coverage badges. The gaps are the point. */
 
 export function generateStaticParams() {
   return AVAILABLE_LOCALES.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'chains.index' });
+  return pageMetadata({
+    locale,
+    path: '/chains',
+    title: t('title'),
+    description: t('subtitle'),
+  });
 }
 
 export default async function ChainsPage({ params }: { params: Promise<{ locale: string }> }) {

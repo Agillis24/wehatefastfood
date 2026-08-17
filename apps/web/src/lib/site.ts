@@ -36,10 +36,54 @@ export const REDIRECT_HOSTS: readonly string[] = ['wehatefastfood.com'];
  */
 export const REPO_URL = 'https://github.com/Agillis24/wehatefastfood';
 
+/**
+ * The project's own accounts.
+ *
+ * Used twice, and both uses matter: as links in the footer, and as `sameAs` in
+ * the Organization structured data, which is how a search engine or an
+ * assistant establishes that the site, the channel and the Instagram account
+ * are one publisher rather than three. Adding an account to only one of the two
+ * places is the easy mistake - keep this list as the single source.
+ */
+export const SOCIAL = [
+  { key: 'youtube', url: 'https://www.youtube.com/@wehatefastfood' },
+  { key: 'instagram', url: 'https://www.instagram.com/wehatefastfood/' },
+  { key: 'facebook', url: 'https://www.facebook.com/profile.php?id=61593011146180' },
+] as const;
+
 /** Named on /privacy, because GitHub is who actually receives the request. */
 export const HOST_PRIVACY_URL =
   'https://docs.github.com/site-policy/privacy-policies/github-privacy-statement';
 
 export function absoluteUrl(pathname: string): string {
   return new URL(pathname, SITE_ORIGIN).toString();
+}
+
+/**
+ * An absolute URL with exactly one trailing slash.
+ *
+ * next.config sets `trailingSlash: true`, so every page really lives at a
+ * slashed path, but the helpers in lib/url.ts return unslashed ones. Next
+ * silently normalises the value it puts in `alternates.canonical`, which hid
+ * the problem: the rendered canonical was right while the same string, used
+ * anywhere Next does not touch it, was wrong. It reached the JSON-LD as the
+ * MenuItem @id and as every BreadcrumbList item - so the identifier a search
+ * engine or an assistant keys the page on pointed at a redirect.
+ *
+ * Canonical, og:url, hreflang href, sitemap entry and JSON-LD @id have to be
+ * BYTE-IDENTICAL. Anything else is two objects as far as every consumer is
+ * concerned, and two social-preview caches. Everything goes through here.
+ */
+export function canonicalUrl(pathname: string): string {
+  // A fragment or a query is not part of the path, so the slash must not land
+  // after it. "/#organisation" is a JSON-LD node identifier and
+  // "/#organisation/" is a different one - which is exactly the sort of silent
+  // near-miss that makes two entities out of one and still looks plausible in
+  // the emitted markup.
+  const split = pathname.search(/[?#]/);
+  const pathOnly = split === -1 ? pathname : pathname.slice(0, split);
+  const rest = split === -1 ? '' : pathname.slice(split);
+  const withSlash = pathOnly.endsWith('/') ? pathOnly : `${pathOnly}/`;
+
+  return new URL(`${withSlash}${rest}`, SITE_ORIGIN).toString();
 }

@@ -49,7 +49,12 @@
     "methodology": "Methodology",
     "legal": "Legal",
     "privacy": "Privacy",
-    "sources": "All sources"
+    "sources": "All sources",
+    "social": {
+      "youtube": "We Hate Fast Food on YouTube",
+      "instagram": "We Hate Fast Food on Instagram",
+      "facebook": "We Hate Fast Food on Facebook"
+    }
   },
   "language": {
     "label": "Language",

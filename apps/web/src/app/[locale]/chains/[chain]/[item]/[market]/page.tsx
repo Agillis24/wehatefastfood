@@ -18,8 +18,7 @@ import {
 } from '@wff/content';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
-import { itemPath } from '@/lib/url';
-import { absoluteUrl } from '@/lib/site';
+import { pageMetadata } from '@/lib/metadata';
 import { grams, isoDate } from '@/lib/format';
 import { RealityCheck } from '@/components/data/RealityCheck';
 import { ReferenceIntake } from '@/components/data/ReferenceIntake';
@@ -140,15 +139,31 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const t = await getTranslations({ locale: resolved.locale, namespace: 'brand' });
   if (!data) return { title: t('name') };
 
-  return {
-    title: `${data.item.name} - ${data.chain.name}`,
-    description: t('tagline'),
-    alternates: {
-      canonical: absoluteUrl(
-        itemPath(resolved.locale, resolved.chain, resolved.item, resolved.market.toUpperCase()),
-      ),
-    },
-  };
+  const market = resolved.market.toUpperCase();
+
+  /*
+   * The description was the site-wide tagline on every item page, which meant
+   * several thousand pages describing themselves identically - the one thing a
+   * meta description must not do, since it is what a search result and an
+   * assistant's summary both quote.
+   *
+   * Our own take when we have written one; otherwise a factual line naming the
+   * item, the chain and the market. Nothing is asserted here that is not
+   * already on the page, and no figure is quoted, because a description is not
+   * revalidated when a figure is.
+   */
+  const meta = await getTranslations({ locale: resolved.locale, namespace: 'item.meta' });
+  const description =
+    data.item.ourTake ??
+    meta('description', { item: data.item.name, chain: data.chain.name, market });
+
+  return pageMetadata({
+    locale: resolved.locale,
+    path: `/chains/${resolved.chain}/${resolved.item}/${market}`,
+    // The market is in the title because two of these pages differ only by it.
+    title: `${data.item.name} - ${data.chain.name} (${market})`,
+    description,
+  });
 }
 
 export default async function ItemPage({ params }: { params: Promise<Params> }) {

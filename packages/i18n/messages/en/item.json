@@ -89,5 +89,8 @@
     "on": "Just the numbers",
     "off": "Show the illustrations",
     "hint": "Turns off the illustrated visualisations and leaves every figure."
+  },
+  "meta": {
+    "description": "What is in a {item} at {chain} in {market} - the figures, where they came from, and the date we checked them."
   }
 }
