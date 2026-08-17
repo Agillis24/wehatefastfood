@@ -41,6 +41,12 @@ jobs:
         env:
           WFF_INCLUDE_SEED: '1'
 
+      # After the build, not in `npm run check`, where it runs before an export
+      # exists and skips - which made it a gate that never fired on the artefact
+      # it was written to read.
+      - name: Check the exported metadata
+        run: node scripts/seo-check.mjs
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 

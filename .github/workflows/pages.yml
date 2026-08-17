@@ -58,6 +58,15 @@ jobs:
           # chain, so an empty site cannot be opened to crawlers by accident.
           NEXT_PUBLIC_ALLOW_INDEXING: ''
 
+      # The metadata gate reads apps/web/out, so it can only run AFTER the
+      # build. In `npm run check` it runs before one exists and skips - which
+      # made it a gate that never fired on the artefact it was written for.
+      - name: Check the exported metadata
+        run: node scripts/seo-check.mjs
+        env:
+          NEXT_PUBLIC_SITE_ORIGIN: https://www.wehatefastfood.com
+          NEXT_PUBLIC_ALLOW_INDEXING:
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
