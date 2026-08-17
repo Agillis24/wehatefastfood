@@ -240,18 +240,23 @@ async function publishInstagram({ imageUrl, caption, altText, account }) {
  * common failure here, so they are separate variables.
  */
 /**
- * Ask the Facebook token who it is.
+ * Read the Page itself with the token, rather than asking the token who it is.
  *
- * This catches the documented number-one failure head on. /me with a PAGE token
- * returns the PAGE; /me with a USER token returns the person. So if a human
- * name comes back, the wrong token was pasted - and Meta reports that case as a
- * permissions error that never mentions the token type.
+ * The obvious form is /me, and it was the first version: a PAGE token returns
+ * the PAGE, a USER token returns the person, so a human name coming back is the
+ * mis-paste people most often make. But it excludes a SYSTEM USER token, which
+ * is the right credential for unattended posting and which /me answers with the
+ * system user - so the check would have refused the best token available.
+ *
+ * Reading the Page node directly works for every kind of token that can post,
+ * and still proves the thing that matters: this credential can see this Page.
  *
  * Read-only, so it runs in a dry run too, and the Page NAME is on screen before
  * anyone types --confirm.
  */
-async function whoamiPage(token) {
-  const url = `${FB_API}/me?fields=id,name&access_token=${encodeURIComponent(token)}`;
+async function whoamiPage(token, pageId) {
+  if (!pageId) return null;
+  const url = `${FB_API}/${pageId}?fields=id,name&access_token=${encodeURIComponent(token)}`;
   const response = await fetch(url).catch(() => null);
   if (!response?.ok) return null;
   return response.json().catch(() => null);
@@ -332,7 +337,7 @@ async function main() {
     : null;
 
   const page = targets.includes('fb')
-    ? await whoamiPage(process.env['FB_PAGE_ACCESS_TOKEN'] ?? '')
+    ? await whoamiPage(process.env['FB_PAGE_ACCESS_TOKEN'] ?? '', process.env['FB_PAGE_ID'] ?? '')
     : null;
 
   /*
@@ -425,7 +430,10 @@ async function main() {
   if (targets.includes('fb')) {
     if (!process.env['FB_PAGE_ID']) missing.push('FB_PAGE_ID');
     if (!process.env['FB_PAGE_ACCESS_TOKEN']) missing.push('FB_PAGE_ACCESS_TOKEN');
-    else if (!page) missing.push('the Page could not be read with FB_PAGE_ACCESS_TOKEN');
+    else if (!page)
+      missing.push(
+        `the Page ${process.env['FB_PAGE_ID']} could not be read with FB_PAGE_ACCESS_TOKEN - wrong token, or it cannot see that Page`,
+      );
   }
 
   // --- the plan, printed whether or not it is going to run ------------------
