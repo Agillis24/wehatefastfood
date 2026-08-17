@@ -1,10 +1,10 @@
 /**
  * Publish one post from the triptych, to Instagram and/or the Facebook Page.
  *
- *   node scripts/ig-publish.mjs --post=1                      dry run, both
- *   node scripts/ig-publish.mjs --post=1 --lang=cs            dry run, Czech
- *   node scripts/ig-publish.mjs --post=1 --to=ig              Instagram only
- *   node scripts/ig-publish.mjs --post=1 --confirm            actually posts
+ *   npm run social:publish -- --post=1                      dry run, both
+ *   npm run social:publish -- --post=1 --lang=cs            dry run, Czech
+ *   npm run social:publish -- --post=1 --to=ig              Instagram only
+ *   npm run social:publish -- --post=1 --confirm            actually posts
  *
  * DRY RUN IS THE DEFAULT AND THE DEFAULT IS THE POINT. Publishing cannot be
  * undone in any way that matters - a deleted post was still seen, and by then
@@ -18,26 +18,19 @@
  * because Instagram fills the grid newest-first from the top left, so posting
  * left to right puts the banner up backwards.
  *
- * TWO NETWORKS, TWO DIFFERENT CREDENTIALS, and this is where it usually goes
- * wrong. Instagram takes a user token; the Facebook Page endpoint explicitly
+ * TWO NETWORKS, SEPARATE CREDENTIALS. The Facebook Page endpoint explicitly
  * requires a PAGE access token - "requested by a person who can perform the
- * CREATE_CONTENT task on the Page" - and a user token there fails with an
- * unhelpful error. They are separate values in .env.local for that reason.
+ * CREATE_CONTENT task on the Page" - and a user token there fails with an error
+ * that does not say so. Instagram's token depends on which login flavour the
+ * app was set up with; see the IG_LOGIN note below.
  *
- * Setup, once, at developers.facebook.com:
- *   1. Create an app. Under Use cases add BOTH:
- *        "Manage messaging & content on Instagram"   (Instagram API)
- *        "Manage everything on your Page"            (Pages API)
- *   2. Connect the business portfolio that holds the Page and the IG account.
- *   3. Generate tokens with these scopes:
- *        Instagram: instagram_business_basic, instagram_business_content_publish
- *        Facebook:  pages_show_list, pages_read_engagement, pages_manage_posts
- *   4. Put the four values in .env.local. It is gitignored, and
- *      `npm run secrets:scan` fails the build if it is ever committed.
- *
- * A long-lived user token lasts about 60 days. A Page token derived from a
- * long-lived user token does not expire, which is why the two are stored
- * separately rather than one being derived from the other at run time.
+ * SETUP IS NOT OBVIOUS AND IS DOCUMENTED SEPARATELY: docs/SOCIAL_PUBLISHING.md.
+ * It was verified against Meta's own documentation rather than written from
+ * memory, and it marks what could not be verified. The short version: the
+ * Instagram account needs the Instagram Tester role AND the invitation has to
+ * be accepted from inside Instagram; the Explorer's token lasts about an hour
+ * and must be exchanged for a long-lived one from a terminal, not a browser;
+ * and the daily publishing ceiling is 50, not the 100 the guide's headline says.
  */
 
 import { readFile } from 'node:fs/promises';
@@ -48,7 +41,34 @@ import { TRIPTYCH_COPY, HASHTAGS } from './lib/instagram-copy.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Pinned, not "latest". A version bump is a change to review, not to inherit. */
-const API = 'https://graph.facebook.com/v25.0';
+const VERSION = 'v26.0';
+const FB_API = `https://graph.facebook.com/${VERSION}`;
+
+/**
+ * TWO INSTAGRAM FLAVOURS, AND THEY ARE NOT INTERCHANGEABLE.
+ *
+ * An app's Instagram use case is set up with either Instagram Login or Facebook
+ * Login, and the choice decides the host, the token type AND the permission
+ * strings:
+ *
+ *   Instagram Login   graph.instagram.com   an Instagram User token
+ *                     instagram_business_basic, instagram_business_content_publish
+ *
+ *   Facebook Login    graph.facebook.com    the PAGE access token - the same
+ *                     string as FB_PAGE_ACCESS_TOKEN, because under this flavour
+ *                     there is no separate Instagram token at all
+ *                     instagram_basic, instagram_content_publish
+ *
+ * Both still require the Instagram account to be linked to a Facebook Page.
+ * Sending the right call to the wrong host fails with an error that does not
+ * mention hosts, which is why this is a named setting rather than a guess.
+ *
+ * Default is Instagram Login: it is what Meta's current use-case UI sets up,
+ * and the `instagram_business_*` permission names are how you recognise it.
+ * See docs/SOCIAL_PUBLISHING.md.
+ */
+const IG_LOGIN = process.env['IG_LOGIN'] ?? 'instagram';
+const IG_API = IG_LOGIN === 'facebook' ? FB_API : `https://graph.instagram.com/${VERSION}`;
 
 /**
  * Meta fetches the image itself, so this has to be the live public origin -
@@ -114,7 +134,24 @@ async function call(url, params) {
   }
 
   if (!response.ok) {
-    die(`Meta returned ${response.status}: ${parsed?.error?.message ?? JSON.stringify(parsed)}`);
+    const error = parsed?.error ?? {};
+    /*
+     * A token with "no expiration date" is not immortal: Meta invalidates it
+     * when the user logs out, changes their password or revokes the app. The
+     * failure then looks like a scope problem and is not one, so it is named.
+     */
+    const hint =
+      error.type === 'OAuthException'
+        ? [
+            'The token was rejected. It may have expired, or been invalidated by a',
+            'password change, a logout, or a revoked authorisation - "no expiration',
+            'date" means no timestamp, not immortal.',
+            '',
+            'An expired token cannot be exchanged for a new one. You have to log in',
+            'again and re-issue it: see docs/SOCIAL_PUBLISHING.md.',
+          ].join('\n')
+        : undefined;
+    die(`Meta returned ${response.status}: ${error.message ?? JSON.stringify(parsed)}`, hint);
   }
   return parsed;
 }
@@ -133,8 +170,8 @@ async function publishInstagram({ imageUrl, caption, altText }) {
     die('IG_USER_ID and IG_ACCESS_TOKEN must both be set in .env.local');
   }
 
-  console.log('  instagram: creating the media container...');
-  const container = await call(`${API}/${userId}/media`, {
+  console.log(`  instagram: creating the media container (${IG_LOGIN} login)...`);
+  const container = await call(`${IG_API}/${userId}/media`, {
     image_url: imageUrl,
     caption,
     alt_text: altText,
@@ -143,7 +180,7 @@ async function publishInstagram({ imageUrl, caption, altText }) {
   if (!container.id) die(`no container id came back: ${JSON.stringify(container)}`);
 
   console.log(`  instagram: publishing container ${container.id}...`);
-  const published = await call(`${API}/${userId}/media_publish`, {
+  const published = await call(`${IG_API}/${userId}/media_publish`, {
     creation_id: container.id,
     access_token: token,
   });
@@ -168,7 +205,7 @@ async function publishFacebook({ imageUrl, caption, altText }) {
   }
 
   console.log('  facebook: posting the photo...');
-  const published = await call(`${API}/${pageId}/photos`, {
+  const published = await call(`${FB_API}/${pageId}/photos`, {
     url: imageUrl,
     caption,
     alt_text_custom: altText,
