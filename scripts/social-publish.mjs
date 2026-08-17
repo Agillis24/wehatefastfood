@@ -307,10 +307,13 @@ async function main() {
   /*
    * BOTH LANGUAGES IN ONE POST, and that is the default.
    *
-   * The account has a Czech audience and an English-language site, and there is
-   * one feed rather than two - a post carrying only one language excludes half
-   * the people reading it. Czech leads because that is who follows the account;
-   * English follows because that is what the site and the sources are in.
+   * There is one feed rather than two, and a post carrying only one language
+   * excludes half the people reading it.
+   *
+   * ENGLISH LEADS. The site, the sources and the figures are in English, the
+   * project is aimed past the Czech market, and the first line of a caption is
+   * the part that gets truncated into a preview - so it is the half that has to
+   * reach the wider audience. Czech follows under the rule.
    *
    * --lang=cs or --lang=en still forces a single language, for the occasional
    * post where the other half would be noise.
@@ -319,7 +322,7 @@ async function main() {
   if (lang !== undefined && lang !== 'en' && lang !== 'cs') {
     die('--lang must be cs or en; leave it out to post both');
   }
-  const languages = lang ? [lang] : ['cs', 'en'];
+  const languages = lang ? [lang] : ['en', 'cs'];
 
   const to = args.get('to') ?? 'both';
   const targets = to === 'both' ? ['ig', 'fb'] : [to];
