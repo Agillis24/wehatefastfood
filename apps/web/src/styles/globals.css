@@ -90,12 +90,27 @@
     -webkit-box-decoration-break: clone;
   }
 
-  /* The brand angle, as a divider. One angle, used everywhere. */
+  /*
+   * The brand angle, as a section divider.
+   *
+   * A SHORT mark, not a full-width rule. Rotating a full-width bar by -19deg
+   * lifts its far end by width * sin(19deg) - nearly 400 px on a 1200 px page -
+   * so it sweeps diagonally across everything and strikes through the text.
+   *
+   * That is not just ugly, it breaks the rule in docs/BRAND.md §2: the strike is
+   * the brand's gesture and NEVER a verdict on content. Striking through our own
+   * prose reads as exactly that verdict. The Specimen Card computes the same
+   * clearance from the geometry; this is the CSS equivalent, solved by bounding
+   * the width so the rotation stays local.
+   */
   .rule-strike {
-    block-size: var(--hairline);
-    background-color: var(--surface-rule);
+    inline-size: 120px;
+    block-size: 6px;
+    background-color: var(--color-pink);
     transform: rotate(var(--angle-strike));
-    transform-origin: center;
+    transform-origin: left center;
+    /* The rotation lifts the far end; this keeps it out of the line above. */
+    margin-block: calc(120px * 0.33) 0;
   }
 }
 
