@@ -237,15 +237,56 @@ long-lived one, then reads the Page token from it.
   console.log(`\n  written: ${chosen.name}, id ${chosen.id}`);
 }
 
+// --- a Page token you already hold ------------------------------------------
+
+async function page() {
+  console.log(`
+A Page token you already hold - typically a SYSTEM USER token from
+business.facebook.com -> Settings -> Users -> System users.
+
+That route exists because /me/accounts is not always available: when a Page
+role was granted through a business portfolio, Meta requires ads_management
+or ads_read even to READ the list of Pages. A system user with the Page
+assigned sidesteps it, and its token does not expire.
+
+You need the Page ID as well - Business Settings -> Accounts -> Pages shows
+it under the Page name.
+`);
+
+  const pageId = await askSecret('Page ID', 'id');
+  if (pageId.error) return fail(pageId.error, pageId.hint);
+  const token = await askSecret('Page token');
+  if (token.error) return fail(token.error, token.hint);
+
+  const node = await get(
+    `https://graph.facebook.com/${VERSION}/${encodeURIComponent(pageId.value)}?fields=id,name&access_token=${encodeURIComponent(token.value)}`,
+  );
+  if (node.error) {
+    return fail(
+      `Meta rejected it: ${node.error}`,
+      [
+        'Nothing was written. Either that id is not the Page, or this token',
+        'cannot see it - check the system user has the Page assigned, with',
+        'content rights rather than read-only.',
+      ].join('\n'),
+    );
+  }
+
+  await setKeys({ FB_PAGE_ID: node.value.id, FB_PAGE_ACCESS_TOKEN: token.value });
+  console.log(`\n  written: ${node.value.name}, id ${node.value.id}`);
+}
+
 // --- main -------------------------------------------------------------------
 
 try {
   if (args.has('ig')) await instagram();
+  else if (args.has('page')) await page();
   else if (args.has('fb')) await facebook();
   else {
     console.log(`
   npm run social:token -- --ig     Instagram token
-  npm run social:token -- --fb     Facebook Page id and Page token
+  npm run social:token -- --fb     Facebook Page id and Page token, derived
+  npm run social:token -- --page   a Page token you already hold (system user)
 
 Nothing is written unless Meta confirms the value works.`);
   }
