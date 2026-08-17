@@ -23,10 +23,6 @@ export function contentHash(value: unknown): string {
   return createHash('sha256').update(stableStringify(value)).digest('hex').slice(0, 16);
 }
 
-export function cacheKey(locale: string, namespace: string, hash: string): string {
-  return `t:${locale}:${namespace}:${hash}`;
-}
-
 /**
  * Every leaf key path in a bundle, sorted.
  *

@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-const ITEM = '/en/chains/example-burger-co/example-double-burger/GB';
+const ITEM = '/en/chains/example-burger-co/example-double-burger/GB/';
 
 test('home to chain to item', async ({ page }) => {
-  await page.goto('/en');
+  await page.goto('/en/');
   await page
     .getByRole('link', { name: /chains/i })
     .first()
@@ -20,9 +20,9 @@ test('switching market changes the numbers AND the URL', async ({ page }) => {
   // The whole reason market is a path segment: a shared link must show the
   // recipient the same figures as the sender.
   await page.goto(ITEM);
-  await expect(page).toHaveURL(/\/GB$/);
+  await expect(page).toHaveURL(/\/GB\/$/);
   await page.getByRole('link', { name: 'US', exact: true }).click();
-  await expect(page).toHaveURL(/\/US$/);
+  await expect(page).toHaveURL(/\/US\/$/);
 });
 
 test('switching language keeps the same page and the same market', async ({ page }) => {
@@ -32,7 +32,7 @@ test('switching language keeps the same page and the same market', async ({ page
     .filter({ hasText: /Language/i })
     .click();
   await page.getByRole('link', { name: 'Čeština' }).click();
-  await expect(page).toHaveURL('/cs/chains/example-burger-co/example-double-burger/GB');
+  await expect(page).toHaveURL('/cs/chains/example-burger-co/example-double-burger/GB/');
   await expect(page.getByRole('heading', { name: 'Semafory' })).toBeVisible();
 });
 
@@ -82,7 +82,7 @@ test('no exercise-equivalent language anywhere on an item page', async ({ page }
 test('the decoder works without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto('/en/decoder');
+  await page.goto('/en/decoder/');
   // Every entry is server-rendered; only the controls are hidden.
   await expect(page.getByRole('listitem').first()).toBeVisible();
   await expect(page.locator('#decoder-controls')).toBeHidden();
@@ -96,4 +96,49 @@ test('the item page fits 360 px without horizontal scrolling', async ({ page }) 
     () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
   );
   expect(overflow).toBe(false);
+});
+
+test('the root redirects into a locale without JavaScript', async ({ browser }) => {
+  // A static export has no middleware, so "/" is a hand-written meta refresh.
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto('/');
+  await page.waitForURL(/\/(en|cs)\/$/, { timeout: 5000 });
+  await context.close();
+});
+
+test('compare assembles a shareable comparison from the URL hash', async ({ page }) => {
+  // The selection is in the hash so ONE static page answers every combination.
+  await page.goto(
+    '/en/compare/#GB/example-burger-co~example-double-burger/example-burger-co~example-fries',
+  );
+  const table = page.getByRole('table');
+  await expect(table).toBeVisible();
+  await expect(table).toContainText('EXAMPLE DOUBLE BURGER');
+  await expect(table).toContainText('EXAMPLE FRIES');
+  // Figures come from the build-time index, so they must match the item page.
+  await expect(table).toContainText('700');
+});
+
+test('compare shows its empty state with no selection', async ({ page }) => {
+  await page.goto('/en/compare/');
+  await expect(page.getByText(/Nothing selected yet/)).toBeVisible();
+});
+
+test('the decoder filter actually filters, with JavaScript on', async ({ page }) => {
+  // The only previous decoder test ran with JavaScript disabled, so a script
+  // that never executed would still have passed it.
+  await page.goto('/en/decoder/');
+  const controls = page.locator('#decoder-controls');
+  await expect(controls).toBeVisible();
+
+  const entries = page.locator('[data-entry]');
+  const total = await entries.count();
+  expect(total).toBeGreaterThan(1);
+
+  await page.locator('#decoder-query').fill('e621');
+  await expect(entries.filter({ visible: true })).toHaveCount(1);
+
+  await page.locator('#decoder-query').fill('');
+  await expect(entries.filter({ visible: true })).toHaveCount(total);
 });

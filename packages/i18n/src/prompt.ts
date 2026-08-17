@@ -11,23 +11,6 @@ export type Glossary = {
   voice: string;
 };
 
-/**
- * Fields that tier 2 is NOT allowed to translate.
- *
- * Decided 2026-08-14. Machine-translating a claim about evidence into a
- * language nobody on the project can read is how this site publishes something
- * it cannot stand behind. These stay in English with a visible notice, and
- * tier-2 pages carry noindex so a thin machine rendering never competes with
- * the reviewed one in search.
- */
-export const TIER2_FORBIDDEN_FIELDS = [
-  'evidenceSummary',
-  'notableDivergence',
-  'ourTake',
-  'longIntro',
-  'articleBody',
-] as const;
-
 export function buildTranslationPrompt(options: {
   targetLocale: string;
   targetLanguageName: string;

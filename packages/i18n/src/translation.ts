@@ -1,25 +1,24 @@
 /**
- * Translation machinery: content hashing, the shared prompt, and the tier-2
- * cache stores.
+ * Translation machinery for TIER 1: content hashing and the shared prompt.
  *
- * Server and build only. Imports node:crypto, so it must never be pulled into
- * a middleware or client bundle - which is exactly why it is not re-exported
- * from the package root.
+ * Server and build only - imports node:crypto, so it must never reach a client
+ * bundle, which is why it is not re-exported from the package root.
+ *
+ * Tier 2 (on-demand machine translation into ~200 languages) was REMOVED when
+ * the site moved to a static host. That was not only a hosting consequence: a
+ * machine-translated claim about food safety, in a language nobody on the
+ * project can read, was always the riskiest thing in the brief. Eight reviewed
+ * languages are worth more than two hundred unreviewed ones.
  */
 
 export {
   stableStringify,
   contentHash,
-  cacheKey,
   keyPaths,
   sameKeySet,
   placeholders,
   samePlaceholders,
 } from './hash.js';
 
-export { buildTranslationPrompt, TIER2_FORBIDDEN_FIELDS } from './prompt.js';
+export { buildTranslationPrompt } from './prompt.js';
 export type { Glossary, GlossaryTerm } from './prompt.js';
-
-export { createMemoryStore } from './store/memory.js';
-export { createUpstashStore } from './store/upstash.js';
-export type { TranslationStore } from './store/types.js';

@@ -39,3 +39,18 @@ export function normaliseMarket(value: string | undefined): string {
   const upper = value?.toUpperCase();
   return upper !== undefined && isSupportedMarket(upper) ? upper : DEFAULT_MARKET;
 }
+
+/**
+ * A shareable comparison. The selection lives in the HASH so a single static
+ * page can answer any of them - a hash never reaches the server.
+ *
+ *   /en/compare/#GB/chain~item/chain~item
+ */
+export function comparePath(
+  locale: string,
+  market: string,
+  items: readonly { chain: string; item: string }[],
+): string {
+  const selection = items.map((i) => `${i.chain}~${i.item}`).join('/');
+  return `/${locale}/compare/#${market}/${selection}`;
+}

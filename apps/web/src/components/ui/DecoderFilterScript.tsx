@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 /**
  * Decoder search and filtering, as ~50 lines of plain DOM script.
  *
@@ -73,6 +75,20 @@ const SCRIPT = `
 })();
 `;
 
+/**
+ * next/script with `afterInteractive`, not a bare <script> tag.
+ *
+ * React 19 hoists script elements out of where they were rendered. A plain
+ * <script> in the body therefore breaks hydration (React error #418) AND runs
+ * at an unpredictable point relative to it - the symptom being a script that
+ * appears never to execute at all. next/script exists for exactly this, and
+ * `afterInteractive` means "once hydration is done", which is the only moment
+ * it is safe to touch the DOM.
+ */
 export function DecoderFilterScript() {
-  return <script dangerouslySetInnerHTML={{ __html: SCRIPT }} />;
+  return (
+    <Script id="decoder-filter" strategy="afterInteractive">
+      {SCRIPT}
+    </Script>
+  );
 }

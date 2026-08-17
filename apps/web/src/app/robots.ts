@@ -1,4 +1,7 @@
 import type { MetadataRoute } from 'next';
+
+// Required by output: export - these are files, not handlers.
+export const dynamic = 'force-static';
 import { SITE_ORIGIN } from '@/lib/site';
 import { isIndexable } from '@/lib/launch';
 

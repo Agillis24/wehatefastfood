@@ -1,29 +1,29 @@
 /**
- * Builds the translation manifest and reports catalogue drift.
+ * Catalogue drift check.
  *
- * Emits packages/i18n/generated/manifest.json: for every English namespace, its
- * content hash and its source bundle.
- *
- * THE MANIFEST IS THE TIER-2 ALLOWLIST. /api/translate accepts a
- * (namespace, contentHash) pair only if it appears here. Without that, the
- * endpoint is an unauthenticated POST that will translate arbitrary attacker
- * text at our expense, and cache it under a key of their choosing.
- *
- * Also reports, for every non-source locale:
+ * Reports, for every non-source locale:
  *   - missing keys   (English has it, the locale does not: a blank on the page)
  *   - orphaned keys  (the locale has it, English does not: dead weight, and a
  *                     sign the English was edited without the locale following)
  *   - placeholder mismatches (ICU args renamed or dropped: renders throw)
+ *
+ * None of that is visible to anyone who cannot read the target language, which
+ * is exactly our situation with seven of the eight - so it is a gate rather
+ * than a report, and `npm run check` fails on any of them.
+ *
+ * This used to also emit a manifest that acted as the allowlist for the tier-2
+ * translation endpoint. Tier 2 is gone - the site is statically exported, and
+ * eight reviewed languages beat two hundred unreviewed ones - so the manifest
+ * went with it.
  */
 
-import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { contentHash, keyPaths, placeholders } from '@wff/i18n/translation';
+import { keyPaths, placeholders } from '@wff/i18n/translation';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const MESSAGES = path.join(ROOT, 'packages', 'i18n', 'messages');
-const OUT = path.join(ROOT, 'packages', 'i18n', 'generated', 'manifest.json');
 const SOURCE = 'en';
 
 const readNamespace = async (locale, namespace) =>
@@ -37,29 +37,13 @@ const locales = (await readdir(MESSAGES, { withFileTypes: true }))
   .filter((e) => e.isDirectory())
   .map((e) => e.name);
 
-// --- manifest --------------------------------------------------------------
-
-const manifest = { source: SOURCE, namespaces: {} };
+const sources = {};
 for (const namespace of namespaces) {
-  const source = await readNamespace(SOURCE, namespace);
-  manifest.namespaces[namespace] = { hash: contentHash(source), source };
+  sources[namespace] = await readNamespace(SOURCE, namespace);
 }
 
-await mkdir(path.dirname(OUT), { recursive: true });
-await writeFile(OUT, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
-
-const leafCount = namespaces.reduce(
-  (total, ns) => total + keyPaths(manifest.namespaces[ns].source).length,
-  0,
-);
-console.log(
-  `i18n: ${namespaces.length} namespaces, ${leafCount} strings -> ${path
-    .relative(ROOT, OUT)
-    .split(path.sep)
-    .join('/')}`,
-);
-
-// --- drift -----------------------------------------------------------------
+const leafCount = namespaces.reduce((total, ns) => total + keyPaths(sources[ns]).length, 0);
+console.log(`i18n: ${namespaces.length} namespaces, ${leafCount} source strings`);
 
 const leaf = (obj, dotted) =>
   dotted.split('.').reduce((node, key) => (node === undefined ? undefined : node?.[key]), obj);
@@ -72,7 +56,7 @@ for (const locale of locales.filter((l) => l !== SOURCE)) {
   const badPlaceholders = [];
 
   for (const namespace of namespaces) {
-    const source = manifest.namespaces[namespace].source;
+    const source = sources[namespace];
     let target;
     try {
       target = await readNamespace(locale, namespace);

@@ -1,49 +1,42 @@
 # DEPLOY.md
 
-Repository: <https://github.com/Agillis24/wehatefastfood> (private)
+Repository: <https://github.com/Agillis24/wehatefastfood>
+Host: **GitHub Pages** (static export)
 Canonical host: `https://www.wehatefastfood.com`
 
-**The site ships closed.** `robots.txt` disallows everything, every page carries `noindex, nofollow`, and the sitemap is empty, until both conditions in `apps/web/src/lib/launch.ts` are met. Deploying does not publish. That separation is deliberate.
+**The site ships closed.** `robots.txt` disallows everything, every page carries `noindex, nofollow`, and the sitemap is empty, until both conditions in `apps/web/src/lib/launch.ts` are met. Deploying does not publish.
 
 ---
 
-## 1. Vercel project
+## 1. Why GitHub Pages, and what it cost
 
-Import the repository, then set:
+The site is a **static export**: HTML, CSS and a little inline script. No server, no runtime, nothing to pay for.
 
-| Setting          | Value                            |
-| ---------------- | -------------------------------- |
-| Framework preset | Next.js                          |
-| Root directory   | _(leave at the repository root)_ |
-| Build command    | `npm run build`                  |
-| Output directory | `apps/web/.next`                 |
-| Install command  | `npm ci`                         |
-| Node version     | 22                               |
+That was possible because one feature was dropped: the **tier-2 on-demand translation endpoint**, which machine-translated the interface into ~200 unreviewed languages. Losing it is not really a loss — it was the riskiest thing in the brief, and eight reviewed languages are worth more than two hundred unreviewed ones. The hosting constraint and the editorial judgement pointed the same way.
 
-`vercel.json` already carries the build command, output directory and the `X-Robots-Tag` header on the translate endpoint, so most of this is picked up automatically.
+Two smaller consequences, both handled:
 
-The build runs `tokens → i18n manifest → content validation → packages → search index → next build`, in that order, because each step produces something the next one needs. A content error fails the deploy rather than shipping a page with a broken figure.
+- **No middleware**, so `/` cannot be redirected server-side. `apps/web/public/index.html` is a hand-written meta refresh with a script that honours the browser's language preference.
+- **Compare cannot be rendered per request.** The selection moved into the URL **hash**, which never reaches the server, so one static page answers every selection from a build-time index. It is still shareable, which was always the point.
+
+**The repository must be public** for GitHub Pages on a free account. Pages from a private repository requires a paid plan.
 
 ---
 
-## 2. Environment variables
+## 2. Enabling Pages
 
-Set per environment. Anything with a value here that is not `NEXT_PUBLIC_` is a **server secret** and must never gain that prefix — `npm run check` fails if one does.
+1. Repository → **Settings → Pages**.
+2. **Source: GitHub Actions.** Not "Deploy from a branch" — `.github/workflows/pages.yml` builds and publishes.
+3. Under **Custom domain**, enter `www.wehatefastfood.com`.
+4. Tick **Enforce HTTPS** once the certificate has been issued (it appears after DNS resolves).
 
-| Variable                       | Production                       | Preview           | Notes                                                                                                 |
-| ------------------------------ | -------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_ORIGIN`      | `https://www.wehatefastfood.com` | _the preview URL_ | Preview must differ, or preview pages emit production canonical URLs and compete with the real ones.  |
-| `NEXT_PUBLIC_ALLOW_INDEXING`   | **unset** for now                | unset             | Set to `1` only when §5 is satisfied.                                                                 |
-| `NEXT_PUBLIC_ANALYTICS_DOMAIN` | unset                            | unset             | Cookieless analytics, when we add it.                                                                 |
-| `ANTHROPIC_API_KEY`            | optional                         | optional          | Server only. Without it `/api/translate` returns an honest 503 rather than a silent English fallback. |
-| `UPSTASH_REDIS_REST_URL`       | optional                         | optional          | Without it the tier-2 cache falls back to an in-memory LRU.                                           |
-| `UPSTASH_REDIS_REST_TOKEN`     | optional                         | optional          |                                                                                                       |
+`apps/web/public/CNAME` carries the domain in the repository as well, so a manual redeploy cannot silently drop it.
 
-Nothing is required. The site builds and runs with none of these set — that was a design constraint, not an accident.
+The workflow runs `npm run check` before building. A deploy that skips the gates is a deploy that can publish a figure with a broken source.
 
 ---
 
-## 3. Domain — Český hosting (muj.cesky-hosting.cz)
+## 3. DNS — Český hosting (muj.cesky-hosting.cz)
 
 ### The zone as it stands, checked 2026-08-15
 
@@ -59,39 +52,33 @@ TXT   (none)
 DNSSEC inactive
 ```
 
-**There is mail on this domain** — Seznam Email Profi. That settles the nameserver question: **keep Český hosting as the nameservers and change individual records.** Delegating the zone to Vercel would take the MX records with it, and mail would stop silently.
+**There is mail on this domain** — Seznam Email Profi. Keep Český hosting as the nameservers and change individual records. Do not delegate the zone anywhere: that would take the MX records with it and mail would stop, silently.
 
-### The trap: the AAAA records
+### What to change
 
-The apex and `www` each have an **AAAA** record pointing at Český hosting. Vercel publishes an IPv4 address for an apex and does not give you an AAAA to replace it with.
+| Name       | Type      | Now             | Do                                               |
+| ---------- | --------- | --------------- | ------------------------------------------------ |
+| `@`        | **A**     | `91.239.200.81` | **replace with GitHub's four addresses** (below) |
+| `@`        | **AAAA**  | `2001:67c:...`  | **replace with GitHub's four addresses**         |
+| `www`      | **A**     | `91.239.200.81` | **delete**                                       |
+| `www`      | **AAAA**  | `2001:67c:...`  | **delete**                                       |
+| `www`      | **CNAME** | —               | **add** → `agillis24.github.io`                  |
+| **MX** × 2 |           | Seznam          | **do not touch**                                 |
+| **DNSSEC** |           | inactive        | leave inactive                                   |
 
-If you change only the A records and leave the AAAA records alone, then **every visitor whose network prefers IPv6 — which is most mobile networks — still reaches Český hosting's parking page.** Everyone else reaches the site. It looks like it works, right up until someone tells you it does not, and it is miserable to diagnose because it depends on the visitor's connection rather than on anything you can see from here.
+GitHub's published Pages addresses, which you should confirm against GitHub's own documentation before entering:
 
-Delete them. Both.
+```
+A     185.199.108.153   185.199.109.153   185.199.110.153   185.199.111.153
+AAAA  2606:50c0:8000::153  2606:50c0:8001::153
+      2606:50c0:8002::153  2606:50c0:8003::153
+```
 
-### Exact changes
+**Do not leave the old AAAA records in place.** Unlike some hosts, GitHub Pages does answer over IPv6 — so here the AAAA records must be _replaced_, not merely deleted. If they are left pointing at Český hosting, every visitor whose network prefers IPv6, which is most mobile networks, keeps landing on the old parking page while everyone else sees the site. It looks like it works until someone tells you it does not.
 
-| Record                             | Now                            | Do                                      |
-| ---------------------------------- | ------------------------------ | --------------------------------------- |
-| `wehatefastfood.com` **A**         | `91.239.200.81`                | **change** to the IPv4 Vercel shows you |
-| `wehatefastfood.com` **AAAA**      | `2001:67c:e94:0:1:5bef:c851:1` | **delete**                              |
-| `www.wehatefastfood.com` **A**     | `91.239.200.81`                | **delete**                              |
-| `www.wehatefastfood.com` **AAAA**  | `2001:67c:e94:0:1:5bef:c851:1` | **delete**                              |
-| `www.wehatefastfood.com` **CNAME** | —                              | **add** → `cname.vercel-dns.com`        |
-| **MX** × 2                         | Seznam Email Profi             | **do not touch**                        |
-| **DNSSEC**                         | inactive                       | leave inactive for now                  |
+Český hosting's own UI states the rule that fixes the order on `www`: a subdomain with a CNAME cannot have any other record. **Delete `www`'s A and AAAA first, then add the CNAME.**
 
-Take the apex IPv4 from the Vercel dashboard when you add the domain, not from this file — Vercel changes it, and a stale A record points the domain at somebody else's server.
-
-Český hosting's own UI states the rule that forces the order on `www`: a subdomain with a CNAME cannot have any other record. **Delete the A and AAAA first, then add the CNAME.**
-
-DNSSEC stays off. Turning it on takes days to propagate fully and would be one more moving part during a cutover; it can be enabled later once the records are stable.
-
-### Order of operations
-
-1. **Vercel first.** Add `www.wehatefastfood.com` as the primary domain, and `wehatefastfood.com` set to redirect to it permanently. Vercel shows the records it wants and waits.
-2. **Then Český hosting.** Make the five changes above.
-3. Wait. Allow an hour for the old records to age out of resolver caches.
+The apex keeps A/AAAA records rather than a CNAME because DNS does not permit a CNAME at the zone apex. GitHub Pages then redirects the apex to `www` on its own, because `www` is the configured custom domain.
 
 ### Then check
 
@@ -99,7 +86,7 @@ DNSSEC stays off. Turning it on takes days to propagate fully and would be one m
 curl -sI https://wehatefastfood.com | head -3
 ```
 
-Expect `301` or `308` to `https://www.wehatefastfood.com/`.
+Expect `301` to `https://www.wehatefastfood.com/`.
 
 ```bash
 curl -sI https://www.wehatefastfood.com | head -3
@@ -107,49 +94,54 @@ curl -sI https://www.wehatefastfood.com | head -3
 
 Expect `200`.
 
-And confirm the IPv6 trap is closed — this must return no address:
-
 ```bash
 nslookup -type=AAAA www.wehatefastfood.com 8.8.8.8
 ```
 
-`REDIRECT_HOSTS` in `apps/web/src/lib/site.ts` records the www decision in code, so it is not only a dashboard setting nobody can find later.
-
-### Unrelated, but visible from here: no SPF record
-
-The zone publishes no TXT records, so the domain has no SPF policy while sending mail through Seznam. That makes outbound mail more likely to be filtered. Nothing to do with the website and it can wait, but worth a TXT record from Seznam Email Profi's own instructions at some point.
+Must resolve through the CNAME to GitHub, **not** to `2001:67c:...`.
 
 ---
 
-## 4. After the first deploy, verify
+## 4. After the first deploy
 
 ```bash
 curl -s https://www.wehatefastfood.com/robots.txt
 ```
 
-Expect `Disallow: /`. If it says anything else while there is no content, stop and check `NEXT_PUBLIC_ALLOW_INDEXING`.
+Expect `Disallow: /`. If it says anything else while there is no content, stop.
 
-Then confirm by hand: `/en` renders, `/cs` renders in Czech, the language picker moves between them, and `/api/translate` returns `503` (unconfigured) or `404` (bad hash) rather than `500`.
+Then by hand: `/` lands on a locale, `/en/` and `/cs/` render, the language picker moves between them keeping the same page, and `/en/compare/#GB/...` assembles a comparison.
 
 ---
 
 ## 5. The checklist before opening to search engines
 
-`NEXT_PUBLIC_ALLOW_INDEXING=1` is the last step, not an early one. Do not set it until **all** of these are true:
+`NEXT_PUBLIC_ALLOW_INDEXING=1` in `.github/workflows/pages.yml` is the last step, not an early one. Do not set it until **all** of these are true:
 
 - [ ] **`content/reference/fsa-thresholds.json` and `reference-intakes.json` are `status: "verified"`**, checked by a human against the DHSC/FSA guidance and Annex XIII of Regulation (EU) 1169/2011. These decide whether a food shows red or amber.
 - [ ] At least one **real chain** is published and `content/_seed/` is deleted.
-- [ ] **Fonts are self-hosted** and subset. Until then the site renders in fallbacks and does not look like itself.
+- [ ] **Fonts are self-hosted** and subset. Until then the site renders in fallbacks.
 - [ ] The Czech has been **read by a human** and `messages/cs/_provenance.json` says so.
 - [ ] `npm run check` and `npm run test:e2e` pass on the deployed commit.
-- [ ] `/legal`, `/privacy`, `/methodology` and `/about` exist and say something true.
+- [ ] `/legal`, `/privacy`, `/methodology` and `/about` exist and say something true. They are currently linked from the footer and 404.
 
-Even with the variable set, the code refuses to open the site while there are zero published chains. That second condition is not a formality — it is there because the end of a long build is exactly when "it feels finished" and "it is finished" are easiest to confuse.
+Even with the variable set, the code refuses to open the site while there are zero published chains.
 
 ---
 
-## 6. Rolling back
+## 6. Local preview and rollback
 
-Vercel keeps every deployment. Promote a previous one from the dashboard; no rebuild needed.
+```bash
+npm run build
+npm run serve
+```
 
-To close the site again immediately: unset `NEXT_PUBLIC_ALLOW_INDEXING` and redeploy. `robots.txt`, the per-page meta and the sitemap all follow from it.
+`scripts/serve-static.mjs` serves `apps/web/out` the way Pages does — directory indexes, `404.html`, no rewrites — so what you see locally is what gets published.
+
+To roll back: revert the commit and let the workflow redeploy. To close the site again: clear `NEXT_PUBLIC_ALLOW_INDEXING` and redeploy.
+
+---
+
+## 7. Unrelated, but visible from here: no SPF record
+
+The zone publishes no TXT records, so the domain has no SPF policy while sending mail through Seznam. Outbound mail is more likely to be filtered. Nothing to do with the website, but worth a TXT record from Seznam Email Profi's instructions at some point.

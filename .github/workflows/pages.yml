@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deployment at a time, and never cancel one in flight: a half-finished
+# publish is worse than a slightly stale site.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The same gates that run in CI. A deploy that skips them is a deploy
+      # that can publish a figure with a broken source.
+      - name: Check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_ORIGIN: https://www.wehatefastfood.com
+          # Indexing stays off until content exists - see apps/web/src/lib/launch.ts.
+          # Setting this alone is not enough: the code also requires a published
+          # chain, so an empty site cannot be opened to crawlers by accident.
+          NEXT_PUBLIC_ALLOW_INDEXING: ''
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

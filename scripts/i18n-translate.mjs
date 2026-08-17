@@ -18,7 +18,7 @@
  * read the target language, which is precisely the situation we are in.
  */
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CORE_LOCALES, SOURCE_LOCALE } from '@wff/i18n';
@@ -61,8 +61,17 @@ if (!CORE_LOCALES.includes(locale)) {
   process.exit(1);
 }
 
-const manifest = JSON.parse(
-  await readFile(path.join(ROOT, 'packages', 'i18n', 'generated', 'manifest.json'), 'utf8'),
+const namespaces = (await readdir(path.join(MESSAGES, SOURCE_LOCALE)))
+  .filter((f) => f.endsWith('.json') && !f.startsWith('_'))
+  .map((f) => f.replace(/\.json$/, ''));
+
+const sources = Object.fromEntries(
+  await Promise.all(
+    namespaces.map(async (ns) => [
+      ns,
+      JSON.parse(await readFile(path.join(MESSAGES, SOURCE_LOCALE, `${ns}.json`), 'utf8')),
+    ]),
+  ),
 );
 const glossary = JSON.parse(await readFile(path.join(ROOT, 'content', 'glossary.json'), 'utf8'));
 
@@ -144,8 +153,8 @@ console.log(`i18n: translating ${SOURCE_LOCALE} -> ${locale}${dryRun ? ' (dry ru
 
 await mkdir(path.join(MESSAGES, locale), { recursive: true });
 
-for (const [namespace, entry] of Object.entries(manifest.namespaces)) {
-  const translated = await translate(namespace, entry.source);
+for (const [namespace, source] of Object.entries(sources)) {
+  const translated = await translate(namespace, source);
   if (translated === null) continue;
 
   await writeFile(
@@ -162,9 +171,7 @@ await writeFile(
     {
       locale,
       producedBy: 'i18n-translate',
-      sourceHashes: Object.fromEntries(
-        Object.entries(manifest.namespaces).map(([ns, e]) => [ns, e.hash]),
-      ),
+      namespaces,
       reviewedByHuman: false,
       reviewedOn: null,
       note: 'Machine translation. reviewedByHuman stays false until a human who reads this language has actually read it.',

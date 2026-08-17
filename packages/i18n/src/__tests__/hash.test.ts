@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import {
-  cacheKey,
   contentHash,
   keyPaths,
   placeholders,
@@ -21,10 +20,6 @@ describe('content hashing', () => {
     const before = contentHash({ greeting: 'Hello' });
     const after = contentHash({ greeting: 'Hello.' });
     expect(after).not.toBe(before);
-  });
-
-  it('builds the documented cache key', () => {
-    expect(cacheKey('vi', 'item', 'abc123')).toBe('t:vi:item:abc123');
   });
 });
 

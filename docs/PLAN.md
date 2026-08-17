@@ -356,4 +356,4 @@ _Done when:_ the validator catches every §6 rule in tests, and the coverage tab
 6. **Design direction → evidence poster**, signature element the **Specimen Card**, system geometry the **−19° strike** taken from the delivered mark. Full argument in `docs/BRAND.md`.
 7. **First real chain → McDonald's**, GB and US, so the diff view has a payload immediately.
 8. **Nutri-Score → no for v1**, because computing it would require estimating inputs the chains do not publish.
-9. **Hosting → Vercel**, built so Cloudflare Pages stays a genuine fallback.
+9. **Hosting → GitHub Pages**, static export. _(Revised 2026-08-15. The brief specified Vercel and §14.6 agreed; the client asked why, which was a fair question. GitHub Pages costs nothing, and the only feature it cannot host is tier-2 translation — which we had already narrowed and which was the riskiest thing in the brief. Vercel's free tier also forbids commercial use, and this project has a YouTube channel planned.)_

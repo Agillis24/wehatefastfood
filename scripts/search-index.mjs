@@ -12,7 +12,7 @@
  * problem: it spans chains, items and additives, and cannot be answered from
  * whatever happens to be on the current page.
  *
- * Seed content is excluded. An index is a published artefact.
+ * Seed content is excluded unless WFF_INCLUDE_SEED=1, matching the app.
  */
 
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -22,17 +22,29 @@ import { createRepository, pickBasis } from '@wff/content';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'apps', 'web', 'public', 'search-index.json');
+const COMPARE_OUT = path.join(ROOT, 'apps', 'web', 'public', 'compare-index.json');
 
 const fold = (value) =>
   value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
 
 const repo = await createRepository({
   contentRoot: path.join(ROOT, 'content'),
-  includeSeed: false,
+  // Matches the app: seed is excluded from a production build, but included
+  // when WFF_INCLUDE_SEED is set, so a seed build is coherent end to end
+  // rather than shipping pages the index does not know about.
+  includeSeed: process.env['WFF_INCLUDE_SEED'] === '1',
   now: new Date(),
 });
 
 const records = [];
+
+/**
+ * compare-index.json: the figures the compare page needs, keyed by
+ * "chain~item/MARKET". Separate from the search index so the search index stays
+ * lean - compare is the only page that fetches this, and only when a selection
+ * is present in the hash.
+ */
+const compare = {};
 
 for (const chain of await repo.listChains()) {
   records.push({
@@ -60,6 +72,17 @@ for (const item of await repo.listItems()) {
         [item.name, item.chainSlug, item.slug, item.category, variant.market].join(' '),
       ),
     });
+
+    compare[`${item.chainSlug}~${item.slug}/${variant.market}`] = {
+      title: item.name,
+      path: `/chains/${item.chainSlug}/${item.slug}/${variant.market}`,
+      serving: serving?.servingSizeG ?? null,
+      kcal: serving?.energyKcal ?? null,
+      fat: serving?.fatG ?? null,
+      sat: serving?.saturatesG ?? null,
+      sugar: serving?.sugarsG ?? null,
+      salt: serving?.saltG ?? null,
+    };
   }
 }
 
@@ -81,7 +104,17 @@ for (const additive of await repo.listAdditives()) {
 await mkdir(path.dirname(OUT), { recursive: true });
 await writeFile(OUT, `${JSON.stringify({ records }, null, 0)}\n`, 'utf8');
 
+await writeFile(
+  COMPARE_OUT,
+  `${JSON.stringify({ items: compare })}
+`,
+  'utf8',
+);
+
 const bytes = JSON.stringify({ records }).length;
+console.log(
+  `compare: ${Object.keys(compare).length} item/market pairs -> apps/web/public/compare-index.json`,
+);
 console.log(
   `search: ${records.length} records -> ${path.relative(ROOT, OUT).split(path.sep).join('/')} (${(bytes / 1024).toFixed(1)} kB)`,
 );

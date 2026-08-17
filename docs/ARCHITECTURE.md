@@ -22,25 +22,28 @@ packages/content/   Zod schemas, loaders, reference graph, nutrition maths.
 
 ## 2. Rendering
 
-Every route is statically generated except `/api/translate`.
+**Everything is statically exported.** `output: 'export'`, `trailingSlash: true`, published to GitHub Pages. There is no server.
 
-| Route                                      | Rendering                          | Why                                                                                                  |
-| ------------------------------------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `/[locale]`                                | static                             | document                                                                                             |
-| `/[locale]/chains`                         | static                             | document                                                                                             |
-| `/[locale]/chains/[chain]`                 | static                             | document                                                                                             |
-| `/[locale]/chains/[chain]/[item]/[market]` | static, one page per market        | each market is a different set of figures                                                            |
-| `/[locale]/decoder`, `/decoder/[slug]`     | static                             | documents                                                                                            |
-| `/[locale]/compare/[[...selection]]`       | on demand, empty state prerendered | a comparison is a query, not a document; prerendering every combination is a combinatorial explosion |
-| `/api/translate`                           | dynamic                            | tier-2 translation                                                                                   |
+| Route                                      | Notes                                                                             |
+| ------------------------------------------ | --------------------------------------------------------------------------------- |
+| `/[locale]`                                |                                                                                   |
+| `/[locale]/chains`, `/chains/[chain]`      |                                                                                   |
+| `/[locale]/chains/[chain]/[item]/[market]` | one page per market, because each market is a different set of figures            |
+| `/[locale]/decoder`, `/decoder/[slug]`     |                                                                                   |
+| `/[locale]/compare`                        | ONE page; the selection is in the URL hash                                        |
+| `/`                                        | hand-written `public/index.html` meta refresh — a static export has no middleware |
 
-**Market is a path segment, not a query parameter.** Next cannot prerender per query value, and reading `searchParams` opts a route into dynamic rendering. See `docs/PLAN.md` §2.2.
+**Market is a path segment.** Next cannot prerender per query value, and reading `searchParams` opts a route into dynamic rendering — which a static export does not have.
 
----
+**The compare selection is in the hash**, not the path: `#GB/chain~item/chain~item`. A hash never reaches the server, so one static page answers every combination, assembled in the browser from `compare-index.json` generated at build time. It stays shareable, which was the point of putting it in the URL at all.
+
+**Tier-2 translation is gone.** It needed a server. It was also the riskiest thing in the brief — machine-translated claims about food safety in languages nobody here can read — so the constraint and the judgement agreed. Eight reviewed languages beat two hundred unreviewed ones.
 
 ## 3. The client-JavaScript position
 
 **There are no client components.** Not "few" - none.
+
+Inline scripts go through `next/script` with `strategy="afterInteractive"`, never a bare `<script>` tag. React 19 hoists script elements out of where they were rendered, which breaks hydration and makes the script run at an unpredictable point relative to it — the symptom being a script that appears never to run at all. Two scripts were written the wrong way first and only a browser test caught it.
 
 This is measured, not aspirational. Adding one `'use client'` component to the decoder page moved _every_ route from 107 kB to 118 kB first-load JS, including the item page that did not use it, because the first client component anywhere pulls the React client runtime into the shared bundle. Removing it restored 107 kB exactly.
 
@@ -53,6 +56,7 @@ Everything interactive is built without it:
 | Language picker                            | `<details>` with links                           |
 | "Just the numbers"                         | CSS checkbox plus `:has()`                       |
 | Decoder search and filters                 | ~50 lines of DOM script, progressive enhancement |
+| Compare                                    | ~90 lines of DOM script over a build-time index  |
 | Reality check, traffic lights, intake arcs | server-rendered SVG                              |
 
 `npm run budget:check` fails the build if a route exceeds its budget.
@@ -144,15 +148,9 @@ Not used by the decoder page, which filters DOM nodes the server already rendere
 
 ## 7. Translation
 
-Two tiers, one prompt (`packages/i18n/src/prompt.ts`) so they cannot drift.
+**Tier 1 only.** Build time, committed, reviewable. `npm run i18n:translate -- --locale=cs`. A translation is rejected if the JSON does not parse, the key set differs, or an ICU placeholder is renamed, added or dropped.
 
-**Tier 1** is build time, committed, reviewable. `npm run i18n:translate -- --locale=cs`. A translation is rejected if the JSON does not parse, the key set differs, or an ICU placeholder is renamed, added or dropped.
-
-**Tier 2** is `/api/translate`, on demand, cached under `t:{locale}:{namespace}:{contentHash}` for ever - permanent is only safe because the hash changes when the English does.
-
-`@wff/i18n` exports configuration only. The translation machinery is behind `@wff/i18n/translation` because it imports `node:crypto`, and re-exporting it from the root made webpack try to bundle `node:crypto` into the middleware.
-
----
+`@wff/i18n` exports configuration only. The hashing and prompt live behind `@wff/i18n/translation` because they import `node:crypto`, and re-exporting them from the root made webpack try to bundle `node:crypto` into a client build.
 
 ## 8. Reference data is content
 

@@ -32,7 +32,8 @@
     "export:video-brief": "node scripts/export-video-brief.mjs",
     "secrets:scan": "node scripts/secrets-scan.mjs",
     "budget:check": "node scripts/budget-check.mjs",
-    "prepare": "node scripts/install-git-hooks.mjs"
+    "prepare": "node scripts/install-git-hooks.mjs",
+    "serve": "node scripts/serve-static.mjs"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

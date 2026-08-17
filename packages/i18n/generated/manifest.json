@@ -1,0 +1,312 @@
+{
+  "source": "en",
+  "namespaces": {
+    "chains": {
+      "hash": "3487e1637d0be5a4",
+      "source": {
+        "index": {
+          "title": "Chains",
+          "subtitle": "What we hold, and what we do not. The gaps are listed on purpose.",
+          "empty": "No chains documented yet.",
+          "itemsDocumented": "{count, plural, =0 {nothing documented} one {# item documented} other {# items documented}}",
+          "markets": "Markets"
+        },
+        "chain": {
+          "backToChains": "All chains",
+          "items": "Items",
+          "noItems": "No items documented for this chain yet.",
+          "kcal": "kcal",
+          "notPublished": "not published",
+          "coverage": "Data coverage"
+        },
+        "status": {
+          "verified": "Verified",
+          "partial": "Partial",
+          "unpublished": "Not published"
+        }
+      }
+    },
+    "common": {
+      "hash": "b42a82dbf85b7202",
+      "source": {
+        "brand": {
+          "name": "We Hate Fast Food",
+          "tagline": "What's actually in it — and why they put it there.",
+          "wordmarkWe": "WE",
+          "wordmarkLove": "LOVE",
+          "wordmarkHate": "HATE",
+          "wordmarkFastFood": "FAST FOOD"
+        },
+        "nav": {
+          "chains": "Chains",
+          "decoder": "Decoder",
+          "compare": "Compare",
+          "learn": "Learn",
+          "about": "About",
+          "methodology": "Methodology",
+          "skipToContent": "Skip to content",
+          "openMenu": "Open menu",
+          "closeMenu": "Close menu"
+        },
+        "market": {
+          "label": "Market",
+          "change": "Change market",
+          "noDataTitle": "We do not hold data for this market",
+          "noDataBody": "Figures differ by country and we will not show you another country's numbers as if they were this one's. Here is what we do hold.",
+          "verifiedOn": "Verified {date}",
+          "basisPerServing": "per serving",
+          "basisPer100g": "per 100 g",
+          "basisPer100ml": "per 100 ml"
+        },
+        "data": {
+          "high": "HIGH",
+          "medium": "MED",
+          "low": "LOW",
+          "unpublished": "Not published",
+          "justTheNumbers": "Just the numbers",
+          "justTheNumbersHint": "Turns off the illustrated visualisations and leaves the figures.",
+          "sources": "Sources",
+          "retrieved": "Retrieved {date}"
+        },
+        "disclaimer": {
+          "notAffiliated": "Not affiliated with, endorsed by, or sponsored by any company named on this site. Company and product names are used only to identify the products discussed.",
+          "notMedical": "This is not medical or dietary advice.",
+          "figuresChange": "Figures change. This page states the market and the date we verified it — check the company's current published figures before relying on them.",
+          "support": "Support with eating and food"
+        },
+        "footer": {
+          "legal": "Legal",
+          "privacy": "Privacy",
+          "sources": "All sources"
+        },
+        "language": {
+          "label": "Language",
+          "reviewed": "Reviewed translations",
+          "moreComing": "More languages are coming. We only list one when a catalogue exists and someone has looked at it - an English page under a foreign flag is worse than not offering it.",
+          "machineTranslated": "This page was machine-translated and has not been reviewed.",
+          "readOriginal": "Read the English original",
+          "notTranslated": "Left in English on purpose: this passage describes evidence or is our own opinion, and we do not machine-translate either into a language nobody on the project can check."
+        }
+      }
+    },
+    "compare": {
+      "hash": "4360bfc114e4b27f",
+      "source": {
+        "title": "Compare",
+        "subtitle": "Up to three items side by side. The address bar holds the selection, so the comparison is shareable.",
+        "empty": "Nothing selected yet. Open an item and use its compare link, or edit the address directly.",
+        "howTo": "The address takes the form /compare/{market}/{chain}~{item}/{chain}~{item}",
+        "market": "Market",
+        "nutrient": "Nutrient",
+        "perPortion": "Per portion",
+        "notPublished": "not published",
+        "noVariant": "no data for {market}",
+        "tooMany": "We show the first three. The rest of the selection is ignored rather than squeezed.",
+        "row": {
+          "energy": "Energy",
+          "fat": "Fat",
+          "saturates": "Saturates",
+          "sugars": "Sugars",
+          "salt": "Salt",
+          "serving": "Serving"
+        },
+        "bandsFor": "Bands for {name}",
+        "unknownItem": "We do not hold {slug}."
+      }
+    },
+    "decoder": {
+      "hash": "b17350d874522e83",
+      "source": {
+        "index": {
+          "title": "The decoder",
+          "subtitle": "Every additive we have documented: what it is, and the commercial reason a company put it in your food.",
+          "search": "Search the decoder",
+          "searchHint": "Search by name, E-number or what it does.",
+          "results": "{count, plural, =0 {No entries match} one {# entry} other {# entries}}",
+          "clear": "Clear",
+          "filterClass": "What it does",
+          "filterEvidence": "Evidence",
+          "filterAll": "All",
+          "empty": "No additives documented yet.",
+          "foundInCount": "{count, plural, =0 {not yet linked to an item} one {in # item} other {in # items}}"
+        },
+        "entry": {
+          "back": "All entries",
+          "whatItIs": "What it is",
+          "whyItIsHere": "Why it is in your food",
+          "evidence": "Evidence",
+          "evidenceStrength": "Strength of evidence",
+          "regulatory": "Regulatory status",
+          "divergence": "Where regulators disagree",
+          "noDivergence": "We have not recorded a disagreement between regulators for this entry.",
+          "foundIn": "Found in",
+          "notFoundIn": "Not yet linked to any item we hold.",
+          "alsoKnownAs": "Also on labels as",
+          "eu": "EU",
+          "us": "US",
+          "uk": "UK"
+        },
+        "evidence": {
+          "well-established": "Well established",
+          "mixed": "Mixed",
+          "emerging": "Emerging",
+          "contested": "Contested",
+          "caveat": "Strength of evidence is our reading of the sources listed, not a safety verdict. Where regulators disagree we show both positions rather than picking one."
+        },
+        "class": {
+          "preservative": "Preservative",
+          "emulsifier": "Emulsifier",
+          "stabiliser": "Stabiliser",
+          "colour": "Colour",
+          "flavour-enhancer": "Flavour enhancer",
+          "sweetener": "Sweetener",
+          "acidity-regulator": "Acidity regulator",
+          "anticaking": "Anticaking agent",
+          "antioxidant": "Antioxidant",
+          "raising-agent": "Raising agent",
+          "thickener": "Thickener",
+          "humectant": "Humectant",
+          "other": "Other"
+        }
+      }
+    },
+    "diff": {
+      "hash": "2380ffa8f8228961",
+      "source": {
+        "title": "Same product, different country",
+        "subtitle": "What the recipe carries in one market and not in another. Both lists come from the companies' own published declarations.",
+        "onlyIn": "Only in {market}",
+        "inBoth": "In both",
+        "nothingDiffers": "The declarations we hold for {a} and {b} list the same additives and ingredients.",
+        "needTwoMarkets": "We hold data for only one market for this item, so there is nothing to compare yet.",
+        "compareWith": "Compare with {market}",
+        "added": "Added",
+        "absent": "Absent",
+        "shared": "Shared",
+        "caution": "A difference here is a difference in what each company chose to declare, which is not always the same thing as a difference in the recipe. Declaration rules differ by country."
+      }
+    },
+    "home": {
+      "hash": "137704a98a08c016",
+      "source": {
+        "hero": {
+          "leadIn": "Pick a chain. Pick an item.",
+          "thesis": "See what is actually in it, what those things do, and why they are there.",
+          "cta": "Browse the chains"
+        },
+        "scaffold": {
+          "title": "Foundation only",
+          "body": "Phase 1 is the skeleton: workspaces, tokens, routing, checks. No content has been published yet, and nothing on this page is a real figure.",
+          "phase": "Phase {n} of 6"
+        },
+        "decoder": {
+          "title": "The decoder",
+          "body": "Every additive, what it is, and the commercial reason a company put it in your food."
+        },
+        "video": {
+          "title": "Latest video",
+          "empty": "The channel does not exist yet. This slot is reserved."
+        },
+        "newsletter": {
+          "title": "Get told when we publish",
+          "disabled": "Not connected to anything yet. We would rather show you a disabled box than pretend to store your address."
+        }
+      }
+    },
+    "item": {
+      "hash": "637148327fa72ff2",
+      "source": {
+        "header": {
+          "servingSize": "Serving size",
+          "market": "Market",
+          "verified": "Verified",
+          "specimen": "Specimen",
+          "unverifiedThresholds": "Our copy of the official thresholds has not yet been checked against the source document by a human. Treat these bands as provisional.",
+          "noDataTitle": "We do not hold data for this market",
+          "noDataBody": "Figures differ by country, and we will not show you one country's numbers as if they were another's.",
+          "marketsWeHold": "Markets we hold for this item:"
+        },
+        "reality": {
+          "title": "What is in this portion",
+          "sugar": "Sugar",
+          "salt": "Salt",
+          "saturates": "Saturated fat",
+          "notPublished": "{nutrient} is not published for this market.",
+          "sentenceSugar": "This portion contains {value} of sugar - about {count, plural, one {# sugar cube} other {# sugar cubes}}, {grams} g each.",
+          "sentenceSalt": "This portion contains {value} of salt - about {count, plural, one {# level teaspoon} other {# level teaspoons}}, {grams} g each.",
+          "sentenceSaturates": "This portion contains {value} of saturated fat - about {count, plural, one {# pat of butter} other {# pats of butter}}, {grams} g each."
+        },
+        "lights": {
+          "title": "Traffic lights",
+          "subtitle": "UK front-of-pack bands. The thresholds are shown so you can check our arithmetic.",
+          "per100": "per 100 g",
+          "per100ml": "per 100 ml",
+          "perPortion": "per portion",
+          "nutrient": "Nutrient",
+          "band": "Band",
+          "thresholds": "Thresholds",
+          "lowAtOrBelow": "LOW at or below {value} g",
+          "highAbove": "HIGH above {value} g",
+          "portionRule": "Raised to HIGH by the portion rule: more than {value} g in one portion.",
+          "notPublished": "Not published"
+        },
+        "intake": {
+          "title": "Reference intake",
+          "subtitle": "Percentage of an adult reference intake, for one portion.",
+          "ofReference": "{percent} of the {reference} reference intake",
+          "energy": "Energy",
+          "fat": "Fat",
+          "saturates": "Saturates",
+          "sugars": "Sugars",
+          "salt": "Salt"
+        },
+        "ingredients": {
+          "title": "What is actually in it",
+          "additive": "Additive",
+          "openEntry": "What is this?",
+          "whatItIs": "What it is",
+          "whyItIsHere": "Why it is in your food",
+          "evidence": "Evidence",
+          "regulatory": "Regulatory status",
+          "divergence": "Where regulators disagree",
+          "eu": "EU",
+          "us": "US",
+          "uk": "UK",
+          "none": "No ingredient list recorded for this market yet.",
+          "groupHeading": "{count, plural, one {# ingredient is} other {# ingredients are}} here to do a job: {classes}.",
+          "allergens": "Allergens"
+        },
+        "ourTake": {
+          "title": "Our take",
+          "label": "This section is our opinion. Everything above it is sourced fact."
+        },
+        "sources": {
+          "title": "Sources",
+          "retrieved": "retrieved {date}",
+          "published": "published {date}",
+          "forThisMarket": "For the figures on this page",
+          "forTheChain": "For the company"
+        },
+        "nutrition": {
+          "title": "The published panel",
+          "basis": "Basis",
+          "energy": "Energy",
+          "fat": "Fat",
+          "saturates": "of which saturates",
+          "carbohydrate": "Carbohydrate",
+          "sugars": "of which sugars",
+          "fibre": "Fibre",
+          "protein": "Protein",
+          "salt": "Salt",
+          "sodium": "Sodium",
+          "saltNote": "Where a company declares sodium rather than salt, we convert with the EU convention: salt = sodium x 2.5."
+        },
+        "plain": {
+          "on": "Just the numbers",
+          "off": "Show the illustrations",
+          "hint": "Turns off the illustrated visualisations and leaves every figure."
+        }
+      }
+    }
+  }
+}

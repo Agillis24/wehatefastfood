@@ -1,4 +1,7 @@
 import type { MetadataRoute } from 'next';
+
+// Required by output: export - these are files, not handlers.
+export const dynamic = 'force-static';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
 import { SITE_ORIGIN } from '@/lib/site';
@@ -36,10 +39,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return AVAILABLE_LOCALES.flatMap((locale) =>
     paths.map((path) => ({
-      url: `${SITE_ORIGIN}/${locale}${path}`,
+      url: `${SITE_ORIGIN}/${locale}${path}/`,
       alternates: {
         languages: Object.fromEntries(
-          AVAILABLE_LOCALES.map((other) => [other, `${SITE_ORIGIN}/${other}${path}`]),
+          AVAILABLE_LOCALES.map((other) => [other, `${SITE_ORIGIN}/${other}${path}/`]),
         ),
       },
     })),
