@@ -25,6 +25,7 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { createInterface } from 'node:readline/promises';
+import { Writable } from 'node:stream';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -40,11 +41,36 @@ function fail(message, hint) {
   process.exitCode = 1;
 }
 
-const rl = createInterface({ input: process.stdin, output: process.stdout });
+/**
+ * The prompt does not echo what is typed.
+ *
+ * It did, and the consequence was predictable: the client pasted a Page token,
+ * it appeared in the terminal, and the terminal ended up in a screenshot. A
+ * credential that reaches the screen reaches every place the screen goes.
+ *
+ * So the readline output is wrapped in a stream that can be silenced while a
+ * secret is being entered. The label is written straight to stdout, which is
+ * not muted, so the prompt is still visible - only the value is not.
+ */
+let muted = false;
+const output = new Writable({
+  write(chunk, encoding, callback) {
+    if (!muted) process.stdout.write(chunk, encoding);
+    callback();
+  },
+});
+
+const rl = createInterface({ input: process.stdin, output, terminal: true });
 
 /** Trimmed, unquoted, and checked for the shape a credential cannot have. */
 async function askSecret(label, kind = 'token') {
-  const raw = (await rl.question(`${label}: `)).trim().replace(/^["']|["']$/g, '');
+  process.stdout.write(`${label}: `);
+  muted = true;
+  const typed = await rl.question('');
+  muted = false;
+  process.stdout.write('\n');
+
+  const raw = typed.trim().replace(/^["']|["']$/g, '');
 
   if (raw === '') return { error: 'nothing was entered' };
 
