@@ -304,8 +304,22 @@ async function main() {
     );
   }
 
-  const lang = args.get('lang') ?? 'en';
-  if (lang !== 'en' && lang !== 'cs') die('--lang must be en or cs');
+  /*
+   * BOTH LANGUAGES IN ONE POST, and that is the default.
+   *
+   * The account has a Czech audience and an English-language site, and there is
+   * one feed rather than two - a post carrying only one language excludes half
+   * the people reading it. Czech leads because that is who follows the account;
+   * English follows because that is what the site and the sources are in.
+   *
+   * --lang=cs or --lang=en still forces a single language, for the occasional
+   * post where the other half would be noise.
+   */
+  const lang = args.get('lang');
+  if (lang !== undefined && lang !== 'en' && lang !== 'cs') {
+    die('--lang must be cs or en; leave it out to post both');
+  }
+  const languages = lang ? [lang] : ['cs', 'en'];
 
   const to = args.get('to') ?? 'both';
   const targets = to === 'both' ? ['ig', 'fb'] : [to];
@@ -313,8 +327,17 @@ async function main() {
     if (!NETWORKS[target]) die(`--to must be ig, fb or both`);
   }
 
-  const caption = `${tile.caption[lang]}\n\n${HASHTAGS[lang]}`;
-  const altText = tile.alt[lang];
+  /*
+   * Hashtags merged and deduplicated. Several are the same word in both
+   * languages - #fastfood is #fastfood - and a repeated tag in one caption does
+   * nothing except make the post look like it is chasing reach.
+   */
+  const tags = [...new Set(languages.flatMap((l) => HASHTAGS[l].split(/\s+/)))].join(' ');
+
+  const caption = `${languages.map((l) => tile.caption[l]).join('\n\n—  —  —\n\n')}\n\n${tags}`;
+
+  // Alt text is read aloud, so it is joined tightly rather than spaced out.
+  const altText = languages.map((l) => tile.alt[l]).join(' / ');
 
   /*
    * JPEG, not PNG. Meta's reference for a single image container lists JPEG as
@@ -413,7 +436,7 @@ async function main() {
    */
   const suspect = (name) => {
     const value = process.env[name] ?? '';
-    if (value === '' || !/[s"']/.test(value)) return null;
+    if (value === '' || !/[\s"']/.test(value)) return null;
     return `${name} contains whitespace or quotes, so it is not a token - it looks like something else got pasted (${value.length} characters)`;
   };
 
@@ -451,7 +474,7 @@ ${
     ? `  page      ${page.name}  [id ${page.id}]
 `
     : ''
-}  language  ${lang}
+}  language  ${languages.join(' + ')}
   image     ${imageUrl}
             [${contentType}, ${head.headers.get('content-length') ?? '?'} bytes]
   alt       ${altText}
@@ -483,7 +506,7 @@ ${caption
 
   To publish exactly this, run the same command again with --confirm:
 
-    npm run social:publish -- --post=${tile.order} --lang=${lang} --to=${to} --confirm
+    npm run social:publish -- --post=${tile.order} ${lang ? `--lang=${lang} ` : ''}--to=${to} --confirm
 
   Post in this order - ${TRIPTYCH_COPY.map((t) => t.order).join(', then ')} - because
   Instagram fills the grid newest-first from the top left.
