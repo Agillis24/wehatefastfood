@@ -18,8 +18,8 @@
   --hairline: 1.5px;
 
   /* font */
-  --font-display: Archivo Variable, Archivo, Arial Black, sans-serif;
-  --font-body: Public Sans Variable, Public Sans, system-ui, sans-serif;
+  --font-display: Archivo, Arial Black, sans-serif;
+  --font-body: Public Sans, system-ui, sans-serif;
   --font-data: IBM Plex Mono, ui-monospace, monospace;
 
   /* measure */

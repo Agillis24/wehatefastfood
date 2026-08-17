@@ -15,6 +15,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
+import { resvgFonts } from './lib/fonts.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'packages', 'design-tokens', 'brand');
@@ -44,7 +45,7 @@ for (const target of selected) {
     const resvg = new Resvg(svg, {
       fitTo: { mode: 'width', value: size },
       // No `background` key at all - that is what keeps the alpha channel.
-      font: { loadSystemFonts: false }, // these marks are pure geometry; fail loudly if that changes
+      font: resvgFonts(),
     });
     const png = resvg.render().asPng();
 

@@ -24,6 +24,7 @@ import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
+import { resvgFonts } from './lib/fonts.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'apps', 'web', 'public', 'og');
@@ -37,7 +38,7 @@ const PINK = '#FF2D62';
 const GREY = '#8C8377';
 const MUTED = '#B9B2A4';
 
-const STACK = 'Arial Black, Impact, DejaVu Sans Condensed, Helvetica, sans-serif';
+const STACK = 'Archivo, sans-serif';
 
 const word = (x, y, text, { size, fill, width, spacing = 2, anchor = 'start' }) =>
   `<text x="${x}" y="${y}" font-family="${STACK}" font-weight="bold" font-size="${size}" ` +
@@ -90,7 +91,7 @@ await mkdir(OUT, { recursive: true });
 
 const png = new Resvg(svg, {
   fitTo: { mode: 'width', value: W },
-  font: { loadSystemFonts: true },
+  font: resvgFonts(),
 })
   .render()
   .asPng();

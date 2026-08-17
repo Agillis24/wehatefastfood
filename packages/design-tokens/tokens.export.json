@@ -67,12 +67,12 @@
     },
     "font": {
       "display": {
-        "value": "Archivo Variable, Archivo, Arial Black, sans-serif",
+        "value": "Archivo, Arial Black, sans-serif",
         "note": "Headings and the wordmark. Narrow width axis, weight 900 at wordmark size.",
         "cssVar": "--font-display"
       },
       "body": {
-        "value": "Public Sans Variable, Public Sans, system-ui, sans-serif",
+        "value": "Public Sans, system-ui, sans-serif",
         "note": "Running prose.",
         "cssVar": "--font-body"
       },
@@ -117,8 +117,8 @@
     "--color-tl-low": "#1B5E34",
     "--angle-strike": "-19deg",
     "--hairline": "1.5px",
-    "--font-display": "Archivo Variable, Archivo, Arial Black, sans-serif",
-    "--font-body": "Public Sans Variable, Public Sans, system-ui, sans-serif",
+    "--font-display": "Archivo, Arial Black, sans-serif",
+    "--font-body": "Public Sans, system-ui, sans-serif",
     "--font-data": "IBM Plex Mono, ui-monospace, monospace",
     "--measure-sugar-cube-g": "4",
     "--measure-salt-tsp-g": "6",

@@ -37,6 +37,7 @@ import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
+import { resvgFonts } from './lib/fonts.mjs';
 import sharp from 'sharp';
 import { TRIPTYCH_COPY, HASHTAGS } from './lib/instagram-copy.mjs';
 
@@ -73,7 +74,7 @@ const PINK = '#FF2D62';
 const GREY = '#8C8377';
 const MUTED = '#B9B2A4';
 
-const STACK = 'Arial Black, Impact, DejaVu Sans Condensed, Helvetica, sans-serif';
+const STACK = 'Archivo, sans-serif';
 
 /** The shared baseline the three big words sit on. */
 const BASE = 745;
@@ -205,7 +206,7 @@ async function toJpeg(png, file) {
 async function render(svg, width, file) {
   const png = new Resvg(svg, {
     fitTo: { mode: 'width', value: width },
-    font: { loadSystemFonts: true },
+    font: resvgFonts(),
   })
     .render()
     .asPng();

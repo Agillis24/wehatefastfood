@@ -17,6 +17,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
+import { resvgFonts } from './lib/fonts.mjs';
 import { FSA_NUTRIENTS, bandFor, createRepository, pickBasis, resolvePer100 } from '@wff/content';
 import { PRESETS, specimenCardSvg } from './lib/specimen-card.mjs';
 
@@ -131,7 +132,7 @@ for (const item of items) {
 
       const png = new Resvg(svg, {
         fitTo: { mode: 'width', value: meta.width },
-        font: { loadSystemFonts: true },
+        font: resvgFonts(),
       })
         .render()
         .asPng();
