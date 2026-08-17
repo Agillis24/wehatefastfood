@@ -10,7 +10,11 @@ import { grams } from '@/lib/format';
  * as 6 g is to 4 g. The eye then compares them without being told to.
  *
  * Partial units are drawn partial. 9 g of sugar is two cubes and a quarter cube,
- * never "2.25 cubes" rounded to something tidier than the truth.
+ * never "2.25 cubes" rounded to something tidier than the truth. A partial unit
+ * is drawn as the WHOLE unit ghosted with the fraction solid on top, the way a
+ * half-filled star reads as half. Simply clipping the glyph was tried and was
+ * wrong: a teaspoon carries its meaning in its outline, so 0.42 of one came out
+ * as a crescent that read as a rendering fault rather than as a quantity.
  *
  * Zero JavaScript. Every stack carries a plain sentence in the DOM immediately
  * after it - that is what a screen reader gets, and what survives plain mode.
@@ -19,8 +23,26 @@ import { grams } from '@/lib/format';
  * substance itself, never a quantity of the reader's time, effort or body.
  */
 
-const PX_PER_GRAM = 5;
-const MAX_DRAWN_UNITS = 40;
+/**
+ * Pixels per gram of the unit being drawn.
+ *
+ * This constant is what holds the three stacks at TRUE RELATIVE SCALE: a 6 g
+ * teaspoon comes out half again as wide as a 4 g cube because it holds half
+ * again as much. The comparison between the rows is the point of the whole
+ * component, so the size is derived from the mass rather than picked per row.
+ *
+ * Raised from 5 after seeing it on the live site. At the old size the glyphs
+ * read as faint outlines, lighter than the caption underneath them - a poor
+ * showing for the element the page is built around.
+ */
+const PX_PER_GRAM = 11;
+
+/**
+ * Past this many the stack is a texture rather than a count, and each further
+ * glyph adds rows without adding meaning. Nothing is hidden by stopping: the
+ * exact figure is in the heading and the sentence below states the true count.
+ */
+const MAX_DRAWN_UNITS = 30;
 
 type Kind = 'sugar' | 'salt' | 'saturates';
 
@@ -39,9 +61,9 @@ function Glyph({ kind, size }: { kind: Kind; size: number }) {
           height="32"
           fill="var(--color-paper)"
           stroke="var(--color-ink)"
-          strokeWidth="3"
+          strokeWidth="4"
         />
-        <path d="M4 14 H36" stroke="var(--color-ink)" strokeWidth="2" opacity="0.35" />
+        <path d="M4 14 H36" stroke="var(--color-ink)" strokeWidth="2.5" opacity="0.35" />
       </svg>
     );
   }
@@ -56,9 +78,9 @@ function Glyph({ kind, size }: { kind: Kind; size: number }) {
           ry="9"
           fill="var(--color-paper)"
           stroke="var(--color-ink)"
-          strokeWidth="3"
+          strokeWidth="4"
         />
-        <path d="M26 20 H37" stroke="var(--color-ink)" strokeWidth="4" strokeLinecap="round" />
+        <path d="M26 20 H37" stroke="var(--color-ink)" strokeWidth="5" strokeLinecap="round" />
       </svg>
     );
   }
@@ -69,7 +91,7 @@ function Glyph({ kind, size }: { kind: Kind; size: number }) {
         d="M5 27 L13 13 H35 L27 27 Z"
         fill="var(--color-paper)"
         stroke="var(--color-ink)"
-        strokeWidth="3"
+        strokeWidth="4"
         strokeLinejoin="round"
       />
     </svg>
@@ -78,22 +100,30 @@ function Glyph({ kind, size }: { kind: Kind; size: number }) {
 
 function Stack({ kind, grams }: { kind: Kind; grams: number }) {
   const per = UNIT_GRAMS[kind];
-  const size = per * PX_PER_GRAM * 1.6;
+  const size = per * PX_PER_GRAM;
   const total = grams / per;
   const whole = Math.min(Math.floor(total), MAX_DRAWN_UNITS);
   const fraction = total - Math.floor(total);
 
   return (
-    <div className="flex flex-wrap items-end gap-1" aria-hidden="true">
+    <div className="flex flex-wrap items-end gap-1.5" aria-hidden="true">
       {Array.from({ length: whole }, (_, i) => (
         <Glyph key={i} kind={kind} size={size} />
       ))}
       {fraction > 0.02 && whole < MAX_DRAWN_UNITS ? (
-        <div
-          className="overflow-hidden"
-          style={{ width: `${Math.max(fraction * size, 2)}px`, height: `${size}px` }}
-        >
-          <Glyph kind={kind} size={size} />
+        <div className="relative" style={{ width: `${size}px`, height: `${size}px` }}>
+          {/* The unit that would be there, so the fraction has something to be a
+              fraction OF. Faint enough to read as absent. */}
+          <div className="absolute inset-0 opacity-30">
+            <Glyph kind={kind} size={size} />
+          </div>
+          {/* The part that is actually there, at full strength. */}
+          <div
+            className="absolute inset-0 overflow-hidden"
+            style={{ width: `${Math.max(fraction * size, 3)}px` }}
+          >
+            <Glyph kind={kind} size={size} />
+          </div>
         </div>
       ) : null}
     </div>
