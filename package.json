@@ -22,6 +22,7 @@
     "test:e2e": "node scripts/e2e.mjs",
     "tokens:build": "node packages/design-tokens/src/build.mjs",
     "brand:png": "node scripts/export-brand-png.mjs",
+    "brand:instagram": "node scripts/export-instagram-grid.mjs",
     "contrast": "node scripts/contrast.mjs",
     "content:validate": "node scripts/content-validate.mjs",
     "content:coverage": "node scripts/content-coverage.mjs",
