@@ -290,7 +290,7 @@ it under the Page name.
   if (token.error) return fail(token.error, token.hint);
 
   const node = await get(
-    `https://graph.facebook.com/${VERSION}/${encodeURIComponent(pageId.value)}?fields=id,name&access_token=${encodeURIComponent(token.value)}`,
+    `https://graph.facebook.com/${VERSION}/${encodeURIComponent(pageId.value)}?fields=id,name,access_token&access_token=${encodeURIComponent(token.value)}`,
   );
   if (node.error) {
     return fail(

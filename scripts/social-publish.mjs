@@ -171,7 +171,7 @@ async function request(url, body) {
      * real problem was that a container had not finished processing. A hint
      * that fires on the wrong error is worse than none.
      */
-    const aboutTheToken = /token|session|expired|permission/i.test(error.message ?? '');
+    const aboutTheToken = /access token|session|expired/i.test(error.message ?? '');
     const hint = aboutTheToken
       ? [
           'The token was rejected. It may have expired, or been invalidated by a',
