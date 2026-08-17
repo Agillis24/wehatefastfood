@@ -31,7 +31,8 @@
     "lowAtOrBelow": "LOW at or below {value} g",
     "highAbove": "HIGH above {value} g",
     "portionRule": "Raised to HIGH by the portion rule: more than {value} g in one portion.",
-    "notPublished": "Not published"
+    "notPublished": "Not published",
+    "noBands": "This chain publishes figures per portion but not the weight of a portion, so there is no per-100 g figure to compare against the thresholds. The amounts below are what you eat; the colours would need a weight nobody has published."
   },
   "intake": {
     "title": "Reference intake",

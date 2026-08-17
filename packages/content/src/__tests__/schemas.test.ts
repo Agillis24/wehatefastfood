@@ -6,6 +6,7 @@ import {
   MenuItemSchema,
 } from '../schemas/entities.js';
 import { NutritionFactsSchema } from '../schemas/nutrition.js';
+import { toPer100 } from '../nutrition.js';
 import { SourceSchema, hasIndependentSources } from '../schemas/source.js';
 
 /**
@@ -77,10 +78,25 @@ describe('NutritionFacts', () => {
     );
   });
 
-  it('rejects a per-serving panel with no serving size', () => {
+  /*
+   * This asserted the opposite until McDonald's USA turned up: it publishes
+   * figures per portion and no weight at all, and refusing that means holding
+   * nothing about the largest chain in its largest market.
+   *
+   * Without a weight there is no per-100 g figure and therefore no traffic
+   * light - which is a reason to show no bands, not a reason to reject the
+   * data. The layers below already do the right thing on their own, so the
+   * schema was the only thing standing in the way.
+   */
+  it('accepts a per-serving panel with no serving size, because sources do that', () => {
     expect(
       NutritionFactsSchema.safeParse(panel({ basis: 'per-serving', servingSizeG: null })).success,
-    ).toBe(false);
+    ).toBe(true);
+  });
+
+  it('and then nothing can be computed per 100 g, which is the honest outcome', () => {
+    const parsed = NutritionFactsSchema.parse(panel({ basis: 'per-serving', servingSizeG: null }));
+    expect(toPer100(parsed)).toBeNull();
   });
 
   it('rejects negative quantities', () => {

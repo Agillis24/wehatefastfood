@@ -41,15 +41,21 @@ export const NutritionFactsSchema = z
         message: `sugars (${n.sugarsG} g) exceeds carbohydrate (${n.carbohydrateG} g)`,
       });
     }
-    // A per-serving panel without a serving size cannot be turned into a
-    // per-100g figure, so the traffic lights would be uncomputable.
-    if (n.basis === 'per-serving' && n.servingSizeG === null) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['servingSizeG'],
-        message: 'a per-serving panel needs servingSizeG, or nothing can be computed per 100 g',
-      });
-    }
+    /*
+     * A per-serving panel WITHOUT a serving size is allowed, and used to not be.
+     *
+     * The rule was right about the consequence and wrong about what to do with
+     * it. Without a weight there is no per-100 g figure and therefore no traffic
+     * light - true - but that is a reason to show no bands, not a reason to
+     * refuse the data. McDonald's USA publishes calories, fat, sugars and sodium
+     * per portion and no weight at all; rejecting that means the site holds
+     * nothing about the largest chain in its largest market.
+     *
+     * The display layer already degrades correctly on its own: toPer100 returns
+     * null without a serving size, and bandFor returns null on a null per-100.
+     * So the honest outcome - figures shown, bands absent, and the page saying
+     * why - was already reachable and only the schema stood in the way.
+     */
   });
 
 export type NutritionFacts = z.infer<typeof NutritionFactsSchema>;

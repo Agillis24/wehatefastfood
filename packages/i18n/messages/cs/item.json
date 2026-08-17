@@ -31,7 +31,8 @@
     "lowAtOrBelow": "NÍZKÝ do {value} g včetně",
     "highAbove": "VYSOKÝ nad {value} g",
     "portionRule": "Zvednuto na VYSOKÝ pravidlem pro porci: více než {value} g v jedné porci.",
-    "notPublished": "Nezveřejněno"
+    "notPublished": "Nezveřejněno",
+    "noBands": "Tenhle řetězec zveřejňuje hodnoty na porci, ale ne hmotnost porce — a bez ní neexistuje hodnota na 100 g, se kterou se pásma porovnávají. Množství níž jsou to, co sníte; barvy by potřebovaly hmotnost, kterou nikdo nezveřejnil."
   },
   "intake": {
     "title": "Referenční příjem",

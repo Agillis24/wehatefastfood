@@ -1,0 +1,41 @@
+{
+  "slug": "hash-browns",
+  "chainSlug": "mcdonalds",
+  "name": "Hash Browns",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 140,
+          "fatG": 8,
+          "saturatesG": 1,
+          "carbohydrateG": 18,
+          "sugarsG": 0,
+          "fibreG": 2,
+          "proteinG": 2,
+          "saltG": null,
+          "sodiumMg": 310
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Hash Browns - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

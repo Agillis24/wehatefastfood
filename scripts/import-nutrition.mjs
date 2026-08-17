@@ -309,66 +309,85 @@ const slug = itemName
 const today = new Date().toISOString().slice(0, 10);
 const file = path.join(dir, `${slug}.json`);
 
-const existing = await readFile(file, 'utf8').catch(() => null);
-if (existing && args.get('force') !== 'true') {
+/*
+ * A SECOND MARKET IS ADDED, NOT WRITTEN OVER.
+ *
+ * The same burger in two countries is one item with two variants - that is the
+ * whole reason market is a path segment - so importing Canadian figures for
+ * something that already holds American ones must not discard them. The first
+ * version of this refused outright, and refused harder with --force by
+ * overwriting the lot.
+ *
+ * The same market twice is a different case: that is a re-read, and it replaces.
+ */
+const existing = await readFile(file, 'utf8')
+  .then((raw) => JSON.parse(raw))
+  .catch(() => null);
+
+const otherMarkets = (existing?.variants ?? []).filter((v) => v.market !== market);
+const sameMarket = (existing?.variants ?? []).find((v) => v.market === market);
+
+if (sameMarket && args.get('force') !== 'true') {
   die(
-    `${path.relative(ROOT, file)} already exists`,
-    'Pass --force to overwrite. Overwriting discards any hand-written analysis\nalready on that record, which is the part a person wrote.',
+    `${path.relative(ROOT, file)} already holds ${market} figures`,
+    'Pass --force to replace them. A DIFFERENT market merges in without the\nflag - two countries is two variants of one item, not two files.',
   );
 }
 
-const record = {
-  slug,
-  chainSlug: chain,
-  name: itemName,
-  category,
-  variants: [
+const variant = {
+  market,
+  verifiedOn: today,
+  /*
+   * energyKJ and saltG are left null on purpose, not because they are
+   * unknown. The schema is explicit: "Do not derive, interpolate or convert
+   * on the way in - the display layer converts, and says which constant it
+   * used." kJ from kcal and salt from sodium are both defined conversions,
+   * and both belong to the layer that can show its working.
+   *
+   * transFatG and addedSugarsG are parsed for the contradiction checks and
+   * then dropped: the schema is strict and does not carry them. They are
+   * real published figures, so adding the fields is a fair change - just
+   * not one to make silently while importing.
+   */
+  nutrition: [
     {
-      market,
-      verifiedOn: today,
-      /*
-       * energyKJ and saltG are left null on purpose, not because they are
-       * unknown. The schema is explicit: "Do not derive, interpolate or convert
-       * on the way in - the display layer converts, and says which constant it
-       * used." kJ from kcal and salt from sodium are both defined conversions,
-       * and both belong to the layer that can show its working.
-       *
-       * transFatG and addedSugarsG are parsed for the contradiction checks and
-       * then dropped: the schema is strict and does not carry them. They are
-       * real published figures, so adding the fields is a fair change - just
-       * not one to make silently while importing.
-       */
-      nutrition: [
-        {
-          basis: 'per-serving',
-          servingSizeG,
-          energyKJ: null,
-          energyKcal: facts.energyKcal,
-          fatG: facts.fatG,
-          saturatesG: facts.saturatesG,
-          carbohydrateG: facts.carbohydrateG,
-          sugarsG: facts.sugarsG,
-          fibreG: facts.fibreG,
-          proteinG: facts.proteinG,
-          saltG: null,
-          sodiumMg: facts.sodiumMg,
-        },
-      ],
-      status: 'partial',
-      ingredientRefs: [],
-      additiveRefs: [],
-      allergens: [],
-      sources: [
-        {
-          title: `${itemName} - nutrition information`,
-          publisher: "McDonald's",
-          url: sourceUrl,
-          retrievedOn: today,
-          type: 'company-disclosure',
-        },
-      ],
+      basis: 'per-serving',
+      servingSizeG,
+      energyKJ: null,
+      energyKcal: facts.energyKcal,
+      fatG: facts.fatG,
+      saturatesG: facts.saturatesG,
+      carbohydrateG: facts.carbohydrateG,
+      sugarsG: facts.sugarsG,
+      fibreG: facts.fibreG,
+      proteinG: facts.proteinG,
+      saltG: null,
+      sodiumMg: facts.sodiumMg,
     },
   ],
+  status: 'partial',
+  ingredientRefs: [],
+  additiveRefs: [],
+  allergens: [],
+  sources: [
+    {
+      title: `${itemName} - nutrition information`,
+      publisher: args.get('publisher') ?? "McDonald's",
+      url: sourceUrl,
+      retrievedOn: today,
+      type: 'company-disclosure',
+    },
+  ],
+};
+
+const record = {
+  ...(existing ?? {}),
+  slug,
+  chainSlug: chain,
+  name: existing?.name ?? itemName,
+  category: existing?.category ?? category,
+  // Sorted, so the file does not churn just because of import order.
+  variants: [...otherMarkets, variant].sort((a, b) => a.market.localeCompare(b.market)),
 };
 
 await writeFile(file, `${JSON.stringify(record, null, 2)}\n`, 'utf8');

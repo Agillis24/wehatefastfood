@@ -45,6 +45,16 @@ export function TrafficLights({ bands, locale, isDrink, provisional }: Props) {
       </h2>
       <p className="text-sm text-[var(--surface-muted)]">{t('subtitle')}</p>
 
+      {/*
+        No bands at all. The company published figures per portion and no weight,
+        so there is no per-100 g figure and therefore nothing to colour. Saying
+        that is the point: an absent traffic light with no explanation reads as
+        an oversight, and this one is a fact about the source.
+      */}
+      {bands.length === 0 ? (
+        <p className="border-s-4 border-[var(--surface-rule)] ps-3 text-sm">{t('noBands')}</p>
+      ) : null}
+
       {provisional ? (
         <p
           data-nosnippet
@@ -54,7 +64,7 @@ export function TrafficLights({ bands, locale, isDrink, provisional }: Props) {
         </p>
       ) : null}
 
-      <div className="overflow-x-auto">
+      <div className={bands.length === 0 ? 'hidden' : 'overflow-x-auto'}>
         <table className="w-full border-collapse text-start">
           <caption className="sr-only">{t('title')}</caption>
           <thead>

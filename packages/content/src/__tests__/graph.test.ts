@@ -192,13 +192,31 @@ describe('the real content directory', () => {
   });
 
   it('excludes seed content when asked, which is what production builds do', async () => {
-    const repo = await createRepository({
+    const seeded = await createRepository({ contentRoot: CONTENT_ROOT, now: NOW });
+    const real = await createRepository({
       contentRoot: CONTENT_ROOT,
       includeSeed: false,
       now: NOW,
     });
-    expect(await repo.listChains()).toEqual([]);
-    expect(await repo.listItems()).toEqual([]);
+
+    /*
+     * This used to assert both lists were EMPTY, because for a long time there
+     * was no real content and the seed was all there was. That assertion
+     * started failing the day the first real chain landed, which is the nicest
+     * way for a test to break.
+     *
+     * What it should have been checking all along is the thing that matters:
+     * nothing whose name shouts SEED DATA reaches a production build.
+     */
+    const realChains = await real.listChains();
+    const realItems = await real.listItems();
+
+    expect(realChains.length).toBeLessThan((await seeded.listChains()).length);
+    expect(realItems.length).toBeLessThan((await seeded.listItems()).length);
+
+    for (const named of [...realChains, ...realItems]) {
+      expect(named.name).not.toMatch(/SEED DATA/i);
+    }
   });
 
   it('warns that the reference thresholds are still unverified', async () => {
