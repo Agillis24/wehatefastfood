@@ -33,9 +33,18 @@ export async function generateMetadata({
     title: { default: t('name'), template: `%s - ${t('name')}` },
     description: t('tagline'),
     icons: { icon: '/favicon.svg' },
-    // Belt as well as braces: robots.txt closes the site, and every page says
-    // so itself. A crawler that ignores one is unlikely to ignore both.
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
+    /*
+     * Belt as well as braces: robots.txt closes the site, and every page says
+     * so itself. A crawler that ignores one is unlikely to ignore both.
+     *
+     * FOLLOW STAYS TRUE WHEN CLOSED, and the word is load-bearing. A page that
+     * cannot be indexed has no need to suppress its own links, so nofollow buys
+     * nothing - but it costs the entire internal link graph the moment the site
+     * is crawlable while still noindex, which is how it will be opened. hreflang
+     * is discarded wholesale rather than partially when a cluster is incomplete,
+     * so a crawler that never walks chain -> item never assembles one.
+     */
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 

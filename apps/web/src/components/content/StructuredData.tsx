@@ -44,16 +44,38 @@ export function ItemStructuredData({ locale, chain, item, market, serving, verif
   const graph: Record<string, unknown>[] = [
     {
       '@type': 'MenuItem',
-      '@id': url,
+      '@id': `${url}#item`,
       name: item.name,
       url,
       ...(Object.keys(nutrition).length > 0
         ? { nutrition: { '@type': 'NutritionInformation', ...nutrition } }
         : {}),
+    },
+    /*
+     * The page, as distinct from the burger.
+     *
+     * `dateModified` used to sit on the MenuItem, where it is invalid: MenuItem
+     * is Thing > Intangible > MenuItem, and dateModified's domain is
+     * CreativeWork. The date also meant the wrong thing there - it is the day a
+     * person last checked the figures against the company's disclosure, which
+     * is a fact about this document, not about the food.
+     *
+     * That is the property a consumer weighing how current an answer is will
+     * look for, so it is worth putting somewhere it is actually defined.
+     */
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: item.name,
+      inLanguage: locale,
+      isPartOf: { '@id': canonicalUrl('/#website') },
+      about: { '@id': `${url}#item` },
       ...(verifiedOn !== null ? { dateModified: verifiedOn } : {}),
     },
     {
       '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
       itemListElement: [
         {
           '@type': 'ListItem',

@@ -23,6 +23,10 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'apps', 'web', 'out');
 const LOCALES = ['en', 'cs'];
+const ORIGIN = process.env['NEXT_PUBLIC_SITE_ORIGIN'] ?? 'https://www.wehatefastfood.com';
+
+/** Whether THIS build was meant to be open. Both directions are then checked. */
+const OPEN = process.env['NEXT_PUBLIC_ALLOW_INDEXING'] === '1';
 
 /**
  * The 404 page is not a document about anything, so it has no canonical URL and
@@ -126,11 +130,63 @@ for (const file of files) {
     if (href && !href.endsWith('/')) fail(`hreflang href has no trailing slash: ${href}`);
   }
 
-  // --- the launch state must be the same on every page --------------------
+  /*
+   * The launch state, checked in BOTH directions.
+   *
+   * It only checked one - that no page was indexable without the flag - which
+   * is the failure that cannot really happen. The one that does happen is the
+   * opposite: the flag is set, the deploy goes out, and a page is still
+   * carrying noindex. apps/web/public/index.html is the likeliest culprit,
+   * because it is hand-written and isIndexable() cannot reach it, and it was
+   * the one file this check used to exempt.
+   */
   const robots = (named('robots') ?? '').toLowerCase();
-  const closed = robots.includes('noindex');
-  if (rel !== 'index.html' && !closed && !process.env['NEXT_PUBLIC_ALLOW_INDEXING']) {
+  const saysNoindex = robots.includes('noindex');
+
+  if (OPEN && saysNoindex) {
+    fail('still says noindex in a build with NEXT_PUBLIC_ALLOW_INDEXING=1');
+  }
+  if (!OPEN && !saysNoindex) {
     fail('indexable, but NEXT_PUBLIC_ALLOW_INDEXING was not set for this build');
+  }
+
+  // A well-formed absolute URL pointing at a file that was never generated is
+  // the realistic og:image failure, and no amount of tag-checking sees it.
+  if (ogImage && ogImage.startsWith(ORIGIN)) {
+    const asset = path.join(OUT, ogImage.slice(ORIGIN.length).split('?')[0]);
+    if (!(await exists(asset))) fail(`og:image is not in the export: ${ogImage}`);
+  }
+}
+
+/*
+ * The two files that actually decide whether the site is open. Neither is HTML,
+ * so nothing above can see them, and getting either wrong on launch day is
+ * expensive in a way the head tags are not.
+ */
+const robotsTxt = path.join(OUT, 'robots.txt');
+if (await exists(robotsTxt)) {
+  const text = await readFile(robotsTxt, 'utf8');
+  const starGroup = text.split(/^user-agent:/im)[1] ?? '';
+
+  if (OPEN) {
+    if (/^\s*disallow:\s*\/\s*$/im.test(starGroup)) {
+      problems.push('robots.txt: the * group still disallows everything in an open build');
+    }
+    if (!/^sitemap:/im.test(text)) problems.push('robots.txt: no Sitemap line in an open build');
+  } else if (!/^\s*disallow:\s*\/\s*$/im.test(starGroup)) {
+    problems.push('robots.txt: the site is closed but the * group does not disallow everything');
+  }
+} else {
+  problems.push('no robots.txt in the export');
+}
+
+const sitemap = path.join(OUT, 'sitemap.xml');
+if (OPEN) {
+  if (!(await exists(sitemap))) problems.push('no sitemap.xml in an open build');
+  else {
+    const xml = await readFile(sitemap, 'utf8');
+    const urls = (xml.match(/<url>/g) ?? []).length;
+    if (urls === 0) problems.push('sitemap.xml has no <url> entries in an open build');
   }
 }
 
