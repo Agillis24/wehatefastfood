@@ -96,7 +96,21 @@ async function loadEnv() {
     } catch {
       continue;
     }
-    for (const line of text.split('\n')) {
+    /*
+     * Split on CRLF as well as LF, and strip a BOM.
+     *
+     * Windows is this project's primary platform, PowerShell's Set-Content
+     * writes CRLF and UTF-8 with a BOM, and this originally split on \n alone.
+     * That left a \r ending every line - and \r is a LINE TERMINATOR in
+     * JavaScript, so `.` does not match it and `(.*)$` failed.
+     *
+     * The failure mode was worse than a plain break. The `\s*` before the value
+     * happily ate the \r on EMPTY lines, so every blank variable parsed and
+     * every filled one was silently dropped. The file looked right, a script
+     * that printed which variables were set looked right, and the token simply
+     * never arrived.
+     */
+    for (const line of text.replace(/^\uFEFF/, '').split(/\r?\n/)) {
       const match = /^\s*([A-Z0-9_]+)\s*=\s*(.*)$/.exec(line);
       if (!match) continue;
       const [, key, raw = ''] = match;
@@ -163,9 +177,35 @@ async function call(url, params) {
  * There is no single call, and a container that is created but never published
  * simply expires - which is why a failure between the two is not a half-post.
  */
-async function publishInstagram({ imageUrl, caption, altText }) {
+/**
+ * Ask the token who it is, before anything is sent.
+ *
+ * Under Instagram Login there are TWO numbers for one account - the app-scoped
+ * id that /me returns, and the professional-account id the App Dashboard shows -
+ * and both answer reads, so a wrong one in .env.local looks fine right up until
+ * a post lands somewhere unexpected. Rather than pick, ask: the node this token
+ * actually owns is the node to post to.
+ *
+ * It doubles as the check worth having anyway. Before publishing to a live
+ * account, see its NAME. A token pasted from the wrong tab is otherwise
+ * indistinguishable from the right one.
+ *
+ * Read-only, so it runs in a dry run too.
+ */
+async function whoami(token) {
+  if (IG_LOGIN === 'facebook') return null; // /me is the person, not the account
+
+  const url = `${IG_API}/me?fields=id,username,account_type&access_token=${encodeURIComponent(token)}`;
+  const response = await fetch(url).catch(() => null);
+  if (!response?.ok) return null;
+
+  return response.json().catch(() => null);
+}
+
+async function publishInstagram({ imageUrl, caption, altText, account }) {
   const token = process.env['IG_ACCESS_TOKEN'];
-  const userId = process.env['IG_USER_ID'];
+  // The id the token identifies as wins over whatever is configured.
+  const userId = account?.id ?? process.env['IG_USER_ID'];
   if (!token || !userId) {
     die('IG_USER_ID and IG_ACCESS_TOKEN must both be set in .env.local');
   }
@@ -259,6 +299,24 @@ async function main() {
   if (caption.length > 2200) die(`caption is ${caption.length} characters; the limit is 2200`);
   if (altText.length > 1000) die(`alt text is ${altText.length} characters; the limit is 1000`);
 
+  /*
+   * Who are we about to post as? Asked in the dry run too, so the account name
+   * is on screen before anyone types --confirm.
+   */
+  const account = targets.includes('ig')
+    ? await whoami(process.env['IG_ACCESS_TOKEN'] ?? '')
+    : null;
+
+  if (account && account.account_type !== 'BUSINESS' && account.account_type !== 'CREATOR') {
+    die(
+      `the Instagram account is ${account.account_type}, which cannot publish`,
+      [
+        'Switch it to a professional account:',
+        'Instagram -> Settings -> Account type and tools -> Switch to professional.',
+      ].join('\n'),
+    );
+  }
+
   const head = await fetch(imageUrl, { method: 'HEAD' }).catch(() => null);
   if (!head || !head.ok) {
     die(
@@ -277,7 +335,12 @@ async function main() {
 
   console.log(`
   post      ${tile.order} of ${TRIPTYCH_COPY.length} - ${tile.file} (${tile.position} tile)
-  to        ${targets.map((t) => NETWORKS[t].label).join(' + ')}
+  to        ${targets.map((t) => NETWORKS[t].label).join(' + ')}${
+    account
+      ? `
+  account   @${account.username}  [${account.account_type}, id ${account.id}]`
+      : ''
+  }
   language  ${lang}
   image     ${imageUrl}
             [${contentType}, ${head.headers.get('content-length') ?? '?'} bytes]
@@ -310,7 +373,7 @@ ${caption
   const done = [];
   try {
     for (const target of targets) {
-      done.push(await NETWORKS[target].publish({ imageUrl, caption, altText }));
+      done.push(await NETWORKS[target].publish({ imageUrl, caption, altText, account }));
     }
   } finally {
     /*
