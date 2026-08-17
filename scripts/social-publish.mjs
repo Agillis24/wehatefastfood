@@ -180,11 +180,16 @@ async function call(url, params) {
 /**
  * Ask the token who it is, before anything is sent.
  *
- * Under Instagram Login there are TWO numbers for one account - the app-scoped
- * id that /me returns, and the professional-account id the App Dashboard shows -
- * and both answer reads, so a wrong one in .env.local looks fine right up until
- * a post lands somewhere unexpected. Rather than pick, ask: the node this token
- * actually owns is the node to post to.
+ * Under Instagram Login the User node has TWO id fields and they are NOT
+ * interchangeable. Meta's own Get Started page defines them:
+ *
+ *   id       "The app user's app-scoped ID"
+ *   user_id  "The Instagram professional account ID, <IG_ID>"
+ *
+ * The publishing path takes <IG_ID> - so `user_id`, not `id`. Both happen to
+ * answer a GET on /media, which is exactly why picking by experiment gives the
+ * wrong answer confidently: the read works either way and only the write is
+ * addressed to the wrong node.
  *
  * It doubles as the check worth having anyway. Before publishing to a live
  * account, see its NAME. A token pasted from the wrong tab is otherwise
@@ -195,7 +200,7 @@ async function call(url, params) {
 async function whoami(token) {
   if (IG_LOGIN === 'facebook') return null; // /me is the person, not the account
 
-  const url = `${IG_API}/me?fields=id,username,account_type&access_token=${encodeURIComponent(token)}`;
+  const url = `${IG_API}/me?fields=id,user_id,username,account_type&access_token=${encodeURIComponent(token)}`;
   const response = await fetch(url).catch(() => null);
   if (!response?.ok) return null;
 
@@ -204,8 +209,9 @@ async function whoami(token) {
 
 async function publishInstagram({ imageUrl, caption, altText, account }) {
   const token = process.env['IG_ACCESS_TOKEN'];
-  // The id the token identifies as wins over whatever is configured.
-  const userId = account?.id ?? process.env['IG_USER_ID'];
+  // user_id is the professional-account id the publishing path wants; id is the
+  // app-scoped one and belongs nowhere near this call.
+  const userId = account?.user_id ?? process.env['IG_USER_ID'];
   if (!token || !userId) {
     die('IG_USER_ID and IG_ACCESS_TOKEN must both be set in .env.local');
   }
@@ -346,7 +352,19 @@ async function main() {
     );
   }
 
-  if (account && account.account_type !== 'BUSINESS' && account.account_type !== 'CREATOR') {
+  /*
+   * Case-insensitive, and MEDIA_CREATOR counts.
+   *
+   * Meta documents the values as "Business" and "Media_Creator" while the API
+   * returns "BUSINESS" and "MEDIA_CREATOR", so an exact match against either
+   * spelling is wrong. This gate first read `!== 'CREATOR'` and would have
+   * refused a Creator account outright - for no reason: Limitations says
+   * verbatim "Content Publishing is available to all Instagram Professional
+   * accounts, except Stories, which are only available to business accounts."
+   * A photo post needs a professional account, not a Business one.
+   */
+  const kind = (account?.account_type ?? '').toUpperCase();
+  if (account && kind !== 'BUSINESS' && kind !== 'MEDIA_CREATOR' && kind !== 'CREATOR') {
     die(
       `the Instagram account is ${account.account_type}, which cannot publish`,
       [
@@ -377,7 +395,7 @@ async function main() {
   to        ${targets.map((t) => NETWORKS[t].label).join(' + ')}${
     account
       ? `
-  account   @${account.username}  [${account.account_type}, id ${account.id}]`
+  account   @${account.username}  [${account.account_type}, id ${account.user_id ?? account.id}]`
       : ''
   }
 ${

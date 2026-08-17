@@ -30,6 +30,35 @@ go looking for a second token — there isn't one.
 
 ---
 
+## The two Instagram ids, and which one publishes
+
+Under Instagram Login the User node has **two id fields** and they are not interchangeable. Meta
+defines them on the Get Started page:
+
+| field     | meaning                                            |
+| --------- | -------------------------------------------------- |
+| `id`      | "The app user's app-scoped ID"                     |
+| `user_id` | "The Instagram professional account ID, `<IG_ID>`" |
+
+**The publishing path takes `<IG_ID>` — so `user_id`.** A bare `GET /me` returns the app-scoped
+`id`, and it is the wrong one.
+
+The trap is that **both answer a GET on `/media`**, so testing by experiment confirms the wrong
+value: the read works either way and only the write is addressed to the wrong node. Ask for the
+field explicitly:
+
+```
+GET https://graph.instagram.com/v26.0/me?fields=user_id,username,account_type
+```
+
+**Creator accounts can publish.** Limitations says verbatim: _"Content Publishing is available to
+all Instagram Professional accounts, except Stories, which are only available to business
+accounts."_ A photo post needs a professional account, not specifically a Business one. Do not gate
+on the account type being Business — and compare case-insensitively, because the docs write
+`Business` and `Media_Creator` while the API returns `BUSINESS` and `MEDIA_CREATOR`.
+
+---
+
 ## Before any of it works
 
 1. **The Instagram account must be Business or Creator.** A personal account returns `null` for the
