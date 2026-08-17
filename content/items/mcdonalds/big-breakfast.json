@@ -1,0 +1,41 @@
+{
+  "slug": "big-breakfast",
+  "chainSlug": "mcdonalds",
+  "name": "Big Breakfast",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 1060,
+          "fatG": 48,
+          "saturatesG": 18,
+          "carbohydrateG": 131,
+          "sugarsG": 56,
+          "fibreG": 3,
+          "proteinG": 26,
+          "saltG": null,
+          "sodiumMg": 1540
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Big Breakfast - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

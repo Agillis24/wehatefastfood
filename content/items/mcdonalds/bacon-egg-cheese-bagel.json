@@ -1,0 +1,41 @@
+{
+  "slug": "bacon-egg-cheese-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Bacon, Egg & Cheese Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 590,
+          "fatG": 30,
+          "saturatesG": 12,
+          "carbohydrateG": 56,
+          "sugarsG": 7,
+          "fibreG": 2,
+          "proteinG": 25,
+          "saltG": null,
+          "sodiumMg": 1320
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Bacon, Egg & Cheese Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "mcdonalds",
+  "name": "McDonald's",
+  "hqCountry": "US",
+  "marketsCovered": ["US"],
+  "oneLiner": "The largest fast-food chain on earth, and the one whose figures are easiest to check and hardest to hold in your head.",
+  "longIntro": "McDonald's publishes its nutrition information, because in most of the markets it trades in the law requires that. What it does not do is make it easy to compare: the figures live inside a calculator that shows one item at a time, per portion only, with no weight in grams and with percentages measured against a 2,000 calorie day that belongs to nobody in particular. This page holds what that calculator says, item by item, with the date a person read it. Figures here are for the United States. The same product is formulated differently in other markets and the numbers move with it, which is why every set of figures on this site names the country it describes.",
+  "accentToken": "accent-1",
+  "dataStatus": "partial",
+  "sources": [
+    {
+      "title": "Nutrition Calculator",
+      "publisher": "McDonald's USA",
+      "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+      "retrievedOn": "2026-08-17",
+      "type": "company-disclosure"
+    }
+  ]
+}

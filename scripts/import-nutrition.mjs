@@ -177,6 +177,24 @@ if (!chain || !market || !itemName) {
       '                 --url="https://www.mcdonalds.com/..."',
   );
 }
+/** The schema's enum. A wrong one fails validation rather than mislabelling. */
+const CATEGORIES = [
+  'burger',
+  'chicken',
+  'fries-sides',
+  'pizza',
+  'wrap',
+  'breakfast',
+  'dessert',
+  'drink',
+  'sauce',
+  'other',
+];
+const category = args.get('category') ?? '';
+if (!CATEGORIES.includes(category)) {
+  die(`--category must be one of: ${CATEGORIES.join(', ')}`);
+}
+
 if (!sourceUrl) {
   die(
     'need --url',
@@ -303,12 +321,40 @@ const record = {
   slug,
   chainSlug: chain,
   name: itemName,
-  category: args.get('category') ?? 'food',
+  category,
   variants: [
     {
       market,
       verifiedOn: today,
-      nutrition: [{ basis: 'per-serving', servingSizeG, ...facts }],
+      /*
+       * energyKJ and saltG are left null on purpose, not because they are
+       * unknown. The schema is explicit: "Do not derive, interpolate or convert
+       * on the way in - the display layer converts, and says which constant it
+       * used." kJ from kcal and salt from sodium are both defined conversions,
+       * and both belong to the layer that can show its working.
+       *
+       * transFatG and addedSugarsG are parsed for the contradiction checks and
+       * then dropped: the schema is strict and does not carry them. They are
+       * real published figures, so adding the fields is a fair change - just
+       * not one to make silently while importing.
+       */
+      nutrition: [
+        {
+          basis: 'per-serving',
+          servingSizeG,
+          energyKJ: null,
+          energyKcal: facts.energyKcal,
+          fatG: facts.fatG,
+          saturatesG: facts.saturatesG,
+          carbohydrateG: facts.carbohydrateG,
+          sugarsG: facts.sugarsG,
+          fibreG: facts.fibreG,
+          proteinG: facts.proteinG,
+          saltG: null,
+          sodiumMg: facts.sodiumMg,
+        },
+      ],
+      status: 'partial',
       ingredientRefs: [],
       additiveRefs: [],
       allergens: [],

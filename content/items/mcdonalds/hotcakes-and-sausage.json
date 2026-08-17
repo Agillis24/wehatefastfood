@@ -1,0 +1,41 @@
+{
+  "slug": "hotcakes-and-sausage",
+  "chainSlug": "mcdonalds",
+  "name": "Hotcakes and Sausage",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 770,
+          "fatG": 33,
+          "saturatesG": 12,
+          "carbohydrateG": 102,
+          "sugarsG": 46,
+          "fibreG": 2,
+          "proteinG": 15,
+          "saltG": null,
+          "sodiumMg": 810
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Hotcakes and Sausage - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

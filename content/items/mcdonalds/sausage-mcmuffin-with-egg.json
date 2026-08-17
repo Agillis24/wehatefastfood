@@ -1,0 +1,41 @@
+{
+  "slug": "sausage-mcmuffin-with-egg",
+  "chainSlug": "mcdonalds",
+  "name": "Sausage McMuffin with Egg",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 480,
+          "fatG": 31,
+          "saturatesG": 12,
+          "carbohydrateG": 30,
+          "sugarsG": 2,
+          "fibreG": 2,
+          "proteinG": 20,
+          "saltG": null,
+          "sodiumMg": 830
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage McMuffin with Egg - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

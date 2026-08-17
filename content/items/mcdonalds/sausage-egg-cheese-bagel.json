@@ -1,0 +1,41 @@
+{
+  "slug": "sausage-egg-cheese-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Sausage, Egg & Cheese Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 710,
+          "fatG": 42,
+          "saturatesG": 16,
+          "carbohydrateG": 56,
+          "sugarsG": 6,
+          "fibreG": 2,
+          "proteinG": 27,
+          "saltG": null,
+          "sodiumMg": 1380
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage, Egg & Cheese Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

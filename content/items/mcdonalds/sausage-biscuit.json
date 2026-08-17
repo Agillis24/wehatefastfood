@@ -1,0 +1,41 @@
+{
+  "slug": "sausage-biscuit",
+  "chainSlug": "mcdonalds",
+  "name": "Sausage Biscuit",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 460,
+          "fatG": 30,
+          "saturatesG": 13,
+          "carbohydrateG": 37,
+          "sugarsG": 2,
+          "fibreG": 2,
+          "proteinG": 11,
+          "saltG": null,
+          "sodiumMg": 1090
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage Biscuit - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

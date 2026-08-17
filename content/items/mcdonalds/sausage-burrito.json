@@ -1,0 +1,41 @@
+{
+  "slug": "sausage-burrito",
+  "chainSlug": "mcdonalds",
+  "name": "Sausage Burrito",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "US",
+      "verifiedOn": "2026-08-17",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 310,
+          "fatG": 17,
+          "saturatesG": 7,
+          "carbohydrateG": 25,
+          "sugarsG": 2,
+          "fibreG": 1,
+          "proteinG": 13,
+          "saltG": null,
+          "sodiumMg": 800
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage Burrito - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
