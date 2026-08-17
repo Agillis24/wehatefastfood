@@ -181,3 +181,16 @@ test('the privacy page does not outlive its own claim', async ({ page, baseURL }
   }
   expect(foreign, 'no page may load anything from a third party').toEqual([]);
 });
+
+test('unverified reference data is labelled provisional wherever it is used', async ({ page }) => {
+  // /methodology tells readers that anything derived from the unverified
+  // threshold and reference-intake tables is labelled on the page where it
+  // appears. That was true of the traffic lights and, for a while, quietly
+  // false of the reference-intake percentages - which look more like plain
+  // facts than a colour does. Both are asserted here so the claim on
+  // /methodology cannot drift away from the pages it describes.
+  await page.goto(ITEM);
+
+  await expect(page.getByText(/thresholds has not yet been checked/i)).toBeVisible();
+  await expect(page.getByText(/reference intakes has not yet been checked/i)).toBeVisible();
+});

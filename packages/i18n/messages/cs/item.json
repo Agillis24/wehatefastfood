@@ -41,7 +41,8 @@
     "fat": "Tuky",
     "saturates": "Nasycené",
     "sugars": "Cukry",
-    "salt": "Sůl"
+    "salt": "Sůl",
+    "unverified": "Naši kopii oficiálních referenčních hodnot příjmu zatím nikdo neporovnal s nařízením. Berte tato procenta jako předběžná."
   },
   "ingredients": {
     "title": "Co v tom doopravdy je",

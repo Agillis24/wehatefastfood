@@ -41,7 +41,8 @@
     "fat": "Fat",
     "saturates": "Saturates",
     "sugars": "Sugars",
-    "salt": "Salt"
+    "salt": "Salt",
+    "unverified": "Our copy of the official reference intakes has not yet been checked against the regulation by a human. Treat these percentages as provisional."
   },
   "ingredients": {
     "title": "What is actually in it",

@@ -49,7 +49,23 @@ function Arc({ value }: { value: number }) {
   );
 }
 
-export function ReferenceIntake({ rows, locale }: { rows: Row[]; locale: string }) {
+export function ReferenceIntake({
+  rows,
+  locale,
+  provisional,
+}: {
+  rows: Row[];
+  locale: string;
+  /**
+   * True while content/reference/reference-intakes.json is unverified.
+   *
+   * The traffic lights carried this caveat from the start and this table did
+   * not, even though both are computed from a table written from working
+   * knowledge. A percentage looks more like a plain fact than a colour does,
+   * which makes the omission the worse of the two.
+   */
+  provisional: boolean;
+}) {
   const t = useTranslations('item.intake');
 
   const shown = rows.filter((r) => r.percent !== null);
@@ -61,6 +77,12 @@ export function ReferenceIntake({ rows, locale }: { rows: Row[]; locale: string 
         {t('title')}
       </h2>
       <p className="text-sm text-[var(--surface-muted)]">{t('subtitle')}</p>
+
+      {provisional ? (
+        <p className="border-s-4 border-pink ps-3 text-sm text-[var(--surface-muted)]">
+          {t('unverified')}
+        </p>
+      ) : null}
 
       <ul className="flex flex-wrap gap-6">
         {shown.map((row) => (

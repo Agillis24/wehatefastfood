@@ -207,7 +207,8 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
         { kind: 'salt' as const, grams: serving?.saltG ?? null },
         { kind: 'saturates' as const, grams: serving?.saturatesG ?? null },
       ]}
-      provisional={data.thresholds?.status !== 'verified'}
+      bandsProvisional={data.thresholds?.status !== 'verified'}
+      intakesProvisional={data.intakes?.status !== 'verified'}
     />
   );
 }
@@ -227,7 +228,13 @@ type ViewProps = {
   servingG: number | null;
   serving: import('@wff/content').NutritionFacts | null;
   realityRows: { kind: 'sugar' | 'salt' | 'saturates'; grams: number | null }[];
-  provisional: boolean;
+  /**
+   * Two flags, not one. The bands and the percentages come from two separate
+   * reference tables with two separate verification states, and collapsing them
+   * would eventually label one of them by the status of the other.
+   */
+  bandsProvisional: boolean;
+  intakesProvisional: boolean;
 };
 
 function ItemView(props: ViewProps) {
@@ -303,7 +310,7 @@ function ItemView(props: ViewProps) {
               bands={props.bands}
               locale={locale}
               isDrink={props.isDrink}
-              provisional={props.provisional}
+              provisional={props.bandsProvisional}
             />
 
             <ReferenceIntake
@@ -314,6 +321,7 @@ function ItemView(props: ViewProps) {
                 reference: r.reference,
               }))}
               locale={locale}
+              provisional={props.intakesProvisional}
             />
 
             <IngredientChips
