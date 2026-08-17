@@ -43,14 +43,43 @@ function fail(message, hint) {
 const rl = createInterface({ input: process.stdin, output: process.stdout });
 
 /** Trimmed, unquoted, and checked for the shape a credential cannot have. */
-async function askSecret(label) {
+async function askSecret(label, kind = 'token') {
   const raw = (await rl.question(`${label}: `)).trim().replace(/^["']|["']$/g, '');
 
   if (raw === '') return { error: 'nothing was entered' };
-  // A token has no whitespace. A pasted command does.
+
+  // A token has no whitespace. A pasted shell command does.
   if (/\s/.test(raw)) {
     return { error: `that contains spaces, so it is not a token (${raw.length} characters)` };
   }
+
+  /*
+   * 32 hex characters is NOT an access token.
+   *
+   * App settings -> Basic lists three values in one column: App ID, App Secret,
+   * and Client Token. Two of them are 32 hex characters, both are named
+   * something-secret-or-token, and neither is what any of this wants. A real
+   * access token is around 200 characters and begins EAA or IGAA.
+   *
+   * Caught here rather than at Meta, because Meta's answer is "Cannot parse
+   * access token" - which reads as an expiry, and sends people off to generate
+   * another one of the wrong thing.
+   */
+  if (kind === 'token' && /^[0-9a-f]{32}$/i.test(raw)) {
+    return {
+      error: 'that is 32 hex characters - an App Secret or a Client Token, not an access token',
+      hint: [
+        'An access token is around 200 characters and starts with EAA or IGAA.',
+        '',
+        'Facebook:  Graph API Explorer -> Generate Access Token -> the long value',
+        '           in the "Access Token" box at the top of the panel.',
+        'Instagram: App Dashboard -> the Instagram use case -> Generate token.',
+        '',
+        'The 32-character values in App settings -> Basic are not access tokens.',
+      ].join('\n'),
+    };
+  }
+
   return { value: raw };
 }
 
@@ -103,7 +132,7 @@ Instagram token. Get it from the App Dashboard:
 `);
 
   const entered = await askSecret('Token');
-  if (entered.error) return fail(entered.error);
+  if (entered.error) return fail(entered.error, entered.hint);
 
   const me = await get(
     `https://graph.instagram.com/${VERSION}/me?fields=user_id,username,account_type&access_token=${encodeURIComponent(entered.value)}`,
@@ -144,12 +173,12 @@ The short-lived token lasts about an hour. This exchanges it for a
 long-lived one, then reads the Page token from it.
 `);
 
-  const appId = await askSecret('App ID');
-  if (appId.error) return fail(appId.error);
-  const appSecret = await askSecret('App Secret');
-  if (appSecret.error) return fail(appSecret.error);
+  const appId = await askSecret('App ID', 'id');
+  if (appId.error) return fail(appId.error, appId.hint);
+  const appSecret = await askSecret('App Secret', 'secret');
+  if (appSecret.error) return fail(appSecret.error, appSecret.hint);
   const short = await askSecret('Short-lived token');
-  if (short.error) return fail(short.error);
+  if (short.error) return fail(short.error, short.hint);
 
   const exchanged = await get(
     `https://graph.facebook.com/${VERSION}/oauth/access_token?grant_type=fb_exchange_token` +
