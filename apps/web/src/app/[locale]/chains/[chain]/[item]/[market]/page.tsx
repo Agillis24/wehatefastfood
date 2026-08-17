@@ -50,6 +50,8 @@ import {
 
 type Params = { locale: string; chain: string; item: string; market: string };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const repo = await getContent();
   const items = await repo.listItems();

@@ -33,8 +33,13 @@ jobs:
       - name: Check
         run: npm run check
 
+      # Seed included on purpose: CI verifies that the build WORKS, and a
+      # production build with no content deliberately refuses to export (see
+      # scripts/build.mjs). CI has no audience, so the fake data harms nobody.
       - name: Build
         run: npm run build
+        env:
+          WFF_INCLUDE_SEED: '1'
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium

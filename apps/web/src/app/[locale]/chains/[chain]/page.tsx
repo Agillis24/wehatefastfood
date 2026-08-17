@@ -18,6 +18,8 @@ import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
  * would multiply the route without adding anything the item page does not.
  */
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const repo = await getContent();
   const chains = await repo.listChains();

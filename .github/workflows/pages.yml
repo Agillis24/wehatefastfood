@@ -4,6 +4,13 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      include_seed:
+        description: >-
+          Publish the obviously-fake seed data. ONLY to prove the deployment
+          pipeline works before real content exists. Never for a launch.
+        type: boolean
+        default: false
 
 # One deployment at a time, and never cancel one in flight: a half-finished
 # publish is worse than a slightly stale site.
@@ -34,10 +41,18 @@ jobs:
       - name: Check
         run: npm run check
 
+      # An automatic push NEVER publishes seed data. A production build with no
+      # content refuses to export rather than shipping placeholders, which is
+      # the behaviour we want: the site says nothing until it has something.
+      #
+      # A manual run may opt in, to prove the pipeline works before the first
+      # real chain lands. The seed is unmistakably fake in every field and the
+      # site is closed to crawlers either way.
       - name: Build
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_ORIGIN: https://www.wehatefastfood.com
+          WFF_INCLUDE_SEED: ${{ inputs.include_seed && '1' || '' }}
           # Indexing stays off until content exists - see apps/web/src/lib/launch.ts.
           # Setting this alone is not enough: the code also requires a published
           # chain, so an empty site cannot be opened to crawlers by accident.

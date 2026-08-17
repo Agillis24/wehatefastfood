@@ -15,6 +15,8 @@ import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
  * index exists in @wff/content.
  */
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const repo = await getContent();
   const additives = await repo.listAdditives();
