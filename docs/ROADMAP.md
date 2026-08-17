@@ -9,6 +9,8 @@
 - **Phase 4** Decoder, compare, search index, market diff.
 - **Phase 5** i18n: Czech pilot, tier-2 endpoint, glossary, drift gate.
 - **Phase 6** Structured data, social and OG cards, video-brief export, budget gate, Playwright smoke suite, deployment config.
+- **Deployed** 2026-08-17, GitHub Pages at `www.wehatefastfood.com`, closed to crawlers, seed data only.
+- **The footer pages** `/about`, `/methodology`, `/sources`, `/legal`, `/privacy` in `en` and `cs`. `/sources` is generated from the content graph. Two tests guard them: every footer link must resolve in both locales, and no page may request anything from a third party, so `/privacy` cannot outlive its own claim.
 
 ---
 
@@ -18,7 +20,7 @@
 2. **Review the Czech.** `packages/i18n/messages/cs/_provenance.json` has `reviewedByHuman: false`.
 3. **Add the first real chain** — McDonald's, GB and US — then delete `content/_seed/`.
 4. **Self-host the fonts.** Archivo, Public Sans and IBM Plex Mono are named in the tokens but not yet downloaded, subset to `latin` + `latin-ext`, or wired through `next/font`. Until then the site renders in fallbacks.
-5. **Deploy.** Vercel; apex 301 to `www`; `NEXT_PUBLIC_SITE_ORIGIN` set per environment so previews do not emit production canonicals.
+5. ~~**Deploy.**~~ Done, on GitHub Pages rather than Vercel - Vercel Hobby forbids commercial use and this project feeds a YouTube channel. The cost was tier-2 translation, dropped by decision.
 
 ---
 
@@ -27,7 +29,6 @@
 - Per-item OG images wired into `generateMetadata` from the generated cards.
 - The illustration set: first the fixed cast of measure objects, then per-item artwork.
 - `/learn` MDX articles.
-- `/about`, `/methodology`, `/sources`, `/legal`, `/privacy` — `methodology` is what separates this from a rage blog and deserves real writing.
 - Site-wide search over the generated index.
 - Plain-data mode that persists across navigation. Currently CSS-only and per-page; persistence needs a cookie (which forces dynamic rendering) or a small island (which costs 11 kB on every route). Neither is obviously right yet.
 - Tier-1 translation for the remaining seven locales, after `cs` has been reviewed and the pipeline has proved itself against it.
