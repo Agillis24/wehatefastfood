@@ -233,6 +233,24 @@ async function publishInstagram({ imageUrl, caption, altText, account }) {
  * Instagram uses, and different scopes. Mixing the two up is the single most
  * common failure here, so they are separate variables.
  */
+/**
+ * Ask the Facebook token who it is.
+ *
+ * This catches the documented number-one failure head on. /me with a PAGE token
+ * returns the PAGE; /me with a USER token returns the person. So if a human
+ * name comes back, the wrong token was pasted - and Meta reports that case as a
+ * permissions error that never mentions the token type.
+ *
+ * Read-only, so it runs in a dry run too, and the Page NAME is on screen before
+ * anyone types --confirm.
+ */
+async function whoamiPage(token) {
+  const url = `${FB_API}/me?fields=id,name&access_token=${encodeURIComponent(token)}`;
+  const response = await fetch(url).catch(() => null);
+  if (!response?.ok) return null;
+  return response.json().catch(() => null);
+}
+
 async function publishFacebook({ imageUrl, caption, altText }) {
   const token = process.env['FB_PAGE_ACCESS_TOKEN'];
   const pageId = process.env['FB_PAGE_ID'];
@@ -307,6 +325,27 @@ async function main() {
     ? await whoami(process.env['IG_ACCESS_TOKEN'] ?? '')
     : null;
 
+  const page = targets.includes('fb')
+    ? await whoamiPage(process.env['FB_PAGE_ACCESS_TOKEN'] ?? '')
+    : null;
+
+  /*
+   * A Page token identifies AS the Page. If what comes back is not the page we
+   * were configured with, this is a user token wearing the right variable name -
+   * the most common setup mistake there is, and one Meta reports as a
+   * permissions failure rather than as what it actually is.
+   */
+  if (page && process.env['FB_PAGE_ID'] && page.id !== process.env['FB_PAGE_ID']) {
+    die(
+      `FB_PAGE_ACCESS_TOKEN identifies as "${page.name}" (id ${page.id}), not as the configured page ${process.env['FB_PAGE_ID']}`,
+      [
+        'That is almost always a USER token stored where a PAGE token belongs.',
+        'A Page token returns the Page from /me; a user token returns you.',
+        'Re-read it from me/accounts - see docs/SOCIAL_PUBLISHING.md.',
+      ].join('\n'),
+    );
+  }
+
   if (account && account.account_type !== 'BUSINESS' && account.account_type !== 'CREATOR') {
     die(
       `the Instagram account is ${account.account_type}, which cannot publish`,
@@ -341,7 +380,12 @@ async function main() {
   account   @${account.username}  [${account.account_type}, id ${account.id}]`
       : ''
   }
-  language  ${lang}
+${
+  page
+    ? `  page      ${page.name}  [id ${page.id}]
+`
+    : ''
+}  language  ${lang}
   image     ${imageUrl}
             [${contentType}, ${head.headers.get('content-length') ?? '?'} bytes]
   alt       ${altText}
