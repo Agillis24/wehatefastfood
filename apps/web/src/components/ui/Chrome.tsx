@@ -114,7 +114,7 @@ export function Disclaimers({ withMedical = true }: { withMedical?: boolean }) {
   const t = useTranslations('disclaimer');
 
   return (
-    <div className="flex flex-col gap-2 text-xs text-[var(--surface-muted)]">
+    <div data-nosnippet className="flex flex-col gap-2 text-xs text-[var(--surface-muted)]">
       <p>{t('notAffiliated')}</p>
       {withMedical ? <p>{t('notMedical')}</p> : null}
       <p>{t('figuresChange')}</p>

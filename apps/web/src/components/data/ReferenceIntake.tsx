@@ -79,7 +79,10 @@ export function ReferenceIntake({
       <p className="text-sm text-[var(--surface-muted)]">{t('subtitle')}</p>
 
       {provisional ? (
-        <p className="border-s-4 border-pink ps-3 text-sm text-[var(--surface-muted)]">
+        <p
+          data-nosnippet
+          className="border-s-4 border-pink ps-3 text-sm text-[var(--surface-muted)]"
+        >
           {t('unverified')}
         </p>
       ) : null}

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { isRtl } from '@wff/i18n';
@@ -10,6 +10,14 @@ import '@/styles/globals.css';
 export function generateStaticParams() {
   return AVAILABLE_LOCALES.map((locale) => ({ locale }));
 }
+
+/**
+ * theme-color lives here and not in `metadata`, where Next has deprecated it
+ * since v14 and where it is silently dropped rather than warned about.
+ */
+export const viewport: Viewport = {
+  themeColor: '#16120F',
+};
 
 export async function generateMetadata({
   params,
