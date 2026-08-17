@@ -10,6 +10,7 @@
 
 import { readdir, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -33,6 +34,21 @@ const KEY_LITERALS = [
   { name: 'Generic bearer secret', re: /(?:secret|token)\s*[:=]\s*['"][A-Za-z0-9_-]{32,}['"]/i },
 ];
 
+/**
+ * Everything git tracks, as repo-relative paths.
+ *
+ * Read once rather than shelling out per file. If git is unavailable - a
+ * tarball, a sandbox - the set is empty and the .env check simply cannot fire,
+ * which is the right way round: this gate exists to catch a secret entering the
+ * index, and with no index there is nothing to catch.
+ */
+const tracked = new Set(
+  spawnSync('git', ['ls-files'], { cwd: ROOT, encoding: 'utf8' })
+    .stdout?.split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean) ?? [],
+);
+
 const problems = [];
 
 async function walk(dir) {
@@ -47,9 +63,18 @@ async function walk(dir) {
     const full = path.join(dir, entry.name);
     const rel = path.relative(ROOT, full).split(path.sep).join('/');
 
-    // A committed .env is the single most common way a key escapes.
-    if (/^\.env($|\.)/.test(entry.name) && entry.name !== '.env.example') {
-      problems.push(`${rel}: env file present in the working tree - it must never be committed`);
+    /*
+     * A COMMITTED .env is the single most common way a key escapes. A PRESENT
+     * one is the documented way to work: the first line of .env.example says
+     * "Copy to .env.local", and every script here reads it.
+     *
+     * This used to fire on any .env file that merely existed, so following the
+     * project's own instructions turned `npm run check` red - the gate forbade
+     * the workflow it was written to protect. What matters is whether git
+     * TRACKS it.
+     */
+    if (/^\.env($|\.)/.test(entry.name) && entry.name !== '.env.example' && tracked.has(rel)) {
+      problems.push(`${rel}: env file is TRACKED BY GIT - take it out of the index now`);
     }
 
     if (!/\.(ts|tsx|mjs|js|json|md|yml|yaml|css)$/.test(entry.name)) continue;
