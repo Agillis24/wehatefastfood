@@ -35,7 +35,8 @@
     "budget:check": "node scripts/budget-check.mjs",
     "prepare": "node scripts/install-git-hooks.mjs",
     "serve": "node scripts/serve-static.mjs",
-    "social:publish": "node scripts/social-publish.mjs"
+    "social:publish": "node scripts/social-publish.mjs",
+    "social:token": "node scripts/social-token.mjs"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
