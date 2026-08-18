@@ -1,0 +1,43 @@
+{
+  "slug": "aloha-twister",
+  "chainSlug": "kfc",
+  "name": "Aloha Twister",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null
+        }
+      ],
+      "status": "unpublished",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

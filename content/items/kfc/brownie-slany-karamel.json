@@ -1,0 +1,59 @@
+{
+  "slug": "brownie-slany-karamel",
+  "chainSlug": "kfc",
+  "name": "Brownie slaný karamel",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1770,
+          "energyKcal": 423,
+          "fatG": 25.7,
+          "saturatesG": 15.7,
+          "transFatG": null,
+          "carbohydrateG": 42.9,
+          "sugarsG": 32.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4.6,
+          "saltG": 0.5,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 84,
+          "energyKJ": 1487,
+          "energyKcal": 355,
+          "fatG": 21.6,
+          "saturatesG": 13.2,
+          "transFatG": null,
+          "carbohydrateG": 36,
+          "sugarsG": 27.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.9,
+          "saltG": 0.42,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko", "skořápkové-plody", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

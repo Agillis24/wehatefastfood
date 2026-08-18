@@ -1,0 +1,59 @@
+{
+  "slug": "minioni-double-burger",
+  "chainSlug": "kfc",
+  "name": "Minioni Double Burger",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 998,
+          "energyKcal": 239,
+          "fatG": 11.7,
+          "saturatesG": 2.4,
+          "transFatG": null,
+          "carbohydrateG": 18.8,
+          "sugarsG": 2.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 15.6,
+          "saltG": 1.37,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 340,
+          "energyKJ": 3393,
+          "energyKcal": 813,
+          "fatG": 39.8,
+          "saturatesG": 8,
+          "transFatG": null,
+          "carbohydrateG": 63.9,
+          "sugarsG": 8.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 52.9,
+          "saltG": 4.66,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

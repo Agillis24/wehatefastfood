@@ -1,0 +1,59 @@
+{
+  "slug": "kentucky-gold-grander",
+  "chainSlug": "kfc",
+  "name": "Kentucky Gold Grander",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1100,
+          "energyKcal": 263,
+          "fatG": 14,
+          "saturatesG": 2.6,
+          "transFatG": null,
+          "carbohydrateG": 24.4,
+          "sugarsG": 4.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.2,
+          "saltG": 1.56,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 320,
+          "energyKJ": 3520,
+          "energyKcal": 842,
+          "fatG": 44.8,
+          "saturatesG": 8.3,
+          "transFatG": null,
+          "carbohydrateG": 78.1,
+          "sugarsG": 14.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 35.8,
+          "saltG": 4.99,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "lepek-žito", "hořčice", "mléko", "sezam", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

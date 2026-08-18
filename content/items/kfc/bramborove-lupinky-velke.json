@@ -1,0 +1,59 @@
+{
+  "slug": "bramborove-lupinky-velke",
+  "chainSlug": "kfc",
+  "name": "Bramborové lupínky velké",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 2031,
+          "energyKcal": 487,
+          "fatG": 29.1,
+          "saturatesG": 6.8,
+          "transFatG": null,
+          "carbohydrateG": 48.1,
+          "sugarsG": 0.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 5.6,
+          "saltG": 0.5,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 120,
+          "energyKJ": 2437,
+          "energyKcal": 584,
+          "fatG": 34.9,
+          "saturatesG": 8.2,
+          "transFatG": null,
+          "carbohydrateG": 57.7,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 6.7,
+          "saltG": 0.6,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "cappuccino",
+  "chainSlug": "kfc",
+  "name": "Cappuccino",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 123,
+          "energyKcal": 29,
+          "fatG": 1.6,
+          "saturatesG": 1,
+          "transFatG": null,
+          "carbohydrateG": 2.2,
+          "sugarsG": 2.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.5,
+          "saltG": 0.04,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 180,
+          "energyKJ": 221,
+          "energyKcal": 52,
+          "fatG": 2.8,
+          "saturatesG": 1.8,
+          "transFatG": null,
+          "carbohydrateG": 4,
+          "sugarsG": 3.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.6,
+          "saltG": 0.07,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

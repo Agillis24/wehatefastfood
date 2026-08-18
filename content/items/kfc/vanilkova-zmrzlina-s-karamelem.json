@@ -1,0 +1,59 @@
+{
+  "slug": "vanilkova-zmrzlina-s-karamelem",
+  "chainSlug": "kfc",
+  "name": "Vanilková zmrzlina s karamelem",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1009,
+          "energyKcal": 241,
+          "fatG": 11,
+          "saturatesG": 7.4,
+          "transFatG": null,
+          "carbohydrateG": 32,
+          "sugarsG": 27,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.2,
+          "saltG": 0.17,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 95,
+          "energyKJ": 959,
+          "energyKcal": 229,
+          "fatG": 10.5,
+          "saturatesG": 7,
+          "transFatG": null,
+          "carbohydrateG": 30.4,
+          "sugarsG": 25.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3,
+          "saltG": 0.16,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko", "sója"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

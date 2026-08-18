@@ -1,0 +1,59 @@
+{
+  "slug": "malinovka",
+  "chainSlug": "kfc",
+  "name": "Malinovka",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 123,
+          "energyKcal": 29,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 7.2,
+          "sugarsG": 7.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 300,
+          "energyKJ": 369,
+          "energyKcal": 87,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 21.6,
+          "sugarsG": 21.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

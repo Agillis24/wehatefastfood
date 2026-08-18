@@ -1,0 +1,59 @@
+{
+  "slug": "toast-se-slaninou-a-syrem",
+  "chainSlug": "kfc",
+  "name": "Toast se slaninou a sýrem",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1340,
+          "energyKcal": 320,
+          "fatG": 16,
+          "saturatesG": 7.7,
+          "transFatG": null,
+          "carbohydrateG": 28,
+          "sugarsG": 2.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 14.2,
+          "saltG": 2.47,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 95,
+          "energyKJ": 1273,
+          "energyKcal": 304,
+          "fatG": 15.2,
+          "saturatesG": 7.3,
+          "transFatG": null,
+          "carbohydrateG": 26.6,
+          "sugarsG": 2.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.5,
+          "saltG": 2.35,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-ječmen", "lepek-pšenice", "mléko", "sója"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

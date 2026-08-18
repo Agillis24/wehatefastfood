@@ -1,0 +1,59 @@
+{
+  "slug": "qurrito-grande",
+  "chainSlug": "kfc",
+  "name": "Qurrito grande",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1409,
+          "energyKcal": 337,
+          "fatG": 20,
+          "saturatesG": 6.3,
+          "transFatG": null,
+          "carbohydrateG": 25,
+          "sugarsG": 4.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 14.5,
+          "saltG": 1.58,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 320,
+          "energyKJ": 4509,
+          "energyKcal": 1078,
+          "fatG": 64,
+          "saturatesG": 20.2,
+          "transFatG": null,
+          "carbohydrateG": 80,
+          "sugarsG": 15.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 46.4,
+          "saltG": 5.06,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

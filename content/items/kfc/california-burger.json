@@ -1,0 +1,59 @@
+{
+  "slug": "california-burger",
+  "chainSlug": "kfc",
+  "name": "California Burger",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 845,
+          "energyKcal": 202,
+          "fatG": 9.2,
+          "saturatesG": 1.1,
+          "transFatG": null,
+          "carbohydrateG": 20,
+          "sugarsG": 4.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 9.8,
+          "saltG": 1.05,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 307,
+          "energyKJ": 2594,
+          "energyKcal": 620,
+          "fatG": 28.3,
+          "saturatesG": 3.4,
+          "transFatG": null,
+          "carbohydrateG": 61.4,
+          "sugarsG": 15.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 29.9,
+          "saltG": 3.22,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

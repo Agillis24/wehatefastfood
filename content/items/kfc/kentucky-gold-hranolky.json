@@ -1,0 +1,59 @@
+{
+  "slug": "kentucky-gold-hranolky",
+  "chainSlug": "kfc",
+  "name": "Kentucky Gold hranolky",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1272,
+          "energyKcal": 305,
+          "fatG": 17,
+          "saturatesG": 2.8,
+          "transFatG": null,
+          "carbohydrateG": 32,
+          "sugarsG": 4.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4,
+          "saltG": 0.7,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 155,
+          "energyKJ": 1972,
+          "energyKcal": 473,
+          "fatG": 26.4,
+          "saturatesG": 4.3,
+          "transFatG": null,
+          "carbohydrateG": 49.6,
+          "sugarsG": 7.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 6.2,
+          "saltG": 1.09,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

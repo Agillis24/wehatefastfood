@@ -1,0 +1,59 @@
+{
+  "slug": "zinger-double",
+  "chainSlug": "kfc",
+  "name": "Zinger Double",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1030,
+          "energyKcal": 246,
+          "fatG": 12,
+          "saturatesG": 2.1,
+          "transFatG": null,
+          "carbohydrateG": 17,
+          "sugarsG": 2.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 17,
+          "saltG": 1.88,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 240,
+          "energyKJ": 2472,
+          "energyKcal": 590,
+          "fatG": 28.8,
+          "saturatesG": 5,
+          "transFatG": null,
+          "carbohydrateG": 40.8,
+          "sugarsG": 5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 40.8,
+          "saltG": 4.51,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "sezam", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "halloumi-twister",
+  "chainSlug": "kfc",
+  "name": "Halloumi Twister",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1115,
+          "energyKcal": 268,
+          "fatG": 16.9,
+          "saturatesG": 7.4,
+          "transFatG": null,
+          "carbohydrateG": 17.1,
+          "sugarsG": 2.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 10.9,
+          "saltG": 1.78,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 260,
+          "energyKJ": 2899,
+          "energyKcal": 697,
+          "fatG": 43.9,
+          "saturatesG": 19.2,
+          "transFatG": null,
+          "carbohydrateG": 44.5,
+          "sugarsG": 5.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 28.3,
+          "saltG": 4.63,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko", "oxid-siřičitý", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "snidanova-brioska",
+  "chainSlug": "kfc",
+  "name": "Snídaňová brioška",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1010,
+          "energyKcal": 242,
+          "fatG": 12.5,
+          "saturatesG": 2.9,
+          "transFatG": null,
+          "carbohydrateG": 18.6,
+          "sugarsG": 2.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.9,
+          "saltG": 1.3,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 165,
+          "energyKJ": 1667,
+          "energyKcal": 399,
+          "fatG": 20.6,
+          "saturatesG": 4.8,
+          "transFatG": null,
+          "carbohydrateG": 30.7,
+          "sugarsG": 3.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 22.9,
+          "saltG": 2.15,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-ječmen", "lepek-pšenice", "hořčice", "mléko", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

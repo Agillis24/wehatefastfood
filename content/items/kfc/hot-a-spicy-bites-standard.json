@@ -1,0 +1,59 @@
+{
+  "slug": "hot-a-spicy-bites-standard",
+  "chainSlug": "kfc",
+  "name": "Hot & Spicy Bites standard",
+  "category": "chicken",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1376,
+          "energyKcal": 330,
+          "fatG": 21.7,
+          "saturatesG": 3.1,
+          "transFatG": null,
+          "carbohydrateG": 16.2,
+          "sugarsG": 0.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 18.1,
+          "saltG": 1.78,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 180,
+          "energyKJ": 2477,
+          "energyKcal": 594,
+          "fatG": 39,
+          "saturatesG": 5.6,
+          "transFatG": null,
+          "carbohydrateG": 29.2,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 32.6,
+          "saltG": 3.2,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

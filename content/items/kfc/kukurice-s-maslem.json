@@ -1,0 +1,59 @@
+{
+  "slug": "kukurice-s-maslem",
+  "chainSlug": "kfc",
+  "name": "Kukuřice s máslem",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 565,
+          "energyKcal": 134,
+          "fatG": 1.8,
+          "saturatesG": 0.7,
+          "transFatG": null,
+          "carbohydrateG": 24.5,
+          "sugarsG": 2.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.7,
+          "saltG": 0.25,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 125,
+          "energyKJ": 706,
+          "energyKcal": 168,
+          "fatG": 2.2,
+          "saturatesG": 0.9,
+          "transFatG": null,
+          "carbohydrateG": 30.6,
+          "sugarsG": 3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4.6,
+          "saltG": 0.31,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

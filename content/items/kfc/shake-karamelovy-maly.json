@@ -1,0 +1,59 @@
+{
+  "slug": "shake-karamelovy-maly",
+  "chainSlug": "kfc",
+  "name": "Shake karamelový malý",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 654,
+          "energyKcal": 155,
+          "fatG": 3.6,
+          "saturatesG": 2.6,
+          "transFatG": null,
+          "carbohydrateG": 28,
+          "sugarsG": 25,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.9,
+          "saltG": 0.15,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 180,
+          "energyKJ": 1177,
+          "energyKcal": 279,
+          "fatG": 6.5,
+          "saturatesG": 4.7,
+          "transFatG": null,
+          "carbohydrateG": 50.4,
+          "sugarsG": 45,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 5.2,
+          "saltG": 0.27,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko", "sója"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

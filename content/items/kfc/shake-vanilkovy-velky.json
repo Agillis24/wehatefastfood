@@ -1,0 +1,59 @@
+{
+  "slug": "shake-vanilkovy-velky",
+  "chainSlug": "kfc",
+  "name": "Shake vanilkový velký",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 525,
+          "energyKcal": 120,
+          "fatG": 3.5,
+          "saturatesG": 2.5,
+          "transFatG": null,
+          "carbohydrateG": 20,
+          "sugarsG": 16,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.1,
+          "saltG": 0.13,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 400,
+          "energyKJ": 2100,
+          "energyKcal": 480,
+          "fatG": 14,
+          "saturatesG": 10,
+          "transFatG": null,
+          "carbohydrateG": 80,
+          "sugarsG": 64,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 12.4,
+          "saltG": 0.52,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

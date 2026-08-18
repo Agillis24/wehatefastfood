@@ -1,0 +1,59 @@
+{
+  "slug": "espresso-macchiato",
+  "chainSlug": "kfc",
+  "name": "Espresso Macchiato",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 83,
+          "energyKcal": 20,
+          "fatG": 1,
+          "saturatesG": 0.6,
+          "transFatG": null,
+          "carbohydrateG": 1.6,
+          "sugarsG": 1.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.9,
+          "saltG": 0.03,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 90,
+          "energyKJ": 75,
+          "energyKcal": 18,
+          "fatG": 0.9,
+          "saturatesG": 0.6,
+          "transFatG": null,
+          "carbohydrateG": 1.4,
+          "sugarsG": 1.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.8,
+          "saltG": 0.03,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

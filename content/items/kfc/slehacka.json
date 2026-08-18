@@ -1,0 +1,59 @@
+{
+  "slug": "slehacka",
+  "chainSlug": "kfc",
+  "name": "Šlehačka",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1218,
+          "energyKcal": 291,
+          "fatG": 26,
+          "saturatesG": 19,
+          "transFatG": null,
+          "carbohydrateG": 11,
+          "sugarsG": 11,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.3,
+          "saltG": 0.07,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 18,
+          "energyKJ": 219,
+          "energyKcal": 52,
+          "fatG": 4.7,
+          "saturatesG": 3.4,
+          "transFatG": null,
+          "carbohydrateG": 2,
+          "sugarsG": 2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.4,
+          "saltG": 0.01,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "jahodova-omacka-do-churros",
+  "chainSlug": "kfc",
+  "name": "Jahodová omáčka do churros",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 689,
+          "energyKcal": 162,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 39,
+          "sugarsG": 32,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.5,
+          "saltG": 0.04,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 30,
+          "energyKJ": 207,
+          "energyKcal": 49,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 11.7,
+          "sugarsG": 9.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.2,
+          "saltG": 0.01,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

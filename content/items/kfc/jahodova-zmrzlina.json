@@ -1,0 +1,59 @@
+{
+  "slug": "jahodova-zmrzlina",
+  "chainSlug": "kfc",
+  "name": "Jahodová zmrzlina",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 856,
+          "energyKcal": 204,
+          "fatG": 8.2,
+          "saturatesG": 7,
+          "transFatG": null,
+          "carbohydrateG": 30,
+          "sugarsG": 27,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.6,
+          "saltG": 0.08,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 101,
+          "energyKJ": 865,
+          "energyKcal": 206,
+          "fatG": 8.3,
+          "saturatesG": 7.1,
+          "transFatG": null,
+          "carbohydrateG": 30.3,
+          "sugarsG": 27.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.6,
+          "saltG": 0.08,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

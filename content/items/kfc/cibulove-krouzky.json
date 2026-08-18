@@ -1,0 +1,59 @@
+{
+  "slug": "cibulove-krouzky",
+  "chainSlug": "kfc",
+  "name": "Cibulové kroužky",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1338,
+          "energyKcal": 320,
+          "fatG": 15.5,
+          "saturatesG": 6.3,
+          "transFatG": null,
+          "carbohydrateG": 42.2,
+          "sugarsG": 4.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 5.1,
+          "saltG": 0.7,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 90,
+          "energyKJ": 1204,
+          "energyKcal": 288,
+          "fatG": 13.9,
+          "saturatesG": 5.7,
+          "transFatG": null,
+          "carbohydrateG": 38,
+          "sugarsG": 4.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4.6,
+          "saltG": 0.63,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

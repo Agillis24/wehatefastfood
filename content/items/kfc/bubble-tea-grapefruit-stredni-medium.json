@@ -1,0 +1,59 @@
+{
+  "slug": "bubble-tea-grapefruit-stredni-medium",
+  "chainSlug": "kfc",
+  "name": "Bubble Tea Grapefruit střední/medium",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 173,
+          "energyKcal": 41,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 9.9,
+          "sugarsG": 9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.01,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 232,
+          "energyKJ": 402,
+          "energyKcal": 95,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 23,
+          "sugarsG": 20.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.02,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

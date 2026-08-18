@@ -1,0 +1,59 @@
+{
+  "slug": "americano",
+  "chainSlug": "kfc",
+  "name": "Americano",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 4,
+          "energyKcal": 1,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.1,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 280,
+          "energyKJ": 12,
+          "energyKcal": 3,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.4,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

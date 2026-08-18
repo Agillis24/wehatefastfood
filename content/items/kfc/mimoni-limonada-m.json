@@ -1,0 +1,59 @@
+{
+  "slug": "mimoni-limonada-m",
+  "chainSlug": "kfc",
+  "name": "Mimoni Limonáda M",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 186,
+          "energyKcal": 44,
+          "fatG": 0.3,
+          "saturatesG": 0.2,
+          "transFatG": null,
+          "carbohydrateG": 10.4,
+          "sugarsG": 9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.3,
+          "saltG": 0.02,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 340,
+          "energyKJ": 632,
+          "energyKcal": 150,
+          "fatG": 1.1,
+          "saturatesG": 0.7,
+          "transFatG": null,
+          "carbohydrateG": 35.4,
+          "sugarsG": 30.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.1,
+          "saltG": 0.07,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

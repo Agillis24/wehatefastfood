@@ -1,0 +1,59 @@
+{
+  "slug": "shake-arasidovy-stredni",
+  "chainSlug": "kfc",
+  "name": "Shake arašídový střední",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 725,
+          "energyKcal": 173,
+          "fatG": 8.4,
+          "saturatesG": 3.2,
+          "transFatG": null,
+          "carbohydrateG": 18.2,
+          "sugarsG": 16.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 6.9,
+          "saltG": 0.19,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 245,
+          "energyKJ": 1776,
+          "energyKcal": 424,
+          "fatG": 20.6,
+          "saturatesG": 7.8,
+          "transFatG": null,
+          "carbohydrateG": 44.6,
+          "sugarsG": 40.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 16.9,
+          "saltG": 0.47,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

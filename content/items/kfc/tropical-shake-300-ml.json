@@ -1,0 +1,59 @@
+{
+  "slug": "tropical-shake-300-ml",
+  "chainSlug": "kfc",
+  "name": "Tropical Shake 300 ml",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 640,
+          "energyKcal": 152,
+          "fatG": 3.2,
+          "saturatesG": 2.3,
+          "transFatG": null,
+          "carbohydrateG": 27.8,
+          "sugarsG": 25.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.9,
+          "saltG": 0.13,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 265,
+          "energyKJ": 1696,
+          "energyKcal": 403,
+          "fatG": 8.4,
+          "saturatesG": 6.1,
+          "transFatG": null,
+          "carbohydrateG": 73.7,
+          "sugarsG": 67.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 7.8,
+          "saltG": 0.34,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

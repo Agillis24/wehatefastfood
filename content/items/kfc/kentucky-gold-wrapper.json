@@ -1,0 +1,59 @@
+{
+  "slug": "kentucky-gold-wrapper",
+  "chainSlug": "kfc",
+  "name": "Kentucky Gold Wrapper",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1427,
+          "energyKcal": 342,
+          "fatG": 22,
+          "saturatesG": 4.4,
+          "transFatG": null,
+          "carbohydrateG": 26,
+          "sugarsG": 4.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 12,
+          "saltG": 2.1,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 350,
+          "energyKJ": 4995,
+          "energyKcal": 1197,
+          "fatG": 77,
+          "saturatesG": 15.4,
+          "transFatG": null,
+          "carbohydrateG": 91,
+          "sugarsG": 15.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 42,
+          "saltG": 7.35,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

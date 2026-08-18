@@ -1,0 +1,59 @@
+{
+  "slug": "lici-bubble-limo-180-ml",
+  "chainSlug": "kfc",
+  "name": "Liči Bubble Limo 180 ml",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 110,
+          "energyKcal": 26,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 6.5,
+          "sugarsG": 6.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.4,
+          "saltG": 0.04,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 220,
+          "energyKJ": 242,
+          "energyKcal": 57,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 14.3,
+          "sugarsG": 13.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.8,
+          "saltG": 0.09,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

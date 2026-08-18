@@ -1,0 +1,59 @@
+{
+  "slug": "avokadovy-toast",
+  "chainSlug": "kfc",
+  "name": "Avokádový toast",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 877,
+          "energyKcal": 210,
+          "fatG": 10.1,
+          "saturatesG": 3,
+          "transFatG": null,
+          "carbohydrateG": 20,
+          "sugarsG": 1.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 9.5,
+          "saltG": 1.1,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 156,
+          "energyKJ": 1368,
+          "energyKcal": 328,
+          "fatG": 15.8,
+          "saturatesG": 4.7,
+          "transFatG": null,
+          "carbohydrateG": 31.2,
+          "sugarsG": 2.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 14.8,
+          "saltG": 1.72,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-ječmen", "lepek-pšenice", "hořčice", "mléko", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

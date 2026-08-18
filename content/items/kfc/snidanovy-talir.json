@@ -1,0 +1,59 @@
+{
+  "slug": "snidanovy-talir",
+  "chainSlug": "kfc",
+  "name": "Snídaňový talíř",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 867,
+          "energyKcal": 207,
+          "fatG": 11.2,
+          "saturatesG": 2.1,
+          "transFatG": null,
+          "carbohydrateG": 14.8,
+          "sugarsG": 0.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.8,
+          "saltG": 0.8,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 260,
+          "energyKJ": 2254,
+          "energyKcal": 538,
+          "fatG": 29.1,
+          "saturatesG": 5.3,
+          "transFatG": null,
+          "carbohydrateG": 38.5,
+          "sugarsG": 1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 30.7,
+          "saltG": 2.08,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-ječmen", "lepek-pšenice", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

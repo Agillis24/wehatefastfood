@@ -1,0 +1,59 @@
+{
+  "slug": "salat-coleslaw",
+  "chainSlug": "kfc",
+  "name": "Salát Coleslaw",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 419,
+          "energyKcal": 101,
+          "fatG": 6.9,
+          "saturatesG": 0.6,
+          "transFatG": null,
+          "carbohydrateG": 9.5,
+          "sugarsG": 7.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1,
+          "saltG": 0.38,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 140,
+          "energyKJ": 587,
+          "energyKcal": 141,
+          "fatG": 9.7,
+          "saturatesG": 0.8,
+          "transFatG": null,
+          "carbohydrateG": 13.3,
+          "sugarsG": 10.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.4,
+          "saltG": 0.53,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

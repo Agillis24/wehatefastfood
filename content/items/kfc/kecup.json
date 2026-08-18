@@ -1,0 +1,59 @@
+{
+  "slug": "kecup",
+  "chainSlug": "kfc",
+  "name": "Kečup",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 520,
+          "energyKcal": 123,
+          "fatG": 0.5,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 28,
+          "sugarsG": 26,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.2,
+          "saltG": 1.7,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 25,
+          "energyKJ": 130,
+          "energyKcal": 31,
+          "fatG": 0.1,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 7,
+          "sugarsG": 6.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.3,
+          "saltG": 0.43,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

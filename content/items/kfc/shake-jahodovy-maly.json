@@ -1,0 +1,59 @@
+{
+  "slug": "shake-jahodovy-maly",
+  "chainSlug": "kfc",
+  "name": "Shake jahodový malý",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 549,
+          "energyKcal": 130,
+          "fatG": 2.8,
+          "saturatesG": 1.9,
+          "transFatG": null,
+          "carbohydrateG": 24,
+          "sugarsG": 19,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.8,
+          "saltG": 0.13,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 180,
+          "energyKJ": 988,
+          "energyKcal": 234,
+          "fatG": 5,
+          "saturatesG": 3.4,
+          "transFatG": null,
+          "carbohydrateG": 43.2,
+          "sugarsG": 34.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 5,
+          "saltG": 0.23,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

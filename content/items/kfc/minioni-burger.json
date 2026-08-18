@@ -1,0 +1,59 @@
+{
+  "slug": "minioni-burger",
+  "chainSlug": "kfc",
+  "name": "Minioni Burger",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 950,
+          "energyKcal": 227,
+          "fatG": 10.3,
+          "saturatesG": 1.9,
+          "transFatG": null,
+          "carbohydrateG": 21.8,
+          "sugarsG": 3.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 12.9,
+          "saltG": 1.33,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 240,
+          "energyKJ": 2280,
+          "energyKcal": 545,
+          "fatG": 24.8,
+          "saturatesG": 4.6,
+          "transFatG": null,
+          "carbohydrateG": 52.3,
+          "sugarsG": 9.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 31.1,
+          "saltG": 3.19,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

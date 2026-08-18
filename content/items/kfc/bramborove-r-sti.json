@@ -1,0 +1,59 @@
+{
+  "slug": "bramborove-r-sti",
+  "chainSlug": "kfc",
+  "name": "Bramborové Rösti",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1150,
+          "energyKcal": 276,
+          "fatG": 14.2,
+          "saturatesG": 1.8,
+          "transFatG": null,
+          "carbohydrateG": 33.8,
+          "sugarsG": 0.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.1,
+          "saltG": 1.28,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 50,
+          "energyKJ": 575,
+          "energyKcal": 138,
+          "fatG": 7.1,
+          "saturatesG": 0.9,
+          "transFatG": null,
+          "carbohydrateG": 16.9,
+          "sugarsG": 0.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.6,
+          "saltG": 0.64,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "california-salat",
+  "chainSlug": "kfc",
+  "name": "California Salát",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 799,
+          "energyKcal": 193,
+          "fatG": 14.2,
+          "saturatesG": 7.6,
+          "transFatG": null,
+          "carbohydrateG": 9.5,
+          "sugarsG": 1.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 8.2,
+          "saltG": 0.49,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 296,
+          "energyKJ": 2365,
+          "energyKcal": 571,
+          "fatG": 41.9,
+          "saturatesG": 22.5,
+          "transFatG": null,
+          "carbohydrateG": 28.1,
+          "sugarsG": 3.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 24.2,
+          "saltG": 1.45,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

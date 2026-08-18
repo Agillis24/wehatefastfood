@@ -1,0 +1,59 @@
+{
+  "slug": "shake-vanilkovy-stredni",
+  "chainSlug": "kfc",
+  "name": "Shake vanilkový střední",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 525,
+          "energyKcal": 120,
+          "fatG": 3.5,
+          "saturatesG": 2.5,
+          "transFatG": null,
+          "carbohydrateG": 20,
+          "sugarsG": 16,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.1,
+          "saltG": 0.13,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 270,
+          "energyKJ": 1418,
+          "energyKcal": 324,
+          "fatG": 9.5,
+          "saturatesG": 6.8,
+          "transFatG": null,
+          "carbohydrateG": 54,
+          "sugarsG": 43.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 8.4,
+          "saltG": 0.35,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["arašídy", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "cokoladova-omacka-do-churros",
+  "chainSlug": "kfc",
+  "name": "Čokoládová omáčka do churros",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1361,
+          "energyKcal": 324,
+          "fatG": 11,
+          "saturatesG": 7.7,
+          "transFatG": null,
+          "carbohydrateG": 51,
+          "sugarsG": 31,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.7,
+          "saltG": 0.11,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 30,
+          "energyKJ": 408,
+          "energyKcal": 97,
+          "fatG": 3.3,
+          "saturatesG": 2.3,
+          "transFatG": null,
+          "carbohydrateG": 15.3,
+          "sugarsG": 9.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.1,
+          "saltG": 0.03,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

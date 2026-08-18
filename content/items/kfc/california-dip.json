@@ -1,0 +1,59 @@
+{
+  "slug": "california-dip",
+  "chainSlug": "kfc",
+  "name": "California Dip",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1545,
+          "energyKcal": 374,
+          "fatG": 35,
+          "saturatesG": 2.5,
+          "transFatG": null,
+          "carbohydrateG": 13,
+          "sugarsG": 11,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.1,
+          "saltG": 1.5,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 90,
+          "energyKJ": 1391,
+          "energyKcal": 337,
+          "fatG": 31.5,
+          "saturatesG": 2.3,
+          "transFatG": null,
+          "carbohydrateG": 11.7,
+          "sugarsG": 9.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1,
+          "saltG": 1.35,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["hořčice", "mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

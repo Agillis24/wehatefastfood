@@ -1,0 +1,59 @@
+{
+  "slug": "caffe-latte",
+  "chainSlug": "kfc",
+  "name": "Caffé Latte",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 155,
+          "energyKcal": 37,
+          "fatG": 2,
+          "saturatesG": 1.3,
+          "transFatG": null,
+          "carbohydrateG": 2.8,
+          "sugarsG": 2.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.9,
+          "saltG": 0.06,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 280,
+          "energyKJ": 435,
+          "energyKcal": 103,
+          "fatG": 5.6,
+          "saturatesG": 3.7,
+          "transFatG": null,
+          "carbohydrateG": 7.8,
+          "sugarsG": 7.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 5.3,
+          "saltG": 0.17,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

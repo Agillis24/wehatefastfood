@@ -1,0 +1,59 @@
+{
+  "slug": "bubble-tea-grapefruit-velky-large",
+  "chainSlug": "kfc",
+  "name": "Bubble Tea Grapefruit velký/large",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 174,
+          "energyKcal": 41,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 9.9,
+          "sugarsG": 9.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.01,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 454,
+          "energyKJ": 788,
+          "energyKcal": 186,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 44.9,
+          "sugarsG": 41.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.05,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "grander-texas",
+  "chainSlug": "kfc",
+  "name": "Grander Texas",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1054,
+          "energyKcal": 252,
+          "fatG": 12.8,
+          "saturatesG": 2.8,
+          "transFatG": null,
+          "carbohydrateG": 20.3,
+          "sugarsG": 4.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 12.2,
+          "saltG": 2.18,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 300,
+          "energyKJ": 3162,
+          "energyKcal": 756,
+          "fatG": 38.5,
+          "saturatesG": 8.4,
+          "transFatG": null,
+          "carbohydrateG": 60.9,
+          "sugarsG": 14.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 36.6,
+          "saltG": 6.54,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "lepek-žito", "hořčice", "mléko", "sezam", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

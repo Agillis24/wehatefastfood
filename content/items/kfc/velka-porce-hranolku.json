@@ -1,0 +1,59 @@
+{
+  "slug": "velka-porce-hranolku",
+  "chainSlug": "kfc",
+  "name": "Velká porce hranolků",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1055,
+          "energyKcal": 252,
+          "fatG": 10,
+          "saturatesG": 0.9,
+          "transFatG": null,
+          "carbohydrateG": 37,
+          "sugarsG": 0.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.6,
+          "saltG": 0.64,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 115,
+          "energyKJ": 1213,
+          "energyKcal": 290,
+          "fatG": 11.5,
+          "saturatesG": 1,
+          "transFatG": null,
+          "carbohydrateG": 42.6,
+          "sugarsG": 0.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4.1,
+          "saltG": 0.74,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

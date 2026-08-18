@@ -1,0 +1,59 @@
+{
+  "slug": "california-wrapper",
+  "chainSlug": "kfc",
+  "name": "California Wrapper",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1379,
+          "energyKcal": 331,
+          "fatG": 20.5,
+          "saturatesG": 4.2,
+          "transFatG": null,
+          "carbohydrateG": 26.2,
+          "sugarsG": 2.4,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.4,
+          "saltG": 1.46,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 331,
+          "energyKJ": 4564,
+          "energyKcal": 1096,
+          "fatG": 67.7,
+          "saturatesG": 13.9,
+          "transFatG": null,
+          "carbohydrateG": 86.7,
+          "sugarsG": 7.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 37.7,
+          "saltG": 4.83,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "hořčice", "mléko", "sója", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

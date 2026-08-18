@@ -1,0 +1,59 @@
+{
+  "slug": "bbq",
+  "chainSlug": "kfc",
+  "name": "BBQ",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 434,
+          "energyKcal": 102,
+          "fatG": 0.5,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 23,
+          "sugarsG": 21,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.5,
+          "saltG": 2.1,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 25,
+          "energyKJ": 109,
+          "energyKcal": 26,
+          "fatG": 0.1,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 5.8,
+          "sugarsG": 5.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.4,
+          "saltG": 0.53,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["hořčice"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

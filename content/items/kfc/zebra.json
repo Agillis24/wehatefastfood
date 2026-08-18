@@ -1,0 +1,59 @@
+{
+  "slug": "zebra",
+  "chainSlug": "kfc",
+  "name": "Žebra",
+  "category": "chicken",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 869,
+          "energyKcal": 207,
+          "fatG": 9.6,
+          "saturatesG": 1.7,
+          "transFatG": null,
+          "carbohydrateG": 5.1,
+          "sugarsG": 0.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 26.7,
+          "saltG": 1.25,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": 1300,
+          "energyKcal": 310,
+          "fatG": 14.4,
+          "saturatesG": 2.5,
+          "transFatG": null,
+          "carbohydrateG": 7.6,
+          "sugarsG": 0.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 39.9,
+          "saltG": 1.87,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["lepek-pšenice", "mléko", "vejce"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

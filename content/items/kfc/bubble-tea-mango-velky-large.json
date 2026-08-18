@@ -1,0 +1,59 @@
+{
+  "slug": "bubble-tea-mango-velky-large",
+  "chainSlug": "kfc",
+  "name": "Bubble Tea Mango velký/large",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 182,
+          "energyKcal": 43,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 10.4,
+          "sugarsG": 9.8,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.01,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 454,
+          "energyKJ": 826,
+          "energyKcal": 195,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 47.2,
+          "sugarsG": 44.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0,
+          "saltG": 0.05,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

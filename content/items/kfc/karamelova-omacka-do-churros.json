@@ -1,0 +1,59 @@
+{
+  "slug": "karamelova-omacka-do-churros",
+  "chainSlug": "kfc",
+  "name": "Karamelová omáčka do churros",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1390,
+          "energyKcal": 329,
+          "fatG": 6.1,
+          "saturatesG": 4.5,
+          "transFatG": null,
+          "carbohydrateG": 66,
+          "sugarsG": 54,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.4,
+          "saltG": 0.11,
+          "sodiumMg": null
+        },
+        {
+          "basis": "per-serving",
+          "servingSizeG": 30,
+          "energyKJ": 417,
+          "energyKcal": 99,
+          "fatG": 1.8,
+          "saturatesG": 1.4,
+          "transFatG": null,
+          "carbohydrateG": 19.8,
+          "sugarsG": 16.2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.7,
+          "saltG": 0.03,
+          "sodiumMg": null
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mléko", "sója"],
+      "sources": [
+        {
+          "title": "Alergeny a nutriční hodnoty",
+          "publisher": "AmRest s.r.o. (KFC Česká republika)",
+          "url": "https://amrestcdn.azureedge.net/kfc-web-ordering/CZ/KFC/KFC_NH_Alergeny.pdf",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
