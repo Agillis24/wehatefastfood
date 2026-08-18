@@ -1,0 +1,109 @@
+{
+  "slug": "e621-monosodium-glutamate",
+  "eNumber": "E621",
+  "names": [
+    "Monosodium glutamate",
+    "MSG",
+    "Sodium glutamate",
+    "Monosodium L-glutamate monohydrate",
+    "E621",
+    "INS 621"
+  ],
+  "functionalClass": ["flavour-enhancer"],
+  "whatItIs": "The sodium salt of glutamic acid. The EU specification, as reproduced in EFSA's re-evaluation, describes it as white, practically odourless crystals or crystalline powder. Food Standards Australia New Zealand states the chemistry without hedging: there is no chemical difference between added and naturally occurring glutamate. Free glutamate is already high in peas, tomatoes, potatoes and mushrooms, and in cheeses such as Parmesan; meat, fish and other protein-rich foods carry large amounts of it bound into protein; FSANZ notes it in breast milk. Regulators treat the family as one substance. EU and UK law group E 621 with glutamic acid (E 620) — which is the free acid, not a salt — and with four other glutamate salts: potassium (E 622), calcium (E 623), ammonium (E 624) and magnesium (E 625). EFSA's safety limit is a single group figure expressed as glutamic acid rather than as the sodium salt. The WHO/FAO expert committee files it as INS 621, CAS 142-47-2, functional class flavour enhancer.",
+  "whyItIsInYourFood": "Savoury depth is normally something you buy with time and expensive protein: stock reduced for hours, cheese aged for two years, meat browned rather than griddled. E 621 delivers the same taste signal off a dry-goods shelf. FSANZ dates the identification precisely — in 1908 a Japanese chemistry professor determined that monosodium L-glutamate was responsible for the characteristic meaty or savoury taste of the broth of dried bonito and Japanese seaweed. That is what a flavour enhancer is: not a taste of its own, but a lever on how much savouriness the eater perceives from whatever is actually in the pan. A lever is also repeatable in a way a cook is not, which is the second attraction and probably the larger one.\n\nEU law sets how far the lever travels. EFSA records that the glutamates sit in Group I of Annex II to Regulation (EC) No 1333/2008 at a maximum permitted level of 10,000 mg/kg or 10,000 mg/L, and that they are authorised at quantum satis in salt substitutes (food category 12.1.2) and in seasonings and condiments (12.2.2). Quantum satis is not quite the blank cheque it sounds like: Article 3(2)(h) defines it as no maximum numerical level specified, the substance to be used in accordance with good manufacturing practice, at a level not higher than is necessary to achieve the intended purpose and provided the consumer is not misled. The constraint is real. It is also a description of good practice rather than a number, which means the ceiling in those categories is whatever the manufacturer can call necessary.",
+  "evidenceSummary": "This is the additive with the widest gap between reputation and evidence, and the reputation came from a letter rather than a study. In April 1968 the New England Journal of Medicine published a letter from Robert Ho Man Kwok, a paediatrician in Maryland, describing a racing heart, weakness and numbness after eating at Chinese restaurants, and naming three possible culprits: salt, cooking wine, or perhaps MSG. Newspapers, in the Science History Institute's phrase, didn't get the joke and ran with \"Chinese Restaurant Syndrome\". In 2019 a retired orthopaedic surgeon, Howard Steele, claimed he had invented the letter to win a ten-dollar bet and that the Journal's editors refused his request to retract it. That is his account, and the same source flags holes in it: a real Dr Kwok practised in Maryland and his surviving children insist he wrote the letter. Both men are now dead. What survives is a fifty-year-old anecdote that MSG's critics and MSG's defenders have both found useful.\n\nThe toxicology since is thorough and boring. EFSA's 2017 re-evaluation found no adverse effects in the available short-term, subchronic, chronic, reproductive and developmental studies, and no concern for genotoxicity. It identified a NOAEL of 3,200 mg monosodium glutamate/kg body weight per day from a developmental neurotoxicity study and derived a group acceptable daily intake of 30 mg/kg bw per day, expressed as glutamic acid. It set the human reports aside not because it dismissed them but because they were unusable: the human data were not suitable due to the lack of dose–response data from which a dose without effect could be identified. JECFA has held a group ADI of \"not specified\" since 1987. In the US, 21 CFR 182.1 names monosodium glutamate only as an illustration — the Commissioner regards common ingredients such as salt, pepper, vinegar, baking powder and monosodium glutamate as safe for their intended use — in a paragraph that opens by saying it is impracticable to list all substances generally recognised as safe. FSANZ says a small number of people may experience a mild hypersensitivity-type reaction to large amounts of MSG eaten in a single meal, with symptoms such as headache and muscle tightness that normally pass quickly, and that reviews concluded MSG does not represent a health concern for the general population.\n\nThe uncomfortable numbers in EFSA's opinion are arithmetical rather than toxicological, and they are worse than the toxicology alone implies. EFSA's press release states that exposure to glutamates added to food may exceed the proposed ADI for individuals of all population groups whose diet is high in foods containing these additives, as well as for toddlers and children with medium exposure. The opinion goes further: the Panel noted that exposure to glutamic acid and glutamates (E 620–625) exceeded not only the proposed ADI, but also doses associated with adverse effects in humans for some population groups. EFSA records that the MSG symptom complex was rarely seen when doses below 3,000 mg — 42.9 mg/kg bw per day at a body weight of 70 kg — were ingested; in its non-brand-loyal scenario, mean exposure exceeded that dose in toddlers and children, and 95th-percentile exposure exceeded it in infants, toddlers, children and adolescents. The press release names the same exceedance for highly exposed infants, children and adolescents. EFSA asked the European Commission to consider revising the maximum permitted levels in the food categories contributing most to overall exposure: fine bakery wares, soups and broths, sauces, meat and meat products, seasoning and condiments, and food supplements. That is a finding about how much is being added to processed food. It does not rehabilitate the 1968 letter, and it is not nothing either.",
+  "evidenceStrength": "well-established",
+  "regulatoryStatus": {
+    "eu": "Authorised. Listed in Annex II to Regulation (EC) No 1333/2008 in the group E 620-625, glutamic acid and glutamates. EFSA records that the group sits in Group I of food additives at a maximum permitted level of 10,000 mg/kg or 10,000 mg/L, and is authorised at quantum satis in salt substitutes (food category 12.1.2) and in seasonings and condiments (12.2.2). EFSA's 2017 re-evaluation derived a group acceptable daily intake of 30 mg/kg body weight per day expressed as glutamic acid; before it, EFSA states, there was no numerical safe intake level specified for glutamic acid and glutamates used as food additives in the EU. The Panel found no concern for genotoxicity and recommended that the European Commission consider revising the maximum permitted levels in the categories contributing most to exposure.",
+    "us": "Permitted, with no numerical cap. The FDA's Substances Added to Food inventory records monosodium glutamate under CAS 142-47-2 with technical effects flavor enhancer, nutrient supplement, pH control agent, stabilizer or thickener, citing 21 CFR 172.320, 182.1 and 101.22 among others. 21 CFR 182.1 carries no GRAS listing for MSG: paragraph (a) states that it is impracticable to list all substances that are generally recognized as safe for their intended use, and names monosodium glutamate only by way of illustration, alongside salt, pepper, vinegar and baking powder, as ingredients the Commissioner regards as safe for their intended use. The same section imposes the good manufacturing practice condition that the quantity added to food not exceed the amount reasonably required to accomplish its intended physical, nutritional, or other technical effect. 21 CFR 101.22(h)(5) requires that any monosodium glutamate used as an ingredient in food be declared by its common or usual name, 'monosodium glutamate'.",
+    "uk": "Authorised in England, Scotland and Wales. The FSA's register of authorised regulated products lists E 621 monosodium glutamate in the group 'E 620-625: Glutamic acid - glutamates' and in additive Group I, with a status change date of 31 December 2020, under assimilated Regulation (EC) No 1333/2008 Annexes II and III and specifications under assimilated Regulation (EU) No 231/2012. The register carries no numerical levels. E621 also appears in the FSA's published list of approved additives and E numbers, under the heading 'Others' - that document has no 'flavour enhancers' heading. The flavour-enhancer function is stated instead by the FDA's Substances Added to Food inventory and by the WHO/FAO JECFA record."
+  },
+  "notableDivergence": "The regulators differ over the number, not over the hazard, and the difference is easy to misread as a warning. JECFA has held a group ADI of \"not specified\" since 1987 for L-glutamic acid and its ammonium, calcium, monosodium, magnesium and potassium salts. The US sets no numerical cap. FSANZ reports that reviews concluded MSG does not represent a health concern for the general population, and attributes the absence of an ADI to JECFA rather than asserting a position of its own — so it is a second voice on the evidence, not a third independent verdict. EFSA broke ranks in 2017 with a numerical group ADI of 30 mg/kg body weight per day, and with two exposure findings: that exposure from additive use may exceed that ADI for all population groups whose diet is high in these foods and for toddlers and children at medium exposure, and that for some population groups it exceeded doses associated with adverse effects in humans as well. It asked the European Commission to consider revising maximum permitted levels in fine bakery wares, soups and broths, sauces, meat and meat products, seasoning and condiments, and food supplements. The gap is not that Europe found a hazard the others missed. It is that Europe put a number on the dose and then measured how much manufacturers are actually using, and did not like the answer.",
+  "sources": [
+    {
+      "title": "Re-evaluation of glutamic acid (E 620), sodium glutamate (E 621), potassium glutamate (E 622), calcium glutamate (E 623), ammonium glutamate (E 624) and magnesium glutamate (E 625) as food additives",
+      "publisher": "European Food Safety Authority",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7009848/",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "EFSA reviews safety of glutamates added to food",
+      "publisher": "European Food Safety Authority",
+      "url": "https://www.efsa.europa.eu/en/press/news/170712",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Regulation (EC) No 1333/2008 of the European Parliament and of the Council of 16 December 2008 on food additives, Article 3",
+      "publisher": "The National Archives (legislation.gov.uk)",
+      "url": "https://www.legislation.gov.uk/eur/2008/1333/article/3",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Monosodium glutamate (E 621) - Authorised Regulated Food and Feed Products for Great Britain",
+      "publisher": "UK Food Standards Agency",
+      "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-621",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Approved additives and E numbers",
+      "publisher": "UK Food Standards Agency",
+      "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Substances Added to Food: Monosodium Glutamate",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=FoodSubstances&id=MONOSODIUMGLUTAMATE",
+      "retrievedOn": "2026-08-18",
+      "type": "database"
+    },
+    {
+      "title": "21 CFR 182.1: Substances that are generally recognized as safe (2023 edition)",
+      "publisher": "US Government Publishing Office",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol3/xml/CFR-2023-title21-vol3-sec182-1.xml",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "21 CFR 101.22: Foods; labeling of spices, flavorings, colorings and chemical preservatives (2023 edition)",
+      "publisher": "US Government Publishing Office",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2023-title21-vol2/xml/CFR-2023-title21-vol2-sec101-22.xml",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Monosodium L-glutamate - JECFA evaluations database",
+      "publisher": "World Health Organization",
+      "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/2257",
+      "retrievedOn": "2026-08-18",
+      "type": "database"
+    },
+    {
+      "title": "MSG in food",
+      "publisher": "Food Standards Australia New Zealand",
+      "url": "https://www.foodstandards.gov.au/consumer/additives/msg",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "The Rotten Science Behind the MSG Scare",
+      "publisher": "Science History Institute",
+      "url": "https://www.sciencehistory.org/stories/magazine/the-rotten-science-behind-the-msg-scare/",
+      "retrievedOn": "2026-08-18",
+      "type": "journalism"
+    },
+    {
+      "title": "Mass Psychosis in Food Science",
+      "publisher": "Science History Institute",
+      "url": "https://www.sciencehistory.org/stories/disappearing-pod/mass-psychosis-in-food-science/",
+      "retrievedOn": "2026-08-18",
+      "type": "journalism"
+    }
+  ]
+}

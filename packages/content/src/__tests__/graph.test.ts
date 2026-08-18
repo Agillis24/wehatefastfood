@@ -173,50 +173,79 @@ describe('the real content directory', () => {
     expect(errs.map((e) => `${e.file}: ${e.message}`)).toEqual([]);
   });
 
-  it('loads the seed chain with three items across two markets', async () => {
+  /*
+   * These three used to run against content/_seed/, which was deleted the day
+   * the first real chain shipped - exactly as CLAUDE.md said it would be. So
+   * they now run against the real directory, which is what they should have
+   * done from the moment there was one: a loader test that only ever sees
+   * fixtures is a loader test that has never seen the thing it loads.
+   *
+   * They deliberately assert shapes rather than counts. "McDonald's has 54
+   * items" would fail on the next import and teach nobody anything.
+   */
+  it('loads a chain with items, each carrying at least one market', async () => {
     const repo = await createRepository({ contentRoot: CONTENT_ROOT, now: NOW });
-    const items = await repo.listItemsForChain('example-burger-co');
-    expect(items).toHaveLength(3);
-    for (const i of items) {
-      expect(i.variants.map((v) => v.market).sort()).toEqual(['GB', 'US']);
+    const chains = await repo.listChains();
+    expect(chains.length).toBeGreaterThan(0);
+
+    for (const chain of chains) {
+      const items = await repo.listItemsForChain(chain.slug);
+      expect(items.length).toBeGreaterThan(0);
+      for (const item of items) {
+        expect(item.variants.length).toBeGreaterThan(0);
+        // Markets are ISO-3166 alpha-2 and unique within an item, or two
+        // countries' figures would collapse into one page.
+        const markets = item.variants.map((v) => v.market);
+        expect(new Set(markets).size).toBe(markets.length);
+        for (const m of markets) expect(m).toMatch(/^[A-Z]{2}$/);
+      }
     }
   });
 
   it('builds the reverse index that powers the "found in" back-links', async () => {
     const repo = await createRepository({ contentRoot: CONTENT_ROOT, now: NOW });
-    const using = await repo.listItemsUsingAdditive('e621-example-flavour-enhancer');
-    expect(using.map((i) => i.slug)).toContain('example-double-burger');
 
-    const unused = await repo.listItemsUsingAdditive('does-not-exist');
-    expect(unused).toEqual([]);
+    /*
+     * Every additive we hold is walked, and each one's back-links must point at
+     * items that really reference it. Today no McDonald's variant carries an
+     * additiveRef - we hold no ingredient statements yet - so this asserts the
+     * index is CONSISTENT rather than non-empty. An index that invents a
+     * back-link is the failure worth catching; an empty one is just coverage.
+     */
+    for (const additive of await repo.listAdditives()) {
+      const using = await repo.listItemsUsingAdditive(additive.slug);
+      for (const item of using) {
+        expect(item.variants.some((v) => v.additiveRefs.includes(additive.slug))).toBe(true);
+      }
+    }
+
+    expect(await repo.listItemsUsingAdditive('does-not-exist')).toEqual([]);
   });
 
-  it('excludes seed content when asked, which is what production builds do', async () => {
-    const seeded = await createRepository({ contentRoot: CONTENT_ROOT, now: NOW });
+  it('lets no seed content reach a production build', async () => {
+    /*
+     * This has now been wrong twice, and both times because it asserted a
+     * relationship between seed and real rather than the thing that matters.
+     * First it asserted both lists were empty, which broke when the first real
+     * chain landed. Then it asserted real < seeded, which broke when the seed
+     * was deleted and the two became equal.
+     *
+     * The invariant does not mention the seed's size at all: nothing whose name
+     * shouts SEED DATA is ever published, whether or not any seed exists.
+     */
     const real = await createRepository({
       contentRoot: CONTENT_ROOT,
       includeSeed: false,
       now: NOW,
     });
 
-    /*
-     * This used to assert both lists were EMPTY, because for a long time there
-     * was no real content and the seed was all there was. That assertion
-     * started failing the day the first real chain landed, which is the nicest
-     * way for a test to break.
-     *
-     * What it should have been checking all along is the thing that matters:
-     * nothing whose name shouts SEED DATA reaches a production build.
-     */
-    const realChains = await real.listChains();
-    const realItems = await real.listItems();
-
-    expect(realChains.length).toBeLessThan((await seeded.listChains()).length);
-    expect(realItems.length).toBeLessThan((await seeded.listItems()).length);
-
-    for (const named of [...realChains, ...realItems]) {
-      expect(named.name).not.toMatch(/SEED DATA/i);
-    }
+    const named = [
+      ...(await real.listChains()),
+      ...(await real.listItems()),
+      ...(await real.listAdditives()).map((a) => ({ name: a.names[0] ?? a.slug })),
+    ];
+    expect(named.length).toBeGreaterThan(0);
+    for (const n of named) expect(n.name).not.toMatch(/SEED DATA|EXAMPLE/i);
   });
 
   it('warns that the reference thresholds are still unverified', async () => {

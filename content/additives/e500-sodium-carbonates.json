@@ -1,0 +1,127 @@
+{
+  "slug": "e500-sodium-carbonates",
+  "eNumber": "E500",
+  "names": [
+    "Sodium carbonates",
+    "Sodium carbonate",
+    "Soda ash",
+    "Sodium hydrogen carbonate",
+    "Sodium bicarbonate",
+    "Bicarbonate of soda",
+    "Baking soda",
+    "Sodium acid carbonate",
+    "Sodium sesquicarbonate",
+    "Sodium monohydrogen dicarbonate"
+  ],
+  "functionalClass": ["raising-agent", "acidity-regulator"],
+  "whatItIs": "One E-number covering three related sodium salts of carbonic acid, each specified separately in EU law. E 500(i) is sodium carbonate, Na2CO3 · nH2O, synonym \"Soda ash\". E 500(ii) is sodium hydrogen carbonate, NaHCO3, whose listed synonyms are \"Sodium bicarbonate; sodium acid carbonate; Bicarbonate of soda; Baking soda\" — the same thing sold in a box for domestic baking. E 500(iii) is sodium sesquicarbonate, chemical name sodium monohydrogen dicarbonate, Na2CO3 · NaHCO3 · 2H2O.\n\nUS regulations describe how they are made. Sodium carbonate is produced \"from purified trona ore that has been calcined to soda ash\", from trona ore calcined to impure soda ash and then purified, or \"synthesized from limestone by the Solvay process\". The bicarbonate is then \"prepared by treating a sodium carbonate or a sodium carbonate and sodium bicarbonate solution with carbon dioxide\"; a suspension forms, and \"the slurry is filtered, forming a cake which is washed and dried\".\n\nSodium bicarbonate is 27.37% sodium by mass. The EU purity specifications for all three forms cap arsenic at 3 mg/kg, lead at 2 mg/kg and mercury at 1 mg/kg.",
+  "whyItIsInYourFood": "Carbon dioxide on demand. EU law defines the job in one line: raising agents are \"substances or combinations of substances which liberate gas and thereby increase the volume of a dough or a batter\". Bicarbonate is a base. Heat makes it decompose; a leavening acid makes it react; either route puts CO2 into the dough.\n\nA technical report compiled by the Organic Materials Review Institute for the USDA's National Organic Program states the appeal plainly, citing Gélinas (2022): \"Sodium bicarbonate is the most popular gas-releasing leavener after baker's yeast because of its low cost, ease of handling, low toxicity, high purity, and lack of taste contribution when used in low amounts.\" Yeast wants hours and warmth. Bicarbonate wants a mixer. The same report says it can be used as a single leavening agent in some cookies and snack crackers, because it slightly decomposes during heating, while products needing higher gas levels — cakes and other batter-based products — must combine it with one or more leavening acids.\n\nLift is not the only reason it gets used. The report records that manufacturers may add more than leavening requires in order to raise the pH and produce \"certain flavors and darker colors\", effects that \"may be desired in products such as chocolate cakes or muffins\". Overdo it and you get the trade-off the same document describes: undissolved residue, \"a more intensive browning and an increase in alkaline taste, known as 'soda bite'\". The same alkali chemistry runs through cocoa, where nibs are soaked in an alkali solution before roasting, or press cake or chocolate liquor is treated after it — and where, the report says, sodium bicarbonate \"is responsible for the characteristic reddish-brown to black color of cocoa\".\n\nTwo caveats on that source, since it is doing a lot of work here: it is an organic-programme sunset review, not a general safety assessment, and most of these statements are its summary of the published literature rather than its own findings.",
+  "evidenceSummary": "Boring, and consistently so for sixty years. JECFA gave sodium carbonate (INS 500(i)) and sodium hydrogen carbonate (INS 500(ii)) an ADI of \"NOT LIMITED\" at its 9th meeting in 1965, and the FAO specification monograph lists the functional uses as \"Alkali, leavening agent, buffer\". In the US all three salts are affirmed GRAS, each regulation carrying the identical sentence that the ingredient \"is used in food with no limitation other than current good manufacturing practice\". In the EU it is a Group I additive listed at quantum satis — which, as the regulatory section below sets out, is not the same as no limit anywhere.\n\nWhat no regulator has published is a modern assessment. The ADI dates from 1965. EFSA's re-evaluation of E 500 was due by 31 December 2018 under Commission Regulation (EU) No 257/2010, which required that \"the re-evaluation of all approved food additives other than colours and sweeteners listed in Directive 95/2/EC shall be completed by 31 December 2018\". On the Commission's own summary table, last saved 18 February 2026, the E 500 row records the additive as permitted before 20 January 2009, not re-evaluated before the Union list was adopted, deadline 31/12/2018 — followed by three empty cells where the date of adoption, the date of publication and the link to the EFSA opinion would go. The Commission's state-of-play page, at the same date, counts 315 additives to be re-evaluated and 71 \"still to be re-evaluated by EFSA\". A missed deadline is not a finding, and this entry is not going to dress it up as one. It is also not evidence of safety.\n\nThe measurable thing about bicarbonate is sodium. NaHCO3 is 27.37% sodium by mass, and the USDA/OMRI report, citing the US Institute of Medicine, states that \"Ninety-five percent of the sodium in baked goods comes from sodium bicarbonate and table salt\". Not all the sodium in a baked good got there as seasoning.",
+  "evidenceStrength": "well-established",
+  "regulatoryStatus": {
+    "eu": "Authorised — but \"quantum satis\" does not mean \"no limit anywhere\", and that distinction matters here. E 500 sits in Group I of Annex II to Regulation (EC) No 1333/2008 (Union list established by Commission Regulation (EU) No 1129/2011, amended since) at quantum satis, defined in the Regulation as meaning \"that no maximum numerical level is specified and substances shall be used in accordance with good manufacturing practice, at a level not higher than is necessary to achieve the intended purpose and provided the consumer is not misled\". The catch sits in Annex II Part A: \"Additives may only be used in the foods and under the conditions set out in Part E of this Annex.\" Part E does set numbers. In food category 05.1, \"Cocoa and Chocolate products as covered by Directive 2000/36/EC\", the entry \"E 500-504 Carbonates\" is capped at 70 000 mg/kg, footnoted \"7 % on dry matter, without fat, expressed as potassium carbonates\" — a hard ceiling over exactly the cocoa alkalisation described above. Elsewhere the constraint is on use rather than quantity: in category 02.2.1, butter and concentrated butter and butter oil and anhydrous milkfat, E 500 is quantum satis \"only soured cream butter\"; in category 13.1.3, processed cereal-based foods and baby foods for infants and young children, it is quantum satis \"only as rising agent\"; and E 500(ii) is listed quantum satis \"only sour milk cheese\". Identity and purity specifications for E 500(i), E 500(ii) and E 500(iii) are laid down in Commission Regulation (EU) No 231/2012. EFSA's re-evaluation was due by 31 December 2018 and has not been adopted or published.",
+    "us": "GRAS, in three separate regulations. All three open with the same sentence: \"In accordance with § 184.1(b)(1), the ingredient is used in food with no limitation other than current good manufacturing practice.\" What differs is the conditions of use each affirmation rests on. Sodium bicarbonate (21 CFR 184.1736) lists none — paragraph (c) is that sentence and nothing else. Sodium carbonate (21 CFR 184.1742) rests on five technical functions: antioxidant, curing and pickling agent, flavoring agent and adjuvant, pH control agent, and processing aid. Sodium sesquicarbonate (21 CFR 184.1792) rests on use \"as a pH control agent\" and use \"in cream at levels not to exceed current good manufacturing practice\", at a level \"sufficient to control lactic acid prior to pasteurization and churning of cream into butter\". These regulations name the substances chemically — sodium bicarbonate, sodium carbonate, sodium sesquicarbonate. E-numbers are an EU labelling convention and appear nowhere in them.",
+    "uk": "Authorised. The Food Standards Agency's register of authorised regulated products for Great Britain records \"E No. E 500\", food additive \"Sodium carbonates\", specifications \"Assimilated Regulation (EU) No. 231/2012\", \"Groups Group I\", status \"Authorised\", applying in England, Scotland and Wales, status change date 31 December 2020, terms of authorisation under \"Assimilated Regulation (EC) No. 1333/2008\" Annexes II and III, last updated 1 April 2025. It also appears on the FSA's \"Approved additives and E numbers\" list as \"E500 Sodium carbonates\" in section 7, \"Others\" — a page scoped to England, Northern Ireland and Wales rather than Scotland, and one that carries its own warning: \"Most additives are only permitted to be used in certain foods and are subject to specific quantitative limits, so it is important to note this list should be used in conjunction with the appropriate legislation.\" That page also records that Northern Ireland continues to apply Regulation (EC) No 1333/2008 together with Commission Regulation (EU) 2022/63, rather than the assimilated version used in England and Wales."
+  },
+  "notableDivergence": "Not a disagreement about safety. Every market that regulates it authorises it. The differences are administrative, and they change what the label says and where the limits bite.\n\nThe EU and UK file all three salts under one number, E 500, with one set of purity specifications and a Group I listing at quantum satis — subject to the Annex II category conditions, including the 7% ceiling on carbonates in cocoa and chocolate products. The US affirms them as three separate GRAS substances in three separate CFR sections. It is tempting to read that split as three tiers of scrutiny, with sesquicarbonate on the shortest leash. It is not: 184.1736, 184.1742 and 184.1792 all carry the identical \"no limitation other than current good manufacturing practice\" sentence. The real difference is what each affirmation is grounded on — no conditions of use listed for the bicarbonate, five technical functions for the carbonate, pH control and use in cream for the sesquicarbonate. Add the absence of E-numbers from the US regulations and the same substance reads \"E500\" on one side of the Atlantic and \"baking soda\" on the other.\n\nThe divergence actually worth naming is not between countries but between the EU's own timetable and its output. The re-evaluation of E 500 fell due on 31 December 2018, and on the Commission's status table dated 18 February 2026 nothing has been adopted, published or linked. \"Not re-evaluated\" means the deadline passed. It does not mean anything was found, in either direction.",
+  "sources": [
+    {
+      "title": "Regulation (EC) No 1333/2008 of the European Parliament and of the Council of 16 December 2008 on food additives (Article 3(2)(h), definition of 'quantum satis'; Annex I, item 22, definition of 'raising agents')",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008R1333",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Commission Regulation (EU) No 1129/2011 of 11 November 2011 amending Annex II to Regulation (EC) No 1333/2008 by establishing a Union list of food additives (Part A general provisions; Part C Group I, E 500 Sodium carbonates quantum satis; Part E categories 02.2.1, 05.1 and 13.1.3)",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011R1129",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Commission Regulation (EU) No 231/2012 of 9 March 2012 laying down specifications for food additives listed in Annexes II and III to Regulation (EC) No 1333/2008 (entries for E 500(i), E 500(ii) and E 500(iii))",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0231",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Commission Regulation (EU) No 257/2010 of 25 March 2010 setting up a programme for the re-evaluation of approved food additives (Article 3(1)(b), deadline of 31 December 2018 for additives other than colours and sweeteners)",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32010R0257",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Summary table of permitted food additives and status of their re-evaluation by EFSA (status as of 18 February 2026), sheet 'other', row for E 500 Sodium carbonates",
+      "publisher": "European Commission, Directorate-General for Health and Food Safety",
+      "url": "https://food.ec.europa.eu/document/download/7471ebd9-5a9a-4f8a-ae85-b64502a15353_en?filename=fs_food-improvement-agents_reeval_summary-table.xls",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Re-evaluation of approved food additives — state of play as of 18 February 2026 (315 additives to be re-evaluated; 71 still to be re-evaluated by EFSA)",
+      "publisher": "European Commission, Directorate-General for Health and Food Safety",
+      "url": "https://food.ec.europa.eu/food-safety/food-improvement-agents/additives/re-evaluation_en",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "21 CFR 184.1736 Sodium bicarbonate and 21 CFR 184.1742 Sodium carbonate (Code of Federal Regulations, Title 21, Vol. 3, revised as of 1 April 2024)",
+      "publisher": "U.S. Government Publishing Office (govinfo)",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol3/pdf/CFR-2024-title21-vol3-sec184-1736.pdf",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "21 CFR 184.1792 Sodium sesquicarbonate (Code of Federal Regulations, Title 21, Vol. 3, revised as of 1 April 2024)",
+      "publisher": "U.S. Government Publishing Office (govinfo)",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol3/pdf/CFR-2024-title21-vol3-sec184-1792.pdf",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Sodium Bicarbonate — Handling/Processing: full scope Technical Report, 17 June 2025, compiled by the Organic Materials Review Institute (OMRI) for the USDA National Organic Program to support the sunset review of sodium bicarbonate at 7 CFR 205.605(a)(26)",
+      "publisher": "United States Department of Agriculture, Agricultural Marketing Service",
+      "url": "https://www.ams.usda.gov/sites/default/files/media/2025_TR-Sodium_Bicarbonate-Handling_508.pdf",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "JECFA database entry: SODIUM HYDROGEN CARBONATE, INS 500(ii), CAS 144-55-8 — ADI 'NOT LIMITED', 9th JECFA meeting, 1965",
+      "publisher": "World Health Organization (JECFA)",
+      "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1892",
+      "retrievedOn": "2026-08-18",
+      "type": "database"
+    },
+    {
+      "title": "JECFA database entry: SODIUM CARBONATE, INS 500(i), CAS 497-19-8 — ADI 'NOT LIMITED', 9th JECFA meeting, 1965",
+      "publisher": "World Health Organization (JECFA)",
+      "url": "https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3252",
+      "retrievedOn": "2026-08-18",
+      "type": "database"
+    },
+    {
+      "title": "JECFA specification monograph: Sodium hydrogen carbonate, INS No. 500(ii) — 'FUNCTIONAL USES Alkali, leavening agent, buffer'; ADI 'not limited' established at the 9th JECFA (1965)",
+      "publisher": "Food and Agriculture Organization of the United Nations (JECFA)",
+      "url": "https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-407.pdf",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Authorised Regulated Food and Feed Products for Great Britain — E 500 Sodium carbonates",
+      "publisher": "Food Standards Agency",
+      "url": "https://data.food.gov.uk/regulated-products/food_authorisations/e-500",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    },
+    {
+      "title": "Approved additives and E numbers (section 7, 'Others': E500 Sodium carbonates; applies to England, Northern Ireland and Wales)",
+      "publisher": "Food Standards Agency (GOV.UK)",
+      "url": "https://www.gov.uk/government/publications/approved-additives-and-e-numbers/approved-additives-and-e-numbers",
+      "retrievedOn": "2026-08-18",
+      "type": "regulator"
+    }
+  ]
+}
