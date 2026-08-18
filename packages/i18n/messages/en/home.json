@@ -6,8 +6,13 @@
   },
   "scaffold": {
     "title": "Foundation only",
-    "body": "Phase 1 is the skeleton: workspaces, tokens, routing, checks. No content has been published yet, and nothing on this page is a real figure.",
-    "phase": "Phase {n} of 6"
+    "body": "Phase 1 is the skeleton: workspaces, tokens, routing, checks. No content has been published yet, and nothing on this page is a real figure."
+  },
+  "highlight": {
+    "label": "One figure to start with",
+    "sugar": "One portion of {item} contains {grams} of sugar.",
+    "caveat": "Published by {chain} for the {market} market. We neither convert it nor round it — it is their figure.",
+    "link": "See the full panel"
   },
   "decoder": {
     "title": "The decoder",

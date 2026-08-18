@@ -6,8 +6,13 @@
   },
   "scaffold": {
     "title": "Zatím jen kostra",
-    "body": "Web se staví po fázích. Zatím nebyl zveřejněn žádný obsah a žádné číslo na této stránce není skutečné.",
-    "phase": "Fáze {n} ze 6"
+    "body": "Web se staví po fázích. Zatím nebyl zveřejněn žádný obsah a žádné číslo na této stránce není skutečné."
+  },
+  "highlight": {
+    "label": "Jedno číslo na začátek",
+    "sugar": "{item} obsahuje v jedné porci {grams} cukru.",
+    "caveat": "Údaj zveřejňuje {chain} pro trh {market}. Nepřepočítáváme ho ani nezaokrouhlujeme — je to jejich číslo.",
+    "link": "Ukázat celý rozpis"
   },
   "decoder": {
     "title": "Dekodér",

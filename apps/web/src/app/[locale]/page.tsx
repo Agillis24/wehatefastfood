@@ -8,7 +8,8 @@ import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
 import { SiteStructuredData } from '@/components/content/StructuredData';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
-import { chainPath, chainsPath } from '@/lib/url';
+import { chainPath, chainsPath, itemPath } from '@/lib/url';
+import { grams } from '@/lib/format';
 import { pageMetadata } from '@/lib/metadata';
 
 export function generateStaticParams() {
@@ -41,10 +42,53 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const repo = await getContent();
   const chains = await repo.listChains();
 
-  return <HomeView locale={locale} chains={[...chains]} />;
+  /*
+   * The single most sugar in one portion, anywhere in the repo, found rather
+   * than chosen. Picking an item by hand would mean editing this file every
+   * time a bigger one lands, and the version that is not edited is the version
+   * that lies.
+   */
+  const items = await repo.listItems();
+  let best: Highlight | null = null;
+  let most = 0;
+  for (const item of items) {
+    for (const variant of item.variants) {
+      const panel = variant.nutrition.find((n) => n.basis === 'per-serving');
+      const sugars = panel?.sugarsG;
+      if (sugars == null || sugars <= most) continue;
+      const chain = chains.find((c) => c.slug === item.chainSlug);
+      if (!chain) continue;
+      most = sugars;
+      best = {
+        grams: grams(locale, sugars),
+        item: item.name,
+        chain: chain.name,
+        market: variant.market,
+        href: itemPath(locale, item.chainSlug, item.slug, variant.market),
+      };
+    }
+  }
+
+  return <HomeView locale={locale} chains={[...chains]} highlight={best} />;
 }
 
-function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
+type Highlight = {
+  grams: string;
+  item: string;
+  chain: string;
+  market: string;
+  href: string;
+};
+
+function HomeView({
+  locale,
+  chains,
+  highlight,
+}: {
+  locale: string;
+  chains: Chain[];
+  highlight: Highlight | null;
+}) {
   const t = useTranslations('home');
   const brand = useTranslations('brand');
   const nav = useTranslations('nav');
@@ -66,18 +110,42 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
         <div className="rule-strike" aria-hidden="true" />
 
         {/*
-          The brief asks for one startling verified figure here. There is not a
-          single real figure in the repo yet, and inventing one to fill a hero
-          slot is precisely the failure this project cannot survive. The slot
-          stays empty and says so until a real chain lands.
+          The brief asks for one startling verified figure here, and for a long
+          time there was not a single real figure in the repo, so the slot said
+          so instead: "no content has been published and no figure on this page
+          is real."
+
+          That notice was correct and then stopped being correct, and it did not
+          notice - it was unconditional, with the phase number written in by
+          hand. So the site went on telling readers its figures were not real
+          while serving two chains, 298 items and numbers checked twice against
+          their sources. Understating is not modesty when it is false; a site
+          whose whole claim is that its numbers are right cannot go around
+          saying they are not.
+
+          The figure is now COMPUTED from the repo, so it cannot be stale and
+          cannot be invented, and the scaffold notice is what shows when there
+          is genuinely nothing - which is the only state in which it is true.
         */}
-        <section className="flex flex-col gap-3">
-          <h2 className="font-display text-3xl font-extrabold">{t('scaffold.title')}</h2>
-          <p className="max-w-prose text-[var(--surface-muted)]">{t('scaffold.body')}</p>
-          <p className="font-data text-sm" data-numeric>
-            {t('scaffold.phase', { n: 3 })}
-          </p>
-        </section>
+        {highlight ? (
+          <section className="flex flex-col gap-3">
+            <p className="font-data text-xs tracking-widest uppercase">{t('highlight.label')}</p>
+            <p className="max-w-prose font-display text-3xl font-extrabold">
+              {t('highlight.sugar', { grams: highlight.grams, item: highlight.item })}
+            </p>
+            <p className="max-w-prose text-[var(--surface-muted)]">
+              {t('highlight.caveat', { chain: highlight.chain, market: highlight.market })}
+            </p>
+            <Link href={highlight.href} className="underline underline-offset-4">
+              {t('highlight.link')}
+            </Link>
+          </section>
+        ) : (
+          <section className="flex flex-col gap-3">
+            <h2 className="font-display text-3xl font-extrabold">{t('scaffold.title')}</h2>
+            <p className="max-w-prose text-[var(--surface-muted)]">{t('scaffold.body')}</p>
+          </section>
+        )}
 
         <section className="flex flex-col gap-4">
           <h2 className="font-display text-3xl font-extrabold">{nav('chains')}</h2>
