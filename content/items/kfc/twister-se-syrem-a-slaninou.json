@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["lepek-pšenice", "hořčice", "mléko", "sója", "vejce"],
+      "mayContain": [],
+      "allergens": ["cereals-gluten-wheat", "mustard", "milk", "soybeans", "eggs"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

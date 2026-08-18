@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["mléko"],
+      "mayContain": [],
+      "allergens": ["milk"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

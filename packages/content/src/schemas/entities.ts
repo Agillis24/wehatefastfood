@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { COUNTRY, MARKET, SLUG, SourceSchema } from './source.js';
+import { AllergenSchema, allergenParent } from './allergens.js';
 import { NutritionFactsSchema } from './nutrition.js';
 
 const DataStatus = z.enum(['verified', 'partial', 'unpublished']);
@@ -40,13 +41,61 @@ export const MarketVariantSchema = z
     nutrition: z.array(NutritionFactsSchema).min(1),
     ingredientRefs: z.array(SLUG),
     additiveRefs: z.array(SLUG),
-    allergens: z.array(z.string().min(1)),
+    /*
+     * DECLARED allergens: named in the recipe. Not the same claim as
+     * `mayContain`, and the two are never merged - see below.
+     */
+    allergens: z.array(AllergenSchema),
+    /*
+     * Allergens that MAY be present, from shared equipment or a shared kitchen.
+     * Czech menus print this as "MO", against "A" for declared.
+     *
+     * Folding this into `allergens` would turn a cross-contamination warning
+     * into an ingredient. For a reader with a mild intolerance that is a meal
+     * needlessly refused; for a reader who learns the site overstates, it is a
+     * reason to stop believing the declared list too - which is the list that
+     * matters most.
+     */
+    mayContain: z.array(AllergenSchema).default([]),
     sources: z.array(SourceSchema).min(1),
     verifiedOn: z.string().date(),
     status: DataStatus,
   })
   .strict()
   .superRefine((v, ctx) => {
+    /*
+     * An allergen cannot be both declared and merely possible. A source saying
+     * both is a source we have misread, and the safe-looking resolution - keep
+     * the stronger claim - would hide the misreading.
+     */
+    const declared = new Set<string>(v.allergens);
+    for (const a of v.mayContain) {
+      if (declared.has(a)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['mayContain'],
+          message: `"${a}" is both declared and listed as possible traces`,
+        });
+      }
+    }
+    /*
+     * Nor may a category and one of its own members sit in the same list. "Nuts
+     * and hazelnuts" is not two facts; it is one fact recorded twice at two
+     * different precisions, and it makes any count of allergens wrong.
+     */
+    for (const list of [v.allergens, v.mayContain]) {
+      for (const a of list) {
+        const p = allergenParent(a);
+        if (p !== a && list.includes(p)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['allergens'],
+            message: `"${a}" is listed alongside its own category "${p}"`,
+          });
+        }
+      }
+    }
+
     // The rule that protects the whole project: an "unpublished" variant must
     // not carry figures. If it has numbers, it is not unpublished.
     if (v.status === 'unpublished') {

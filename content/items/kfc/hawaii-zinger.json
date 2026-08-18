@@ -28,7 +28,8 @@
       "status": "unpublished",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["lepek-pšenice", "mléko", "sezam"],
+      "mayContain": [],
+      "allergens": ["cereals-gluten-wheat", "milk", "sesame"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

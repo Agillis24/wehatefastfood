@@ -42,6 +42,14 @@ export type { Source } from './schemas/source.js';
  */
 export { SUPPORTED_MARKETS, isSupportedMarket } from './schemas/source.js';
 
+export {
+  ALLERGENS,
+  AllergenSchema,
+  allergenParent,
+  CZ_ALLERGEN_CODES,
+} from './schemas/allergens.js';
+export type { Allergen } from './schemas/allergens.js';
+
 export { FsaThresholdsSchema, ReferenceIntakesSchema } from './schemas/reference.js';
 export type { FsaThresholds, ReferenceIntakes } from './schemas/reference.js';
 

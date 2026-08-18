@@ -1,0 +1,51 @@
+{
+  "slug": "toasted-marshmallow-latte",
+  "chainSlug": "mcdonalds",
+  "name": "Toasted marshmallow latte",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null
+        }
+      ],
+      "status": "unpublished",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Ceník McDonald’s – Praha Flora",
+          "publisher": "McDonald's ČR spol. s r.o.",
+          "url": "https://ceniky.mcdonalds.cz/cenik/cenik.jsp?restaurace=073&podtyp=11",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ceník McDonald’s – Praha Flora",
+          "publisher": "McDonald's ČR spol. s r.o.",
+          "url": "https://ceniky.mcdonalds.cz/cenik/cenik.jsp?restaurace=073&podtyp=10",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

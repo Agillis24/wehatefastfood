@@ -1,0 +1,44 @@
+{
+  "slug": "happy-meal-mcnuggets-4-ks-60-g-a-1a-9-male-hranolky-hash-brown-zahradni-salat-caj-stava-z-koncentratu-maly-syceny-napoj-maly-ledovy-caj-voda-milk-shake-hracka-nebo-kniha",
+  "chainSlug": "mcdonalds",
+  "name": "Happy Meal McNuggets 4 ks 60 g (A:1a,9) + malé hranolky / Hash Brown / Zahradní salát + čaj / šťáva z koncentrátu, Malý sycený nápoj / Malý ledový čaj / Voda / Milk Shake + hračka nebo kniha",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null
+        }
+      ],
+      "status": "unpublished",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Ceník McDonald’s – Praha Flora",
+          "publisher": "McDonald's ČR spol. s r.o.",
+          "url": "https://ceniky.mcdonalds.cz/cenik/cenik.jsp?restaurace=073&podtyp=10",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

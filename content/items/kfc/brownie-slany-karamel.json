@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["mléko", "skořápkové-plody", "sója", "vejce"],
+      "mayContain": [],
+      "allergens": ["milk", "nuts", "soybeans", "eggs"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

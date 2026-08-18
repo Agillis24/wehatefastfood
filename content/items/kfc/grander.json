@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["lepek-pšenice"],
+      "mayContain": [],
+      "allergens": ["cereals-gluten-wheat"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

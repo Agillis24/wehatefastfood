@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["lepek-ječmen", "lepek-pšenice", "sója", "vejce"],
+      "mayContain": [],
+      "allergens": ["cereals-gluten-barley", "cereals-gluten-wheat", "soybeans", "eggs"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

@@ -18,6 +18,7 @@ type Props = {
   ingredients: Ingredient[];
   additives: Additive[];
   allergens: string[];
+  mayContain: string[];
 };
 
 function Entry({ children, term }: { children: React.ReactNode; term: string }) {
@@ -29,25 +30,28 @@ function Entry({ children, term }: { children: React.ReactNode; term: string }) 
   );
 }
 
-export function IngredientChips({ ingredients, additives, allergens }: Props) {
+export function IngredientChips({ ingredients, additives, allergens, mayContain }: Props) {
   const t = useTranslations('item.ingredients');
+  const tA = useTranslations('allergen');
 
-  if (ingredients.length === 0 && additives.length === 0) {
-    return (
-      <section aria-labelledby="ingredients-title" className="flex flex-col gap-3">
-        <h2 id="ingredients-title" className="font-display text-2xl font-extrabold">
-          {t('title')}
-        </h2>
-        <p className="text-[var(--surface-muted)]">{t('none')}</p>
-      </section>
-    );
-  }
+  /*
+   * An allergen declaration is not an ingredient list, and this component used
+   * to return early when there were no ingredients - taking the allergens with
+   * it. Every item in the repo is in that state today, so the effect was that
+   * two hundred and forty-four allergen declarations were held and none of them
+   * reached a page. A company may publish what a product contains for allergen
+   * purposes while publishing nothing about its recipe, and for a reader with
+   * an allergy that first list is the one that matters.
+   */
+  const noComposition = ingredients.length === 0 && additives.length === 0;
 
   return (
     <section aria-labelledby="ingredients-title" className="flex flex-col gap-4">
       <h2 id="ingredients-title" className="font-display text-2xl font-extrabold">
         {t('title')}
       </h2>
+
+      {noComposition ? <p className="text-[var(--surface-muted)]">{t('none')}</p> : null}
 
       <ul className="flex flex-wrap gap-2">
         {ingredients.map((ingredient) => (
@@ -105,10 +109,24 @@ export function IngredientChips({ ingredients, additives, allergens }: Props) {
         </ul>
       ) : null}
 
+      {/*
+        Two lists, never one. "Contains" names what is in the recipe; "may
+        contain" warns about a shared kitchen. Printing them together would turn
+        a warning into an ingredient - a meal needlessly refused by someone with
+        a mild intolerance, and a reason to distrust the declared list, which is
+        the one that matters most.
+      */}
       {allergens.length > 0 ? (
         <p className="text-sm">
           <span className="font-data text-xs tracking-widest uppercase">{t('allergens')}</span>
-          <span className="ms-2">{allergens.join(', ')}</span>
+          <span className="ms-2">{allergens.map((a) => tA(a)).join(', ')}</span>
+        </p>
+      ) : null}
+
+      {mayContain.length > 0 ? (
+        <p className="text-sm text-[var(--surface-muted)]">
+          <span className="font-data text-xs tracking-widest uppercase">{t('mayContain')}</span>
+          <span className="ms-2">{mayContain.map((a) => tA(a)).join(', ')}</span>
         </p>
       ) : null}
     </section>

@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["mléko", "sója"],
+      "mayContain": [],
+      "allergens": ["milk", "soybeans"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

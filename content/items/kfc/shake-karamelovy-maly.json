@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["arašídy", "mléko", "sója"],
+      "mayContain": [],
+      "allergens": ["peanuts", "milk", "soybeans"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

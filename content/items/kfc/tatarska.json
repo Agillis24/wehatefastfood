@@ -44,7 +44,8 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["hořčice", "vejce"],
+      "mayContain": [],
+      "allergens": ["mustard", "eggs"],
       "sources": [
         {
           "title": "Alergeny a nutriční hodnoty",

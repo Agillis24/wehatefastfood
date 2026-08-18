@@ -60,7 +60,8 @@
     "uk": "UK",
     "none": "No ingredient list recorded for this market yet.",
     "groupHeading": "{count, plural, one {# ingredient is} other {# ingredients are}} here to do a job: {classes}.",
-    "allergens": "Allergens"
+    "allergens": "Allergens",
+    "mayContain": "May contain traces of"
   },
   "ourTake": {
     "title": "Our take",

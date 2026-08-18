@@ -60,7 +60,8 @@
     "uk": "UK",
     "none": "Pro tento trh zatím nemáme zaznamenané složení.",
     "groupHeading": "{count, plural, one {# složka je} few {# složky jsou} other {# složek je}} tady kvůli konkrétní práci: {classes}.",
-    "allergens": "Alergeny"
+    "allergens": "Alergeny",
+    "mayContain": "Může obsahovat stopy"
   },
   "ourTake": {
     "title": "Náš pohled",

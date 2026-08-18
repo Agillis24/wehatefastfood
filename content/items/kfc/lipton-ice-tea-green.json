@@ -44,6 +44,7 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
+      "mayContain": [],
       "allergens": [],
       "sources": [
         {
