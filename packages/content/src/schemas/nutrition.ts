@@ -16,8 +16,26 @@ export const NutritionFactsSchema = z
     energyKcal: z.number().nonnegative().nullable(),
     fatG: z.number().nonnegative().nullable(),
     saturatesG: z.number().nonnegative().nullable(),
+    /*
+     * transFatG and addedSugarsG are here because the panels carry them and
+     * dropping a published figure is a decision, not a default.
+     *
+     * Added sugars in particular is the single most editorially useful number
+     * on an American panel: it is the only one that separates sugar that came
+     * with the food from sugar the company put in, and it is the reason a
+     * savoury-sounding item can be shown to carry more of it than a soft drink.
+     * The importer parsed both from the start and threw them away, because the
+     * schema was strict and did not carry them.
+     *
+     * They stay nullable and stay null where the market does not publish them.
+     * Canada's panels give trans fat and no added sugars; that asymmetry is a
+     * fact about the two disclosure regimes and must not be smoothed over by
+     * deriving one from the other.
+     */
+    transFatG: z.number().nonnegative().nullable(),
     carbohydrateG: z.number().nonnegative().nullable(),
     sugarsG: z.number().nonnegative().nullable(),
+    addedSugarsG: z.number().nonnegative().nullable(),
     fibreG: z.number().nonnegative().nullable(),
     proteinG: z.number().nonnegative().nullable(),
     saltG: z.number().nonnegative().nullable(),
@@ -39,6 +57,25 @@ export const NutritionFactsSchema = z
         code: z.ZodIssueCode.custom,
         path: ['sugarsG'],
         message: `sugars (${n.sugarsG} g) exceeds carbohydrate (${n.carbohydrateG} g)`,
+      });
+    }
+    // Same shape of impossibility for the two components: each is a named part
+    // of the total above it, so neither can be larger than what contains it.
+    // They are checked separately rather than summed - published panels round
+    // each row on its own, and a sum that lands a tenth over is rounding, not a
+    // transcription error.
+    if (n.transFatG !== null && n.fatG !== null && n.transFatG > n.fatG) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['transFatG'],
+        message: `trans fat (${n.transFatG} g) exceeds total fat (${n.fatG} g)`,
+      });
+    }
+    if (n.addedSugarsG !== null && n.sugarsG !== null && n.addedSugarsG > n.sugarsG) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['addedSugarsG'],
+        message: `added sugars (${n.addedSugarsG} g) exceeds total sugars (${n.sugarsG} g)`,
       });
     }
     /*

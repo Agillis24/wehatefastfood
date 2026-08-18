@@ -130,7 +130,17 @@ function Stack({ kind, grams }: { kind: Kind; grams: number }) {
   );
 }
 
-type Row = { kind: Kind; grams: number | null };
+/**
+ * `added` carries the added-sugars figure on the sugar row, and is null on every
+ * other row and in every market that does not publish one.
+ *
+ * It is a second sentence rather than a fourth stack on purpose. Two towers of
+ * sugar cubes on one page, one a subset of the other, reads as twice the sugar;
+ * the number is worth stating and not worth drawing twice. It is also the only
+ * figure on the panel that separates sugar that arrived with the food from sugar
+ * the company put in - which is the whole argument of the page.
+ */
+type Row = { kind: Kind; grams: number | null; added?: number | null };
 
 export function RealityCheck({ rows, locale }: { rows: Row[]; locale: string }) {
   const t = useTranslations('item.reality');
@@ -194,6 +204,14 @@ export function RealityCheck({ rows, locale }: { rows: Row[]; locale: string }) 
             </div>
             {/* The sentence is the accessible equivalent AND what plain mode keeps. */}
             <p className="text-sm">{sentence}</p>
+            {row.added !== null && row.added !== undefined ? (
+              <p className="text-sm">
+                {t('addedSugar', {
+                  added: grams(locale, row.added),
+                  cubes: Math.round((row.added / UNIT_GRAMS[row.kind]) * 100) / 100,
+                })}
+              </p>
+            ) : null}
           </div>
         );
       })}

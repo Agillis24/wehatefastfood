@@ -16,6 +16,7 @@
     "saturates": "Nasycené tuky",
     "notPublished": "{nutrient} — pro tento trh nezveřejněno.",
     "sentenceSugar": "Tato porce obsahuje {value} cukru — přibližně {count, plural, one {# kostku} few {# kostky} many {# kostky} other {# kostek}} po {grams} g.",
+    "addedSugar": "Z toho {added} tam přidal výrobce — {cubes, plural, =0 {žádná kostka} one {# kostka} few {# kostky} many {# kostky} other {# kostek}} z hromádky nahoře. Zbytek už byl ve složkách.",
     "sentenceSalt": "Tato porce obsahuje {value} soli — přibližně {count, plural, one {# zarovnanou čajovou lžičku} few {# zarovnané čajové lžičky} many {# zarovnané čajové lžičky} other {# zarovnaných čajových lžiček}} po {grams} g.",
     "sentenceSaturates": "Tato porce obsahuje {value} nasycených tuků — přibližně {count, plural, one {# kostičku másla} few {# kostičky másla} many {# kostičky másla} other {# kostiček másla}} po {grams} g."
   },

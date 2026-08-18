@@ -16,6 +16,7 @@
     "saturates": "Saturated fat",
     "notPublished": "{nutrient} is not published for this market.",
     "sentenceSugar": "This portion contains {value} of sugar - about {count, plural, one {# sugar cube} other {# sugar cubes}}, {grams} g each.",
+    "addedSugar": "Of that, {added} was added by the manufacturer — {cubes, plural, =0 {no cubes} one {# cube} other {# cubes}} of the stack above. The rest was already in the ingredients.",
     "sentenceSalt": "This portion contains {value} of salt - about {count, plural, one {# level teaspoon} other {# level teaspoons}}, {grams} g each.",
     "sentenceSaturates": "This portion contains {value} of saturated fat - about {count, plural, one {# pat of butter} other {# pats of butter}}, {grams} g each."
   },

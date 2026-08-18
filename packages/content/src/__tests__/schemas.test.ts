@@ -30,8 +30,10 @@ const panel = (over: Record<string, unknown> = {}) => ({
   energyKcal: null,
   fatG: null,
   saturatesG: null,
+  transFatG: null,
   carbohydrateG: null,
   sugarsG: null,
+  addedSugarsG: null,
   fibreG: null,
   proteinG: null,
   saltG: null,
@@ -75,6 +77,42 @@ describe('NutritionFacts', () => {
   it('rejects sugars above carbohydrate', () => {
     expect(NutritionFactsSchema.safeParse(panel({ carbohydrateG: 10, sugarsG: 11 })).success).toBe(
       false,
+    );
+  });
+
+  it('rejects trans fat above total fat', () => {
+    expect(NutritionFactsSchema.safeParse(panel({ fatG: 5, transFatG: 6 })).success).toBe(false);
+    expect(NutritionFactsSchema.safeParse(panel({ fatG: 5, transFatG: 5 })).success).toBe(true);
+  });
+
+  it('rejects added sugars above total sugars', () => {
+    expect(NutritionFactsSchema.safeParse(panel({ sugarsG: 10, addedSugarsG: 11 })).success).toBe(
+      false,
+    );
+    // Equal is the normal case, not an edge one: a McDonald's hotcake platter is
+    // very nearly all added sugar, and one where every gram is would be legal.
+    expect(NutritionFactsSchema.safeParse(panel({ sugarsG: 10, addedSugarsG: 10 })).success).toBe(
+      true,
+    );
+  });
+
+  it('does not reject saturates and trans fat that only exceed total fat when summed', () => {
+    // Published panels round each row on its own, so a sum landing a tenth over
+    // is rounding rather than a transcription error. Checking the sum would fail
+    // real, correctly-copied panels.
+    expect(
+      NutritionFactsSchema.safeParse(panel({ fatG: 10, saturatesG: 9.6, transFatG: 0.5 })).success,
+    ).toBe(true);
+  });
+
+  it('keeps a component figure without the total it belongs to', () => {
+    // Canada publishes trans fat; some panels give no total-fat row at all. That
+    // is missing data, not a contradiction, and must not be a hard failure.
+    expect(NutritionFactsSchema.safeParse(panel({ fatG: null, transFatG: 0.4 })).success).toBe(
+      true,
+    );
+    expect(NutritionFactsSchema.safeParse(panel({ sugarsG: null, addedSugarsG: 4 })).success).toBe(
+      true,
     );
   });
 

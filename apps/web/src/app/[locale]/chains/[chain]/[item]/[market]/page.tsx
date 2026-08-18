@@ -223,7 +223,14 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
       servingG={serving?.servingSizeG ?? null}
       serving={serving}
       realityRows={[
-        { kind: 'sugar' as const, grams: serving?.sugarsG ?? null },
+        {
+          kind: 'sugar' as const,
+          grams: serving?.sugarsG ?? null,
+          // Null in Canada, which publishes no added-sugars row at all. The
+          // asymmetry is a fact about the two disclosure regimes, so it shows as
+          // a missing sentence rather than as a zero.
+          added: serving?.addedSugarsG ?? null,
+        },
         { kind: 'salt' as const, grams: serving?.saltG ?? null },
         { kind: 'saturates' as const, grams: serving?.saturatesG ?? null },
       ]}
@@ -247,7 +254,11 @@ type ViewProps = {
   isDrink: boolean;
   servingG: number | null;
   serving: import('@wff/content').NutritionFacts | null;
-  realityRows: { kind: 'sugar' | 'salt' | 'saturates'; grams: number | null }[];
+  realityRows: {
+    kind: 'sugar' | 'salt' | 'saturates';
+    grams: number | null;
+    added?: number | null;
+  }[];
   /**
    * Two flags, not one. The bands and the percentages come from two separate
    * reference tables with two separate verification states, and collapsing them

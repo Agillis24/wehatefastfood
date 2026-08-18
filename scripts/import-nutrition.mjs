@@ -344,10 +344,13 @@ const variant = {
    * used." kJ from kcal and salt from sodium are both defined conversions,
    * and both belong to the layer that can show its working.
    *
-   * transFatG and addedSugarsG are parsed for the contradiction checks and
-   * then dropped: the schema is strict and does not carry them. They are
-   * real published figures, so adding the fields is a fair change - just
-   * not one to make silently while importing.
+   * transFatG and addedSugarsG used to be parsed for the contradiction checks
+   * and then dropped, because the schema was strict and did not carry them.
+   * It carries them now, so they are written: an American panel's added-sugars
+   * row is the only figure that separates sugar that came with the food from
+   * sugar the company added, and throwing it away silently was the wrong
+   * default. Where a market does not publish them they stay null, which is the
+   * same answer the rest of the panel gives.
    */
   nutrition: [
     {
@@ -357,8 +360,10 @@ const variant = {
       energyKcal: facts.energyKcal,
       fatG: facts.fatG,
       saturatesG: facts.saturatesG,
+      transFatG: facts.transFatG,
       carbohydrateG: facts.carbohydrateG,
       sugarsG: facts.sugarsG,
+      addedSugarsG: facts.addedSugarsG,
       fibreG: facts.fibreG,
       proteinG: facts.proteinG,
       saltG: null,

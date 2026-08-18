@@ -33,6 +33,10 @@ export function ItemStructuredData({ locale, chain, item, market, serving, verif
     if (serving.fatG !== null) nutrition.fatContent = `${round(serving.fatG)} g`;
     if (serving.saturatesG !== null)
       nutrition.saturatedFatContent = `${round(serving.saturatesG)} g`;
+    // schema.org has transFatContent but no equivalent for added sugars, so the
+    // added-sugars figure stays on the page only. Emitting it under sugarContent
+    // would misstate the total.
+    if (serving.transFatG !== null) nutrition.transFatContent = `${round(serving.transFatG)} g`;
     if (serving.carbohydrateG !== null)
       nutrition.carbohydrateContent = `${round(serving.carbohydrateG)} g`;
     if (serving.sugarsG !== null) nutrition.sugarContent = `${round(serving.sugarsG)} g`;
