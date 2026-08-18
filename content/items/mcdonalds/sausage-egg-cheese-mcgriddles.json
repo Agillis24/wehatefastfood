@@ -5,6 +5,39 @@
   "category": "breakfast",
   "variants": [
     {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 193,
+          "energyKJ": null,
+          "energyKcal": 510,
+          "fatG": 29,
+          "saturatesG": 12,
+          "carbohydrateG": 42,
+          "sugarsG": 15,
+          "fibreG": 1,
+          "proteinG": 19,
+          "saltG": null,
+          "sodiumMg": 1290
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage, Egg & Cheese McGriddles - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    },
+    {
       "market": "US",
       "verifiedOn": "2026-08-17",
       "nutrition": [

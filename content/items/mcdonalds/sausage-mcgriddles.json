@@ -5,6 +5,39 @@
   "category": "breakfast",
   "variants": [
     {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 133,
+          "energyKJ": null,
+          "energyKcal": 390,
+          "fatG": 21,
+          "saturatesG": 8,
+          "carbohydrateG": 41,
+          "sugarsG": 14,
+          "fibreG": 1,
+          "proteinG": 10,
+          "saltG": null,
+          "sodiumMg": 1050
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sausage McGriddles - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    },
+    {
       "market": "US",
       "verifiedOn": "2026-08-17",
       "nutrition": [

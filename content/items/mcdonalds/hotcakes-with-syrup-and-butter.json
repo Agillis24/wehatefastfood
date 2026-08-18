@@ -1,0 +1,41 @@
+{
+  "slug": "hotcakes-with-syrup-and-butter",
+  "chainSlug": "mcdonalds",
+  "name": "Hotcakes with Syrup and Butter",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 206,
+          "energyKJ": null,
+          "energyKcal": 550,
+          "fatG": 16,
+          "saturatesG": 6,
+          "carbohydrateG": 93,
+          "sugarsG": 46,
+          "fibreG": 3,
+          "proteinG": 8,
+          "saltG": null,
+          "sodiumMg": 660
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Hotcakes with Syrup and Butter - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

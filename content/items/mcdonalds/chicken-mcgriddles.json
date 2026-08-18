@@ -1,0 +1,41 @@
+{
+  "slug": "chicken-mcgriddles",
+  "chainSlug": "mcdonalds",
+  "name": "Chicken McGriddles",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 143,
+          "energyKJ": null,
+          "energyKcal": 360,
+          "fatG": 14,
+          "saturatesG": 4.5,
+          "carbohydrateG": 47,
+          "sugarsG": 14,
+          "fibreG": 1,
+          "proteinG": 10,
+          "saltG": null,
+          "sodiumMg": 960
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Chicken McGriddles - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

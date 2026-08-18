@@ -5,6 +5,39 @@
   "category": "breakfast",
   "variants": [
     {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 159,
+          "energyKJ": null,
+          "energyKcal": 380,
+          "fatG": 18,
+          "saturatesG": 8,
+          "carbohydrateG": 42,
+          "sugarsG": 15,
+          "fibreG": 1,
+          "proteinG": 14,
+          "saltG": null,
+          "sodiumMg": 1080
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Bacon, Egg & Cheese McGriddles - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    },
+    {
       "market": "US",
       "verifiedOn": "2026-08-17",
       "nutrition": [

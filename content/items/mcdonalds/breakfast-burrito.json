@@ -1,0 +1,41 @@
+{
+  "slug": "breakfast-burrito",
+  "chainSlug": "mcdonalds",
+  "name": "Breakfast Burrito",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 114,
+          "energyKJ": null,
+          "energyKcal": 290,
+          "fatG": 16,
+          "saturatesG": 7,
+          "carbohydrateG": 23,
+          "sugarsG": 1,
+          "fibreG": 1,
+          "proteinG": 13,
+          "saltG": null,
+          "sodiumMg": 570
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Breakfast Burrito - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

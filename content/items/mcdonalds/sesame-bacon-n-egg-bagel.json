@@ -1,0 +1,41 @@
+{
+  "slug": "sesame-bacon-n-egg-bagel",
+  "chainSlug": "mcdonalds",
+  "name": "Sesame Bacon 'N Egg Bagel",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 185,
+          "energyKJ": null,
+          "energyKcal": 550,
+          "fatG": 25,
+          "saturatesG": 11,
+          "carbohydrateG": 57,
+          "sugarsG": 9,
+          "fibreG": 3,
+          "proteinG": 26,
+          "saltG": null,
+          "sodiumMg": 990
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "Sesame Bacon 'N Egg Bagel - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "english-muffin-with-butter",
+  "chainSlug": "mcdonalds",
+  "name": "English Muffin with Butter",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CA",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 58,
+          "energyKJ": null,
+          "energyKcal": 170,
+          "fatG": 4,
+          "saturatesG": 2,
+          "carbohydrateG": 27,
+          "sugarsG": 2,
+          "fibreG": 2,
+          "proteinG": 5,
+          "saltG": null,
+          "sodiumMg": 280
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "sources": [
+        {
+          "title": "English Muffin with Butter - nutrition information",
+          "publisher": "McDonald's",
+          "url": "https://www.mcdonalds.com/ca/en-ca/about-our-food/nutrition-calculator.html",
+          "retrievedOn": "2026-08-18",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
