@@ -4,6 +4,7 @@
   "onlyIn": "Only in {market}",
   "inBoth": "In both",
   "nothingDiffers": "The declarations we hold for {a} and {b} list the same additives and ingredients.",
+  "noDeclarations": "We hold no ingredient declaration for {a} or {b} yet, so there is nothing to compare. That is a gap in our data, not a statement that the two are the same.",
   "needTwoMarkets": "We hold data for only one market for this item, so there is nothing to compare yet.",
   "compareWith": "Compare with {market}",
   "added": "Added",

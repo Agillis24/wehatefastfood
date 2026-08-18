@@ -1,5 +1,7 @@
 import { useTranslations } from 'next-intl';
 
+import { diffState } from '@/lib/market-diff';
+
 /**
  * "Same product, different country" - the single most shareable thing on the
  * site, so it is built properly rather than as a novelty.
@@ -87,8 +89,11 @@ export function MarketDiff({
         <p className="text-[var(--surface-muted)]">{t('needTwoMarkets')}</p>
       ) : (
         comparisons.map((comparison) => {
-          const nothingDiffers =
-            comparison.onlyHere.length === 0 && comparison.onlyThere.length === 0;
+          // Three states, not two - see lib/market-diff.ts for why, and its
+          // tests for the case that would otherwise have shipped.
+          const state = diffState(comparison);
+          const noDeclarations = state === 'no-declarations';
+          const nothingDiffers = state === 'nothing-differs';
 
           return (
             <div
@@ -101,7 +106,11 @@ export function MarketDiff({
                 {comparison.otherMarket}
               </h3>
 
-              {nothingDiffers ? (
+              {noDeclarations ? (
+                <p className="text-sm">
+                  {t('noDeclarations', { a: market, b: comparison.otherMarket })}
+                </p>
+              ) : nothingDiffers ? (
                 <p className="text-sm">
                   {t('nothingDiffers', { a: market, b: comparison.otherMarket })}
                 </p>
@@ -122,12 +131,14 @@ export function MarketDiff({
                 </div>
               )}
 
-              <Column
-                heading={t('inBoth')}
-                glyph="="
-                entries={comparison.shared}
-                emptyLabel={t('absent')}
-              />
+              {noDeclarations ? null : (
+                <Column
+                  heading={t('inBoth')}
+                  glyph="="
+                  entries={comparison.shared}
+                  emptyLabel={t('absent')}
+                />
+              )}
             </div>
           );
         })

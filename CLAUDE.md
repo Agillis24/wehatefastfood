@@ -79,6 +79,19 @@ docs/                  PLAN.md ARCHITECTURE.md CONTENT_GUIDE.md BRAND.md LEGAL.m
 
 **Contrast ratio does not measure colour confusability.** It measures lightness. `#FF0000` and `#7A0000` are the same hue and score 2.87:1. If you need to know whether two colours can be _told apart_, use `scripts/color-separation.mjs`, not `scripts/contrast.mjs`. This mistake is already in the history of this repo — do not repeat it.
 
+**The category enum mixes one daypart with nine food forms, so pick the daypart.** `breakfast`
+sits in a list otherwise made of `burger`, `wrap`, `fries-sides` and so on, which means every
+breakfast item is eligible for two categories and nothing in the schema breaks the tie. **The rule:
+if an item is sold on the breakfast menu, its category is `breakfast`. The form categories describe
+all-day menu items only.** Without this written down, four of the first fifty-four McDonald's items
+were filed by whichever word happened to be in the product name — three "Breakfast Wrap" items under
+`wrap` while two burritos of the same construction sat under `breakfast`.
+
+**A diff of two empty lists is not a diff.** `MarketDiff` distinguishes "these two markets declare
+the same ingredients" from "we hold no declaration for either", because with no data every list
+comes back empty and the first message is a claim about the food made from nothing. Any comparison
+UI added later must make the same distinction.
+
 **Never body-shame.** No exercise equivalents ("run 45 minutes to burn this off"), no BMI, no weight-loss framing, no good/bad food moralising, no drawings of human bodies. The frame is always _what is in it and why the company put it there_. This is a hard product constraint, not a tone preference.
 
 **Never use their trade dress.** Chain names as text only, in our typeface. No logos, mascots, packaging photography, or brand colours used to identify a company. All product imagery is our own flat-vector artwork.

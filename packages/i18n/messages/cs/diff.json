@@ -4,6 +4,7 @@
   "onlyIn": "Jen v {market}",
   "inBoth": "V obou",
   "nothingDiffers": "Deklarace, které máme pro {a} a {b}, uvádějí stejná aditiva i složky.",
+  "noDeclarations": "Pro {a} ani {b} zatím nemáme složení, takže není co porovnávat. To je mezera v našich datech, ne tvrzení, že jsou obě stejné.",
   "needTwoMarkets": "Pro tuto položku máme data jen z jednoho trhu, takže zatím není co porovnávat.",
   "compareWith": "Porovnat s {market}",
   "added": "Přidáno",
