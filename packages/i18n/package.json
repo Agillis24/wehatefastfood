@@ -18,5 +18,8 @@
   },
   "scripts": {
     "build": "tsc --build"
+  },
+  "dependencies": {
+    "@wff/content": "*"
   }
 }

@@ -13,7 +13,22 @@ import { DEFAULT_LOCALE } from '@wff/i18n';
  * `cs` is the pilot: the one locale the client can personally review, so it
  * goes first and alone and is the acceptance test for everything else.
  */
-export const AVAILABLE_LOCALES = ['en', 'cs'] as const;
+/*
+ * Czech alone, since 2026-08-18.
+ *
+ * English was not removed for lack of a catalogue - `messages/en/` is complete
+ * and always will be, since it is what the Czech was drafted from. It was
+ * removed because the CONTENT is not translated: chain intros and decoder
+ * entries are single strings with no locale axis, so an English page and a
+ * Czech page rendered the same prose under different navigation. docs/I18N.md
+ * calls that worse than not offering the language, and it was right.
+ *
+ * Withdrawing the locale rather than shipping the leak is the same rule applied
+ * the other way round: the site now offers exactly the one language its prose
+ * is written in. English returns when the content has an English side, and the
+ * machinery to do that is all still here.
+ */
+export const AVAILABLE_LOCALES = ['cs'] as const;
 
 export type AvailableLocale = (typeof AVAILABLE_LOCALES)[number];
 

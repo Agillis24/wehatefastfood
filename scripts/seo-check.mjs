@@ -16,13 +16,30 @@
  * clone before anything has been built. CI builds first.
  */
 
+import { readFileSync } from 'node:fs';
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'apps', 'web', 'out');
-const LOCALES = ['en', 'cs'];
+/*
+ * Read from the app rather than restated here. This was `['en', 'cs']` and it
+ * outlived the withdrawal of `en` by exactly one build: the gate went on
+ * demanding an hreflang for a locale the site no longer serves, so it failed
+ * every page for the absence of a tag that would itself have been a lie.
+ *
+ * A gate that hard-codes what it is checking is a gate that has to be edited
+ * every time the thing changes, which is the moment nobody remembers to.
+ */
+const LOCALES = (
+  /export const AVAILABLE_LOCALES = \[([^\]]*)\]/.exec(
+    readFileSync(path.join(ROOT, 'apps', 'web', 'src', 'i18n', 'routing.ts'), 'utf8'),
+  )?.[1] ?? "'en'"
+)
+  .split(',')
+  .map((s) => s.trim().replace(/^['"]|['"]$/g, ''))
+  .filter(Boolean);
 const ORIGIN = process.env['NEXT_PUBLIC_SITE_ORIGIN'] ?? 'https://www.wehatefastfood.com';
 
 /** Whether THIS build was meant to be open. Both directions are then checked. */
@@ -120,10 +137,30 @@ for (const file of files) {
   const alternates = links.filter((t) => (attr(t, 'rel') ?? '') === 'alternate');
   const tags = alternates.map((t) => (attr(t, 'hreflang') ?? '').toLowerCase()).filter(Boolean);
 
-  for (const locale of LOCALES) {
-    if (!tags.includes(locale)) fail(`no hreflang="${locale}" (must include itself)`);
+  /*
+   * Two rules, and the second is the one that matters after a locale is
+   * withdrawn: every locale we DO serve must be listed, and no locale we do
+   * not serve may be. An hreflang pointing at a withdrawn locale is a 404 the
+   * site hands a crawler itself.
+   *
+   * With a single locale the set is skipped entirely rather than demanded.
+   * hreflang describes a CHOICE between languages; one language is not a
+   * choice, and Google's own guidance is that a self-referencing tag alone
+   * carries no information. Absent is correct, and pretending otherwise would
+   * have made this gate insist on markup that says nothing.
+   */
+  if (LOCALES.length > 1) {
+    for (const locale of LOCALES) {
+      if (!tags.includes(locale)) fail(`no hreflang="${locale}" (must include itself)`);
+    }
+    if (!tags.includes('x-default')) fail('no hreflang="x-default"');
   }
-  if (!tags.includes('x-default')) fail('no hreflang="x-default"');
+
+  for (const tag of tags) {
+    if (tag !== 'x-default' && !LOCALES.includes(tag)) {
+      fail(`hreflang="${tag}" points at a locale this site does not serve`);
+    }
+  }
 
   for (const tag of alternates) {
     const href = attr(tag, 'href');

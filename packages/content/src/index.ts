@@ -36,6 +36,12 @@ export type { NutritionFacts, FsaNutrient, FsaBand } from './schemas/nutrition.j
 export { SourceSchema, hasIndependentSources } from './schemas/source.js';
 export type { Source } from './schemas/source.js';
 
+/*
+ * The canonical market list lives with the schema that enforces it. @wff/i18n
+ * re-exports these so nothing that already imports them has to move.
+ */
+export { SUPPORTED_MARKETS, isSupportedMarket } from './schemas/source.js';
+
 export { FsaThresholdsSchema, ReferenceIntakesSchema } from './schemas/reference.js';
 export type { FsaThresholds, ReferenceIntakes } from './schemas/reference.js';
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,35 +23,39 @@
       If the tagline, the share image or the locale list changes, change it here
       too. There is no test that can catch this one, because the file is data.
     -->
-    <meta http-equiv="refresh" content="0; url=/en/" />
+    <meta http-equiv="refresh" content="0; url=/cs/" />
 
     <title>We Hate Fast Food</title>
-    <meta name="description" content="What's actually in it — and why they put it there." />
-    <link rel="canonical" href="https://www.wehatefastfood.com/en/" />
+    <meta name="description" content="Co v tom doopravdy je — a proč to tam dali." />
+    <link rel="canonical" href="https://www.wehatefastfood.com/cs/" />
 
-    <link rel="alternate" hreflang="en" href="https://www.wehatefastfood.com/en/" />
+    <!--
+      One locale, so one alternate. hreflang describes a CHOICE between
+      languages; with nothing to choose between, `cs` and `x-default` both
+      pointing at the same URL is the whole truth. An entry for `en` here would
+      advertise a page that no longer exists.
+    -->
     <link rel="alternate" hreflang="cs" href="https://www.wehatefastfood.com/cs/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.wehatefastfood.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.wehatefastfood.com/cs/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="We Hate Fast Food" />
     <meta property="og:title" content="We Hate Fast Food" />
-    <meta property="og:description" content="What's actually in it — and why they put it there." />
-    <meta property="og:url" content="https://www.wehatefastfood.com/en/" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:locale:alternate" content="cs_CZ" />
+    <meta property="og:description" content="Co v tom doopravdy je — a proč to tam dali." />
+    <meta property="og:url" content="https://www.wehatefastfood.com/cs/" />
+    <meta property="og:locale" content="cs_CZ" />
     <meta property="og:image" content="https://www.wehatefastfood.com/og/wff-share.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta
       property="og:image:alt"
-      content="We Hate Fast Food — what's actually in it, and why they put it there."
+      content="We Hate Fast Food — co v tom doopravdy je, a proč to tam dali."
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="We Hate Fast Food" />
-    <meta name="twitter:description" content="What's actually in it — and why they put it there." />
+    <meta name="twitter:description" content="Co v tom doopravdy je — a proč to tam dali." />
     <meta name="twitter:image" content="https://www.wehatefastfood.com/og/wff-share.png" />
 
     <link rel="icon" href="/favicon.svg" />
@@ -64,21 +68,27 @@
     -->
     <meta name="robots" content="noindex" />
 
+    <!--
+      ONE LOCALE, SO NO NEGOTIATION.
+
+      This page is hand-written and inherits nothing - not the routing config,
+      not AVAILABLE_LOCALES, not isIndexable(). That is why it is the thing most
+      likely to be left behind by a change made everywhere else, and it just
+      was: it went on offering `en` after `en` was withdrawn, so every reader
+      whose browser asks for English would have been redirected to /en/, which
+      no longer exists. A 404 as the front door.
+
+      Sent straight to /cs/ instead. When a second locale returns, the list
+      returns with it - and this file has to be edited by hand, deliberately,
+      because nothing here can be told about it automatically.
+    -->
     <script>
       (function () {
-        var reviewed = ['en', 'cs'];
-        var wanted = (navigator.languages || [navigator.language || 'en'])
-          .map(function (tag) {
-            return String(tag).toLowerCase().split('-')[0];
-          })
-          .filter(function (code) {
-            return reviewed.indexOf(code) !== -1;
-          })[0];
-        location.replace('/' + (wanted || 'en') + '/');
+        location.replace('/cs/');
       })();
     </script>
   </head>
   <body>
-    <a href="/en/">We Hate Fast Food</a>
+    <a href="/cs/">We Hate Fast Food</a>
   </body>
 </html>

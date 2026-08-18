@@ -1,5 +1,3 @@
-import { DEFAULT_MARKET, isSupportedMarket } from '@wff/i18n';
-
 /**
  * Market lives in the PATH, not in a query string and not only in a cookie.
  *
@@ -33,11 +31,6 @@ export function chainsPath(locale: string): string {
 
 export function homePath(locale: string): string {
   return `/${locale}`;
-}
-
-export function normaliseMarket(value: string | undefined): string {
-  const upper = value?.toUpperCase();
-  return upper !== undefined && isSupportedMarket(upper) ? upper : DEFAULT_MARKET;
 }
 
 /**

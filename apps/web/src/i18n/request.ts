@@ -7,17 +7,14 @@ import { routing, type AvailableLocale } from './routing';
  * every locale in every bundle, which is exactly the kind of quiet weight the
  * 130 kB item-page budget cannot absorb.
  */
+/*
+ * The English catalogue block was removed when `en` was withdrawn from
+ * AVAILABLE_LOCALES, because this Record is keyed by AvailableLocale and a
+ * key for a locale nobody can reach is a bundle nobody needs. The English
+ * message FILES stay exactly where they are - withdrawing a locale is not
+ * deleting its translations, and they are what the Czech was drafted from.
+ */
 const CATALOGUES: Record<AvailableLocale, () => Promise<Record<string, unknown>>> = {
-  en: async () => ({
-    ...(await import('@wff/i18n/messages/en/common.json')).default,
-    home: (await import('@wff/i18n/messages/en/home.json')).default,
-    item: (await import('@wff/i18n/messages/en/item.json')).default,
-    chains: (await import('@wff/i18n/messages/en/chains.json')).default,
-    decoder: (await import('@wff/i18n/messages/en/decoder.json')).default,
-    diff: (await import('@wff/i18n/messages/en/diff.json')).default,
-    compare: (await import('@wff/i18n/messages/en/compare.json')).default,
-    pages: (await import('@wff/i18n/messages/en/pages.json')).default,
-  }),
   cs: async () => ({
     ...(await import('@wff/i18n/messages/cs/common.json')).default,
     home: (await import('@wff/i18n/messages/cs/home.json')).default,

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { MARKET, SLUG, SourceSchema } from './source.js';
+import { COUNTRY, MARKET, SLUG, SourceSchema } from './source.js';
 import { NutritionFactsSchema } from './nutrition.js';
 
 const DataStatus = z.enum(['verified', 'partial', 'unpublished']);
@@ -18,7 +18,7 @@ export const ChainSchema = z
     slug: SLUG,
     name: z.string().min(1),
     foundedYear: z.number().int().min(1800).max(2100).optional(),
-    hqCountry: MARKET.optional(),
+    hqCountry: COUNTRY.optional(),
     marketsCovered: z.array(MARKET).min(1),
     oneLiner: z.string().min(1).max(140),
     longIntro: z.string().min(1),
