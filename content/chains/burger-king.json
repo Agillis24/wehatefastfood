@@ -1,0 +1,20 @@
+{
+  "slug": "burger-king",
+  "name": "Burger King",
+  "hqCountry": "US",
+  "marketsCovered": ["CZ"],
+  "oneLiner": "Jediné, co o svém jídle v Česku zveřejňuje, je tabulka z ledna 2017. A ta si ve třetině položek protiřečí.",
+  "longIntro": "Burger King má pro český trh jeden dokument s výživovými hodnotami a alergeny. Sám o sobě říká, že jeho čísla odpovídají „stavu ke dni tisku – leden 2017“, a od té chvíle uplynulo devět a půl roku. Není to zapomenutý soubor: je to přesně ten dokument, na který firma odkazuje dnes, a stáhli jsme si ho z jejího webu, abychom si ověřili, že jde o tentýž soubor. Horší než jeho stáří je ale to, že si protiřečí. U sedmnácti ze čtyřiceti devíti produktů nesedí uvedená energie na tuk, sacharidy a bílkoviny na tomtéž řádku — někdy o polovinu. U jednoho výrobku je uvedeno víc nasycených mastných kyselin než tuku celkem, což je jako tvrdit, že část je větší než celek. A jeden řádek je nadepsaný „na 100 g“, přičemž ve sloupci porce stojí 144. Nic z toho jsme neopravili a nic nevynechali. Přepisujeme, co firma zveřejnila, a u každé položky, které se to týká, ukazujeme obě čísla vedle sebe i výpočet mezi nimi, aby si to čtenář mohl přepočítat sám. Které z těch čísel je to špatné, nevíme — a hádat to by znamenalo vymyslet si fakt, abychom vysvětlili jiný.",
+  "accentToken": "accent-3",
+  "dataStatus": "partial",
+  "sources": [
+    {
+      "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+      "publisher": "Burger King ČR",
+      "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+      "retrievedOn": "2026-08-18",
+      "publishedOn": "2017-01-31",
+      "type": "company-disclosure"
+    }
+  ]
+}

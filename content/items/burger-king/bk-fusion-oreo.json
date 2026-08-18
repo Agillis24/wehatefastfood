@@ -1,0 +1,63 @@
+{
+  "slug": "bk-fusion-oreo",
+  "chainSlug": "burger-king",
+  "name": "BK Fusion Oreo",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": null,
+          "energyKcal": 278,
+          "fatG": 10,
+          "saturatesG": 6.6,
+          "transFatG": 0.1,
+          "carbohydrateG": 42,
+          "sugarsG": 36.2,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 4.9,
+          "saltG": 0.47,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 185.3,
+          "fatG": 6.9,
+          "saturatesG": 4.4,
+          "transFatG": 0.1,
+          "carbohydrateG": 28,
+          "sugarsG": 24.1,
+          "addedSugarsG": null,
+          "fibreG": 0.3,
+          "proteinG": 3.3,
+          "saltG": 0.32,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

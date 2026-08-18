@@ -1,0 +1,63 @@
+{
+  "slug": "whopper",
+  "chainSlug": "burger-king",
+  "name": "Whopper",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 297,
+          "energyKJ": null,
+          "energyKcal": 610,
+          "fatG": 34,
+          "saturatesG": 9.6,
+          "transFatG": 0.5,
+          "carbohydrateG": 50,
+          "sugarsG": 10,
+          "addedSugarsG": null,
+          "fibreG": 3,
+          "proteinG": 27,
+          "saltG": 2.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 205.4,
+          "fatG": 11,
+          "saturatesG": 3.2,
+          "transFatG": 0.2,
+          "carbohydrateG": 17,
+          "sugarsG": 3.5,
+          "addedSugarsG": null,
+          "fibreG": 1,
+          "proteinG": 9.1,
+          "saltG": 0.8,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "eggs", "sesame", "soybeans"],
+      "mayContain": ["milk"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

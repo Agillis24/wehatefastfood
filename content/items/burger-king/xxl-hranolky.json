@@ -1,0 +1,46 @@
+{
+  "slug": "xxl-hranolky",
+  "chainSlug": "burger-king",
+  "name": "XXL hranolky",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 220,
+          "energyKJ": null,
+          "energyKcal": 596.2,
+          "fatG": 29,
+          "saturatesG": 9,
+          "transFatG": 0.2,
+          "carbohydrateG": 74,
+          "sugarsG": 1.1,
+          "addedSugarsG": null,
+          "fibreG": 9.2,
+          "proteinG": 10,
+          "saltG": 0.18,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

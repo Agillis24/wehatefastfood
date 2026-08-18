@@ -1,0 +1,63 @@
+{
+  "slug": "hot-brownie-se-zmrzlinou",
+  "chainSlug": "burger-king",
+  "name": "Hot Brownie se zmrzlinou",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": null,
+          "energyKcal": 462.8,
+          "fatG": 28,
+          "saturatesG": 21,
+          "transFatG": 0.3,
+          "carbohydrateG": 47,
+          "sugarsG": 38.2,
+          "addedSugarsG": null,
+          "fibreG": 1.6,
+          "proteinG": 6.6,
+          "saltG": 0.24,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 308.5,
+          "fatG": 19,
+          "saturatesG": 13.7,
+          "transFatG": 0.2,
+          "carbohydrateG": 31,
+          "sugarsG": 25.5,
+          "addedSugarsG": null,
+          "fibreG": 1.1,
+          "proteinG": 4.4,
+          "saltG": 0.16,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
+      "mayContain": ["nuts"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

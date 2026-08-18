@@ -1,0 +1,63 @@
+{
+  "slug": "big-king-xxl",
+  "chainSlug": "burger-king",
+  "name": "Big King XXL",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 362,
+          "energyKJ": null,
+          "energyKcal": 1608,
+          "fatG": 58,
+          "saturatesG": 62,
+          "transFatG": 0.9,
+          "carbohydrateG": 50,
+          "sugarsG": 10,
+          "addedSugarsG": null,
+          "fibreG": 2.5,
+          "proteinG": 58,
+          "saltG": 2.4,
+          "sodiumMg": null,
+          "sourceContradictions": ["saturates-exceeds-fat"]
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 444.2,
+          "fatG": 17,
+          "saturatesG": 6,
+          "transFatG": 0.2,
+          "carbohydrateG": 14,
+          "sugarsG": 2.9,
+          "addedSugarsG": null,
+          "fibreG": 0.7,
+          "proteinG": 16,
+          "saltG": 0.67,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "salat-grilled-chicken",
+  "chainSlug": "burger-king",
+  "name": "Sałat Grilled Chicken",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 212,
+          "energyKJ": null,
+          "energyKcal": 155,
+          "fatG": 3.6,
+          "saturatesG": 0.5,
+          "transFatG": 0,
+          "carbohydrateG": 6.8,
+          "sugarsG": 1.3,
+          "addedSugarsG": null,
+          "fibreG": 2.7,
+          "proteinG": 24,
+          "saltG": 1.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 73,
+          "fatG": 1.7,
+          "saturatesG": 0.2,
+          "transFatG": 0,
+          "carbohydrateG": 3.2,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": 1.3,
+          "proteinG": 11,
+          "saltG": 0.72,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["sulphur-dioxide"],
+      "mayContain": ["celery", "cereals-gluten", "eggs", "milk", "mustard", "soybeans"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

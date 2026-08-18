@@ -40,19 +40,61 @@ export const NutritionFactsSchema = z
     proteinG: z.number().nonnegative().nullable(),
     saltG: z.number().nonnegative().nullable(),
     sodiumMg: z.number().nonnegative().nullable(),
+    /*
+     * Contradictions THE SOURCE ITSELF PRINTS, named one at a time.
+     *
+     * The checks below exist to catch our transcription errors, and they must
+     * stay hard for that. But a company can publish an impossible panel, and
+     * when it does, the impossibility is the story - Burger King ČR states 58 g
+     * of fat and 62 g of saturates for the same product, in the document it
+     * serves today as its current nutrition information. Refusing to record
+     * that would be hiding a company's mistake behind our own validator.
+     *
+     * The escape is deliberately awkward. It names the specific check being
+     * overridden, so it cannot blanket-disable anything; and naming a check
+     * that is NOT actually contradicted is itself an error, so it cannot be
+     * pasted in defensively "just in case". Setting one is a claim: we read
+     * this, it really says this, and here it is.
+     */
+    sourceContradictions: z
+      .array(z.enum(['saturates-exceeds-fat', 'sugars-exceed-carbohydrate']))
+      .default([]),
   })
   .strict()
   .superRefine((n, ctx) => {
-    // Hard failures: these are not "unusual products", they are transcription
-    // errors. A food cannot contain more saturated fat than fat.
-    if (n.saturatesG !== null && n.fatG !== null && n.saturatesG > n.fatG) {
+    const declared = new Set(n.sourceContradictions);
+    const satOverFat = n.saturatesG !== null && n.fatG !== null && n.saturatesG > n.fatG;
+    const sugarOverCarb =
+      n.sugarsG !== null && n.carbohydrateG !== null && n.sugarsG > n.carbohydrateG;
+
+    // A declared contradiction that is not there is a lie in the other
+    // direction, and would let the flag be pasted everywhere pre-emptively.
+    if (declared.has('saturates-exceeds-fat') && !satOverFat) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['sourceContradictions'],
+        message: 'declares "saturates-exceeds-fat" but saturates do not exceed fat',
+      });
+    }
+    if (declared.has('sugars-exceed-carbohydrate') && !sugarOverCarb) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['sourceContradictions'],
+        message: 'declares "sugars-exceed-carbohydrate" but sugars do not exceed carbohydrate',
+      });
+    }
+
+    // Hard failures unless the source is on record as printing them: these are
+    // not "unusual products", they are transcription errors. A food cannot
+    // contain more saturated fat than fat.
+    if (satOverFat && !declared.has('saturates-exceeds-fat')) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['saturatesG'],
         message: `saturates (${n.saturatesG} g) exceeds total fat (${n.fatG} g)`,
       });
     }
-    if (n.sugarsG !== null && n.carbohydrateG !== null && n.sugarsG > n.carbohydrateG) {
+    if (sugarOverCarb && !declared.has('sugars-exceed-carbohydrate')) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['sugarsG'],

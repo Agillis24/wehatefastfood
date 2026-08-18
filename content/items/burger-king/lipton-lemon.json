@@ -1,0 +1,63 @@
+{
+  "slug": "lipton-lemon",
+  "chainSlug": "burger-king",
+  "name": "Lipton Lemon",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 300,
+          "energyKJ": null,
+          "energyKcal": 90,
+          "fatG": 1.5,
+          "saturatesG": 1.5,
+          "transFatG": 0,
+          "carbohydrateG": 21,
+          "sugarsG": 20.7,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 1.5,
+          "saltG": 0.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 30,
+          "fatG": 0.5,
+          "saturatesG": 0.5,
+          "transFatG": 0.5,
+          "carbohydrateG": 7,
+          "sugarsG": 6.9,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.5,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

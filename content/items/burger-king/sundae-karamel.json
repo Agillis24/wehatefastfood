@@ -1,0 +1,63 @@
+{
+  "slug": "sundae-karamel",
+  "chainSlug": "burger-king",
+  "name": "Sundae (karamel)",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 145,
+          "energyKJ": null,
+          "energyKcal": 251.8,
+          "fatG": 8.5,
+          "saturatesG": 5.7,
+          "transFatG": 0.1,
+          "carbohydrateG": 41,
+          "sugarsG": 39.2,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 4.1,
+          "saltG": 0.35,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 167.9,
+          "fatG": 5.6,
+          "saturatesG": 3.8,
+          "transFatG": 0.1,
+          "carbohydrateG": 28,
+          "sugarsG": 26.1,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 2.8,
+          "saltG": 0.23,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

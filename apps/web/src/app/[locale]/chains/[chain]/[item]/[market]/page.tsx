@@ -8,6 +8,8 @@ import {
   referenceIntakePercent,
   resolvePer100,
   pickBasis,
+  panelConsistency,
+  type ConsistencyFinding,
   type Additive,
   type BandResult,
   type Chain,
@@ -24,6 +26,7 @@ import { grams, isoDate } from '@/lib/format';
 import { RealityCheck } from '@/components/data/RealityCheck';
 import { ReferenceIntake } from '@/components/data/ReferenceIntake';
 import { TrafficLights } from '@/components/data/TrafficLights';
+import { PanelConsistency } from '@/components/data/PanelConsistency';
 import { IngredientChips } from '@/components/content/IngredientChips';
 import { SourceList } from '@/components/content/SourceList';
 import { ItemStructuredData } from '@/components/content/StructuredData';
@@ -182,6 +185,15 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
   const per100 = data.variant ? resolvePer100(data.variant.nutrition) : null;
   const serving = data.variant ? (pickBasis(data.variant.nutrition, 'per-serving') ?? null) : null;
 
+  /*
+   * Every panel the variant holds, not just the one on screen: a contradiction
+   * in the per-100 g column is as real as one per portion, and the reader is
+   * being shown both sets of figures.
+   */
+  const findings: ConsistencyFinding[] = data.variant
+    ? data.variant.nutrition.flatMap((p) => panelConsistency(p))
+    : [];
+
   const bands: BandResult[] =
     per100 && data.thresholds
       ? FSA_NUTRIENTS.map((n) => bandFor(n, per100, serving, isDrink, data.thresholds!)).filter(
@@ -222,6 +234,7 @@ export default async function ItemPage({ params }: { params: Promise<Params> }) 
       isDrink={isDrink}
       servingG={serving?.servingSizeG ?? null}
       serving={serving}
+      findings={findings}
       realityRows={[
         {
           kind: 'sugar' as const,
@@ -254,6 +267,7 @@ type ViewProps = {
   isDrink: boolean;
   servingG: number | null;
   serving: import('@wff/content').NutritionFacts | null;
+  findings: ConsistencyFinding[];
   realityRows: {
     kind: 'sugar' | 'salt' | 'saturates';
     grams: number | null;
@@ -354,6 +368,8 @@ function ItemView(props: ViewProps) {
               locale={locale}
               provisional={props.intakesProvisional}
             />
+
+            <PanelConsistency findings={props.findings} locale={locale} />
 
             <IngredientChips
               ingredients={props.ingredients}

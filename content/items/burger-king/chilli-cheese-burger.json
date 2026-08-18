@@ -1,0 +1,63 @@
+{
+  "slug": "chilli-cheese-burger",
+  "chainSlug": "burger-king",
+  "name": "Chilli Cheese Burger",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 114,
+          "energyKJ": null,
+          "energyKcal": 384,
+          "fatG": 25,
+          "saturatesG": 3.8,
+          "transFatG": 0.6,
+          "carbohydrateG": 28,
+          "sugarsG": 3.5,
+          "addedSugarsG": null,
+          "fibreG": 1.4,
+          "proteinG": 12,
+          "saltG": 1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 337,
+          "fatG": 22,
+          "saturatesG": 3.3,
+          "transFatG": 0.5,
+          "carbohydrateG": 25,
+          "sugarsG": 3.1,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 11,
+          "saltG": 0.89,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

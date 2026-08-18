@@ -1,0 +1,63 @@
+{
+  "slug": "sundae-jahoda",
+  "chainSlug": "burger-king",
+  "name": "Sundae (jahoda)",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 145,
+          "energyKJ": null,
+          "energyKcal": 223,
+          "fatG": 6.5,
+          "saturatesG": 4.6,
+          "transFatG": 0.1,
+          "carbohydrateG": 39,
+          "sugarsG": 36.4,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 11,
+          "saltG": 0.31,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 158,
+          "fatG": 4.3,
+          "saturatesG": 3,
+          "transFatG": 0.1,
+          "carbohydrateG": 26,
+          "sugarsG": 24.3,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 7.1,
+          "saltG": 0.21,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

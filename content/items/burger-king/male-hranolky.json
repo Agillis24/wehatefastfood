@@ -1,0 +1,46 @@
+{
+  "slug": "male-hranolky",
+  "chainSlug": "burger-king",
+  "name": "Malé hranolky",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 74,
+          "energyKJ": null,
+          "energyKcal": 200.5,
+          "fatG": 9.7,
+          "saturatesG": 3,
+          "transFatG": 0.1,
+          "carbohydrateG": 25,
+          "sugarsG": 0.4,
+          "addedSugarsG": null,
+          "fibreG": 3.1,
+          "proteinG": 3.5,
+          "saltG": 0.06,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

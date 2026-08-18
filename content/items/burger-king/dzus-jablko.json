@@ -1,0 +1,63 @@
+{
+  "slug": "dzus-jablko",
+  "chainSlug": "burger-king",
+  "name": "Džus jablko",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 330,
+          "energyKJ": null,
+          "energyKcal": 140,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 33,
+          "sugarsG": 30,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 42,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 10,
+          "sugarsG": 11,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

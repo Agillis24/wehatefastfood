@@ -1,0 +1,63 @@
+{
+  "slug": "pepsi",
+  "chainSlug": "burger-king",
+  "name": "Pepsi",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 300,
+          "energyKJ": null,
+          "energyKcal": 121,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 32,
+          "sugarsG": 31.9,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.03,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 40.4,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 11,
+          "sugarsG": 10.6,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

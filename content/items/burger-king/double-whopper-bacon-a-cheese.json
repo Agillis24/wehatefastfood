@@ -1,0 +1,63 @@
+{
+  "slug": "double-whopper-bacon-a-cheese",
+  "chainSlug": "burger-king",
+  "name": "Double Whopper Bacon & Cheese",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 391.6,
+          "energyKJ": null,
+          "energyKcal": 971.1,
+          "fatG": 43,
+          "saturatesG": 15,
+          "transFatG": 0.5,
+          "carbohydrateG": 51,
+          "sugarsG": 10,
+          "addedSugarsG": null,
+          "fibreG": 2.9,
+          "proteinG": 34,
+          "saltG": 3.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 248,
+          "fatG": 13,
+          "saturatesG": 4.6,
+          "transFatG": 0.2,
+          "carbohydrateG": 16,
+          "sugarsG": 3.2,
+          "addedSugarsG": null,
+          "fibreG": 0.9,
+          "proteinG": 10,
+          "saltG": 1.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

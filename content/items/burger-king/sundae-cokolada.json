@@ -1,0 +1,63 @@
+{
+  "slug": "sundae-cokolada",
+  "chainSlug": "burger-king",
+  "name": "Sundae (čokoláda)",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 145,
+          "energyKJ": null,
+          "energyKcal": 237,
+          "fatG": 6.7,
+          "saturatesG": 4.7,
+          "transFatG": 0.1,
+          "carbohydrateG": 42,
+          "sugarsG": 38.4,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 4.2,
+          "saltG": 0.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 158,
+          "fatG": 4.5,
+          "saturatesG": 3.1,
+          "transFatG": 0.1,
+          "carbohydrateG": 28,
+          "sugarsG": 25.6,
+          "addedSugarsG": null,
+          "fibreG": 0.3,
+          "proteinG": 2.8,
+          "saltG": 0.2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

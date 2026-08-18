@@ -1,0 +1,63 @@
+{
+  "slug": "chilli-cheese-nuggets-5-ks",
+  "chainSlug": "burger-king",
+  "name": "Chilli cheese nuggets (5 ks)",
+  "category": "chicken",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 90,
+          "energyKJ": null,
+          "energyKcal": 274.5,
+          "fatG": 15,
+          "saturatesG": 6.8,
+          "transFatG": 0.2,
+          "carbohydrateG": 29,
+          "sugarsG": 1.3,
+          "addedSugarsG": null,
+          "fibreG": 2.8,
+          "proteinG": 8.1,
+          "saltG": 1.8,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 305,
+          "fatG": 17,
+          "saturatesG": 7.5,
+          "transFatG": 0.2,
+          "carbohydrateG": 32,
+          "sugarsG": 1.4,
+          "addedSugarsG": null,
+          "fibreG": 3.1,
+          "proteinG": 9,
+          "saltG": 2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

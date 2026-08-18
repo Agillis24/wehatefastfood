@@ -1,0 +1,63 @@
+{
+  "slug": "double-steakhouse",
+  "chainSlug": "burger-king",
+  "name": "Double Steakhouse",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 349.5,
+          "energyKJ": null,
+          "energyKcal": 878,
+          "fatG": 74,
+          "saturatesG": 24,
+          "transFatG": 0.1,
+          "carbohydrateG": 106,
+          "sugarsG": 24,
+          "addedSugarsG": null,
+          "fibreG": 7.4,
+          "proteinG": 66,
+          "saltG": 2.26,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 251.2,
+          "fatG": 30,
+          "saturatesG": 9.2,
+          "transFatG": 0.1,
+          "carbohydrateG": 42,
+          "sugarsG": 9.6,
+          "addedSugarsG": null,
+          "fibreG": 3,
+          "proteinG": 26,
+          "saltG": 1.64,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

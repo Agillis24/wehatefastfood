@@ -1,0 +1,63 @@
+{
+  "slug": "cafe-latte",
+  "chainSlug": "burger-king",
+  "name": "Cafe Latte",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 200,
+          "energyKJ": null,
+          "energyKcal": 72,
+          "fatG": 3.8,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 5.6,
+          "sugarsG": 5.6,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 3.8,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 60,
+          "fatG": 3.2,
+          "saturatesG": 0,
+          "transFatG": 0,
+          "carbohydrateG": 4.7,
+          "sugarsG": 4.7,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 3.2,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

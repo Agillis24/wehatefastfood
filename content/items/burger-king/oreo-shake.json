@@ -1,0 +1,63 @@
+{
+  "slug": "oreo-shake",
+  "chainSlug": "burger-king",
+  "name": "Oreo Shake",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 350,
+          "energyKJ": null,
+          "energyKcal": 565,
+          "fatG": 17.5,
+          "saturatesG": 11.3,
+          "transFatG": 0,
+          "carbohydrateG": 89.9,
+          "sugarsG": 76.3,
+          "addedSugarsG": null,
+          "fibreG": 2.4,
+          "proteinG": 11,
+          "saltG": 1.12,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 161.7,
+          "fatG": 5,
+          "saturatesG": 3.2,
+          "transFatG": 0,
+          "carbohydrateG": 25.7,
+          "sugarsG": 21.8,
+          "addedSugarsG": null,
+          "fibreG": 0.7,
+          "proteinG": 3.1,
+          "saltG": 0.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

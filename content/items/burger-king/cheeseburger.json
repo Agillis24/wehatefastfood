@@ -1,0 +1,63 @@
+{
+  "slug": "cheeseburger",
+  "chainSlug": "burger-king",
+  "name": "Cheeseburger",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 152,
+          "energyKJ": null,
+          "energyKcal": 277,
+          "fatG": 21,
+          "saturatesG": 9.4,
+          "transFatG": 0.2,
+          "carbohydrateG": 31,
+          "sugarsG": 6,
+          "addedSugarsG": null,
+          "fibreG": 1.6,
+          "proteinG": 24,
+          "saltG": 1.7,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 182.2,
+          "fatG": 14,
+          "saturatesG": 6.2,
+          "transFatG": 0.1,
+          "carbohydrateG": 20,
+          "sugarsG": 3.9,
+          "addedSugarsG": null,
+          "fibreG": 1.1,
+          "proteinG": 17,
+          "saltG": 1.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

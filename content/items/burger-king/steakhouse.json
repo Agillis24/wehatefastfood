@@ -1,0 +1,63 @@
+{
+  "slug": "steakhouse",
+  "chainSlug": "burger-king",
+  "name": "Steakhouse",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 254,
+          "energyKJ": null,
+          "energyKcal": 684.3,
+          "fatG": 37,
+          "saturatesG": 12,
+          "transFatG": 0.7,
+          "carbohydrateG": 53,
+          "sugarsG": 12,
+          "addedSugarsG": null,
+          "fibreG": 3.7,
+          "proteinG": 33,
+          "saltG": 1.13,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 269,
+          "fatG": 15,
+          "saturatesG": 4.6,
+          "transFatG": 0.3,
+          "carbohydrateG": 21,
+          "sugarsG": 4.8,
+          "addedSugarsG": null,
+          "fibreG": 1.5,
+          "proteinG": 13,
+          "saltG": 0.82,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard"],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

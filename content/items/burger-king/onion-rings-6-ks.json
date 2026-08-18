@@ -1,0 +1,63 @@
+{
+  "slug": "onion-rings-6-ks",
+  "chainSlug": "burger-king",
+  "name": "Onion Rings (6 ks)",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 60,
+          "energyKJ": null,
+          "energyKcal": 185.4,
+          "fatG": 8.9,
+          "saturatesG": 2,
+          "transFatG": 0.1,
+          "carbohydrateG": 22,
+          "sugarsG": 2.1,
+          "addedSugarsG": null,
+          "fibreG": 2,
+          "proteinG": 3.1,
+          "saltG": 0.24,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 309,
+          "fatG": 15,
+          "saturatesG": 3.3,
+          "transFatG": 0.1,
+          "carbohydrateG": 37,
+          "sugarsG": 3.5,
+          "addedSugarsG": null,
+          "fibreG": 3.3,
+          "proteinG": 5.1,
+          "saltG": 0.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -88,6 +88,14 @@
     "sodium": "Sodium",
     "saltNote": "Where a company declares sodium rather than salt, we convert with the EU convention: salt = sodium x 2.5."
   },
+  "consistency": {
+    "title": "This panel disagrees with itself",
+    "lede": "The figures below were published by the company. We do not correct them — we show that two of them cannot both hold.",
+    "energy": "It states {stated} kcal per portion. The fat, carbohydrate and protein on the same panel come to {implied} kcal, which is {percent}% away.",
+    "saturates": "It states {saturates} of saturated fat against {fat} of fat in total. Saturates are part of the fat, so there cannot be more of them.",
+    "sugars": "It states {sugars} of sugars against {carbohydrate} of carbohydrate in total. Sugars are part of the carbohydrate, so there cannot be more of them.",
+    "weDoNotCorrect": "Which figure is the wrong one we do not know and will not guess. We transcribe what the company published, with the date we read it."
+  },
   "plain": {
     "on": "Just the numbers",
     "off": "Show the illustrations",

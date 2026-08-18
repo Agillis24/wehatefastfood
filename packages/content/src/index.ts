@@ -71,4 +71,7 @@ export {
 
 export type { BandResult, RiKey } from './nutrition.js';
 
+export { panelConsistency } from './consistency.js';
+export type { ConsistencyFinding } from './consistency.js';
+
 export { STALE_AFTER_DAYS, ENERGY_TOLERANCE, SALT_SODIUM_TOLERANCE } from './graph.js';

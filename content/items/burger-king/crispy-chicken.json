@@ -1,0 +1,63 @@
+{
+  "slug": "crispy-chicken",
+  "chainSlug": "burger-king",
+  "name": "Crispy Chicken",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 183,
+          "energyKJ": null,
+          "energyKcal": 500,
+          "fatG": 29,
+          "saturatesG": 5,
+          "transFatG": 0.3,
+          "carbohydrateG": 39,
+          "sugarsG": 4,
+          "addedSugarsG": null,
+          "fibreG": 2.1,
+          "proteinG": 18,
+          "saltG": 2.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 273.2,
+          "fatG": 16,
+          "saturatesG": 2.7,
+          "transFatG": 0.2,
+          "carbohydrateG": 21,
+          "sugarsG": 2.2,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 9.6,
+          "saltG": 1.2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "eggs", "sesame", "soybeans"],
+      "mayContain": ["milk", "mustard"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

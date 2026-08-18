@@ -1,0 +1,63 @@
+{
+  "slug": "hot-brownie",
+  "chainSlug": "burger-king",
+  "name": "Hot Brownie",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 80,
+          "energyKJ": null,
+          "energyKcal": 364.8,
+          "fatG": 25,
+          "saturatesG": 18,
+          "transFatG": 0.2,
+          "carbohydrateG": 31,
+          "sugarsG": 22.8,
+          "addedSugarsG": null,
+          "fibreG": 1.6,
+          "proteinG": 4.5,
+          "saltG": 0.08,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 456,
+          "fatG": 31,
+          "saturatesG": 23,
+          "transFatG": 0.2,
+          "carbohydrateG": 39,
+          "sugarsG": 28.5,
+          "addedSugarsG": null,
+          "fibreG": 2,
+          "proteinG": 5.6,
+          "saltG": 0.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
+      "mayContain": ["nuts"],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

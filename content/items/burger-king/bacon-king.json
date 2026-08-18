@@ -1,0 +1,63 @@
+{
+  "slug": "bacon-king",
+  "chainSlug": "burger-king",
+  "name": "Bacon King",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-18",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 237,
+          "energyKJ": null,
+          "energyKcal": 584,
+          "fatG": 50,
+          "saturatesG": 17,
+          "transFatG": 0.7,
+          "carbohydrateG": 50,
+          "sugarsG": 10.4,
+          "addedSugarsG": null,
+          "fibreG": 3,
+          "proteinG": 45,
+          "saltG": 2.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": null,
+          "energyKcal": 246.4,
+          "fatG": 17,
+          "saturatesG": 0.2,
+          "transFatG": 0.2,
+          "carbohydrateG": 17,
+          "sugarsG": 3.5,
+          "addedSugarsG": null,
+          "fibreG": 1,
+          "proteinG": 15,
+          "saltG": 0.83,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "eggs", "milk", "sesame"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
+          "publisher": "Burger King ČR",
+          "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
+          "retrievedOn": "2026-08-18",
+          "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

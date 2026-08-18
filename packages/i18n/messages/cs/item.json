@@ -88,6 +88,14 @@
     "sodium": "Sodík",
     "saltNote": "Pokud firma uvádí sodík místo soli, přepočítáváme podle konvence EU: sůl = sodík × 2,5."
   },
+  "consistency": {
+    "title": "Tenhle panel si protiřečí",
+    "lede": "Čísla níž zveřejnila sama firma. Neopravujeme je — jen ukazujeme, že dvě z nich nemůžou platit zároveň.",
+    "energy": "Uvedeno {stated} kcal na porci. Tuk, sacharidy a bílkoviny na tomtéž panelu ale dávají {implied} kcal, tedy o {percent} % jinak.",
+    "saturates": "Uvedeno {saturates} nasycených mastných kyselin, ale jen {fat} tuku celkem. Nasycené jsou částí tuku, takže jich nemůže být víc.",
+    "sugars": "Uvedeno {sugars} cukrů, ale jen {carbohydrate} sacharidů celkem. Cukry jsou částí sacharidů, takže jich nemůže být víc.",
+    "weDoNotCorrect": "Které z těch čísel je špatně, nevíme a nebudeme hádat. Přepisujeme, co firma zveřejnila, s datem, kdy jsme to četli."
+  },
   "plain": {
     "on": "Jen čísla",
     "off": "Zobrazit ilustrace",
