@@ -248,9 +248,17 @@ describe('the real content directory', () => {
     for (const n of named) expect(n.name).not.toMatch(/SEED DATA|EXAMPLE/i);
   });
 
-  it('warns that the reference thresholds are still unverified', async () => {
+  /*
+   * This assertion used to be the other way round. It existed so that shipping
+   * with unverified thresholds could not happen quietly, and it did its job for
+   * as long as they were unverified. A person read both source documents on
+   * 2026-08-19, so the guard now protects the opposite thing: that nothing
+   * silently drops these tables back to "unverified" while the traffic lights
+   * are rendering real figures off them.
+   */
+  it('keeps the reference thresholds verified', async () => {
     const repo = await createRepository({ contentRoot: CONTENT_ROOT, now: NOW });
     const issues = await repo.getIssues();
-    expect(issues.some((i) => i.message.includes('status is "unverified"'))).toBe(true);
+    expect(issues.some((i) => i.message.includes('status is "unverified"'))).toBe(false);
   });
 });
