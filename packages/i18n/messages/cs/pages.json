@@ -1,12 +1,12 @@
 {
   "about": {
     "title": "O projektu",
-    "lede": "Nezávislý záznam o tom, co ve fast foodu doopravdy je — a proč to tam firmy, které ho prodávají, daly.",
+    "lede": "Nezávislý záznam o tom, co ve fast foodu doopravdy je a proč to tam firmy, které ho prodávají, daly.",
     "sections": [
       {
         "heading": "Proč to vzniklo",
         "body": [
-          "Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Zároveň je to rozeseté po PDF souborech zvlášť pro každou zemi, schované pod marketingovým textem, uvedené na 100 g, když sníte 340 g, a vysázené písmem, za které by se styděla i lékárna.",
+          "Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Jenže je to rozeseté po PDF souborech zvlášť pro každou zemi. Schované pod marketingovým textem. Uvedené na 100 g, když sníte 340 g. A vysázené písmem, za které by se styděla i lékárna.",
           "Tenhle web dělá tu nudnou část. Přečíst údaje, zapsat číslo, uvést, odkud pochází, a srozumitelně říct, co tam která složka dělá."
         ]
       },
@@ -14,14 +14,14 @@
         "heading": "Pro koho to je",
         "body": [
           "Pro kohokoli, kdo chce vědět, co jí. Jiná kvalifikace potřeba není.",
-          "Nenajdete tu žádnou dietu, žádný plán, žádné „předtím a potom“. Žádné jídlo tu není označené za dobré nebo špatné, nikomu neříkáme, kolik má vážit, a nejsou tu pohybové ekvivalenty — nikdy se tu nedočtete, že kvůli mléčnému koktejlu máte jít na čtyřicet minut běhat. Co s těmi čísly uděláte, je vaše věc."
+          "Nenajdete tu žádnou dietu, žádný plán, žádné „předtím a potom“. Žádné jídlo tu není označené za dobré nebo špatné a nikomu neříkáme, kolik má vážit. Nejsou tu ani pohybové ekvivalenty. Nikdy se tu nedočtete, že kvůli mléčnému koktejlu máte jít na čtyřicet minut běhat. Co s těmi čísly uděláte, je vaše věc."
         ]
       },
       {
         "heading": "Postoj",
         "body": [
-          "Jsme nepřátelští vůči odvětví: vůči recepturám stavěným kolem ceny a trvanlivosti, vůči porcím, které vyrostly, zatímco cena zůstala povědomá, vůči marketingu, který utratí za slovo „čerstvé“ víc než kuchyně.",
-          "Nejsme nepřátelští vůči nikomu, kdo to jí. Je to levné, rychlé, všude a často je to jediné, co je po ruce. Rýpáme směrem nahoru."
+          "Máme problém s odvětvím. S recepturami, které se stavějí kolem ceny a trvanlivosti. S porcemi, co vyrostly, zatímco cena zůstala povědomá. S marketingem, který utratí za slovo „čerstvé“ víc než kuchyně.",
+          "S nikým, kdo to jí, problém nemáme. Je to levné, rychlé, všude a často je to jediné, co je po ruce. Rýpeme směrem nahoru."
         ]
       },
       {
@@ -35,7 +35,7 @@
         "heading": "Když se spleteme",
         "body": [
           "Spleteme se. Receptury se mění potichu a někdy si zdroj přečteme špatně.",
-          "Když se to stane, oprava je rychlá a viditelná: znovu přečíst zdroj, opravit stránku, aktualizovat datum kontroly. To, že firma změnila výrobek, je samo o sobě informace, kterou stojí za to zaznamenat — staré číslo s datem, kdy jsme ho četli, je doklad, ne ostuda."
+          "Když se to stane, oprava je rychlá a viditelná. Znovu přečíst zdroj, opravit stránku, aktualizovat datum kontroly. To, že firma změnila výrobek, je samo o sobě informace, kterou stojí za to zaznamenat. Staré číslo s datem, kdy jsme ho četli, je doklad, ne ostuda."
         ]
       }
     ],
@@ -48,51 +48,51 @@
       {
         "heading": "Odkud čísla pocházejí",
         "body": [
-          "V tomto pořadí: vlastní zveřejněné nutriční údaje firmy, pak regulační úřady, pak recenzovaný výzkum. Každé číslo má svůj zdroj a každý zdroj má datum, kdy jsme ho četli my — ne datum, kdy vyšel. Řetězce mění receptury potichu, takže rozhoduje, kdy se na to naposledy díval člověk.",
+          "V tomto pořadí: vlastní zveřejněné nutriční údaje firmy, pak regulační úřady, pak recenzovaný výzkum. Každé číslo má svůj zdroj a každý zdroj má datum, kdy jsme ho četli my, ne datum, kdy vyšel. Řetězce mění receptury potichu, takže rozhoduje, kdy se na to naposledy díval člověk.",
           "Záznamy přidáváme po jednom, ručně, protože někdo rozhodl, že tahle položka stojí za zdokumentování. Neprocházíme weby automaticky, nekopírujeme hromadně a nikdy nereprodukujeme celou nutriční tabulku firmy. Jednotlivý údaj je fakt. Sestavená databáze je něčí práce."
         ]
       },
       {
         "heading": "Na 100 g a na porci",
         "body": [
-          "Uvádíme obojí, protože každé odpovídá na jinou otázku. Na 100 g se porovnávají dvě jídla mezi sebou. Na porci je to, co skutečně sníte — a je to číslo, které by odvětví radši nevidělo sečtené.",
+          "Uvádíme obojí, protože každé odpovídá na jinou otázku. Na 100 g se porovnávají dvě jídla mezi sebou. Na porci je to, co skutečně sníte. Je to číslo, které by odvětví radši nevidělo sečtené.",
           "Když firma zveřejní jen jeden základ, stránka řekne který, a neodvozujeme z něj nic, co z něj poctivě odvodit nejde."
         ]
       },
       {
         "heading": "Semafor",
         "body": [
-          "Barvy vycházejí z britských kritérií pro označení na přední straně obalu. Pro tuky, nasycené tuky, cukry a sůl je jídlo nízké, střední nebo vysoké na 100 g; nápoje se posuzují podle vlastních, nižších hranic.",
-          "Jedno pravidlo umí barvu posunout jedině nahoru. Když jediná porce nese víc, než je hranice pro porci, ukazuje se jako vysoká i tam, kde by hodnota na 100 g říkala střední — velká porce jen středního jídla není střední množství. Opačně to pravidlo nefunguje nikdy: nic se nesnižuje kvůli tomu, že je porce malá.",
+          "Barvy vycházejí z britských kritérií pro označení na přední straně obalu. Pro tuky, nasycené tuky, cukry a sůl je jídlo nízké, střední nebo vysoké na 100 g. Nápoje se posuzují podle vlastních, nižších hranic.",
+          "Jedno pravidlo umí barvu posunout jedině nahoru. Když jediná porce nese víc, než je hranice pro porci, ukazuje se jako vysoká i tam, kde by hodnota na 100 g říkala střední. Velká porce jen středního jídla není střední množství. Opačně to pravidlo nefunguje nikdy. Nic se nesnižuje kvůli tomu, že je porce malá.",
           "Hodnota přesně na hranici patří do vyššího pásma."
         ]
       },
       {
         "heading": "Sůl, sodík a číslo 2,5",
         "body": [
-          "Některé trhy zveřejňují sůl, jiné sodík. Je to totéž měření v jiném kabátě: sůl se rovná sodíku vynásobenému 2,5, což je přepočet, který definují evropská pravidla pro označování.",
+          "Některé trhy zveřejňují sůl, jiné sodík. Je to totéž měření v jiném kabátě. Sůl se rovná sodíku vynásobenému 2,5 a ten přepočet definují evropská pravidla pro označování.",
           "Zaznamenáváme to, co firma skutečně zveřejnila, a přepočítanou hodnotu označujeme jako přepočítanou. Když firma zveřejní obojí a neshoduje se to, rozpor označíme, místo abychom ho potichu zprůměrovali."
         ]
       },
       {
         "heading": "Referenční hodnoty příjmu",
         "body": [
-          "Procenta se počítají proti evropské referenční hodnotě příjmu pro průměrného dospělého: 2000 kcal, tedy 8400 kJ na den. To je konvence pro označování, ne doporučení mířené na vás. Neví nic o vašem věku, vaší velikosti ani o tom, co jste dnes ještě jedli."
+          "Procenta se počítají proti evropské referenční hodnotě příjmu pro průměrného dospělého, tedy 2000 kcal neboli 8400 kJ na den. To je konvence pro označování, ne doporučení mířené na vás. Neví nic o vašem věku, vaší velikosti ani o tom, co jste dnes ještě jedli."
         ]
       },
       {
         "heading": "Sloupec množství",
         "body": [
-          "Cukr kreslíme jako kostky po 4 g, sůl jako zarovnané čajové lžičky po 6 g, nasycené tuky jako kostičky másla po 5 g — a všechny tři ve skutečném vzájemném měřítku, aby je oko porovnalo samo, bez vyzvání.",
+          "Cukr kreslíme jako kostky po 4 g, sůl jako zarovnané čajové lžičky po 6 g a nasycené tuky jako kostičky másla po 5 g. Všechny tři ve skutečném vzájemném měřítku, aby je oko porovnalo samo, bez vyzvání.",
           "Zlomky kreslíme jako zlomky. Devět gramů cukru jsou dvě kostky a čtvrtina, ne „asi dvě“.",
           "Jednotkou je vždycky fyzické množství té samé látky. Nikdy ne množství vašeho času, vašeho úsilí nebo vašeho těla."
         ]
       },
       {
-        "heading": "Co je předběžné a proč to říkáme",
+        "heading": "Co je ověřené a co ne",
         "body": [
-          "Tabulky hranic, které rozhodují o barvách semaforu, a referenční hodnoty příjmu za procenty zatím nikdo řádek po řádku neporovnal se zdrojovými dokumenty. Dokud se to nestane, je všechno, co z nich vychází, na příslušné stránce označené jako předběžné.",
-          "Ta značka není formalita. Číslo, které rozhoduje o tom, jestli se jídlo ukáže červeně, je přesně ten druh čísla, který si tenhle web nemůže dovolit brát na dobré slovo — ani od sebe samého."
+          "Tabulky hranic, které rozhodují o barvách semaforu, a referenční hodnoty příjmu za procenty jsou od 19. srpna 2026 porovnané se zdrojovými dokumenty. Do té doby bylo všechno, co z nich vychází, na příslušné stránce označené jako předběžné.",
+          "Ta značka nebyla formalita. Číslo, které rozhoduje o tom, jestli se jídlo ukáže červeně, je přesně ten druh čísla, který si tenhle web nemůže dovolit brát na dobré slovo, ani od sebe samého."
         ]
       },
       {
@@ -107,7 +107,7 @@
         "heading": "Co dělat nebudeme",
         "body": [
           "Žádné odhadované hodnoty. Když něco nemáme ze zdroje, stránka to řekne a na jeho místě neukáže nic.",
-          "Žádný Nutri-Score. K jeho výpočtu je potřeba vláknina a podíl ovoce a zeleniny, což řetězce nezveřejňují — muselo by se to odhadovat, a odhadování je ta jediná věc, kterou tenhle projekt dělat nebude.",
+          "Žádný Nutri-Score. K jeho výpočtu je potřeba vláknina a podíl ovoce a zeleniny, což řetězce nezveřejňují. Muselo by se to odhadovat a odhadování je ta jediná věc, kterou tenhle projekt dělat nebude.",
           "Žádné pohybové ekvivalenty, žádné BMI, žádné hubnutí a žádná dobrá a špatná jídla."
         ]
       }
@@ -127,7 +127,7 @@
       {
         "heading": "Nutriční údaje",
         "body": [
-          "Jednotlivý nutriční údaj je fakt a tak s ním zacházíme: zaznamenaný výběrově, po jedné položce, vždy s odkazem na zdroj, ze kterého pochází, a vždy zveřejněný spolu s naším vlastním rozborem.",
+          "Jednotlivý nutriční údaj je fakt a tak s ním zacházíme. Zaznamenáváme ho výběrově, po jedné položce, vždy s odkazem na zdroj, ze kterého pochází, a vždy ho zveřejňujeme spolu s naším vlastním rozborem.",
           "Nereprodukujeme nutriční databázi ani celou tabulku menu žádné firmy, neprocházíme weby automaticky a respektujeme robots.txt."
         ]
       },
@@ -158,7 +158,7 @@
       {
         "heading": "Když jsme něco popletli",
         "body": [
-          "Dejte nám vědět — zvlášť pokud se to týká vaší firmy — a my to opravíme a napíšeme, že jsme to opravili. Mít pravdu je pro tenhle projekt důležitější než se hájit, protože mít pravdu je jediný důvod ho číst."
+          "Dejte nám vědět, zvlášť pokud se to týká vaší firmy. Opravíme to a napíšeme, že jsme to opravili. Mít pravdu je pro tenhle projekt důležitější než se hájit, protože mít pravdu je jediný důvod ho číst."
         ]
       }
     ],
@@ -166,7 +166,7 @@
   },
   "privacy": {
     "title": "Soukromí",
-    "lede": "Krátká verze: tenhle web o vás nic nesbírá, protože k tomu nemá čím.",
+    "lede": "Tenhle web o vás nic nesbírá. Nemá k tomu čím.",
     "sections": [
       {
         "heading": "Žádné cookies, žádné úložiště, žádné účty",
@@ -191,7 +191,7 @@
       {
         "heading": "Odkazy ven",
         "body": [
-          "Na zdroje odkazujeme proto, abyste si je mohli ověřit sami. Jakmile odkaz otevřete, jste na cizím webu a pod jeho pravidly — do toho, co sbírá on, nemáme co mluvit."
+          "Na zdroje odkazujeme proto, abyste si je mohli ověřit sami. Jakmile odkaz otevřete, jste na cizím webu a pod jeho pravidly. Do toho, co sbírá on, nemáme co mluvit."
         ]
       },
       {
