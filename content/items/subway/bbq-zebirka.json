@@ -1,0 +1,47 @@
+{
+  "slug": "bbq-zebirka",
+  "chainSlug": "subway",
+  "name": "BBQ žebírka",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "carbohydrateG": null,
+          "fibreG": null,
+          "sugarsG": null,
+          "proteinG": null,
+          "saltG": null
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Informace o alergenech (05/2026)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

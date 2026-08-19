@@ -1,0 +1,72 @@
+{
+  "slug": "dvojita-cokolada",
+  "chainSlug": "subway",
+  "name": "Dvojitá čokoláda",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 45,
+          "energyKJ": 876,
+          "energyKcal": 209,
+          "fatG": 9,
+          "saturatesG": 5,
+          "carbohydrateG": 27,
+          "fibreG": 2,
+          "sugarsG": 18,
+          "proteinG": 2,
+          "saltG": 0
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1946,
+          "energyKcal": 465,
+          "fatG": 21,
+          "saturatesG": 12,
+          "carbohydrateG": 60,
+          "fibreG": 4,
+          "sugarsG": 39,
+          "proteinG": 5,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "eggs", "milk", "soybeans"],
+      "mayContain": ["nuts"],
+      "sources": [
+        {
+          "title": "Informace o alergenech (05/2026)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

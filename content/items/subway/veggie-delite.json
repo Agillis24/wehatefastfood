@@ -1,0 +1,64 @@
+{
+  "slug": "veggie-delite",
+  "chainSlug": "subway",
+  "name": "Veggie Delite®",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 167,
+          "energyKJ": 924,
+          "energyKcal": 221,
+          "fatG": 3,
+          "saturatesG": 1,
+          "carbohydrateG": 40,
+          "fibreG": 3,
+          "sugarsG": 7,
+          "proteinG": 9,
+          "saltG": 1
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 555,
+          "energyKcal": 133,
+          "fatG": 2,
+          "saturatesG": 1,
+          "carbohydrateG": 24,
+          "fibreG": 2,
+          "sugarsG": 4,
+          "proteinG": 5,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

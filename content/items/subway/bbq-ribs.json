@@ -1,0 +1,64 @@
+{
+  "slug": "bbq-ribs",
+  "chainSlug": "subway",
+  "name": "BBQ Ribs",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 267,
+          "energyKJ": 1754,
+          "energyKcal": 419,
+          "fatG": 12,
+          "saturatesG": 6,
+          "carbohydrateG": 56,
+          "fibreG": 5,
+          "sugarsG": 20,
+          "proteinG": 18,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 658,
+          "energyKcal": 157,
+          "fatG": 5,
+          "saturatesG": 2,
+          "carbohydrateG": 21,
+          "fibreG": 2,
+          "sugarsG": 8,
+          "proteinG": 7,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "chipotle-cheese-steak",
+  "chainSlug": "subway",
+  "name": "Chipotle Cheese Steak",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 350,
+          "energyKJ": 2594,
+          "energyKcal": 620,
+          "fatG": 27,
+          "saturatesG": 7,
+          "carbohydrateG": 60,
+          "fibreG": 6,
+          "sugarsG": 10,
+          "proteinG": 32,
+          "saltG": 4
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 741,
+          "energyKcal": 177,
+          "fatG": 8,
+          "saturatesG": 2,
+          "carbohydrateG": 17,
+          "fibreG": 2,
+          "sugarsG": 3,
+          "proteinG": 9,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

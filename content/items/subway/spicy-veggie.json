@@ -1,0 +1,64 @@
+{
+  "slug": "spicy-veggie",
+  "chainSlug": "subway",
+  "name": "Spicy Veggie",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 252,
+          "energyKJ": 1593,
+          "energyKcal": 381,
+          "fatG": 11,
+          "saturatesG": 3,
+          "carbohydrateG": 49,
+          "fibreG": 7,
+          "sugarsG": 9,
+          "proteinG": 19,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 633,
+          "energyKcal": 151,
+          "fatG": 4,
+          "saturatesG": 1,
+          "carbohydrateG": 19,
+          "fibreG": 3,
+          "sugarsG": 3,
+          "proteinG": 8,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

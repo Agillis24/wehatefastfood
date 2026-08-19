@@ -1,0 +1,64 @@
+{
+  "slug": "kureci-teriyaki-signature",
+  "chainSlug": "subway",
+  "name": "Kuřecí Teriyaki Signature",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 318,
+          "energyKJ": 2111,
+          "energyKcal": 505,
+          "fatG": 14,
+          "saturatesG": 5,
+          "carbohydrateG": 55,
+          "fibreG": 4,
+          "sugarsG": 10,
+          "proteinG": 38,
+          "saltG": 3
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 954,
+          "energyKcal": 228,
+          "fatG": 8,
+          "saturatesG": 4,
+          "carbohydrateG": 22,
+          "fibreG": 2,
+          "sugarsG": 2,
+          "proteinG": 15,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

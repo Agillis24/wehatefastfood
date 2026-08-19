@@ -1,0 +1,64 @@
+{
+  "slug": "tunak",
+  "chainSlug": "subway",
+  "name": "Tuňák",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 241,
+          "energyKJ": 1526,
+          "energyKcal": 365,
+          "fatG": 13,
+          "saturatesG": 2,
+          "carbohydrateG": 43,
+          "fibreG": 3,
+          "sugarsG": 8,
+          "proteinG": 19,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 635,
+          "energyKcal": 152,
+          "fatG": 5,
+          "saturatesG": 1,
+          "carbohydrateG": 18,
+          "fibreG": 1,
+          "sugarsG": 3,
+          "proteinG": 8,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

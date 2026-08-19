@@ -1,0 +1,64 @@
+{
+  "slug": "chicken-bites-4-pcs",
+  "chainSlug": "subway",
+  "name": "Chicken bites 4 pcs",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 72,
+          "energyKJ": 753,
+          "energyKcal": 180,
+          "fatG": 8.5,
+          "saturatesG": 1,
+          "carbohydrateG": 14,
+          "fibreG": 1,
+          "sugarsG": 1,
+          "proteinG": 11,
+          "saltG": 1
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1046,
+          "energyKcal": 250,
+          "fatG": 12,
+          "saturatesG": 2,
+          "carbohydrateG": 20,
+          "fibreG": 1,
+          "sugarsG": 1,
+          "proteinG": 15,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

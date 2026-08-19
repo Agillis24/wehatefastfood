@@ -1,0 +1,64 @@
+{
+  "slug": "supreme-steak-a-cheese",
+  "chainSlug": "subway",
+  "name": "Supreme Steak & Cheese",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 201,
+          "energyKJ": 1845,
+          "energyKcal": 441,
+          "fatG": 18,
+          "saturatesG": 7,
+          "carbohydrateG": 45,
+          "fibreG": 3,
+          "sugarsG": 10,
+          "proteinG": 24,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 918,
+          "energyKcal": 219,
+          "fatG": 9,
+          "saturatesG": 3,
+          "carbohydrateG": 22,
+          "fibreG": 2,
+          "sugarsG": 5,
+          "proteinG": 12,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

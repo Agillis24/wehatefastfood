@@ -1,0 +1,72 @@
+{
+  "slug": "bbq-kure",
+  "chainSlug": "subway",
+  "name": "BBQ kuře",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 241,
+          "energyKJ": 1306,
+          "energyKcal": 312,
+          "fatG": 3,
+          "saturatesG": 1,
+          "carbohydrateG": 49,
+          "fibreG": 3,
+          "sugarsG": 14,
+          "proteinG": 20,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 543,
+          "energyKcal": 130,
+          "fatG": 1,
+          "saturatesG": 1,
+          "carbohydrateG": 20,
+          "fibreG": 1,
+          "sugarsG": 6,
+          "proteinG": 8,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Informace o alergenech (05/2026)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

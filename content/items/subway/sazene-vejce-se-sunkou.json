@@ -1,0 +1,64 @@
+{
+  "slug": "sazene-vejce-se-sunkou",
+  "chainSlug": "subway",
+  "name": "Sázené vejce se šunkou",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 184,
+          "energyKJ": 1596,
+          "energyKcal": 382,
+          "fatG": 15,
+          "saturatesG": 4,
+          "carbohydrateG": 42,
+          "fibreG": 3,
+          "sugarsG": 7,
+          "proteinG": 22,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 868,
+          "energyKcal": 208,
+          "fatG": 8,
+          "saturatesG": 2,
+          "carbohydrateG": 23,
+          "fibreG": 2,
+          "sugarsG": 4,
+          "proteinG": 12,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

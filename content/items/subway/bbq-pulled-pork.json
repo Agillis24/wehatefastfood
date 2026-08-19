@@ -1,0 +1,64 @@
+{
+  "slug": "bbq-pulled-pork",
+  "chainSlug": "subway",
+  "name": "BBQ Pulled Pork",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": 237,
+          "energyKJ": 1562,
+          "energyKcal": 373,
+          "fatG": 8,
+          "saturatesG": 3,
+          "carbohydrateG": 49,
+          "fibreG": 4,
+          "sugarsG": 14,
+          "proteinG": 21,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 659,
+          "energyKcal": 158,
+          "fatG": 3,
+          "saturatesG": 1,
+          "carbohydrateG": 21,
+          "fibreG": 2,
+          "sugarsG": 6,
+          "proteinG": 10,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Výživové údaje Subway, květen 2026 (střední a východní Evropa)",
+          "publisher": "Subway",
+          "url": "https://www.subway.com/cs-CZ",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-05-01",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
