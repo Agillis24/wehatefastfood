@@ -37,13 +37,15 @@ We read the nutrition disclosures so you do not have to: what is in it, how much
 No diet. No plan. No before-and-after. What you do with the numbers is your business.
 
 Two more pieces of this picture to come.`,
-      cs: `Začínáme.
+      cs: `Ahoj. Jsme We Hate Fast Food.
 
-Čteme nutriční údaje za tebe. Co v tom je, kolik toho je a jaký obchodní důvod měla firma to tam dát. U každého čísla najdeš zdroj a datum, kdy se na něj naposledy díval člověk.
+Budeme rozebírat, co je doopravdy v jídle, které si koupíš u okýnka. Složku po složce. Éčko po éčku.
 
-Žádná dieta. Žádný plán. Žádné „předtím a potom". Co s těmi čísly uděláš, je tvoje věc.
+Nic z toho není tajné. Firmy to musí zveřejnit. Jenom to nikdo nečte, protože je to schované v PDF a vysázené tak, aby se to číst nedalo.
 
-Zbývají dva díly obrázku.`,
+Tak to přečteme za tebe.
+
+Sleduj nás. Teď to teprve začíná.`,
     },
   },
   {
@@ -60,11 +62,13 @@ Zbývají dva díly obrázku.`,
 None of this is secret. It is published, because the law says it has to be. It is also scattered across country-specific PDFs, buried under marketing copy, given per 100 g when you are eating 340 g, and set in type that would embarrass a pharmacist.
 
 We do the boring part.`,
-      cs: `Druhý díl.
+      cs: `O čem to bude.
 
-Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Jenže je to rozeseté po PDF zvlášť pro každou zemi. Schované pod marketingovým textem. Uvedené na 100 g, když sníš 340 g. A vysázené písmem, za které by se styděla i lékárna.
+Fast food není jídlo, které by ti někdo uvařil. Je to výrobek. Navržený tak, aby byl levný, vydržel a chutnal všude stejně. Podle toho vypadá i složení.
 
-My děláme tu nudnou část.`,
+Sůl, cukr, tuk a dlouhý seznam látek, které tam nejsou kvůli chuti, ale kvůli výrobě. Zdravé to není a nikdo to ani netvrdí. Jenom se o tom nemluví nahlas.
+
+My budeme.`,
     },
   },
   {
@@ -83,13 +87,13 @@ We are hostile to an industry: to recipes designed around cost and shelf life, t
 We are not hostile to anyone eating the food. It is cheap, it is fast, it is everywhere, and often it is the only thing within reach.
 
 The snark points up.`,
-      cs: `A je to celé.
+      cs: `Na koho máme vztek.
 
-Máme problém s odvětvím. S recepturami, které se stavějí kolem ceny a trvanlivosti. S porcemi, co vyrostly, zatímco cena zůstala povědomá. S marketingem, který utratí za slovo „čerstvé" víc než kuchyně.
+Na firmy, ne na tebe. Na receptury stavěné kolem ceny a trvanlivosti. Na porce, které vyrostly, zatímco cena zůstala povědomá. Na reklamu, která utratí za slovo „čerstvé" víc než kuchyně.
 
-S nikým, kdo to jí, problém nemáme. Je to levné, rychlé, všude a často je to jediné, co je po ruce.
+Jestli to jíš, nic ti vyčítat nebudeme. Je to levné, rychlé a často jediné, co je po ruce.
 
-Rýpeme směrem nahoru.`,
+Všechno najdeš na wehatefastfood.com. Jsme i na YouTube a na Facebooku. Sleduj nás všude, ať ti nic neuteče.`,
     },
   },
 ];
