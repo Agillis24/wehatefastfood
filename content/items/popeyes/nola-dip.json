@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Nola Dip",
+          "declaration": "SLOŽENÍ: řepkový olej, rajčatový protlak, glukózo-fruktózový sirup, lihový ocet, křenový přípravek (křen, lihový ocet, voda), hořčice (voda, HOŘČICE, lihový ocet, sůl, koření), sladká hořčice (voda, cukr, HOŘČICE, lihový ocet, koření), VAJEČNÝ žloutek, modifikovaný škrob, sůl, hnědá HOŘČIČNÁ mouka, kyselina (E270), zahušťovadlo (E415), přírodní aroma (obsahuje HOŘČICI), koření, karamelový sirup, koncentrát citronové šťávy",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["eggs", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "New Orleans Beignets",
+          "declaration": "SLOŽENÍ: listové těsto s kakaovou náplní (listové těsto (PŠENIČNÁ mouka (LEPEK), margarín (rostlinné oleje a tuky (palmový, slunečnicový, SÓJOVÝ, řepkový, v různých poměrech), voda, emulgátor (monoglyceridy a diglyceridy mastných kyselin), přírodní aroma, okyselovač (kyselina citronová), voda, sůl), kakaový krém (cukr, rostlinný olej (slunečnicový, SÓJOVÝ a/nebo řepkový v různých poměrech), odtučněný kakaový prášek, modifikovaný škrob, emulgátor (SÓJOVÝ lecitin), přírodní aromata)], moučkový cukr: (bílý cukr)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["cereals-gluten", "soybeans"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

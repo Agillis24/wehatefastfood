@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Bold BBQ Fillet Nugget",
+          "declaration": "SLOŽENÍ: marinované kousky kuřecích prsou, obalované a smažené: (marinované kousky kuřecích prsou (kousky kuřecích prsou, voda, sůl, přírodní aroma, kvasničný extrakt, modifikovaný kukuřičný škrob, koření (česnek, cibule), regulátor kyselosti (hydrogenuhličitan sodný), rostlinný olej (palmový), extrakt z koření (bazalka, česnek, rozmarýn a tymián) a rostlinný extrakt (acerola, čaj, granátové jablko a citrusy)), trojobal (mouka: (PŠENIČNÁ mouka, vitální PŠENIČNÝ LEPEK, kypřicí látky: (E500, E450), sůl)), tuk na smažení (hovězí lůj: (hovězí lůj, antioxidant: tokoferol (E306), emulgátor: polysorbát 80 (E433), slunečnicový olej, česnek), rostlinný olej (rostlinný olej, odpěňovač: dimethylpolysiloxan (E900))), směs koření (PŠENIČNÁ mouka, PŠENIČNÝ škrob, modifikovaný PŠENIČNÝ škrob, HOŘČIČNÝ prášek, kukuřičná mouka, lihový ocet v prášku, podmáslí v prášku (MLÉKO), sůl, česnekový prášek, koření, želírující látka (E461), citrusová vláknina, sušená červená paprika, cibulový prášek, kypřicí látky (E450, E500), bylinky (oregano, tymián), přírodní kurkumové aroma, stabilizátor (E461), barviva (E100, E160c)) ), barbecue omáčka (glukózo-fruktózový sirup, rajčatový protlak, lihový ocet, modifikovaný škrob, sůl, melasa, karamelový sirup, koření, uzená sůl (sůl, kouř), regulátor kyselosti (E270), zahušťovadlo (E415))",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["cereals-gluten", "milk", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

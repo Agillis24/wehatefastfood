@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Chocolate Shake",
+          "declaration": "SLOŽENÍ: zmrzlinová vanilková směs (rekonstituované odstředěné MLÉKO, cukr, voda, rostlinný olej (palmový), SYROVÁTKOVÝ prášek (MLÉKO), glukózový sirup, aroma (obsahuje MLÉKO), stabilizátory (E412, E451, E407), sůl, emulgátor (E471), hořká čokoládová poleva (cukr, voda, nízkotučné kakao, kakaová hmota, kyselina (E334), přírodní aroma, emulgátor (E471), konzervant: sorban draselný, sůl)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["milk", "peanuts"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

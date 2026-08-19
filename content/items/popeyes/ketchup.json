@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Ketchup",
+          "declaration": "SLOŽENÍ: rajčata (148 g na 100 g kečupu), ocet, cukr, sůl, extrakty z koření a bylin (obsahují SERLER), koření",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["celery"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

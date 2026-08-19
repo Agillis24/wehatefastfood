@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Swing Onion Sauce",
+          "declaration": "SLOŽENÍ: (řepkový olej, voda, cukr, lihový ocet, HOŘČICE (voda, HOŘČIČNÁ semínka, lihový ocet, sůl, koření), sušená cibule (3 %), sůl, prášek z VAJEČNÉHO žloutku, přírodní aroma, karamelizovaný cukrový sirup, modifikovaný škrob)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["eggs", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

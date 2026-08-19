@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Mardi Gras Dip",
+          "declaration": "SLOŽENÍ: řepkový olej, glukózo-fruktózový sirup, hořčice (voda, HOŘČIČNÁ semínka, lihový ocet, sůl, koření), křenový přípravek (strouhaný křen, lihový ocet, voda), voda, lihový ocet, sladká hořčice 4 % (voda, cukr, HOŘČIČNÁ semínka, lihový ocet, koření), hnědá HOŘČIČNÁ mouka, VAJEČNÝ ŽLOUTEK, sůl, modifikovaný škrob, kyselina (E270), přírodní aroma (obsahuje HOŘČICI), zahušťovadlo (E415), koření, karamelový cukrový sirup, koncentrát citronové šťávy",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["eggs", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

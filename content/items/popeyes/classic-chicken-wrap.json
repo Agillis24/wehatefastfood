@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Classic Chicken Wrap",
+          "declaration": "SLOŽENÍ: marinovaný kuřecí prsní filet, obalovaný a smažený: (marinované kousky kuřecích prsních filetů (kuřecí prsní filety, voda, sůl, přírodní aroma, kvasničný extrakt, modifikovaný kukuřičný škrob, koření (česnek, cibule), regulátor kyselosti (hydrogenuhličitan sodný), rostlinný olej (palmový), extrakt z koření (bazalka, česnek, rozmarýn a tymián) a rostlinný extrakt (acerola, čaj, granátové jablko a citrusy)), trojobal (mouka: (PŠENIČNÁ mouka, vitální PŠENIČNÝ LEPEK, kypřicí látky: (E500, E450), sůl)), tuk na smažení (hovězí lůj: (hovězí lůj, antioxidant: tokoferol (E306), emulgátor: polysorbát 80 (E433), slunečnicový olej, česnek), rostlinný olej (rostlinný olej, odpěňovač: dimethylpolysiloxan (E900))), směs koření (PŠENIČNÁ mouka, PŠENIČNÝ škrob, modifikovaný PŠENIČNÝ škrob, HOŘČIČNÝ prášek, kukuřičná mouka, lihový ocet v prášku, podmáslí v prášku (MLÉKO), sůl, česnekový prášek, koření, želírující látka (E461), citrusová vláknina, sušená červená paprika, cibulový prášek, kypřicí látky (E450, E500), bylinky (oregano, tymián), přírodní kurkumové aroma, stabilizátor (E461), barviva (E100, E160c)) ), PŠENIČNÁ tortilla (PŠENIČNÁ mouka, voda, řepkový olej, stabilizátor: glycerol, emulgátor: mono- a diglyceridy mastných kyselin, sůl, glukóza, kypřicí látka: uhličitany sodné, regulátor kyselosti: kyselina jablečná; přípravek zlepšující mouku: L-cystein), římský salát, rajče, majonéza (řepkový olej, voda, vaječný žloutek, glukózo-fruktózový",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "sulphur-dioxide"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

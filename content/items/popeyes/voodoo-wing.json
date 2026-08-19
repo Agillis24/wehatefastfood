@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Voodoo Wing",
+          "declaration": "SLOŽENÍ: marinovaná kuřecí křidélka, obalovaná a smažená: (marinovaná kuřecí křidélka (kuřecí křídlo, voda, sůl, přírodní aroma, kvasničný extrakt, modifikovaný kukuřičný škrob, koření (česnek, cibule), regulátor kyselosti (hydrogenuhličitan sodný), rostlinný olej (palmový), extrakt z koření (bazalka, česnek, rozmarýn a tymián) a rostlinný extrakt (acerola, čaj, granátové jablko a citrusy)), trojobal (mouka: (PŠENIČNÁ mouka, PŠENIČNÁ sladová mouka), tuk na smažení (hovězí lůj: (hovězí lůj, antioxidant: tokoferol (E306), emulgátor: polysorbát 80 (E433), slunečnicový olej, česnek), rostlinný olej (rostlinný olej, odpěňovač: dimethylpolysiloxan (E900))), směs koření (PŠENIČNÁ mouka, sůl, citronová vláknina, barviva (E100, E160c), stabilizátor (E461), kypřicí látky (E450, E500), cukr, HOŘČIČNÝ olej), sweet chilli omáčka: (cukr, voda, česnek, ananasový nektar 8 % (ananasová šťáva z koncentrátu, voda, regulátor kyselosti: kyselina citronová, sladidlo: sukralóza, vitamín E), lihový ocet, kukuřičný škrob, sůl, pečený česnek, pečená paprika, sambal (kajenský pepř, sůl, lihový ocet, kukuřičný škrob), chilli prášek 1 %, chilli vločky 0,9 %, sušená cibule, kajenský pepř, čerstvé chilli 0,1 %)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["cereals-gluten", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

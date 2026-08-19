@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Voodoo Sauce",
+          "declaration": "SLOŽENÍ: (cukr, voda, česnek, ananasový nektar 8 % (ananasová šťáva z koncentrátu, voda, regulátor kyselosti: kyselina citronová, sladidlo: sukralóza, vitamín E), lihový ocet, kukuřičný škrob, sůl, pečený česnek, pečená paprika, sambal (kajenský pepř, sůl, lihový ocet, kukuřičný škrob), chilli prášek 1 %, chilli vločky 0,9 %, sušená cibule, kajenský pepř, čerstvé chilli 0 1 %)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": [],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

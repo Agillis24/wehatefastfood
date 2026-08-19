@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "7UP Zero Cukru Wielka Dolewka – refill",
+          "declaration": "SLOŽENÍ: voda, oxid uhličitý, kyseliny (kyselina citronová, kyselina jablečná), přírodní citronovo-limetkové aroma, regulátor kyselosti (citráty sodné), konzervant (benzoan sodný), sladidla (aspartam, acesulfam K). Obsahuje zdroj fenylalaninu",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": [],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

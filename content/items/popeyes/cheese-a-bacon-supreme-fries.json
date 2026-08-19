@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Cheese & Bacon Supreme Fries",
+          "declaration": "SLOŽENÍ: bramborové hranolky, okořeněné, smažené (bramborové hranolky, kořeněné, smažené: (brambory (86 %), směs koření (7 %) (rýžová mouka, kukuřičná mouka, modifikovaný škrob (E1412), sůl, kořenící prášek (černý pepř, sladká paprika, chilli paprička), česnekový prášek, kvasničný extrakt, cibulový prášek, kypřicí látky (E450, E500), cukr, prášek ze sušených šalvějových listů, citronová kůra, aroma, zahušťovadlo (E415), antioxidant (E330), extrakt z papriky), slunečnicový olej), tuk na smažení (hovězí lůj: (hovězí lůj, antioxidant: tokoferol (E306), emulgátor: polysorbát 80 (E433), slunečnicový olej, česnek), rostlinný olej (rostlinný olej, odpěňovač: dimethylpolysiloxan (E900)))), cheddar omáčka (sýr čedar, voda, máslo, tvaroh, laktóza, emulgační soli (E339, E452), cukr (sacharóza), jalapenos, barviva (E160a, E160c), modifikovaný škrob (E1422), zahušťovadla (E412, E410), sůl, kyselina: kyselina octová), slanina: (vepřové maso, voda, cukr, sůl, přírodní aroma, vodnaté uzené aroma, med, antioxidant: kyselina askorbová a extrakt z listů rozmarýnu)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["milk"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

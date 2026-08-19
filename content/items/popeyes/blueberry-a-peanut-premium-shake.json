@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Blueberry & Peanut Premium Shake",
+          "declaration": "SLOŽENÍ: zmrzlinová vanilková směs (rekonstituované odstředěné MLÉKO, cukr, voda, rostlinný olej (palmový), SYROVÁTKOVÝ prášek (MLÉKO), glukózový sirup, aroma (obsahuje MLÉKO), stabilizátory (E412, E451, E407), sůl, emulgátor (E471); borůvkový základ (cukr, borůvky (kousky a pyré), přírodní aroma, extrakty z černé mrkve a ibišku, kyselina: kyselina citronová, zahušťovadlo: pektiny, konzervant: sorban draselný); dezertní poleva s arašídovou pastou (cukr, ARAŠÍDOVÁ pasta, slunečnicový olej, syrovátkový prášek (z MLÉKA), emulgátor (lecitiny), sůl, přírodní aroma), šlehačka (ŠLEHAČKA, tekutý cukr, glukózový sirup, hnací plyn (E942, E941), emulgátor (E471), stabilizační látka karagen, přírodní vanilková aroma)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["milk", "peanuts"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

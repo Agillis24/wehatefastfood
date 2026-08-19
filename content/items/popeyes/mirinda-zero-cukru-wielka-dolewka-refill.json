@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Mirinda Zero Cukru Wielka Dolewka – refill",
+          "declaration": "SLOŽENÍ: voda, kyselina (kyselina citronová), modifikovaný škrob, regulátor kyselosti (citráty sodné), aromata, sladidla (aspartam, acesulfam K, sukralóza), antioxidant (kyselina askorbová), konzervant (sorban draselný), stabilizátor (glycerolové estery rostlinné pryskyřice), odpěňovač (dimethylpolysiloxan), barvivo (karoteny).",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": [],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

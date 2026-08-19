@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Spicy Chicken Sandwich",
+          "declaration": "SLOŽENÍ: marinovaný kuřecí prsní filet, obalovaný a smažený: (marinovaný kuřecí prsní filet (kuřecí prsní filet, voda, sůl, přírodní aroma, kvasničný extrakt, modifikovaný kukuřičný škrob, koření (česnek, cibule), regulátor kyselosti (hydrogenuhličitan sodný), rostlinný olej (palmový), extrakt z koření (bazalka, česnek, rozmarýn a tymián), rostlinný extrakt (acerola, čaj, granátové jablko a citrusy)), trojobal (mouka: (PŠENIČNÁ mouka, vitální PŠENIČNÝ LEPEK, kypřicí látky: (E500, E450), sůl)), tuk na smažení (hovězí lůj: (hovězí lůj, antioxidant: tokoferol (E306), emulgátor: polysorbát 80 (E433), slunečnicový olej, česnek), rostlinný olej (rostlinný olej, odpěňovač: dimethylpolysiloxan (E900))), směs koření (PŠENIČNÁ mouka, PŠENIČNÝ škrob, modifikovaný PŠENIČNÝ škrob, HOŘČIČNÝ prášek, kukuřičná mouka, lihový ocet v prášku, podmáslí v prášku (MLÉKO), sůl, česnekový prášek, koření, želírující látka (E461), citrusová vláknina, sušená červená paprika, cibulový prášek, kypřicí látky (E450, E500), bylinky (oregano, tymián), přírodní kurkumové aroma, stabilizátor (E461), barviva (E100, E160c)) ), glazovaná PŠENIČNÁ brioška(mouka PŠENIČNÁ, voda, cukr, slunečnicový olej, poleva 2 % (hrachová bílkovina, dextróza), droždí, jodidovaná sůl (sůl, jodid draselný), přírodní aroma, emulgátor: E472e, antioxidant: E300, alfa-amyláza, mletá kurkuma), pikantní majonéza (rafinovaný slunečnicový olej, voda, VAJÍČKO a žloutek VAJÍČKA, lihový ocet, koření (4,5%), cukr, sůl, barvivo: karoteny, stabilizátory: guarová guma a xanthanová guma, koncentrát citronové šťávy, regulátor kyselosti: kyselina citronová, antioxidant: extrakt bohatý na tokoferoly a přírodní aroma), nakládané okurky",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["cereals-gluten", "eggs", "milk", "mustard"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]

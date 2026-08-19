@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Peanut Shake",
+          "declaration": "SLOŽENÍ: vanilková zmrzlinová směs (odtučněné MLÉKO v prášku, cukr, voda, rostlinný olej (palmový), syrovátka v prášku (MLÉKO), glukózový sirup, aromata (obsahuje MLÉKO), dextróza, stabilizátory (E412, E451, E407), sůl, emulgátor (E471)), dezertní omáčka s arašídovou pastou (cukr, pasta z ARAŠÍDŮ, slunečnicový olej, syrovátka v prášku (z MLÉKA), emulgátor (lecitiny), sůl, přírodní aroma), šlehačka (SMETANA, tekutý cukr, glukózový sirup, hnací plyn (E942, E941), emulgátor (E471), stabilizační látka karagenan, přírodní vanilkové aroma)",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": ["milk", "peanuts"],
@@ -38,6 +45,14 @@
           "publisher": "Popeyes ČR",
           "url": "https://www.popeyeschicken.cz/cs/allergens",
           "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Wykaz składników / Seznam složení (PL a CZ, 10.02.2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2026-02-10",
           "type": "company-disclosure"
         }
       ]
