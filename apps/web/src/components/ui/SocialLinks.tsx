@@ -19,9 +19,18 @@ import { SOCIAL } from '@/lib/site';
  */
 
 const PATHS: Record<string, string> = {
-  // Rounded screen with a play triangle.
+  /*
+   * Rounded screen with a play triangle.
+   *
+   * DRAWN TO THE SAME OPTICAL HEIGHT AS THE OTHER TWO. The first version ran
+   * from y=3.8 to y=16.2, so it was 12.4 units tall in a box where Instagram
+   * and Facebook are 18, and it was the widest of the three. Next to them it
+   * read as squashed. A play button is genuinely wider than it is tall, so it
+   * cannot be square, but 15 units carries the same weight as the neighbours
+   * instead of sitting in the middle looking stepped on.
+   */
   youtube:
-    'M2 7.2a3 3 0 0 1 2.5-3A62 62 0 0 1 12 3.8a62 62 0 0 1 7.5.4A3 3 0 0 1 22 7.2c.2 1.6.2 3.9 0 5.6a3 3 0 0 1-2.5 3 62 62 0 0 1-7.5.4 62 62 0 0 1-7.5-.4 3 3 0 0 1-2.5-3c-.2-1.7-.2-4 0-5.6Z M10 8.2v5.6l4.8-2.8Z',
+    'M6.4 4.5h11.2A4.4 4.4 0 0 1 22 8.9v6.2a4.4 4.4 0 0 1-4.4 4.4H6.4A4.4 4.4 0 0 1 2 15.1V8.9a4.4 4.4 0 0 1 4.4-4.4Z M10 8.4v7.2l6.2-3.6Z',
   // Rounded square, lens, and the corner dot.
   instagram:
     'M7.4 3h9.2A4.4 4.4 0 0 1 21 7.4v9.2a4.4 4.4 0 0 1-4.4 4.4H7.4A4.4 4.4 0 0 1 3 16.6V7.4A4.4 4.4 0 0 1 7.4 3Z M12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Z M17.3 6.1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z',

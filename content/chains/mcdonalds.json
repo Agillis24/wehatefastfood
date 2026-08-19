@@ -3,7 +3,7 @@
   "name": "McDonald's",
   "hqCountry": "US",
   "marketsCovered": ["CA", "CZ", "US"],
-  "oneLiner": "Největší řetězec na světě. Čísla zveřejňuje, protože musí — a dělá všechno pro to, aby se z nich nedalo nic vyčíst.",
+  "oneLiner": "Největší řetězec na světě zveřejňuje čísla, protože musí. U amerických položek ale neuvádí hmotnost porce.",
   "longIntro": "McDonald's výživové údaje zveřejňuje, protože mu to ve většině zemí, kde prodává, ukládá zákon. Co nedělá, je zpřístupnit je k porovnání. Ve Spojených státech leží v kalkulačce, která ukazuje jednu položku po druhé, jen na porci — a hmotnost té porce neuvádí vůbec. To není maličkost: bez gramáže nejde spočítat hodnota na sto gramů a americké položky se proto nedají porovnat ani mezi sebou, ani s ničím jiným. Kanadská kalkulačka gramáž uvádí, a je proto o třídu použitelnější. V Česku firma nezveřejňuje souhrnný dokument žádný: výživové hodnoty jsou po jedné na produktových stránkách, zatímco gramáže a alergeny jsou v ceníku jednotlivých restaurací. Držíme proto pro každý trh to, co se z něj dá poctivě získat, a u každého čísla je napsáno, které země se týká a kdy jsme ho četli. Pro české položky zatím máme alergeny a hmotnosti porcí, výživové hodnoty ne — a než u nich bude něco stát, bude tam napsáno, odkud to je.",
   "accentToken": "accent-1",
   "dataStatus": "partial",

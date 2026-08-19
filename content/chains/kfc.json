@@ -3,7 +3,7 @@
   "name": "KFC",
   "hqCountry": "US",
   "marketsCovered": ["CZ"],
-  "oneLiner": "Smažené kuře a k němu tabulka, ze které se dá počítat, aniž byste si cokoli domýšleli. To v tomhle oboru není samozřejmost.",
+  "oneLiner": "Tabulku má úplnou a dá se z ní počítat, aniž byste si něco domýšleli. V tomhle oboru to není samozřejmost.",
   "longIntro": "KFC vydává pro český trh jeden dokument, ve kterém je celé menu najednou: u každé položky hodnoty na 100 gramů i na porci, hmotnost té porce, a k tomu tabulka alergenů. Zní to jako minimum, ale ve srovnání s tím, co dělá konkurence, to minimum není. Americká kalkulačka McDonald's neuvádí hmotnost porce vůbec, takže z jejích čísel nejde spočítat hodnota na sto gramů a nejde je porovnat s ničím. Tady jde všechno. Sůl je navíc uvedená přímo jako sůl, ne jako sodík, který si má člověk sám vynásobit dvěma a půl. Čísla na téhle stránce popisují český trh a pocházejí z dokumentu, který sám uvádí, že platí ke stavu v červenci 2026. Co v něm není a co bychom chtěli: seznamy složek. Alergeny víme, ale co přesně je v tom trojobalu, nám KFC neříká.",
   "accentToken": "accent-2",
   "dataStatus": "partial",
