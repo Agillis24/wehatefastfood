@@ -210,7 +210,8 @@ function caption(f) {
   const checked = new Date(variant.verifiedOn).toLocaleDateString('cs-CZ');
   const tail = [
     '',
-    `Čísla jsou od ${chain.name}, naposledy ověřená ${checked}. Výpočet i zdroj najdeš na ${SITE}.`,
+    `Údaje zveřejňuje ${chain.name}. Naposledy ověřeno ${checked}. ` +
+      `Výpočet i zdroj najdete na ${SITE}.`,
     '',
     TAGS,
   ];
@@ -225,7 +226,8 @@ function caption(f) {
       `Z tuků, sacharidů a bílkovin na tomtéž řádku ale vychází ${cz(f.macro)} kJ. ` +
         `Rozdíl je ${cz(f.gap)} kJ, tedy ${pct} procent.`,
       '',
-      'Které z těch dvou čísel je špatně, nevíme. Obě jsou od nich a hádat nebudeme.',
+      'Které z těch dvou čísel je špatně, nevíme. Obě uvádí sama společnost ' +
+        'a dohadovat se za ni nebudeme.',
       ...tail,
     ].join('\n');
   }
@@ -243,7 +245,7 @@ function caption(f) {
       `Referenční příjem pro dospělého je ${cz(f.reference)} g na celý den. ` +
         `Tohle je ${cz(times)}násobek, v jedné porci.`,
       '',
-      'To číslo si nevymýšlíme ani nepřepočítáváme. Zveřejnila ho ta firma.',
+      'Údaj zveřejnila sama společnost. Nepřepočítáváme ho ani nezaokrouhlujeme.',
       ...tail,
     ].join('\n');
   }
@@ -304,7 +306,7 @@ async function build(date, all) {
         { label: 'FIRMA UVÁDÍ', value: `${cz(round(serving.energyKJ))} kJ` },
         { label: 'Z TUKŮ, SACHARIDŮ A BÍLKOVIN VYCHÁZÍ', value: `${cz(f.macro)} kJ`, accent: true },
       ],
-      note: 'Které z nich je špatně, nevíme. Obě jsou od nich a hádat nebudeme.',
+      note: 'Které z nich je špatně, nevíme. Obě uvádí sama společnost.',
       chain: chain.name,
       item: item.name,
       source: attribution,

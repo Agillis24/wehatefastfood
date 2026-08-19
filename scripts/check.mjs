@@ -65,19 +65,12 @@ const GATES = [
     why: 'every fact carries a source, every reference resolves',
   },
   {
-    /*
-     * Reads apps/web/out, so it only does anything after a build. It skips
-     * quietly rather than failing on a fresh clone; CI builds before checking.
-     *
-     * The indexing flag is passed through because the DEPLOYED site is open.
-     * Without it the gate reads a correctly-built export and reports all 857
-     * pages as "indexable, but the flag was not set", which is a failure about
-     * the checker's own environment rather than about the site. CI sets the
-     * same value for the build and for this gate.
-     */
+    // Reads apps/web/out, so it only does anything after a build. It skips
+    // quietly rather than failing on a fresh clone; CI builds before checking.
+    // It reads whether the build is open OUT OF THE BUILD, so no environment
+    // has to be arranged here for it to agree with what was rendered.
     name: 'seo',
     args: ['scripts/seo-check.mjs'],
-    env: { NEXT_PUBLIC_ALLOW_INDEXING: '1' },
     why: 'every exported page needs a canonical, Open Graph and a reflexive hreflang set',
   },
   {

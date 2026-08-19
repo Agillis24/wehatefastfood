@@ -16,7 +16,7 @@
  * clone before anything has been built. CI builds first.
  */
 
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -42,8 +42,27 @@ const LOCALES = (
   .filter(Boolean);
 const ORIGIN = process.env['NEXT_PUBLIC_SITE_ORIGIN'] ?? 'https://www.wehatefastfood.com';
 
-/** Whether THIS build was meant to be open. Both directions are then checked. */
-const OPEN = process.env['NEXT_PUBLIC_ALLOW_INDEXING'] === '1';
+/**
+ * Whether THIS build is open, read from the build rather than from the shell.
+ *
+ * It used to read NEXT_PUBLIC_ALLOW_INDEXING out of the environment, which is
+ * a different thing from what the export in front of it actually says. A local
+ * build without the flag, checked in a shell with it, reported all 857 pages as
+ * "still says noindex in a build with the flag set" - a contradiction invented
+ * entirely by the checker.
+ *
+ * The export knows. Next writes "index, follow" or "noindex" into every page it
+ * renders, so the home page is the build's own answer. The consistency check
+ * below is then a real one: given that these pages are open, does robots.txt
+ * agree, and is anything still carrying noindex.
+ */
+const OPEN = (() => {
+  const home = path.join(OUT, 'cs', 'index.html');
+  if (!existsSync(home)) return process.env['NEXT_PUBLIC_ALLOW_INDEXING'] === '1';
+  const html = readFileSync(home, 'utf8');
+  const meta = /<meta[^>]+name="robots"[^>]+content="([^"]+)"/i.exec(html);
+  return !(meta?.[1] ?? '').toLowerCase().includes('noindex');
+})();
 
 /**
  * The 404 page is not a document about anything, so it has no canonical URL and
@@ -181,10 +200,10 @@ for (const file of files) {
   const saysNoindex = robots.includes('noindex');
 
   if (OPEN && saysNoindex) {
-    fail('still says noindex in a build with NEXT_PUBLIC_ALLOW_INDEXING=1');
+    fail('still says noindex in a build whose other pages are indexable');
   }
   if (!OPEN && !saysNoindex) {
-    fail('indexable, but NEXT_PUBLIC_ALLOW_INDEXING was not set for this build');
+    fail('indexable in a build whose home page is not');
   }
 
   // A well-formed absolute URL pointing at a file that was never generated is
