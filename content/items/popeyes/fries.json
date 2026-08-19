@@ -1,0 +1,46 @@
+{
+  "slug": "fries",
+  "chainSlug": "popeyes",
+  "name": "Fries",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny / Allergens (PL and CZ market, stav březen 2026)",
+          "publisher": "Popeyes ČR",
+          "url": "https://www.popeyeschicken.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
