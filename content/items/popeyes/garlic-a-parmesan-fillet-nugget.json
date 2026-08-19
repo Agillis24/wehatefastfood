@@ -36,7 +36,7 @@
         }
       ],
       "ingredientRefs": [],
-      "additiveRefs": [],
+      "additiveRefs": ["e500-sodium-carbonates"],
       "allergens": ["cereals-gluten", "eggs", "milk", "mustard"],
       "mayContain": [],
       "sources": [

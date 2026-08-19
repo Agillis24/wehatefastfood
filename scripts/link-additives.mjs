@@ -50,13 +50,67 @@ const CLASSES = [
   'firming agents?',
   'sweeteners?',
   'acids?',
+  /*
+   * The Czech names for the same classes. Without them this script could not
+   * match a single Czech declaration whatever else it did, and Czech
+   * declarations are now most of what this site holds.
+   */
+  'regul[áa]tor kyselosti',
+  'stabiliz[áa]tor(?:y)?',
+  'antioxidant(?:y)?',
+  'konzervant(?:y)?',
+  'emulg[áa]tor(?:y)?',
+  'emulga[čc]n[íi] soli',
+  'barvivo',
+  'barviva',
+  'zv[ýy]raz[ňn]ova[čc] chuti',
+  'zahu[šs][ťt]ovadlo',
+  'kyp[řr]ic[íi] l[áa]tk(?:a|y)',
+  'protisp[ée]kav[áa] l[áa]tka',
+  'zvlh[čc]uj[íi]c[íi] l[áa]tka',
+  'sladidlo',
+  'kyselina',
+  'odp[ěe][ňn]ova[čc]',
 ].join('|');
-const NAMED_ADDITIVE = new RegExp(String.raw`\b(?:${CLASSES})\s*:\s*([^,;.]+)`, 'gi');
 
+/*
+ * TWO SHAPES, NOT ONE. English declarations write "antioxidant: tocopherols";
+ * Czech ones write "regulátor kyselosti (hydrogenuhličitan sodný)". Only the
+ * colon form was recognised, so every Czech declaration read as carrying no
+ * additives at all. The parenthesised form stops at the closing bracket, which
+ * the colon form must not do - "tokoferol (E306)" is one substance there.
+ */
+const NAMED_COLON = new RegExp(String.raw`\b(?:${CLASSES})\s*:\s*([^,;.]+)`, 'gi');
+const NAMED_PAREN = new RegExp(String.raw`\b(?:${CLASSES})\s*\(\s*([^(),;]+)\)`, 'gi');
+
+/*
+ * Czech letters are FOLDED, not deleted. Stripping everything outside [a-z0-9]
+ * turned "hydrogenuhličitan sodný" into "hydrogenuhli itan sodn ", so a Czech
+ * synonym in the decoder could never match a Czech declaration no matter what
+ * either of them said.
+ */
+const FOLD = {
+  á: 'a',
+  č: 'c',
+  ď: 'd',
+  é: 'e',
+  ě: 'e',
+  í: 'i',
+  ň: 'n',
+  ó: 'o',
+  ř: 'r',
+  š: 's',
+  ť: 't',
+  ú: 'u',
+  ů: 'u',
+  ý: 'y',
+  ž: 'z',
+};
 const norm = (s) =>
   s
     .toLowerCase()
     .replace(/\(.*?\)/g, ' ')
+    .replace(/[áčďéěíňóřšťúůýž]/g, (c) => FOLD[c] ?? c)
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
@@ -88,7 +142,11 @@ for (const chain of readdirSync(itemsDir)) {
     for (const variant of rec.variants) {
       const refs = new Set();
       for (const comp of variant.components ?? []) {
-        for (const m of comp.declaration.matchAll(NAMED_ADDITIVE)) {
+        const hits = [
+          ...comp.declaration.matchAll(NAMED_COLON),
+          ...comp.declaration.matchAll(NAMED_PAREN),
+        ];
+        for (const m of hits) {
           const substance = m[1].trim();
           const slug = bySynonym.get(norm(substance));
           if (slug) {
