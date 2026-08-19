@@ -29,6 +29,10 @@ export function chainsPath(locale: string): string {
   return `/${locale}/chains`;
 }
 
+export function decoderPath(locale: string): string {
+  return `/${locale}/decoder`;
+}
+
 export function homePath(locale: string): string {
   return `/${locale}`;
 }

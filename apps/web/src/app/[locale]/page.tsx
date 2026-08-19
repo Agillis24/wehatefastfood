@@ -8,8 +8,7 @@ import { Disclaimers, SiteFooter, SiteHeader } from '@/components/ui/Chrome';
 import { SiteStructuredData } from '@/components/content/StructuredData';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { getContent } from '@/lib/content';
-import { chainPath, chainsPath, itemPath } from '@/lib/url';
-import { grams } from '@/lib/format';
+import { chainPath, chainsPath, decoderPath } from '@/lib/url';
 import { pageMetadata } from '@/lib/metadata';
 
 export function generateStaticParams() {
@@ -42,53 +41,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const repo = await getContent();
   const chains = await repo.listChains();
 
-  /*
-   * The single most sugar in one portion, anywhere in the repo, found rather
-   * than chosen. Picking an item by hand would mean editing this file every
-   * time a bigger one lands, and the version that is not edited is the version
-   * that lies.
-   */
-  const items = await repo.listItems();
-  let best: Highlight | null = null;
-  let most = 0;
-  for (const item of items) {
-    for (const variant of item.variants) {
-      const panel = variant.nutrition.find((n) => n.basis === 'per-serving');
-      const sugars = panel?.sugarsG;
-      if (sugars == null || sugars <= most) continue;
-      const chain = chains.find((c) => c.slug === item.chainSlug);
-      if (!chain) continue;
-      most = sugars;
-      best = {
-        grams: grams(locale, sugars),
-        item: item.name,
-        chain: chain.name,
-        market: variant.market,
-        href: itemPath(locale, item.chainSlug, item.slug, variant.market),
-      };
-    }
-  }
-
-  return <HomeView locale={locale} chains={[...chains]} highlight={best} />;
+  return <HomeView locale={locale} chains={[...chains]} />;
 }
 
-type Highlight = {
-  grams: string;
-  item: string;
-  chain: string;
-  market: string;
-  href: string;
-};
-
-function HomeView({
-  locale,
-  chains,
-  highlight,
-}: {
-  locale: string;
-  chains: Chain[];
-  highlight: Highlight | null;
-}) {
+function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
   const t = useTranslations('home');
   const brand = useTranslations('brand');
   const nav = useTranslations('nav');
@@ -127,26 +83,6 @@ function HomeView({
           cannot be invented, and the scaffold notice is what shows when there
           is genuinely nothing - which is the only state in which it is true.
         */}
-        {highlight ? (
-          <section className="flex flex-col gap-3">
-            <p className="font-data text-xs tracking-widest uppercase">{t('highlight.label')}</p>
-            <p className="max-w-prose font-display text-3xl font-extrabold">
-              {t('highlight.sugar', { grams: highlight.grams, item: highlight.item })}
-            </p>
-            <p className="max-w-prose text-[var(--surface-muted)]">
-              {t('highlight.caveat', { chain: highlight.chain, market: highlight.market })}
-            </p>
-            <Link href={highlight.href} className="underline underline-offset-4">
-              {t('highlight.link')}
-            </Link>
-          </section>
-        ) : (
-          <section className="flex flex-col gap-3">
-            <h2 className="font-display text-3xl font-extrabold">{t('scaffold.title')}</h2>
-            <p className="max-w-prose text-[var(--surface-muted)]">{t('scaffold.body')}</p>
-          </section>
-        )}
-
         <section className="flex flex-col gap-4">
           <h2 className="font-display text-3xl font-extrabold">{nav('chains')}</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -170,26 +106,30 @@ function HomeView({
           </Link>
         </section>
 
-        <section className="flex flex-col gap-2">
+        {/*
+          The decoder section now LEADS SOMEWHERE. It used to be a heading and a
+          sentence with nothing under them, which reads as a section that failed
+          to load rather than one you are meant to click.
+        */}
+        <section className="flex flex-col gap-3">
           <h2 className="font-display text-3xl font-extrabold">{t('decoder.title')}</h2>
           <p className="max-w-prose text-[var(--surface-muted)]">{t('decoder.body')}</p>
+          <Link
+            href={decoderPath(locale)}
+            className="font-data self-start border-[1.5px] border-ink px-4 py-3 text-sm"
+          >
+            {nav('decoder')}
+          </Link>
         </section>
 
-        {/* Reserved for the YouTube channel. Built now, empty until it exists. */}
-        <section className="flex flex-col gap-2">
-          <h2 className="font-display text-3xl font-extrabold">{t('video.title')}</h2>
-          <p className="border-[1.5px] border-dashed border-[var(--surface-rule)] p-4 text-[var(--surface-muted)]">
-            {t('video.empty')}
-          </p>
-        </section>
-
-        {/* Disabled rather than faked: we store nothing, so we ask for nothing. */}
-        <section className="flex flex-col gap-2">
-          <h2 className="font-display text-3xl font-extrabold">{t('newsletter.title')}</h2>
-          <p className="border-[1.5px] border-dashed border-[var(--surface-rule)] p-4 text-[var(--surface-muted)]">
-            {t('newsletter.disabled')}
-          </p>
-        </section>
+        {/*
+          THE EMPTY SECTIONS ARE GONE, not restyled. A dashed box saying the
+          YouTube channel does not exist yet, and another saying the newsletter
+          is not connected to anything, are honest but they are also the two
+          largest things on the page - a visitor's first impression became a
+          list of what we have not built. They go back when there is something
+          to put in them.
+        */}
 
         <div className="rule-strike" aria-hidden="true" />
         <Disclaimers withMedical={false} />
