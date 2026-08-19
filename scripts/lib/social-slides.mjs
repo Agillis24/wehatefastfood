@@ -33,7 +33,9 @@ const esc = (v) =>
 
 export const SLIDE = { width: 1080, height: 1350 };
 
-const DISPLAY = 'Archivo, Arial Black, Helvetica, sans-serif';
+/* The family name the FILE declares, not what the family is called.
+ * See scripts/lib/fonts.mjs. */
+const DISPLAY = "'Archivo SemiBold', Archivo, sans-serif";
 const MONO = 'IBM Plex Mono, Consolas, monospace';
 
 /**
@@ -100,7 +102,7 @@ function frame(body, c) {
 function footer(c, y = SLIDE.height - 64) {
   return (
     text(72, y, 30, c.paper, 'WE', { font: DISPLAY, weight: 900, spacing: 1 }) +
-    text(126, y, 30, c.pink, 'HATE FAST FOOD', { font: DISPLAY, weight: 900, spacing: 1 }) +
+    text(138, y, 30, c.pink, 'HATE FAST FOOD', { font: DISPLAY, weight: 900, spacing: 1 }) +
     text(SLIDE.width - 72, y, 26, c.greyLight, 'wehatefastfood.com', { anchor: 'end' })
   );
 }

@@ -122,7 +122,8 @@ export function specimenCardSvg(card, preset, tokens, surface = 'paper') {
   const inner = width - pad * 2;
   const k = width / 1200;
 
-  const display = 'Archivo, Arial Black, Helvetica, sans-serif';
+  // scripts/lib/fonts.mjs: the file declares itself "Archivo SemiBold".
+  const display = "'Archivo SemiBold', Archivo, sans-serif";
   const mono = 'IBM Plex Mono, Consolas, monospace';
 
   const text = (x, y, size, fill, value, opts = {}) =>

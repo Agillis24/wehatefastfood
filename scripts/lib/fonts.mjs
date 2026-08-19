@@ -36,12 +36,31 @@ export function resvgFonts() {
     );
   }
 
+  /*
+   * THE OPTION NAMES MATTER AND TWO OF THEM WERE WRONG.
+   *
+   * resvg-js 2.6.2 takes `defaultFontFamily` as a STRING and has separate
+   * `sansSerifFamily` and `monospaceFamily` keys. This passed an object
+   * `{ sansSerif, monospace }`, which is not a shape the option accepts, so it
+   * was discarded and every generic fell back to resvg's own serif.
+   *
+   * AND THE FAMILY NAMES ARE NOT THE FILE NAMES. Archivo.ttf declares its
+   * family as "Archivo SemiBold" and PublicSans.ttf as "Public Sans Thin",
+   * because both are variable fonts named after the instance they were cut
+   * from. Asking for "Archivo" matched nothing.
+   *
+   * Between the two faults nothing drawn through resvg has ever used the brand
+   * type. It went unnoticed for as long as it did because every image this
+   * pipeline rendered was ASCII, where a serif fallback reads as a design
+   * choice rather than a bug. The first Czech display text made it obvious:
+   * "Patatas s pepřovou omáčkou" came out serif on a slide whose next line was
+   * not.
+   */
   return {
     loadSystemFonts: false,
     fontFiles: FILES,
-    defaultFontFamily: {
-      sansSerif: 'Archivo',
-      monospace: 'IBM Plex Mono',
-    },
+    defaultFontFamily: 'Archivo SemiBold',
+    sansSerifFamily: 'Archivo SemiBold',
+    monospaceFamily: 'IBM Plex Mono',
   };
 }
