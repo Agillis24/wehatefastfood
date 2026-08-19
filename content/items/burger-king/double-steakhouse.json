@@ -6,7 +6,7 @@
   "variants": [
     {
       "market": "CZ",
-      "verifiedOn": "2026-08-18",
+      "verifiedOn": "2026-08-19",
       "nutrition": [
         {
           "basis": "per-serving",
@@ -46,7 +46,7 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["cereals-gluten", "milk", "mustard"],
+      "allergens": ["cereals-gluten-wheat", "milk", "mustard"],
       "mayContain": [],
       "sources": [
         {
@@ -55,6 +55,13 @@
           "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
           "retrievedOn": "2026-08-18",
           "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Tabulka alergenů (stav květen 2026)",
+          "publisher": "Burger King ČR",
+          "url": "https://burgerking.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

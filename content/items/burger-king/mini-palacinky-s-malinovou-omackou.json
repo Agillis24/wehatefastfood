@@ -1,0 +1,53 @@
+{
+  "slug": "mini-palacinky-s-malinovou-omackou",
+  "chainSlug": "burger-king",
+  "name": "Mini palačinky s malinovou omáčkou",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [
+        "cereals-gluten-barley",
+        "cereals-gluten-oats",
+        "cereals-gluten-spelt",
+        "cereals-gluten-wheat",
+        "eggs",
+        "milk"
+      ],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Tabulka alergenů (stav květen 2026)",
+          "publisher": "Burger King ČR",
+          "url": "https://burgerking.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

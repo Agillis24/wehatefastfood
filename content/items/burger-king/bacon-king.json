@@ -6,7 +6,7 @@
   "variants": [
     {
       "market": "CZ",
-      "verifiedOn": "2026-08-18",
+      "verifiedOn": "2026-08-19",
       "nutrition": [
         {
           "basis": "per-serving",
@@ -46,8 +46,15 @@
       "status": "partial",
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["celery", "cereals-gluten", "eggs", "milk", "sesame"],
-      "mayContain": [],
+      "allergens": [
+        "cereals-gluten-barley",
+        "cereals-gluten-wheat",
+        "eggs",
+        "milk",
+        "mustard",
+        "sesame"
+      ],
+      "mayContain": ["soybeans"],
       "sources": [
         {
           "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
@@ -55,6 +62,13 @@
           "url": "https://chodovska.burgerkingteam.cz/public/pdf/cz/nutrition.pdf",
           "retrievedOn": "2026-08-18",
           "publishedOn": "2017-01-31",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Tabulka alergenů (stav květen 2026)",
+          "publisher": "Burger King ČR",
+          "url": "https://burgerking.cz/cs/allergens",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

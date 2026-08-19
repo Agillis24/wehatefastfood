@@ -3,11 +3,18 @@
   "name": "Burger King",
   "hqCountry": "US",
   "marketsCovered": ["CZ"],
-  "oneLiner": "Jediné, co o svém jídle v Česku zveřejňuje, je tabulka z ledna 2017. A ta si ve třetině položek protiřečí.",
-  "longIntro": "Burger King má pro český trh jeden dokument s výživovými hodnotami a alergeny. Sám o sobě říká, že jeho čísla odpovídají „stavu ke dni tisku – leden 2017“, a od té chvíle uplynulo devět a půl roku. Není to zapomenutý soubor: je to přesně ten dokument, na který firma odkazuje dnes, a stáhli jsme si ho z jejího webu, abychom si ověřili, že jde o tentýž soubor. Horší než jeho stáří je ale to, že si protiřečí. U sedmnácti ze čtyřiceti devíti produktů nesedí uvedená energie na tuk, sacharidy a bílkoviny na tomtéž řádku — někdy o polovinu. U jednoho výrobku je uvedeno víc nasycených mastných kyselin než tuku celkem, což je jako tvrdit, že část je větší než celek. A jeden řádek je nadepsaný „na 100 g“, přičemž ve sloupci porce stojí 144. Nic z toho jsme neopravili a nic nevynechali. Přepisujeme, co firma zveřejnila, a u každé položky, které se to týká, ukazujeme obě čísla vedle sebe i výpočet mezi nimi, aby si to čtenář mohl přepočítat sám. Které z těch čísel je to špatné, nevíme — a hádat to by znamenalo vymyslet si fakt, abychom vysvětlili jiný.",
+  "oneLiner": "Tabulku alergenů má z května 2026. Tabulku výživových hodnot z ledna 2017. Rozdíl je devět let.",
+  "longIntro": "Burger King vydává pro český trh dva dokumenty a mezi nimi je devět let. Seznam alergenů je aktuální — hlásí se ke květnu 2026, pokrývá 96 výrobků a jako jediný na tomhle webu rozepisuje lepek na konkrétní obilovinu: pšenice, ječmen, oves, špalda. To je poctivá práce. Tabulka výživových hodnot je z ledna 2017, uvádí 49 výrobků a firma na ni odkazuje dodnes. Že jsou obě na stejném webu vedle sebe, je samo o sobě odpověď na otázku, které z těch dvou tabulek se firma opravdu věnuje: ta, za kterou se ručí, se udržuje; ta, která jen informuje, zůstala stát. A ta starší si navíc protiřečí. U sedmnácti ze čtyřiceti devíti výrobků nesedí uvedená energie na tuk, sacharidy a bílkoviny na tomtéž řádku, někdy o polovinu. U Big Kingu XXL je uvedeno víc nasycených mastných kyselin než tuku celkem, což je jako tvrdit, že část je větší než celek. Jeden řádek je nadepsaný „na 100 g“ a ve sloupci porce má 144. Nic z toho jsme neopravili: u každé dotčené položky ukazujeme obě čísla vedle sebe i výpočet mezi nimi, aby si to čtenář přepočítal sám. Které z nich je špatné, nevíme, a hádat by znamenalo vymyslet si fakt, abychom vysvětlili jiný. Dvaadvacet výrobků je jen ve staré tabulce a v té nové chybí — buď se přestaly prodávat, nebo je někdo zapomněl doplnit, a rozhodovat mezi tím nám nepřísluší.",
   "accentToken": "accent-3",
   "dataStatus": "partial",
   "sources": [
+    {
+      "title": "Tabulka alergenů (stav květen 2026)",
+      "publisher": "Burger King ČR",
+      "url": "https://burgerking.cz/cs/allergens",
+      "retrievedOn": "2026-08-19",
+      "type": "company-disclosure"
+    },
     {
       "title": "Tabulka výživových hodnot a alergenů (stav leden 2017)",
       "publisher": "Burger King ČR",
