@@ -41,7 +41,7 @@ import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
 import { resvgFonts } from './lib/fonts.mjs';
 import { createRepository, pickBasis } from '@wff/content';
-import { specimenCardSvg } from './lib/specimen-card.mjs';
+import { SLIDE, carouselSvg } from './lib/social-slides.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'exports', 'social', 'daily');
@@ -284,26 +284,76 @@ async function build(date, all) {
   ).css;
 
   const { item, chain, variant, serving } = f.row;
-  const card = {
-    specimenId: `${item.chainSlug.slice(0, 3).toUpperCase()}-${variant.market}`,
-    chainName: chain.name,
-    itemName: item.name,
-    market: variant.market,
-    verifiedOn: variant.verifiedOn,
-    sugarG: serving.sugarsG ?? null,
-    saltG: serving.saltG ?? null,
-    saturatesG: serving.saturatesG ?? null,
-    bands: [],
-  };
+  const checked = new Date(variant.verifiedOn).toLocaleDateString('cs-CZ');
 
-  /* Portrait only. Instagram and Facebook get the same picture and the same
-   * words, because one account speaking two visual languages reads as two. */
-  const svg = specimenCardSvg(card, 'portrait', tokens, 'paper');
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: 1080 }, font: resvgFonts() })
-    .render()
-    .asPng();
+  /*
+   * The slides carry the SAME finding the caption argues, which the Specimen
+   * Card could not. That card drew whichever three nutrients the item happened
+   * to hold, so a post about 838 kJ against 51 kJ was illustrated with
+   * "SUGAR 0.065 g". Here picture and words come from one object.
+   */
+  const attribution = `Údaje zveřejnila ${chain.name}. Naposledy ověřeno ${checked}.`;
+  let slides;
+  if (f.kind === 'contradiction') {
+    const pct = Math.round((f.gap / serving.energyKJ) * 100);
+    slides = {
+      hero: `${pct} %`,
+      heroSub: 'Tak moc se liší dvě čísla, která firma uvádí na jednom řádku.',
+      title: 'Dvě čísla, jeden výrobek',
+      rows: [
+        { label: 'FIRMA UVÁDÍ', value: `${cz(round(serving.energyKJ))} kJ` },
+        { label: 'Z TUKŮ, SACHARIDŮ A BÍLKOVIN VYCHÁZÍ', value: `${cz(f.macro)} kJ`, accent: true },
+      ],
+      note: 'Které z nich je špatně, nevíme. Obě jsou od nich a hádat nebudeme.',
+      chain: chain.name,
+      item: item.name,
+      source: attribution,
+    };
+  } else if (f.kind === 'reference') {
+    const n = f.nutrient;
+    const times = round(f.value / f.reference, 1);
+    slides = {
+      hero: `${cz(times)}×`,
+      heroSub: `Tolikrát denní příjem ${n.label}. V jedné porci.`,
+      title: 'Jedna porce proti celému dni',
+      rows: [
+        { label: 'V JEDNÉ PORCI', value: `${cz(round(f.value, 1))} g`, accent: true },
+        { label: 'REFERENČNÍ PŘÍJEM NA CELÝ DEN', value: `${cz(f.reference)} g` },
+      ],
+      note: 'Referenční příjem je z přílohy XIII nařízení 1169/2011. Není to doporučení mířené na vás.',
+      chain: chain.name,
+      item: item.name,
+      source: attribution,
+    };
+  } else {
+    const n = f.nutrient;
+    slides = {
+      hero: `${cz(round(f.value, 1))} g`,
+      heroSub: `Nejvíc ${n.what} v jedné porci, co na webu máme.`,
+      title: 'Nejzazší případ, ne typický',
+      rows: [
+        {
+          label: `${n.label.toUpperCase()} V PORCI`,
+          value: `${cz(round(f.value, 1))} g`,
+          accent: true,
+        },
+      ],
+      note: 'Je to extrém, a proto stojí za ukázání.',
+      chain: chain.name,
+      item: item.name,
+      source: attribution,
+    };
+  }
 
-  await writeFile(path.join(dir, `${item.chainSlug}-${item.slug}.png`), png);
+  const fonts = resvgFonts();
+  const svgs = carouselSvg(slides, tokens);
+  for (const [i, svg] of svgs.entries()) {
+    const png = new Resvg(svg, { fitTo: { mode: 'width', value: SLIDE.width }, font: fonts })
+      .render()
+      .asPng();
+    await writeFile(path.join(dir, `${i + 1}-${item.chainSlug}-${item.slug}.png`), png);
+  }
+
   await writeFile(path.join(dir, 'caption.txt'), `${caption(f)}\n`, 'utf8');
   await writeFile(
     path.join(dir, 'meta.json'),
