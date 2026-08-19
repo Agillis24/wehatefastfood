@@ -1,8 +1,7 @@
 {
   "title": "Porovnání",
   "subtitle": "Až tři položky vedle sebe. Výběr drží adresní řádek, takže porovnání jde poslat dál.",
-  "empty": "Zatím nic nevybráno. Otevřete položku a použijte odkaz na porovnání, nebo upravte adresu přímo.",
-  "howTo": "Adresa má tvar /compare/{market}/{chain}~{item}/{chain}~{item}",
+  "empty": "Zatím nic nevybráno. Vyberte si z nabídky níž, nebo otevřete položku a použijte odkaz na porovnání.",
   "market": "Trh",
   "nutrient": "Živina",
   "perPortion": "Na porci",
@@ -18,5 +17,6 @@
     "serving": "Porce"
   },
   "bandsFor": "Pásma pro {name}",
-  "unknownItem": "Položku {slug} nemáme."
+  "unknownItem": "Položku {slug} nemáme.",
+  "suggestions": "Nemáte co porovnat? Zkuste tohle."
 }
