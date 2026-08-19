@@ -38,7 +38,8 @@
     "social:publish": "node scripts/social-publish.mjs",
     "social:token": "node scripts/social-token.mjs",
     "fonts": "node scripts/fetch-fonts.mjs",
-    "import": "node scripts/import-nutrition.mjs"
+    "import": "node scripts/import-nutrition.mjs",
+    "social:daily": "node scripts/social-daily.mjs"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
