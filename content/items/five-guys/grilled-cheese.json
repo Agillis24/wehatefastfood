@@ -1,0 +1,84 @@
+{
+  "slug": "grilled-cheese",
+  "chainSlug": "five-guys",
+  "name": "Grilled Cheese",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1816,
+          "energyKcal": 434,
+          "fatG": 24,
+          "saturatesG": 7.6,
+          "transFatG": null,
+          "carbohydrateG": 42,
+          "sugarsG": 7.3,
+          "addedSugarsG": null,
+          "fibreG": 2.2,
+          "proteinG": 12,
+          "saltG": 2.2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1540,
+          "energyKcal": 368,
+          "fatG": 20,
+          "saturatesG": 6.4,
+          "transFatG": null,
+          "carbohydrateG": 36,
+          "sugarsG": 6.2,
+          "addedSugarsG": null,
+          "fibreG": 1.9,
+          "proteinG": 11,
+          "saltG": 1.9,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Grilled Cheese",
+          "declaration": "(MILK), Emulsifying Salt (Trisodium Citrate), Natural Cheese flavouring (MILK), Salt, acidity regulator: Lactic acid, preservative: Sorbic acid, Colours: Beta-carotene, Paprika extract, anticaking agent. Mayonnaise: Rapeseed oil, EGG yolk, spirit vinegar, sugar, apple cider vinegar, salt,",
+          "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

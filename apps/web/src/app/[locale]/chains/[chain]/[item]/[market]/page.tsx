@@ -376,6 +376,7 @@ function ItemView(props: ViewProps) {
               additives={props.additives}
               allergens={variant.allergens}
               mayContain={variant.mayContain}
+              components={variant.components}
             />
 
             <MarketDiff market={props.marketParam} comparisons={props.comparisons} />

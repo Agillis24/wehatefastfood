@@ -1,0 +1,70 @@
+{
+  "slug": "oreo",
+  "chainSlug": "five-guys",
+  "name": "Oreo",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 118,
+          "fatG": 4.8,
+          "saturatesG": 1.4,
+          "transFatG": null,
+          "carbohydrateG": 16.8,
+          "sugarsG": 9.3,
+          "addedSugarsG": null,
+          "fibreG": 0.7,
+          "proteinG": 11.4,
+          "saltG": 0.19,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1982,
+          "energyKcal": 472,
+          "fatG": 19,
+          "saturatesG": 5.4,
+          "transFatG": null,
+          "carbohydrateG": 67,
+          "sugarsG": 37.1,
+          "addedSugarsG": null,
+          "fibreG": 2.9,
+          "proteinG": 45.6,
+          "saltG": 0.76,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk", "soybeans"],
+      "mayContain": ["nuts", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

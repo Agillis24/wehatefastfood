@@ -1,0 +1,84 @@
+{
+  "slug": "chocolate",
+  "chainSlug": "five-guys",
+  "name": "Chocolate",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 218,
+          "fatG": 2,
+          "saturatesG": 1.2,
+          "transFatG": null,
+          "carbohydrateG": 47.6,
+          "sugarsG": 30.4,
+          "addedSugarsG": null,
+          "fibreG": 1.9,
+          "proteinG": 1.3,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1336,
+          "energyKcal": 316,
+          "fatG": 2.9,
+          "saturatesG": 1.7,
+          "transFatG": null,
+          "carbohydrateG": 69,
+          "sugarsG": 44,
+          "addedSugarsG": null,
+          "fibreG": 2.8,
+          "proteinG": 1.9,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Chocolate",
+          "declaration": "Glucose Syrup, Sugar, Water, Humectant (Glycerol), Chocolate (7%) (Cocoa Mass, Sugar, Dextrose, Emulsifier(SOYA Lecithins)) , Fat Reduced Cocoa Powder, Cocoa Extract, Preservative (Potassium Sorbate), Emulsifier (SOYA Lecithins), Natural flavourings, Colour (Plain Caramel)",
+          "allergens": ["milk", "soybeans"],
+          "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk", "soybeans"],
+      "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

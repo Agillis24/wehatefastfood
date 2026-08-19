@@ -1,0 +1,84 @@
+{
+  "slug": "peanut-butter",
+  "chainSlug": "five-guys",
+  "name": "Peanut Butter",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": 28,
+          "saturatesG": 4.4,
+          "transFatG": null,
+          "carbohydrateG": 8.4,
+          "sugarsG": 4.6,
+          "addedSugarsG": null,
+          "fibreG": 4.2,
+          "proteinG": 12.3,
+          "saltG": 0.9,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 2455,
+          "energyKcal": 587,
+          "fatG": 50,
+          "saturatesG": 7.9,
+          "transFatG": null,
+          "carbohydrateG": 15,
+          "sugarsG": 8.3,
+          "addedSugarsG": null,
+          "fibreG": 7.5,
+          "proteinG": 22,
+          "saltG": 1.6,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Peanut Butter",
+          "declaration": "Roasted PEANUTS, PEANUT Oil, Sugar, Sea Salt",
+          "allergens": ["milk", "peanuts"],
+          "mayContain": ["cereals-gluten", "nuts", "sesame", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk", "peanuts"],
+      "mayContain": ["cereals-gluten", "nuts", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "whipped-cream",
+  "chainSlug": "five-guys",
+  "name": "Whipped Cream",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 88.1,
+          "fatG": 9.1,
+          "saturatesG": 6.8,
+          "transFatG": null,
+          "carbohydrateG": 0.8,
+          "sugarsG": 0.8,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.6,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1418,
+          "energyKcal": 339,
+          "fatG": 35,
+          "saturatesG": 26,
+          "transFatG": null,
+          "carbohydrateG": 3,
+          "sugarsG": 3,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 2.3,
+          "saltG": 0.08,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Whipped Cream",
+          "declaration": "Cream (MILK); propellants: N2O, N2; emulsifier: Mono-and Diglycerides; stabiliser: Carrageenan",
+          "allergens": ["milk"],
+          "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "cheese-veggie-sandwich",
+  "chainSlug": "five-guys",
+  "name": "Cheese Veggie Sandwich",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1791,
+          "energyKcal": 428,
+          "fatG": 14,
+          "saturatesG": 5.9,
+          "transFatG": null,
+          "carbohydrateG": 57,
+          "sugarsG": 15,
+          "addedSugarsG": null,
+          "fibreG": 5.9,
+          "proteinG": 14,
+          "saltG": 2.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 611,
+          "energyKcal": 146,
+          "fatG": 4.7,
+          "saturatesG": 2,
+          "transFatG": null,
+          "carbohydrateG": 30,
+          "sugarsG": 5,
+          "addedSugarsG": null,
+          "fibreG": 2,
+          "proteinG": 4.8,
+          "saltG": 0.86,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Cheese Veggie Sandwich",
+          "declaration": "regulators: Citric acid, Ascorbic acid), Lettuce, Green Peppers. Cheese: Cheddar Cheese (MILK), Water, Butter (MILK), Cheese (MILK), MILK Proteins, Whey powder (MILK), Emulsifying Salt (Trisodium Citrate), Natural Cheese flavouring (MILK), Salt, acidity regulator: Lactic acid,",
+          "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+          "mayContain": ["celery", "mustard"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+      "mayContain": ["celery", "mustard"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

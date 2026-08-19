@@ -1,0 +1,84 @@
+{
+  "slug": "cajun-seasoning",
+  "chainSlug": "five-guys",
+  "name": "Cajun Seasoning",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 84,
+          "energyKcal": 20,
+          "fatG": 0.3,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 2.9,
+          "sugarsG": 1.1,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.8,
+          "saltG": 1.16,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1199,
+          "energyKcal": 287,
+          "fatG": 4.6,
+          "saturatesG": 0.8,
+          "transFatG": null,
+          "carbohydrateG": 42,
+          "sugarsG": 15,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 12,
+          "saltG": 16.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Cajun Seasoning",
+          "declaration": "Garlic, Salt, Onion, Paprika, Oregano, White Pepper, Cayenne Pepper, CELERY Seeds, Rapeseed Oil",
+          "allergens": ["celery"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

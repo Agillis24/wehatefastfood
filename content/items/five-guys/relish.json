@@ -1,0 +1,92 @@
+{
+  "slug": "relish",
+  "chainSlug": "five-guys",
+  "name": "Relish",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 65.3,
+          "energyKcal": 15.4,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 3.5,
+          "sugarsG": 2.9,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 0,
+          "saltG": 0.14,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 653,
+          "energyKcal": 154,
+          "fatG": 0.4,
+          "saturatesG": 0.2,
+          "transFatG": null,
+          "carbohydrateG": 35.1,
+          "sugarsG": 29,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 0.4,
+          "saltG": 1.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Relish",
+          "declaration": "Gherkin, Sugar, Spirit Vinegar, Water, Salt, Flavorings, stabiliser: Xanthan Gum",
+          "allergens": [],
+          "mayContain": [
+            "celery",
+            "cereals-gluten",
+            "eggs",
+            "milk",
+            "mustard",
+            "sesame",
+            "soybeans"
+          ]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["celery", "cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

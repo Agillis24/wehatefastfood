@@ -1,0 +1,77 @@
+{
+  "slug": "jalape-o-peppers",
+  "chainSlug": "five-guys",
+  "name": "Jalapeño Peppers",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 3.9,
+          "energyKcal": 0.9,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.5,
+          "sugarsG": 0.3,
+          "addedSugarsG": null,
+          "fibreG": 0.2,
+          "proteinG": 0.1,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 55,
+          "energyKcal": 13,
+          "fatG": 0.4,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 7,
+          "sugarsG": 4.1,
+          "addedSugarsG": null,
+          "fibreG": 2.8,
+          "proteinG": 0.9,
+          "saltG": 0.25,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Jalapeño Peppers",
+          "declaration": "Jalapeno Peppers",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

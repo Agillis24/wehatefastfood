@@ -1,0 +1,70 @@
+{
+  "slug": "veggie-sandwich",
+  "chainSlug": "five-guys",
+  "name": "Veggie Sandwich",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1381,
+          "energyKcal": 330,
+          "fatG": 7.4,
+          "saturatesG": 2.4,
+          "transFatG": null,
+          "carbohydrateG": 52,
+          "sugarsG": 13,
+          "addedSugarsG": null,
+          "fibreG": 5.4,
+          "proteinG": 10,
+          "saltG": 1.2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 540,
+          "energyKcal": 129,
+          "fatG": 2.9,
+          "saturatesG": 1,
+          "transFatG": null,
+          "carbohydrateG": 20,
+          "sugarsG": 5.2,
+          "addedSugarsG": null,
+          "fibreG": 2.1,
+          "proteinG": 3.9,
+          "saltG": 0.47,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+      "mayContain": ["celery", "mustard"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

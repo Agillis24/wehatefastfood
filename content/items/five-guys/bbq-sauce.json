@@ -1,0 +1,84 @@
+{
+  "slug": "bbq-sauce",
+  "chainSlug": "five-guys",
+  "name": "BBQ Sauce",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 81.3,
+          "energyKcal": 19.2,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 4.3,
+          "sugarsG": 4.1,
+          "addedSugarsG": null,
+          "fibreG": 0.2,
+          "proteinG": 0.2,
+          "saltG": 0.36,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 542,
+          "energyKcal": 128,
+          "fatG": 0.5,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 28.9,
+          "sugarsG": 27.2,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 1.3,
+          "saltG": 2.42,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "BBQ Sauce",
+          "declaration": "Distilled Vinegar, Sugar, Tomato Paste, Water, Molasses, Salt, MUSTARD Bran, Tamarind Extract, Smoke Flavoring, Preservative: Sodium Benzoate, Spices, Garlic Powder, Onion Powder",
+          "allergens": ["mustard"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

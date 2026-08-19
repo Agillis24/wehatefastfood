@@ -1,0 +1,84 @@
+{
+  "slug": "mustard",
+  "chainSlug": "five-guys",
+  "name": "Mustard",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 15.8,
+          "energyKcal": 3.8,
+          "fatG": 0.2,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.1,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": 0.2,
+          "proteinG": 0.2,
+          "saltG": 0.18,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 263,
+          "energyKcal": 64,
+          "fatG": 3.9,
+          "saturatesG": 0.3,
+          "transFatG": null,
+          "carbohydrateG": 1.5,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": 4.1,
+          "proteinG": 3.6,
+          "saltG": 3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Mustard",
+          "declaration": "Spirit Vinegar, Water, MUSTARD Seed, Salt, Turmeric, Paprika, Spice, Flavoring, Garlic Powder",
+          "allergens": ["mustard"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

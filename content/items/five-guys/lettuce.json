@@ -1,0 +1,77 @@
+{
+  "slug": "lettuce",
+  "chainSlug": "five-guys",
+  "name": "Lettuce",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 9.2,
+          "energyKcal": 3,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.3,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": 0.2,
+          "proteinG": 0.1,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 57.5,
+          "energyKcal": 19,
+          "fatG": 0.1,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 1.8,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 0.9,
+          "saltG": 0.03,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Lettuce",
+          "declaration": "Lettuce",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

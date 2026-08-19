@@ -1,0 +1,92 @@
+{
+  "slug": "grilled-mushrooms",
+  "chainSlug": "five-guys",
+  "name": "Grilled Mushrooms",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 39.4,
+          "energyKcal": 9.3,
+          "fatG": 0.1,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 1,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": 0.7,
+          "proteinG": 0.8,
+          "saltG": 0.27,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 123,
+          "energyKcal": 29,
+          "fatG": 0.3,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 3.1,
+          "sugarsG": 2,
+          "addedSugarsG": null,
+          "fibreG": 2.3,
+          "proteinG": 2.4,
+          "saltG": 0.84,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Grilled Mushrooms",
+          "declaration": "Mushrooms, Water, Sugar, Salt, acidity regulators: Citric acid, Ascorbic acid.",
+          "allergens": [],
+          "mayContain": [
+            "celery",
+            "cereals-gluten",
+            "eggs",
+            "milk",
+            "mustard",
+            "sesame",
+            "soybeans"
+          ]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["celery", "cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "pickles",
+  "chainSlug": "five-guys",
+  "name": "Pickles",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 9.8,
+          "energyKcal": 2.4,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.2,
+          "sugarsG": 0.2,
+          "addedSugarsG": null,
+          "fibreG": 0.2,
+          "proteinG": 0.1,
+          "saltG": 0.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 49,
+          "energyKcal": 12,
+          "fatG": 0.2,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 1,
+          "sugarsG": 1,
+          "addedSugarsG": null,
+          "fibreG": 1.1,
+          "proteinG": 0.6,
+          "saltG": 2,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Pickles",
+          "declaration": "Gherkins, Water, Spirit Vinegar, Salt, Firming Agent: Calcium Chloride, Acid: Lactic Acid, Preservative: Sodium Benzoate, Natural Dill Flavouring, Colour: Riboflavin",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "reg-fries",
+  "chainSlug": "five-guys",
+  "name": "Reg FRIES",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 4670,
+          "energyKcal": 1122,
+          "fatG": 66,
+          "saturatesG": 9.1,
+          "transFatG": null,
+          "carbohydrateG": 120,
+          "sugarsG": 1.7,
+          "addedSugarsG": null,
+          "fibreG": 11,
+          "proteinG": 17,
+          "saltG": 1.79,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1128,
+          "energyKcal": 271,
+          "fatG": 16,
+          "saturatesG": 2.2,
+          "transFatG": null,
+          "carbohydrateG": 29,
+          "sugarsG": 0.4,
+          "addedSugarsG": null,
+          "fibreG": 2.6,
+          "proteinG": 4.1,
+          "saltG": 0.43,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

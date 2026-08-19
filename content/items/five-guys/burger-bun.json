@@ -1,0 +1,84 @@
+{
+  "slug": "burger-bun",
+  "chainSlug": "five-guys",
+  "name": "Burger Bun",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1001,
+          "energyKcal": 238,
+          "fatG": 7.5,
+          "saturatesG": 2.6,
+          "transFatG": null,
+          "carbohydrateG": 37.6,
+          "sugarsG": 6.2,
+          "addedSugarsG": null,
+          "fibreG": 1.4,
+          "proteinG": 6,
+          "saltG": 0.49,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1300,
+          "energyKcal": 309,
+          "fatG": 9.8,
+          "saturatesG": 3.3,
+          "transFatG": null,
+          "carbohydrateG": 49,
+          "sugarsG": 8,
+          "addedSugarsG": null,
+          "fibreG": 1.8,
+          "proteinG": 7.8,
+          "saltG": 0.64,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Burger Bun",
+          "declaration": "Our bread is a proprietary recipe. The primary ingredients are: WHEAT flour, Water, Sugar, Vegetable fats, MILK, Dry yeast, EGGS, SESAME seeds, Salt, SOYA flour, acidity regulator: Calcium Carbonate, Spirit vinegar",
+          "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

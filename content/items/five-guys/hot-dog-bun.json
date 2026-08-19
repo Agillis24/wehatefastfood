@@ -1,0 +1,84 @@
+{
+  "slug": "hot-dog-bun",
+  "chainSlug": "five-guys",
+  "name": "Hot Dog Bun",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 908,
+          "energyKcal": 215,
+          "fatG": 6.7,
+          "saturatesG": 2.3,
+          "transFatG": null,
+          "carbohydrateG": 34,
+          "sugarsG": 5.9,
+          "addedSugarsG": null,
+          "fibreG": 1.2,
+          "proteinG": 5.3,
+          "saltG": 0.47,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1298,
+          "energyKcal": 308,
+          "fatG": 9.6,
+          "saturatesG": 3.2,
+          "transFatG": null,
+          "carbohydrateG": 49,
+          "sugarsG": 8.5,
+          "addedSugarsG": null,
+          "fibreG": 1.7,
+          "proteinG": 7.6,
+          "saltG": 0.67,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Hot Dog Bun",
+          "declaration": "Our bread is a proprietary recipe. The primary ingredients are: WHEAT flour, Water, Sugar, Vegetable fats, MILK, Dry yeast, EGGS, Salt, SOYA flour, acidity regulator: Calcium Carbonate, Spirit vinegar. May contain SESAME seeds",
+          "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
+          "mayContain": ["sesame"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

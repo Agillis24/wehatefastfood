@@ -1,0 +1,70 @@
+{
+  "slug": "blt",
+  "chainSlug": "five-guys",
+  "name": "BLT",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2728,
+          "energyKcal": 652,
+          "fatG": 41,
+          "saturatesG": 9.9,
+          "transFatG": null,
+          "carbohydrateG": 45,
+          "sugarsG": 8.8,
+          "addedSugarsG": null,
+          "fibreG": 3.6,
+          "proteinG": 22,
+          "saltG": 2.67,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1364,
+          "energyKcal": 326,
+          "fatG": 20,
+          "saturatesG": 5,
+          "transFatG": null,
+          "carbohydrateG": 23,
+          "sugarsG": 4.4,
+          "addedSugarsG": null,
+          "fibreG": 1.8,
+          "proteinG": 11,
+          "saltG": 1.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

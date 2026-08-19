@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import type { Component } from '@wff/content';
 import type { Additive, Ingredient } from '@wff/content';
 
 /**
@@ -19,6 +20,7 @@ type Props = {
   additives: Additive[];
   allergens: string[];
   mayContain: string[];
+  components: Component[];
 };
 
 function Entry({ children, term }: { children: React.ReactNode; term: string }) {
@@ -30,7 +32,13 @@ function Entry({ children, term }: { children: React.ReactNode; term: string }) 
   );
 }
 
-export function IngredientChips({ ingredients, additives, allergens, mayContain }: Props) {
+export function IngredientChips({
+  ingredients,
+  additives,
+  allergens,
+  mayContain,
+  components,
+}: Props) {
   const t = useTranslations('item.ingredients');
   const tA = useTranslations('allergen');
 
@@ -43,7 +51,8 @@ export function IngredientChips({ ingredients, additives, allergens, mayContain 
    * purposes while publishing nothing about its recipe, and for a reader with
    * an allergy that first list is the one that matters.
    */
-  const noComposition = ingredients.length === 0 && additives.length === 0;
+  const noComposition =
+    ingredients.length === 0 && additives.length === 0 && components.length === 0;
 
   return (
     <section aria-labelledby="ingredients-title" className="flex flex-col gap-4">
@@ -52,6 +61,32 @@ export function IngredientChips({ ingredients, additives, allergens, mayContain 
       </h2>
 
       {noComposition ? <p className="text-[var(--surface-muted)]">{t('none')}</p> : null}
+
+      {/*
+        The declaration as the company printed it, component by component. Not
+        parsed into entities and not summarised: splitting "Enriched Flour
+        (bleached Wheat Flour, Niacin)" into parts means deciding where one
+        ingredient ends and another begins, and every such decision would be
+        ours rather than the source's. The reader gets the label, not our
+        reading of it.
+      */}
+      {components.length > 0 ? (
+        <dl className="flex flex-col gap-3">
+          {components.map((c) => (
+            <div key={c.name} className="flex flex-col gap-1 border-s-[3px] border-ink ps-3">
+              <dt className="font-data text-xs tracking-widest uppercase">{c.name}</dt>
+              <dd className="text-sm">{c.declaration}</dd>
+              {c.allergens.length > 0 ? (
+                <dd className="text-xs text-[var(--surface-muted)]">
+                  {t('allergens')}
+                  {': '}
+                  {c.allergens.map((a) => tA(a)).join(', ')}
+                </dd>
+              ) : null}
+            </div>
+          ))}
+        </dl>
+      ) : null}
 
       <ul className="flex flex-wrap gap-2">
         {ingredients.map((ingredient) => (

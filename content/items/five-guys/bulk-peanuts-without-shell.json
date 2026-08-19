@@ -1,0 +1,67 @@
+{
+  "slug": "bulk-peanuts-without-shell",
+  "chainSlug": "five-guys",
+  "name": "Bulk Peanuts without shell",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 2462,
+          "energyKcal": 594,
+          "fatG": 43,
+          "saturatesG": 7,
+          "transFatG": null,
+          "carbohydrateG": 25,
+          "sugarsG": 3.3,
+          "addedSugarsG": null,
+          "fibreG": 11,
+          "proteinG": 25,
+          "saltG": 1.86,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Bulk Peanuts without shell",
+          "declaration": "PEANUTS, Salt",
+          "allergens": ["peanuts"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["peanuts"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

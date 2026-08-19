@@ -1,0 +1,84 @@
+{
+  "slug": "hp-brown-sauce",
+  "chainSlug": "five-guys",
+  "name": "HP Brown Sauce",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 51.7,
+          "energyKcal": 12.2,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 2.8,
+          "sugarsG": 2.3,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.13,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 517,
+          "energyKcal": 122,
+          "fatG": 0.1,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 28.3,
+          "sugarsG": 23.1,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.9,
+          "saltG": 1.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "HP Brown Sauce",
+          "declaration": "Tomatoes, Malt vinegar (BARLEY), Molasses, Glucose-fructose syrup, Spirit vinegar, Sugar, Dates, Corn flour, RYE flour, Salt, Spices, Flavourings, Tamarind",
+          "allergens": ["cereals-gluten"],
+          "mayContain": ["mustard"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten"],
+      "mayContain": ["mustard"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

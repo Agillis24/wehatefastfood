@@ -1,0 +1,77 @@
+{
+  "slug": "onions",
+  "chainSlug": "five-guys",
+  "name": "Onions",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 33,
+          "energyKcal": 8,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 1.8,
+          "sugarsG": 1,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 0.3,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 133,
+          "energyKcal": 32,
+          "fatG": 0.3,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 7,
+          "sugarsG": 3.8,
+          "addedSugarsG": null,
+          "fibreG": 2,
+          "proteinG": 1.2,
+          "saltG": 0.01,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Onions",
+          "declaration": "Onions",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

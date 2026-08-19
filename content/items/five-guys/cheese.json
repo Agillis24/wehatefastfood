@@ -1,0 +1,70 @@
+{
+  "slug": "cheese",
+  "chainSlug": "five-guys",
+  "name": "Cheese",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": 70.5,
+          "fatG": 5.7,
+          "saturatesG": 3.6,
+          "transFatG": null,
+          "carbohydrateG": 0.6,
+          "sugarsG": 0.6,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 3.7,
+          "saltG": 0.7,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1553,
+          "energyKcal": 371,
+          "fatG": 30,
+          "saturatesG": 19.2,
+          "transFatG": null,
+          "carbohydrateG": 3,
+          "sugarsG": 3,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 19.5,
+          "saltG": 3.7,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "hot-sauce",
+  "chainSlug": "five-guys",
+  "name": "Hot Sauce",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 8.9,
+          "energyKcal": 2.1,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.2,
+          "sugarsG": 0.2,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.1,
+          "saltG": 0.7,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 111,
+          "energyKcal": 26,
+          "fatG": 0.1,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 2.6,
+          "sugarsG": 1.9,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0.7,
+          "saltG": 8.76,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Hot Sauce",
+          "declaration": "Cayenne Red Peppers, Distilled Vinegar, Water, Salt, Garlic powder",
+          "allergens": [],
+          "mayContain": ["mustard"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["mustard"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

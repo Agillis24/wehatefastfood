@@ -1,0 +1,77 @@
+{
+  "slug": "green-peppers",
+  "chainSlug": "five-guys",
+  "name": "Green Peppers",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 7.1,
+          "energyKcal": 1.6,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 0.4,
+          "sugarsG": 0.2,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 0.1,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 89.2,
+          "energyKcal": 20,
+          "fatG": 0.2,
+          "saturatesG": 0.1,
+          "transFatG": null,
+          "carbohydrateG": 4.6,
+          "sugarsG": 2.4,
+          "addedSugarsG": null,
+          "fibreG": 1.7,
+          "proteinG": 0.9,
+          "saltG": 0.01,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Green Peppers",
+          "declaration": "Green Peppers",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

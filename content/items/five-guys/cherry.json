@@ -1,0 +1,84 @@
+{
+  "slug": "cherry",
+  "chainSlug": "five-guys",
+  "name": "Cherry",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 52.8,
+          "sugarsG": 40.1,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1217,
+          "energyKcal": 287,
+          "fatG": 0,
+          "saturatesG": 0,
+          "transFatG": null,
+          "carbohydrateG": 70.4,
+          "sugarsG": 54.6,
+          "addedSugarsG": null,
+          "fibreG": 0,
+          "proteinG": 0,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Cherry",
+          "declaration": "Sour Cherries, sugar, water, glucose syrup, sour cherry juice, acidifier: citric acid,colorant: anthocyanins, natural flavourings.",
+          "allergens": ["milk"],
+          "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

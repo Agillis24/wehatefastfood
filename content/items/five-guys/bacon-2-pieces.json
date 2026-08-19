@@ -1,0 +1,84 @@
+{
+  "slug": "bacon-2-pieces",
+  "chainSlug": "five-guys",
+  "name": "Bacon (2 pieces)",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 315,
+          "energyKcal": 76,
+          "fatG": 5.5,
+          "saturatesG": 2.1,
+          "transFatG": null,
+          "carbohydrateG": 0.6,
+          "sugarsG": 0.1,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 6.2,
+          "saltG": 0.64,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 2252,
+          "energyKcal": 542,
+          "fatG": 39,
+          "saturatesG": 15,
+          "transFatG": null,
+          "carbohydrateG": 4,
+          "sugarsG": 0.5,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 44,
+          "saltG": 4.6,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Bacon",
+          "declaration": "Pork, acidity regulator: Sodium Lactate, Salt, Sugar, stabilisers: Triphosphates, antioxidant: Sodium Izoascorbate, preservative: Sodium Nitrite",
+          "allergens": [],
+          "mayContain": ["milk", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["milk", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

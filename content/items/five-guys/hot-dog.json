@@ -1,0 +1,84 @@
+{
+  "slug": "hot-dog",
+  "chainSlug": "five-guys",
+  "name": "Hot Dog",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 793,
+          "energyKcal": 192,
+          "fatG": 15,
+          "saturatesG": 6.4,
+          "transFatG": null,
+          "carbohydrateG": 2.1,
+          "sugarsG": 0.4,
+          "addedSugarsG": null,
+          "fibreG": 0.4,
+          "proteinG": 11,
+          "saltG": 1.37,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1044,
+          "energyKcal": 252,
+          "fatG": 20,
+          "saturatesG": 8.4,
+          "transFatG": null,
+          "carbohydrateG": 2.8,
+          "sugarsG": 0.5,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 14,
+          "saltG": 1.8,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Hot Dog",
+          "declaration": "Beef, Water, Salt, Spices, Spice extracts, stabilisers: Disodium Dihydrogen Diphosphate, Sodium Acetate; Glucose syrup, Dextrose, Seasoning, antioxidant: Ascorbic acid, preservative: Sodium Nitrate, SOY protein, Beech wood smoke",
+          "allergens": ["soybeans"],
+          "mayContain": ["milk"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["soybeans"],
+      "mayContain": ["milk"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

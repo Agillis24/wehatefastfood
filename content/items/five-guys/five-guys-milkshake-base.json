@@ -1,0 +1,84 @@
+{
+  "slug": "five-guys-milkshake-base",
+  "chainSlug": "five-guys",
+  "name": "Five Guys Milkshake Base",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": 36.1,
+          "saturatesG": 23.3,
+          "transFatG": null,
+          "carbohydrateG": 81,
+          "sugarsG": 79.8,
+          "addedSugarsG": null,
+          "fibreG": 0.4,
+          "proteinG": 9.2,
+          "saltG": 0.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": 9,
+          "saturatesG": 5.8,
+          "transFatG": null,
+          "carbohydrateG": 20.2,
+          "sugarsG": 19.9,
+          "addedSugarsG": null,
+          "fibreG": 0.1,
+          "proteinG": 2.3,
+          "saltG": 0.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Five Guys Milkshake Base",
+          "declaration": "Reconstituted Skimmed MILK, Cream (MILK), Sugar, Water, Dextrose, MILK Solids, Emulsifiers: Mono and diglycerides of fatty acids, Propyleneglycol esters of fatty acids, stabilisers: Carrageenan, Guar Gum, Cellulose Gum, Natural Flavoring",
+          "allergens": ["milk"],
+          "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": ["cereals-gluten", "nuts", "peanuts", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

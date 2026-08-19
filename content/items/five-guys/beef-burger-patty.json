@@ -1,0 +1,84 @@
+{
+  "slug": "beef-burger-patty",
+  "chainSlug": "five-guys",
+  "name": "Beef Burger Patty",
+  "category": "burger",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 812,
+          "energyKcal": 195,
+          "fatG": 14,
+          "saturatesG": 5.6,
+          "transFatG": null,
+          "carbohydrateG": 0.1,
+          "sugarsG": 0.1,
+          "addedSugarsG": null,
+          "fibreG": 0.3,
+          "proteinG": 18,
+          "saltG": 0.13,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1212,
+          "energyKcal": 291,
+          "fatG": 21,
+          "saturatesG": 8.3,
+          "transFatG": null,
+          "carbohydrateG": 0.1,
+          "sugarsG": 0.1,
+          "addedSugarsG": null,
+          "fibreG": 0.5,
+          "proteinG": 27,
+          "saltG": 0.19,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Beef Burger Patty",
+          "declaration": "Ground Beef",
+          "allergens": [],
+          "mayContain": ["milk", "soybeans"]
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["milk", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutritional information for use in Czech (V270326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Allergen guide for use in Czech (V300326)",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Ingredients guide for use in Czech locations only",
+          "publisher": "Five Guys ČR",
+          "url": "https://www.fiveguys.cz/nutritional-allergy-information/",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
