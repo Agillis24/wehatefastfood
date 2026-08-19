@@ -53,10 +53,11 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_ORIGIN: https://www.wehatefastfood.com
           WFF_INCLUDE_SEED: ${{ inputs.include_seed && '1' || '' }}
-          # Indexing stays off until content exists - see apps/web/src/lib/launch.ts.
-          # Setting this alone is not enough: the code also requires a published
+          # Opened on 2026-08-19, once the Czech had been read by a person and
+          # the reference tables had been checked against their sources. Setting
+          # this alone is not enough: isIndexable() also requires a published
           # chain, so an empty site cannot be opened to crawlers by accident.
-          NEXT_PUBLIC_ALLOW_INDEXING: ''
+          NEXT_PUBLIC_ALLOW_INDEXING: '1'
 
       # The metadata gate reads apps/web/out, so it can only run AFTER the
       # build. In `npm run check` it runs before one exists and skips - which
@@ -65,7 +66,7 @@ jobs:
         run: node scripts/seo-check.mjs
         env:
           NEXT_PUBLIC_SITE_ORIGIN: https://www.wehatefastfood.com
-          NEXT_PUBLIC_ALLOW_INDEXING:
+          NEXT_PUBLIC_ALLOW_INDEXING: '1'
 
       - uses: actions/configure-pages@v5
 

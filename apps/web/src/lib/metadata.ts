@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { DEFAULT_LOCALE } from '@wff/i18n';
 import { AVAILABLE_LOCALES } from '@/i18n/routing';
 import { canonicalUrl, SITE_ORIGIN } from '@/lib/site';
 
@@ -87,9 +88,15 @@ export function pageMetadata({
         ...Object.fromEntries(
           AVAILABLE_LOCALES.map((other) => [other, canonicalUrl(`/${other}${path}`)]),
         ),
-        // Points at the language the site is written in first, which is also
-        // where the root redirect sends anyone whose language we do not have.
-        'x-default': canonicalUrl(`/en${path}`),
+        /*
+         * x-default points at the DEFAULT LOCALE, read from config rather than
+         * written in. It used to say "/en" from when English was the source
+         * language, and after the site moved to Czech that left every page
+         * advertising an x-default at /en/... - a URL that does not exist,
+         * because AVAILABLE_LOCALES is ['cs'] and nothing English is built.
+         * Pointing search engines at a 404 on 857 pages is not a small thing.
+         */
+        'x-default': canonicalUrl(`/${DEFAULT_LOCALE}${path}`),
       },
     },
     openGraph: {

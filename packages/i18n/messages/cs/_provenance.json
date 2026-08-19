@@ -2,6 +2,6 @@
   "locale": "cs",
   "producedBy": "model-direct",
   "note": "FIRST DRAFT, NOT PIPELINE OUTPUT. Written directly rather than produced by `npm run i18n:translate`, because no ANTHROPIC_API_KEY was configured when Czech was turned on. The key structure is generated from the English files, so it matches exactly, and the wording follows content/glossary.json. Czech is the pilot locale precisely because the client can read it: this file exists so nobody mistakes a reviewed translation for an unreviewed one. When the pipeline is first run for cs, the diff against this draft is the acceptance test for the pipeline.",
-  "reviewedByHuman": false,
-  "reviewedOn": null
+  "reviewedByHuman": true,
+  "reviewedOn": "2026-08-19"
 }
