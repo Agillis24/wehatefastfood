@@ -194,8 +194,27 @@ export function SiteFooter({ locale, path = '' }: { locale: string; path?: strin
           <SocialLinks />
         </div>
         <Disclaimers />
-        {/* Discreet, not preachy, and never on the same line as a calorie count. */}
-        <p className="text-xs text-[var(--surface-muted)]">{tDisclaimer('support')}</p>
+        {/*
+          Discreet, not preachy, and never on the same line as a calorie count.
+          It is a LINK now rather than a sentence: a line reading "help with
+          food problems" that goes nowhere is worse than not saying it, because
+          somebody looking for help reads it as a dead end.
+
+          Linka bezpeci is Czech, free and staffed, which is why it is named
+          directly instead of sending people to a search. If the site ever
+          serves a second market this has to become a per-locale value; a
+          helpline in the wrong country is not help.
+        */}
+        <p className="text-xs text-[var(--surface-muted)]">
+          <a
+            href="https://www.linkabezpeci.cz/poradna/problemy-s-jidlem"
+            className="underline underline-offset-4"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {tDisclaimer('support')}
+          </a>
+        </p>
       </div>
     </footer>
   );
