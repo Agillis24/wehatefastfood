@@ -28,7 +28,14 @@ export {
   FUNCTIONAL_CLASSES,
 } from './schemas/entities.js';
 
-export type { Chain, MenuItem, MarketVariant, Additive, Ingredient } from './schemas/entities.js';
+export type {
+  Chain,
+  MenuItem,
+  MarketVariant,
+  Additive,
+  Ingredient,
+  Component,
+} from './schemas/entities.js';
 
 export { NutritionFactsSchema, FSA_NUTRIENTS } from './schemas/nutrition.js';
 export type { NutritionFacts, FsaNutrient, FsaBand } from './schemas/nutrition.js';

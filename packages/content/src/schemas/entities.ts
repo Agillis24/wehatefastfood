@@ -35,10 +35,55 @@ export type Chain = z.infer<typeof ChainSchema>;
  * The same product is formulated differently per market. That is one of the
  * most interesting stories this site can tell, so it is first-class from day one.
  */
+/**
+ * One named part of a product, with the ingredient statement as the company
+ * printed it.
+ *
+ * VERBATIM, and that is the point. The alternative - splitting a declaration
+ * into entities with their own records - means deciding where "Enriched Flour
+ * (bleached Wheat Flour, Niacin, Reduced Iron)" stops being one ingredient and
+ * starts being four, and every one of those decisions is ours rather than the
+ * source's. docs/CONTENT_GUIDE.md says copy, do not interpret. A transcription
+ * is a fact we can stand behind today; a taxonomy is a project.
+ *
+ * It also means the reader sees what is on the label rather than our summary of
+ * it, which for the one question this site exists to answer is the whole thing.
+ *
+ * COMPONENTS RATHER THAN ONE BLOB because that is how the declarations arrive
+ * and because it carries real information: McDonald's prints the biscuit, the
+ * egg, the cheese and the sauce separately, and knowing that the 7 g of added
+ * sugar is in the sauce and not the bread is exactly the kind of thing a reader
+ * cannot work out from a merged list.
+ */
+export const ComponentSchema = z
+  .object({
+    /** As printed: "Biscuit", "Folded Egg", "Burger Bun". */
+    name: z.string().min(1),
+    /** The ingredient statement, transcribed. Never summarised or reordered. */
+    declaration: z.string().min(1),
+    /**
+     * Allergens declared for THIS component. Kept per component rather than
+     * rolled up, because a reader avoiding milk needs to know it is the cheese
+     * and not the bun.
+     */
+    allergens: z.array(AllergenSchema).default([]),
+    mayContain: z.array(AllergenSchema).default([]),
+  })
+  .strict();
+
+export type Component = z.infer<typeof ComponentSchema>;
+
 export const MarketVariantSchema = z
   .object({
     market: MARKET,
     nutrition: z.array(NutritionFactsSchema).min(1),
+    /*
+     * The declaration, as published. `ingredientRefs` and `additiveRefs` below
+     * are the DECODER links - the substances we have written an entry for - and
+     * are a strict subset of what these components name. One is the record, the
+     * other is what we can explain so far.
+     */
+    components: z.array(ComponentSchema).default([]),
     ingredientRefs: z.array(SLUG),
     additiveRefs: z.array(SLUG),
     /*
