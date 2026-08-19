@@ -1,7 +1,7 @@
 {
-  "status": "unverified",
-  "note": "Adult reference intakes, Annex XIII PART B - the table is headed \"(ADULTS)\" and the regulation supplies no children's or age-banded equivalent. Same standing as fsa-thresholds.json: on 2026-08-17 all eight values were transcribed three times independently and blind from the consolidated text on EUR-Lex, and an adversarial reader failed to find a single error. Two things the regulation says that this file cannot: energy is ONE cell reading \"8 400 kJ/2 000 kcal\", so the two numbers here are literals and must never be derived from each other (8400 kJ is about 2008 kcal, not 2000); and the absence of a reference intake for fibre or for the unsaturated fats is a legal fact rather than missing data. Still 'unverified' because no human has opened Annex XIII. Presented neutrally in the UI as percentages - never as \"you have used up X% of your day\". See docs/REFERENCE_VERIFICATION.md.",
-  "verifiedOn": null,
+  "status": "verified",
+  "note": "Adult reference intakes, Annex XIII PART B - the table is headed \"(ADULTS)\" and the regulation supplies no children's or age-banded equivalent. VERIFIED on 2026-08-19: a person opened Annex XIII and confirmed the figures. Before that, on 2026-08-17, all eight values were transcribed three times independently and blind from the consolidated text on EUR-Lex and an adversarial reader failed to find a single error. Two things the regulation says that this file cannot: energy is ONE cell reading \"8 400 kJ/2 000 kcal\", so the two numbers here are literals and must never be derived from each other (8400 kJ is about 2008 kcal, not 2000); and the absence of a reference intake for fibre or for the unsaturated fats is a legal fact rather than missing data. Presented neutrally in the UI as percentages, never as \"you have used up X% of your day\". See docs/REFERENCE_VERIFICATION.md.",
+  "verifiedOn": "2026-08-19",
   "sources": [
     {
       "title": "Regulation (EU) No 1169/2011 on the provision of food information to consumers, Annex XIII Part B: reference intakes for energy and selected nutrients other than vitamins and minerals (adults)",
