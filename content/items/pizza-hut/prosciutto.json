@@ -1,0 +1,70 @@
+{
+  "slug": "prosciutto",
+  "chainSlug": "pizza-hut",
+  "name": "Prosciutto",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 546,
+          "energyKJ": 5563.74,
+          "energyKcal": 1321.32,
+          "fatG": 36.9096,
+          "saturatesG": 19.9836,
+          "transFatG": null,
+          "carbohydrateG": 180.18,
+          "sugarsG": 20.0382,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 62.79,
+          "saltG": 6.006,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1019,
+          "energyKcal": 242,
+          "fatG": 6.76,
+          "saturatesG": 3.66,
+          "transFatG": null,
+          "carbohydrateG": 33,
+          "sugarsG": 3.67,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.5,
+          "saltG": 1.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

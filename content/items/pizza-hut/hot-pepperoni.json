@@ -1,0 +1,63 @@
+{
+  "slug": "hot-pepperoni",
+  "chainSlug": "pizza-hut",
+  "name": "Hot Pepperoni",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 570,
+          "energyKJ": 6919.8,
+          "energyKcal": 1647.3,
+          "fatG": 58.938,
+          "saturatesG": 26.79,
+          "transFatG": null,
+          "carbohydrateG": 194.94,
+          "sugarsG": 21.09,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 77.52,
+          "saltG": 8.265,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1214,
+          "energyKcal": 289,
+          "fatG": 10.34,
+          "saturatesG": 4.7,
+          "transFatG": null,
+          "carbohydrateG": 34.2,
+          "sugarsG": 3.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.6,
+          "saltG": 1.45,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

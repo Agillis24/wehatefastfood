@@ -1,0 +1,70 @@
+{
+  "slug": "syr-corregio",
+  "chainSlug": "pizza-hut",
+  "name": "sýr Corregio",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 12,
+          "energyKJ": 200.52,
+          "energyKcal": 48.24,
+          "fatG": 3.6,
+          "saturatesG": 2.4,
+          "transFatG": null,
+          "carbohydrateG": 0,
+          "sugarsG": 0.324,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.84,
+          "saltG": 0.192,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1671,
+          "energyKcal": 402,
+          "fatG": 30,
+          "saturatesG": 20,
+          "transFatG": null,
+          "carbohydrateG": 0,
+          "sugarsG": 2.7,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 32,
+          "saltG": 1.6,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "milk"],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

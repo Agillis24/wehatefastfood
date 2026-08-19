@@ -1,0 +1,63 @@
+{
+  "slug": "cesnekovy-chleb-2-0",
+  "chainSlug": "pizza-hut",
+  "name": "Česnekový chléb 2.0",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 73,
+          "energyKJ": 1055.945,
+          "energyKcal": 254.04,
+          "fatG": 17.2864,
+          "saturatesG": 6.57,
+          "transFatG": null,
+          "carbohydrateG": 15.987,
+          "sugarsG": 1.0512,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 9.271,
+          "saltG": 0.8395,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1446.5,
+          "energyKcal": 348,
+          "fatG": 23.68,
+          "saturatesG": 9,
+          "transFatG": null,
+          "carbohydrateG": 21.9,
+          "sugarsG": 1.44,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 12.7,
+          "saltG": 1.15,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

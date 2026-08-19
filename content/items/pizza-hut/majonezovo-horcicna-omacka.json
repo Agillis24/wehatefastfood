@@ -1,0 +1,70 @@
+{
+  "slug": "majonezovo-horcicna-omacka",
+  "chainSlug": "pizza-hut",
+  "name": "Majonézovo-hořčičná omáčka",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 25,
+          "energyKJ": 536,
+          "energyKcal": 129.75,
+          "fatG": 2.008,
+          "saturatesG": 0.156,
+          "transFatG": null,
+          "carbohydrateG": 0.628,
+          "sugarsG": 0.54,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.056,
+          "saltG": 0.052,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 2144,
+          "energyKcal": 519,
+          "fatG": 50.2,
+          "saturatesG": 3.9,
+          "transFatG": null,
+          "carbohydrateG": 15.7,
+          "sugarsG": 13.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.4,
+          "saltG": 1.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "mustard", "soybeans"],
+      "mayContain": ["celery", "cereals-gluten", "fish", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

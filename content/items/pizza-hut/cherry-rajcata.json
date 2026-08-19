@@ -1,0 +1,63 @@
+{
+  "slug": "cherry-rajcata",
+  "chainSlug": "pizza-hut",
+  "name": "cherry rajčata",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 79,
+          "energyKJ": 49.77,
+          "energyKcal": 11.85,
+          "fatG": 0.158,
+          "saturatesG": 0.0395,
+          "transFatG": null,
+          "carbohydrateG": 2.844,
+          "sugarsG": 1.027,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.711,
+          "saltG": 0.0158,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 63,
+          "energyKcal": 15,
+          "fatG": 0.2,
+          "saturatesG": 0.05,
+          "transFatG": null,
+          "carbohydrateG": 3.6,
+          "sugarsG": 1.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.9,
+          "saltG": 0.02,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "pasta-farmer",
+  "chainSlug": "pizza-hut",
+  "name": "Pasta Farmer",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 387,
+          "energyKJ": 2561.94,
+          "energyKcal": 611.46,
+          "fatG": 28.8702,
+          "saturatesG": 15.867,
+          "transFatG": null,
+          "carbohydrateG": 58.05,
+          "sugarsG": 1.2247,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 26.8578,
+          "saltG": 3.483,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 662,
+          "energyKcal": 158,
+          "fatG": 7.46,
+          "saturatesG": 4.1,
+          "transFatG": null,
+          "carbohydrateG": 15,
+          "sugarsG": 3.16,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 6.94,
+          "saltG": 0.9,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "zelena-paprika",
+  "chainSlug": "pizza-hut",
+  "name": "zelená paprika",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 46,
+          "energyKJ": 44.16,
+          "energyKcal": 10.58,
+          "fatG": 0.184,
+          "saturatesG": 0.0092,
+          "transFatG": null,
+          "carbohydrateG": 2.53,
+          "sugarsG": 1.5042,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.552,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 96,
+          "energyKcal": 23,
+          "fatG": 0.4,
+          "saturatesG": 0.02,
+          "transFatG": null,
+          "carbohydrateG": 5.5,
+          "sugarsG": 3.27,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.2,
+          "saltG": 0,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

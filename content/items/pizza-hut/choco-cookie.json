@@ -1,0 +1,63 @@
+{
+  "slug": "choco-cookie",
+  "chainSlug": "pizza-hut",
+  "name": "Choco Cookie",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 214,
+          "energyKJ": 3911.92,
+          "energyKcal": 935.18,
+          "fatG": 43.3992,
+          "saturatesG": 26.108,
+          "transFatG": null,
+          "carbohydrateG": 117.272,
+          "sugarsG": 61.204,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 15.408,
+          "saltG": 0.642,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1828,
+          "energyKcal": 437,
+          "fatG": 20.28,
+          "saturatesG": 12.2,
+          "transFatG": null,
+          "carbohydrateG": 54.8,
+          "sugarsG": 28.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 7.2,
+          "saltG": 0.3,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "pecene-brambory",
+  "chainSlug": "pizza-hut",
+  "name": "Pečené brambory",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 150,
+          "energyKJ": 1198.5,
+          "energyKcal": 286.5,
+          "fatG": 9.066,
+          "saturatesG": 0.9,
+          "transFatG": null,
+          "carbohydrateG": 41.85,
+          "sugarsG": 0.75,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 4.8,
+          "saltG": 0.675,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 799,
+          "energyKcal": 191,
+          "fatG": 6.044,
+          "saturatesG": 0.6,
+          "transFatG": null,
+          "carbohydrateG": 27.9,
+          "sugarsG": 0.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 3.2,
+          "saltG": 0.45,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

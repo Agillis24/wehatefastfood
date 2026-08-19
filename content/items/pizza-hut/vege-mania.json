@@ -1,0 +1,70 @@
+{
+  "slug": "vege-mania",
+  "chainSlug": "pizza-hut",
+  "name": "Vege Mania",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 635,
+          "energyKJ": 6019.8,
+          "energyKcal": 1428.75,
+          "fatG": 36.1315,
+          "saturatesG": 19.05,
+          "transFatG": null,
+          "carbohydrateG": 199.39,
+          "sugarsG": 25.4635,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 70.6755,
+          "saltG": 6.223,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 948,
+          "energyKcal": 225,
+          "fatG": 5.69,
+          "saturatesG": 3,
+          "transFatG": null,
+          "carbohydrateG": 31.4,
+          "sugarsG": 4.01,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.13,
+          "saltG": 0.98,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
+      "mayContain": ["celery", "mustard", "nuts", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

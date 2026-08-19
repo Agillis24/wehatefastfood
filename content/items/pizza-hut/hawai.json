@@ -1,0 +1,63 @@
+{
+  "slug": "hawai",
+  "chainSlug": "pizza-hut",
+  "name": "Hawai",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 602,
+          "energyKJ": 6742.4,
+          "energyKcal": 1601.32,
+          "fatG": 43.8858,
+          "saturatesG": 19.264,
+          "transFatG": null,
+          "carbohydrateG": 213.108,
+          "sugarsG": 29.498,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 80.668,
+          "saltG": 9.2106,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1120,
+          "energyKcal": 266,
+          "fatG": 7.29,
+          "saturatesG": 3.2,
+          "transFatG": null,
+          "carbohydrateG": 35.4,
+          "sugarsG": 4.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.4,
+          "saltG": 1.53,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

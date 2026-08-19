@@ -1,0 +1,63 @@
+{
+  "slug": "bbq-bacon",
+  "chainSlug": "pizza-hut",
+  "name": "BBQ Bacon",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 622,
+          "energyKJ": 7227.64,
+          "energyKcal": 1722.94,
+          "fatG": 78.994,
+          "saturatesG": 43.54,
+          "transFatG": null,
+          "carbohydrateG": 143.06,
+          "sugarsG": 18.038,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 96.41,
+          "saltG": 8.5214,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1162,
+          "energyKcal": 277,
+          "fatG": 12.7,
+          "saturatesG": 7,
+          "transFatG": null,
+          "carbohydrateG": 23,
+          "sugarsG": 2.9,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 15.5,
+          "saltG": 1.37,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

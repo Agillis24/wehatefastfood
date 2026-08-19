@@ -1,0 +1,63 @@
+{
+  "slug": "ham-and-corn",
+  "chainSlug": "pizza-hut",
+  "name": "Ham and corn",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 622,
+          "energyKJ": 6275.98,
+          "energyKcal": 1181.8,
+          "fatG": 44.162,
+          "saturatesG": 24.88,
+          "transFatG": null,
+          "carbohydrateG": 197.174,
+          "sugarsG": 21.77,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 83.97,
+          "saltG": 8.708,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1009,
+          "energyKcal": 190,
+          "fatG": 7.1,
+          "saturatesG": 4,
+          "transFatG": null,
+          "carbohydrateG": 31.7,
+          "sugarsG": 3.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.5,
+          "saltG": 1.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

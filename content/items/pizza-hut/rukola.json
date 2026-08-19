@@ -1,0 +1,70 @@
+{
+  "slug": "rukola",
+  "chainSlug": "pizza-hut",
+  "name": "rukola",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 16,
+          "energyKJ": 8.64,
+          "energyKcal": 2.24,
+          "fatG": 0.032,
+          "saturatesG": 0.0064,
+          "transFatG": null,
+          "carbohydrateG": 0.464,
+          "sugarsG": 0.24,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.224,
+          "saltG": 0.016,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 54,
+          "energyKcal": 14,
+          "fatG": 0.2,
+          "saturatesG": 0.04,
+          "transFatG": null,
+          "carbohydrateG": 2.9,
+          "sugarsG": 1.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 1.4,
+          "saltG": 0.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

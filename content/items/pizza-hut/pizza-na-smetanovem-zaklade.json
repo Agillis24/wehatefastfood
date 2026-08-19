@@ -1,0 +1,70 @@
+{
+  "slug": "pizza-na-smetanovem-zaklade",
+  "chainSlug": "pizza-hut",
+  "name": "Pizza na smetanovém základě",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 270,
+          "energyKJ": 2855.7318,
+          "energyKcal": 685.3746,
+          "fatG": 56.641,
+          "saturatesG": 36.3832,
+          "transFatG": null,
+          "carbohydrateG": 3.5907,
+          "sugarsG": 7.614,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 37.4736,
+          "saltG": 3.103,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1057.6785,
+          "energyKcal": 253.8424,
+          "fatG": 20.9781,
+          "saturatesG": 13.4752,
+          "transFatG": null,
+          "carbohydrateG": 1.3299,
+          "sugarsG": 2.82,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 13.8791,
+          "saltG": 1.1493,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "milk", "soybeans"],
+      "mayContain": ["eggs", "mustard", "nuts", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

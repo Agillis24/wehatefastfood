@@ -1,0 +1,70 @@
+{
+  "slug": "cesnekova-omacka",
+  "chainSlug": "pizza-hut",
+  "name": "Česneková omáčka",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 25,
+          "energyKJ": 445,
+          "energyKcal": 108,
+          "fatG": 1.72,
+          "saturatesG": 0.136,
+          "transFatG": null,
+          "carbohydrateG": 0.308,
+          "sugarsG": 0.204,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.096,
+          "saltG": 0.06,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1780,
+          "energyKcal": 432,
+          "fatG": 43,
+          "saturatesG": 3.4,
+          "transFatG": null,
+          "carbohydrateG": 7.7,
+          "sugarsG": 5.1,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.4,
+          "saltG": 1.5,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "mustard"],
+      "mayContain": ["celery", "cereals-gluten", "fish", "milk", "nuts", "sesame", "soybeans"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

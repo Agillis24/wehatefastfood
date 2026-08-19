@@ -1,0 +1,63 @@
+{
+  "slug": "kebab-salat",
+  "chainSlug": "pizza-hut",
+  "name": "Kebab salát",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 110,
+          "energyKJ": 770,
+          "energyKcal": 185.9,
+          "fatG": 15.114,
+          "saturatesG": 4.136,
+          "transFatG": null,
+          "carbohydrateG": 3.927,
+          "sugarsG": 2.574,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 8.888,
+          "saltG": 0.715,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 700,
+          "energyKcal": 169,
+          "fatG": 13.74,
+          "saturatesG": 3.76,
+          "transFatG": null,
+          "carbohydrateG": 3.57,
+          "sugarsG": 2.34,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 8.08,
+          "saltG": 0.65,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

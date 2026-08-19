@@ -1,0 +1,70 @@
+{
+  "slug": "mozzarella",
+  "chainSlug": "pizza-hut",
+  "name": "mozzarella",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 62,
+          "energyKJ": 652.86,
+          "energyKcal": 155.62,
+          "fatG": 11.78,
+          "saturatesG": 9.3,
+          "transFatG": null,
+          "carbohydrateG": 1.24,
+          "sugarsG": 0.93,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 11.16,
+          "saltG": 0.279,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1053,
+          "energyKcal": 251,
+          "fatG": 19,
+          "saturatesG": 15,
+          "transFatG": null,
+          "carbohydrateG": 2,
+          "sugarsG": 1.5,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 18,
+          "saltG": 0.45,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

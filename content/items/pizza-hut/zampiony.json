@@ -1,0 +1,70 @@
+{
+  "slug": "zampiony",
+  "chainSlug": "pizza-hut",
+  "name": "žampiony",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 35,
+          "energyKJ": 24.85,
+          "energyKcal": 5.95,
+          "fatG": 0.14,
+          "saturatesG": 0.0245,
+          "transFatG": null,
+          "carbohydrateG": 0.91,
+          "sugarsG": 1.393,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.945,
+          "saltG": 0.0053,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 71,
+          "energyKcal": 17,
+          "fatG": 0.4,
+          "saturatesG": 0.07,
+          "transFatG": null,
+          "carbohydrateG": 2.6,
+          "sugarsG": 3.98,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 2.7,
+          "saltG": 0.015,
+          "sodiumMg": null,
+          "sourceContradictions": ["sugars-exceed-carbohydrate"]
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

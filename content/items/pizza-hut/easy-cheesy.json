@@ -1,0 +1,70 @@
+{
+  "slug": "easy-cheesy",
+  "chainSlug": "pizza-hut",
+  "name": "Easy Cheesy",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 553,
+          "energyKJ": 8145.69,
+          "energyKcal": 1946.56,
+          "fatG": 92.5722,
+          "saturatesG": 31.4657,
+          "transFatG": null,
+          "carbohydrateG": 194.103,
+          "sugarsG": 13.4932,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 79.1343,
+          "saltG": 7.9079,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1473,
+          "energyKcal": 352,
+          "fatG": 16.74,
+          "saturatesG": 5.69,
+          "transFatG": null,
+          "carbohydrateG": 35.1,
+          "sugarsG": 2.44,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 14.31,
+          "saltG": 1.43,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard", "soybeans"],
+      "mayContain": ["celery", "nuts", "peanuts", "sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

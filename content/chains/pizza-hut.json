@@ -1,0 +1,27 @@
+{
+  "slug": "pizza-hut",
+  "name": "Pizza Hut",
+  "hqCountry": "US",
+  "marketsCovered": ["CZ"],
+  "oneLiner": "Výživové hodnoty a alergeny zveřejňuje ve dvou dokumentech, které nepopisují stejné menu.",
+  "longIntro": "Pizza Hut má pro český trh dva dokumenty a každý mluví o jiné části nabídky. V tabulce s výživovými hodnotami je 77 položek a ani u jedné nejsou alergeny — sloupce pro ně existují, ale jsou prázdné. V samostatném seznamu alergenů je 94 záznamů, zato bez jediného čísla. Společných mají 53. Zbývajících čtyřiadvacet položek z tabulky tedy má hodnoty a žádné alergeny, a jsou mezi nimi úplně běžné pizzy jako Hawai nebo Quatro Formaggi. My tu mezeru nezaplňujeme: kde alergeny nemáme, je napsáno, že je nemáme, ne že tam žádné nejsou. Tabulka sama uvádí datum 29. listopadu 2024. Firma u ní upozorňuje, že hodnoty pocházejí z testů zadaných v akreditované laboratoři a v některých případech byly dopočítány z databáze, a že se skutečné porce mohou lišit, protože se jídlo připravuje na místě. Za zmínku stojí i to, jak jsou ty dokumenty vedené: soubor s alergeny leží na firemním serveru pod polskou cestou, list v tabulce se jmenuje „Produkty PH - Polska“ a jedna položka se v české tabulce jmenuje „Sos pomidorowy cups“. Na čísla to nemá vliv, ale je vidět, odkud se ty podklady berou.",
+  "accentToken": "accent-4",
+  "dataStatus": "partial",
+  "sources": [
+    {
+      "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+      "publisher": "Pizza Hut ČR",
+      "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+      "retrievedOn": "2026-08-19",
+      "publishedOn": "2024-11-29",
+      "type": "company-disclosure"
+    },
+    {
+      "title": "Seznam alergenů Pizza Hut",
+      "publisher": "Pizza Hut ČR",
+      "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+      "retrievedOn": "2026-08-19",
+      "type": "company-disclosure"
+    }
+  ]
+}

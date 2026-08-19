@@ -1,0 +1,63 @@
+{
+  "slug": "doritos",
+  "chainSlug": "pizza-hut",
+  "name": "Doritos",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 40,
+          "energyKJ": 838.4,
+          "energyKcal": 200.4,
+          "fatG": 0.65,
+          "saturatesG": 0.0525,
+          "transFatG": null,
+          "carbohydrateG": 1.45,
+          "sugarsG": 0.065,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 0.1625,
+          "saltG": 0.0275,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 2096,
+          "energyKcal": 501,
+          "fatG": 26,
+          "saturatesG": 2.1,
+          "transFatG": null,
+          "carbohydrateG": 58,
+          "sugarsG": 2.6,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 6.5,
+          "saltG": 1.1,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

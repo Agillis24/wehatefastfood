@@ -1,0 +1,70 @@
+{
+  "slug": "syrovy-okraj-na-pizzu",
+  "chainSlug": "pizza-hut",
+  "name": "Sýrový okraj na pizzu",
+  "category": "pizza",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 82,
+          "energyKJ": 876.58,
+          "energyKcal": 210.74,
+          "fatG": 0.2196,
+          "saturatesG": 12,
+          "transFatG": null,
+          "carbohydrateG": 0.082,
+          "sugarsG": 0,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 22,
+          "saltG": 1.148,
+          "sodiumMg": null,
+          "sourceContradictions": ["saturates-exceeds-fat"]
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 1310,
+          "energyKcal": 315,
+          "fatG": 23,
+          "saturatesG": 15,
+          "transFatG": null,
+          "carbohydrateG": 2,
+          "sugarsG": 2,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 25,
+          "saltG": 1.4,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": ["sesame"],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Seznam alergenů Pizza Hut",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_Hut_PL/2026/BOXY_new-logo/treats/W3_Boxy_alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

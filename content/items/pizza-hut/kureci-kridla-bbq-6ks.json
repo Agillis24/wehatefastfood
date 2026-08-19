@@ -1,0 +1,63 @@
+{
+  "slug": "kureci-kridla-bbq-6ks",
+  "chainSlug": "pizza-hut",
+  "name": "Kuřecí křídla BBQ (6ks)",
+  "category": "chicken",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": 278,
+          "energyKJ": 2293.5,
+          "energyKcal": 550.44,
+          "fatG": 33.8326,
+          "saturatesG": 10.564,
+          "transFatG": null,
+          "carbohydrateG": 6.394,
+          "sugarsG": 6.394,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 53.654,
+          "saltG": 6.0604,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        },
+        {
+          "basis": "per-100g",
+          "servingSizeG": 100,
+          "energyKJ": 825,
+          "energyKcal": 198,
+          "fatG": 12.17,
+          "saturatesG": 3.8,
+          "transFatG": null,
+          "carbohydrateG": 2.3,
+          "sugarsG": 2.3,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": 19.3,
+          "saltG": 2.18,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "partial",
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Nutriční hodnoty Pizza Hut (tabulka, stav 29. 11. 2024)",
+          "publisher": "Pizza Hut ČR",
+          "url": "https://amrestcdn.azureedge.net/ph-web-ordering/Pizza_hut_CZ/PHCZ%20Nutrition%2029_11_2024%20%E2%80%93%20kopie.xlsx",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2024-11-29",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
