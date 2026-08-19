@@ -39,7 +39,7 @@ No diet. No plan. No before-and-after. What you do with the numbers is your busi
 Two more pieces of this picture to come.`,
       cs: `Začínáme.
 
-Čteme nutriční údaje za tebe: co v tom je, kolik toho je a jaký obchodní důvod měla firma to tam dát. Každé číslo má svůj zdroj a datum, kdy se na něj naposledy díval člověk.
+Čteme nutriční údaje za tebe. Co v tom je, kolik toho je a jaký obchodní důvod měla firma to tam dát. U každého čísla najdeš zdroj a datum, kdy se na něj naposledy díval člověk.
 
 Žádná dieta. Žádný plán. Žádné „předtím a potom". Co s těmi čísly uděláš, je tvoje věc.
 
@@ -62,7 +62,7 @@ None of this is secret. It is published, because the law says it has to be. It i
 We do the boring part.`,
       cs: `Druhý díl.
 
-Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Zároveň je to rozeseté po PDF zvlášť pro každou zemi, schované pod marketingovým textem, uvedené na 100 g, když sníš 340 g, a vysázené písmem, za které by se styděla i lékárna.
+Nic z toho není tajné. Zveřejňuje se to, protože to ukládá zákon. Jenže je to rozeseté po PDF zvlášť pro každou zemi. Schované pod marketingovým textem. Uvedené na 100 g, když sníš 340 g. A vysázené písmem, za které by se styděla i lékárna.
 
 My děláme tu nudnou část.`,
     },
@@ -85,9 +85,9 @@ We are not hostile to anyone eating the food. It is cheap, it is fast, it is eve
 The snark points up.`,
       cs: `A je to celé.
 
-Jsme nepřátelští vůči odvětví: vůči recepturám stavěným kolem ceny a trvanlivosti, vůči porcím, které vyrostly, zatímco cena zůstala povědomá, vůči marketingu, který utratí za slovo „čerstvé" víc než kuchyně.
+Máme problém s odvětvím. S recepturami, které se stavějí kolem ceny a trvanlivosti. S porcemi, co vyrostly, zatímco cena zůstala povědomá. S marketingem, který utratí za slovo „čerstvé" víc než kuchyně.
 
-Nejsme nepřátelští vůči nikomu, kdo to jí. Je to levné, rychlé, všude a často je to jediné, co je po ruce.
+S nikým, kdo to jí, problém nemáme. Je to levné, rychlé, všude a často je to jediné, co je po ruce.
 
 Rýpeme směrem nahoru.`,
     },
