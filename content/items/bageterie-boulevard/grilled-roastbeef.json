@@ -1,0 +1,70 @@
+{
+  "slug": "grilled-roastbeef",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Grilled roastbeef",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 916.8,
+          "energyKcal": 219.13,
+          "fatG": 8.91,
+          "carbohydrateG": 23.22,
+          "proteinG": 12.95,
+          "saltG": 1.21
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2062.9,
+          "energyKcal": 493,
+          "fatG": 20,
+          "carbohydrateG": 52.2,
+          "proteinG": 29.1,
+          "saltG": 2.7
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Grilled roastbeef",
+          "declaration": "Marinovaný roastbeef, křenový dresink, grilovaná cibule, sýr čedar",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

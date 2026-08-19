@@ -1,0 +1,70 @@
+{
+  "slug": "francouzska-cibulacka-st",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Francouzská cibulačka (st)",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 307.5,
+          "energyKcal": 73.5,
+          "fatG": 4.5,
+          "carbohydrateG": 6.5,
+          "proteinG": 1.7,
+          "saltG": 0.95
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 922.6,
+          "energyKcal": 220.5,
+          "fatG": 13.5,
+          "carbohydrateG": 19.5,
+          "proteinG": 5.1,
+          "saltG": 2.9
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Francouzská cibulačka (st)",
+          "declaration": "Cibule, zeleninový vývar, tymián",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

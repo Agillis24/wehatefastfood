@@ -29,21 +29,15 @@
       "status": "unpublished",
       "components": [
         {
-          "name": "Modrý sýr, máslo, mozzarella",
-          "declaration": "mléko a výrobky z něj",
-          "allergens": ["milk"],
-          "mayContain": []
-        },
-        {
-          "name": "Světlý toast",
-          "declaration": "obiloviny obsahující lepek (pšenice)",
-          "allergens": ["cereals-gluten-wheat"],
+          "name": "Sýrový sendvič",
+          "declaration": "Dvojnásobná porce sýra maasdamer, máslo",
+          "allergens": [],
           "mayContain": []
         }
       ],
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["cereals-gluten-wheat", "milk"],
+      "allergens": ["cereals-gluten", "milk"],
       "mayContain": [],
       "sources": [
         {
@@ -52,6 +46,13 @@
           "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

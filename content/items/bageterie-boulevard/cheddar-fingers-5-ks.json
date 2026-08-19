@@ -1,0 +1,70 @@
+{
+  "slug": "cheddar-fingers-5-ks",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Cheddar Fingers 5 ks",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1577.4,
+          "energyKcal": 377,
+          "fatG": 22,
+          "carbohydrateG": 26,
+          "proteinG": 17,
+          "saltG": 3
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1577.4,
+          "energyKcal": 377,
+          "fatG": 22,
+          "carbohydrateG": 26,
+          "proteinG": 17,
+          "saltG": 3
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Cheddar Fingers 5 ks",
+          "declaration": "Pečené obalované tyčinky z čedaru",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "recky-jogurt-s-fiky",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Řecký jogurt s fíky",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 711.3,
+          "energyKcal": 170,
+          "fatG": 8,
+          "carbohydrateG": 18,
+          "proteinG": 5.5,
+          "saltG": 0.22
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 924.7,
+          "energyKcal": 221,
+          "fatG": 10.4,
+          "carbohydrateG": 23.4,
+          "proteinG": 7.2,
+          "saltG": 0.3
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Řecký jogurt s fíky",
+          "declaration": "nakládanými v medu",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

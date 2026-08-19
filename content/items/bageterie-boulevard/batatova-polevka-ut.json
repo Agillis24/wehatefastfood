@@ -1,0 +1,70 @@
+{
+  "slug": "batatova-polevka-ut",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Batátová polévka (út)",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 263.6,
+          "energyKcal": 63,
+          "fatG": 3,
+          "carbohydrateG": 7,
+          "proteinG": 0.99,
+          "saltG": 0.66
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 790.8,
+          "energyKcal": 189,
+          "fatG": 9,
+          "carbohydrateG": 21,
+          "proteinG": 3,
+          "saltG": 2
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Batátová polévka (út)",
+          "declaration": "Krém ze sladkých brambor, mrkve a cibule zjemněný kokosovým mlékem a smetanou",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "anglicka-omeleta",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Anglická omeleta",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 907.9,
+          "energyKcal": 217,
+          "fatG": 16,
+          "carbohydrateG": 9,
+          "proteinG": 9,
+          "saltG": 0.96
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1162.1,
+          "energyKcal": 277.8,
+          "fatG": 20.5,
+          "carbohydrateG": 11.5,
+          "proteinG": 11.5,
+          "saltG": 1.2
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Anglická omeleta",
+          "declaration": "Vaječná omeleta, slanina, čedar, salátek a rozpečený muffin",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

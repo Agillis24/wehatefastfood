@@ -9,29 +9,46 @@
       "verifiedOn": "2026-08-19",
       "nutrition": [
         {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 886.4,
+          "energyKcal": 211.86,
+          "fatG": 9.41,
+          "carbohydrateG": 20.32,
+          "proteinG": 11.86,
+          "saltG": 0.86
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
           "basis": "per-serving",
           "servingSizeG": null,
-          "energyKJ": null,
-          "energyKcal": null,
-          "fatG": null,
-          "saturatesG": null,
-          "transFatG": null,
-          "carbohydrateG": null,
-          "sugarsG": null,
-          "addedSugarsG": null,
-          "fibreG": null,
-          "proteinG": null,
-          "saltG": null,
-          "sodiumMg": null,
-          "sourceContradictions": []
+          "energyKJ": 2038.8,
+          "energyKcal": 487.3,
+          "fatG": 21.6,
+          "carbohydrateG": 46.7,
+          "proteinG": 27.3,
+          "saltG": 2
         }
       ],
-      "status": "unpublished",
+      "status": "partial",
       "components": [
         {
-          "name": "Náplň",
-          "declaration": "vejce a výrobky z nich, mléko a výrobky z něj, ryby a výrobky z nich, hořčice a výrobky z ní, oxid siřičitý a siřičitany",
-          "allergens": ["eggs", "fish", "milk", "mustard", "sulphur-dioxide"],
+          "name": "Caesar",
+          "declaration": "Kuřecí steaky, parmezán, salát, slanina, caesar dresink",
+          "allergens": [],
           "mayContain": []
         }
       ],
@@ -46,6 +63,13 @@
           "url": "https://www.bb.cz/files/alergeny-bagety-08-2022.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2022-08-17",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

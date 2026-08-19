@@ -1,0 +1,70 @@
+{
+  "slug": "svycarska-omeleta",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Švýcarská omeleta",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 887,
+          "energyKcal": 212,
+          "fatG": 16,
+          "carbohydrateG": 9,
+          "proteinG": 9,
+          "saltG": 1
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1002.3,
+          "energyKcal": 239.6,
+          "fatG": 18.1,
+          "carbohydrateG": 10.2,
+          "proteinG": 10.2,
+          "saltG": 1.1
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Švýcarská omeleta",
+          "declaration": "Vaječná omeleta, maasdamer, modrý sýr, camembert, salátek a rozpečený muffin",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

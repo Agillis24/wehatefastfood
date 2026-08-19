@@ -1,0 +1,70 @@
+{
+  "slug": "tunak-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Tuňák wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 854.9,
+          "energyKcal": 204.33,
+          "fatG": 11.43,
+          "carbohydrateG": 17.24,
+          "proteinG": 11.32,
+          "saltG": 0.84
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1581.6,
+          "energyKcal": 378,
+          "fatG": 21.1,
+          "carbohydrateG": 31.9,
+          "proteinG": 20.9,
+          "saltG": 1.6
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Tuňák wrap",
+          "declaration": "Tuňák, rajče, vejce, dresink, salát little gem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "fish"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

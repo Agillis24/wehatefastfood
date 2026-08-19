@@ -1,0 +1,70 @@
+{
+  "slug": "parizska",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Pařížská",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 964.3,
+          "energyKcal": 230.47,
+          "fatG": 11.84,
+          "carbohydrateG": 20.57,
+          "proteinG": 10.74,
+          "saltG": 1.15
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1157.1,
+          "energyKcal": 276.6,
+          "fatG": 14.2,
+          "carbohydrateG": 24.7,
+          "proteinG": 12.9,
+          "saltG": 1.4
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Pařížská",
+          "declaration": "Šunka, camembert, slanina, pečené rajče, dresink",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

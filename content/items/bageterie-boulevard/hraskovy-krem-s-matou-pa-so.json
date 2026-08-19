@@ -1,0 +1,70 @@
+{
+  "slug": "hraskovy-krem-s-matou-pa-so",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Hráškový krém s mátou (pá + so)",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 347.3,
+          "energyKcal": 83,
+          "fatG": 4,
+          "carbohydrateG": 9,
+          "proteinG": 2,
+          "saltG": 3
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1041.8,
+          "energyKcal": 249,
+          "fatG": 12,
+          "carbohydrateG": 27,
+          "proteinG": 6,
+          "saltG": 9
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Hráškový krém s mátou (pá + so)",
+          "declaration": "Zelený hrášek, máta, smetana, cibule, zeleninový vývar",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

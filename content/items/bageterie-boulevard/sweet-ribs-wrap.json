@@ -1,0 +1,70 @@
+{
+  "slug": "sweet-ribs-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "SWEET RIBS WRAP",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1058.5,
+          "energyKcal": 252.99,
+          "fatG": 11.41,
+          "carbohydrateG": 15.81,
+          "proteinG": 13.37,
+          "saltG": 1.41
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2244,
+          "energyKcal": 536.3,
+          "fatG": 24.2,
+          "carbohydrateG": 33.5,
+          "proteinG": 28.3,
+          "saltG": 3
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "SWEET RIBS WRAP",
+          "declaration": "Pečená vepřová žebra, maasdamer, cibulová marmeláda, bbq omáčka, salát",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

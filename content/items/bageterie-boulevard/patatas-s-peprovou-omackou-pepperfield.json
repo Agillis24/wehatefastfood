@@ -1,0 +1,70 @@
+{
+  "slug": "patatas-s-peprovou-omackou-pepperfield",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Patatas s pepřovou omáčkou Pepperfield",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 661.1,
+          "energyKcal": 158,
+          "fatG": 14,
+          "carbohydrateG": 17,
+          "proteinG": 2,
+          "saltG": 0
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1156.9,
+          "energyKcal": 276.5,
+          "fatG": 24.5,
+          "carbohydrateG": 29.8,
+          "proteinG": 3.5,
+          "saltG": 0
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Patatas s pepřovou omáčkou Pepperfield",
+          "declaration": "Pečené brambory, omáčka z kampotského pepře",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

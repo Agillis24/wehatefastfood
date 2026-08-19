@@ -1,0 +1,70 @@
+{
+  "slug": "ice-tea",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Ice tea",
+  "category": "drink",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 81.6,
+          "energyKcal": 19.5,
+          "fatG": 0.07,
+          "carbohydrateG": 4.6,
+          "proteinG": 0.07,
+          "saltG": 0
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 326.4,
+          "energyKcal": 78,
+          "fatG": 0.3,
+          "carbohydrateG": 18.4,
+          "proteinG": 0.3,
+          "saltG": 0
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Ice tea",
+          "declaration": "Černý ledový čaj, cukr, limetka",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["sulphur-dioxide"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

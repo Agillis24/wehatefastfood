@@ -9,47 +9,46 @@
       "verifiedOn": "2026-08-19",
       "nutrition": [
         {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1092,
+          "energyKcal": 261,
+          "fatG": 20,
+          "carbohydrateG": 8,
+          "proteinG": 12,
+          "saltG": 0.55
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
           "basis": "per-serving",
           "servingSizeG": null,
-          "energyKJ": null,
-          "energyKcal": null,
-          "fatG": null,
-          "saturatesG": null,
-          "transFatG": null,
-          "carbohydrateG": null,
-          "sugarsG": null,
-          "addedSugarsG": null,
-          "fibreG": null,
-          "proteinG": null,
-          "saltG": null,
-          "sodiumMg": null,
-          "sourceContradictions": []
+          "energyKJ": 2784.7,
+          "energyKcal": 665.6,
+          "fatG": 51,
+          "carbohydrateG": 20.4,
+          "proteinG": 30.6,
+          "saltG": 1.4
         }
       ],
-      "status": "unpublished",
+      "status": "partial",
       "components": [
         {
-          "name": "Pečené vejce",
-          "declaration": "vejce a výrobky z nich",
-          "allergens": ["eggs"],
-          "mayContain": []
-        },
-        {
-          "name": "Maasdamer",
-          "declaration": "mléko a výrobky z něj",
-          "allergens": ["milk"],
-          "mayContain": []
-        },
-        {
-          "name": "Majonéza",
-          "declaration": "vejce a výrobky z nich, hořčice a výrobky jí obsahující",
-          "allergens": ["eggs", "mustard"],
-          "mayContain": []
-        },
-        {
-          "name": "Světlý toast",
-          "declaration": "obiloviny obsahující lepek (pšenice)",
-          "allergens": ["cereals-gluten-wheat"],
+          "name": "le Club sendvič",
+          "declaration": "Volské oko, kuřecí, slanina, maasdamer, rajče, salát a dresink",
+          "allergens": [],
           "mayContain": []
         }
       ],
@@ -64,6 +63,13 @@
           "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

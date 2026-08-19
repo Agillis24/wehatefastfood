@@ -9,28 +9,52 @@
       "verifiedOn": "2026-08-19",
       "nutrition": [
         {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 620.2,
+          "energyKcal": 148.24,
+          "fatG": 9.57,
+          "carbohydrateG": 7.02,
+          "proteinG": 7.51,
+          "saltG": 0.66
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
           "basis": "per-serving",
           "servingSizeG": null,
-          "energyKJ": null,
-          "energyKcal": null,
-          "fatG": null,
-          "saturatesG": null,
-          "transFatG": null,
-          "carbohydrateG": null,
-          "sugarsG": null,
-          "addedSugarsG": null,
-          "fibreG": null,
-          "proteinG": null,
-          "saltG": null,
-          "sodiumMg": null,
-          "sourceContradictions": []
+          "energyKJ": 1910.3,
+          "energyKcal": 456.6,
+          "fatG": 29.5,
+          "carbohydrateG": 21.6,
+          "proteinG": 23.1,
+          "saltG": 2
         }
       ],
-      "status": "unpublished",
-      "components": [],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Caesar salát",
+          "declaration": "Kuřecí maso, slanina, little gem, parmezán, caesar dresink a krutony",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["cereals-gluten-wheat", "eggs", "fish", "milk", "mustard"],
+      "allergens": ["cereals-gluten", "eggs", "fish", "milk", "mustard"],
       "mayContain": [],
       "sources": [
         {
@@ -39,6 +63,13 @@
           "url": "https://www.bb.cz/files/alergeny-salaty-072022.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2022-06-21",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

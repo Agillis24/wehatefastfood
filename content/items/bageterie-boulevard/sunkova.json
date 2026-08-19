@@ -1,0 +1,70 @@
+{
+  "slug": "sunkova",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Šunková",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 773.2,
+          "energyKcal": 184.81,
+          "fatG": 7.39,
+          "carbohydrateG": 18.93,
+          "proteinG": 10.38,
+          "saltG": 0.87
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 945.4,
+          "energyKcal": 226,
+          "fatG": 9,
+          "carbohydrateG": 23.1,
+          "proteinG": 12.7,
+          "saltG": 1.1
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Šunková",
+          "declaration": "Šunka, maasdamer, salát, okurka, rajče, máslo",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

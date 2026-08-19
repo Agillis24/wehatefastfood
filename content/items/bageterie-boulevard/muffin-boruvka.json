@@ -30,7 +30,7 @@
       "components": [],
       "ingredientRefs": [],
       "additiveRefs": [],
-      "allergens": ["cereals-gluten", "eggs", "milk"],
+      "allergens": ["cereals-gluten", "eggs", "milk", "soybeans"],
       "mayContain": [],
       "sources": [
         {
@@ -39,6 +39,13 @@
           "url": "https://www.bb.cz/files/alergeny-sladke-pecivo-08-2020.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2020-08-20",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

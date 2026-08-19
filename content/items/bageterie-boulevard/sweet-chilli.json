@@ -1,0 +1,70 @@
+{
+  "slug": "sweet-chilli",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Sweet chilli",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 905.9,
+          "energyKcal": 216.52,
+          "fatG": 10,
+          "carbohydrateG": 24,
+          "proteinG": 9.8,
+          "saltG": 0.71
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1041.8,
+          "energyKcal": 249,
+          "fatG": 11.5,
+          "carbohydrateG": 27.6,
+          "proteinG": 11.3,
+          "saltG": 0.8
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Sweet chilli",
+          "declaration": "Kuřecí steaky, sweet chilli, tatarská omáčka, salát",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

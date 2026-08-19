@@ -1,0 +1,70 @@
+{
+  "slug": "salat-s-kozim-syrem",
+  "chainSlug": "bageterie-boulevard",
+  "name": "SALÁT S KOZÍM SÝREM",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1061,
+          "energyKcal": 253.58,
+          "fatG": 15,
+          "carbohydrateG": 17,
+          "proteinG": 11,
+          "saltG": 1
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2493.3,
+          "energyKcal": 595.9,
+          "fatG": 35.3,
+          "carbohydrateG": 40,
+          "proteinG": 25.9,
+          "saltG": 2.4
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "SALÁT S KOZÍM SÝREM",
+          "declaration": "Čerstvý kozí sýr s rajčatovou marmeládou, rukola, baby špenát, little gem a cherry rajčata s vinaigrette, grilované tortilla chipsy",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

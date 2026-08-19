@@ -27,7 +27,14 @@
         }
       ],
       "status": "unpublished",
-      "components": [],
+      "components": [
+        {
+          "name": "Fresh juice",
+          "declaration": "Orange juice",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
       "ingredientRefs": [],
       "additiveRefs": [],
       "allergens": [],
@@ -39,6 +46,13 @@
           "url": "https://www.bb.cz/files/alergeny-bbbox-9-2019.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2019-09-27",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

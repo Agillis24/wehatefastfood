@@ -1,0 +1,70 @@
+{
+  "slug": "patatas-s-domaci-tatarskou-omackou",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Patatas s domácí tatarskou omáčkou",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 811.7,
+          "energyKcal": 194,
+          "fatG": 13,
+          "carbohydrateG": 16,
+          "proteinG": 2,
+          "saltG": 0.5
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1420.5,
+          "energyKcal": 339.5,
+          "fatG": 22.8,
+          "carbohydrateG": 28,
+          "proteinG": 3.5,
+          "saltG": 0.9
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Patatas s domácí tatarskou omáčkou",
+          "declaration": "Pečené brambory, domácí tatarská omáčka",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

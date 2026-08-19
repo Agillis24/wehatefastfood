@@ -1,0 +1,70 @@
+{
+  "slug": "tomatova-s-tymianem-po-ne",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Tomatová s tymiánem (po + ne)",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 255.2,
+          "energyKcal": 61,
+          "fatG": 1,
+          "carbohydrateG": 11,
+          "proteinG": 1,
+          "saltG": 0.91
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 765.7,
+          "energyKcal": 183,
+          "fatG": 3,
+          "carbohydrateG": 33,
+          "proteinG": 3,
+          "saltG": 2.7
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Tomatová s tymiánem (po + ne)",
+          "declaration": "Rajčata, česnek, tymián a zeleninový vývar",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

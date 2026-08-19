@@ -1,0 +1,70 @@
+{
+  "slug": "francouzska-omeleta",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Francouzská omeleta",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 887,
+          "energyKcal": 212,
+          "fatG": 16,
+          "carbohydrateG": 9,
+          "proteinG": 9,
+          "saltG": 0.96
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1215.2,
+          "energyKcal": 290.4,
+          "fatG": 21.9,
+          "carbohydrateG": 12.3,
+          "proteinG": 12.3,
+          "saltG": 1.3
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Francouzská omeleta",
+          "declaration": "Vaječná omeleta, šunka, maasdamer, pečené rajče, salátek a rozpečený muffin",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -9,47 +9,46 @@
       "verifiedOn": "2026-08-19",
       "nutrition": [
         {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1142.2,
+          "energyKcal": 273,
+          "fatG": 14,
+          "carbohydrateG": 18,
+          "proteinG": 19,
+          "saltG": 2
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
           "basis": "per-serving",
           "servingSizeG": null,
-          "energyKJ": null,
-          "energyKcal": null,
-          "fatG": null,
-          "saturatesG": null,
-          "transFatG": null,
-          "carbohydrateG": null,
-          "sugarsG": null,
-          "addedSugarsG": null,
-          "fibreG": null,
-          "proteinG": null,
-          "saltG": null,
-          "sodiumMg": null,
-          "sourceContradictions": []
+          "energyKJ": 1804.7,
+          "energyKcal": 431.3,
+          "fatG": 22.1,
+          "carbohydrateG": 28.4,
+          "proteinG": 30,
+          "saltG": 3.2
         }
       ],
-      "status": "unpublished",
+      "status": "partial",
       "components": [
         {
-          "name": "Dijónská majonéza",
-          "declaration": "vejce a výrobky z nich, hořčice a výrobky jí obsahující, oxid siřičitý a siřičitany",
-          "allergens": ["eggs", "mustard", "sulphur-dioxide"],
-          "mayContain": []
-        },
-        {
-          "name": "Čedar",
-          "declaration": "mléko a výrobky z něj",
-          "allergens": ["milk"],
-          "mayContain": []
-        },
-        {
-          "name": "Maso (marinovaný roastbeef)",
-          "declaration": "výrobky obsahující lepek, celer a výrobky jej obsahující",
-          "allergens": ["celery", "cereals-gluten"],
-          "mayContain": []
-        },
-        {
-          "name": "English muffin",
-          "declaration": "obiloviny obsahující lepek(pšenice)",
-          "allergens": ["cereals-gluten-wheat"],
+          "name": "Roastbeef & Cheddar",
+          "declaration": "Roastbeef, čedar, grilovaná cibulka, rukola, hořčičný dresink",
+          "allergens": [],
           "mayContain": []
         }
       ],
@@ -64,6 +63,13 @@
           "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
           "retrievedOn": "2026-08-19",
           "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        },
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
           "type": "company-disclosure"
         }
       ]

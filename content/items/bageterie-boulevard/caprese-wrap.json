@@ -1,0 +1,70 @@
+{
+  "slug": "caprese-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Caprese wrap",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 967.1,
+          "energyKcal": 231.14,
+          "fatG": 13.71,
+          "carbohydrateG": 17.64,
+          "proteinG": 9.23,
+          "saltG": 0.52
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1934.2,
+          "energyKcal": 462.3,
+          "fatG": 27.4,
+          "carbohydrateG": 35.3,
+          "proteinG": 18.5,
+          "saltG": 1
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Caprese wrap",
+          "declaration": "Mozzarella, rajče, pesto genovese, mascarpone, rukola, balsamico, salát little gem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "milk", "nuts", "sulphur-dioxide"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

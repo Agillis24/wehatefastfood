@@ -1,0 +1,70 @@
+{
+  "slug": "patatas-s-kecupem-heinz",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Patatas s kečupem Heinz",
+  "category": "fries-sides",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 481.2,
+          "energyKcal": 115,
+          "fatG": 2,
+          "carbohydrateG": 21,
+          "proteinG": 2,
+          "saltG": 0
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 842,
+          "energyKcal": 201.3,
+          "fatG": 3.5,
+          "carbohydrateG": 36.8,
+          "proteinG": 3.5,
+          "saltG": 0
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Patatas s kečupem Heinz",
+          "declaration": "Pečené brambory s kečupem Heinz",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

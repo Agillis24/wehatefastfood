@@ -1,0 +1,70 @@
+{
+  "slug": "brusel-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Brusel wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1326.4,
+          "energyKcal": 317.01,
+          "fatG": 19.42,
+          "carbohydrateG": 22.33,
+          "proteinG": 12.76,
+          "saltG": 1.12
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2387.5,
+          "energyKcal": 570.6,
+          "fatG": 35,
+          "carbohydrateG": 40.2,
+          "proteinG": 23,
+          "saltG": 2
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Brusel wrap",
+          "declaration": "Kuřecí steaky, sýr s modrou plísní, dresink, grilovaná cibulka, BBQ omáčka, salát little gem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

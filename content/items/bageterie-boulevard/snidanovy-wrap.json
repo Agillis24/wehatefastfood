@@ -1,0 +1,70 @@
+{
+  "slug": "snidanovy-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Snídaňový wrap",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 1032,
+          "energyKcal": 246.65,
+          "fatG": 16,
+          "carbohydrateG": 12,
+          "proteinG": 12,
+          "saltG": 0.78
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1620.2,
+          "energyKcal": 387.2,
+          "fatG": 25.1,
+          "carbohydrateG": 18.8,
+          "proteinG": 18.8,
+          "saltG": 1.2
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Snídaňový wrap",
+          "declaration": "Vaječná omeleta se slaninou a čedarem, pečená rajčata, hořčičný dresink",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk", "mustard"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

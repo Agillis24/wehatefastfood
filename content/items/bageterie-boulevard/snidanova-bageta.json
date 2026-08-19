@@ -1,0 +1,70 @@
+{
+  "slug": "snidanova-bageta",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Snídaňová bageta",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 988.4,
+          "energyKcal": 236.24,
+          "fatG": 10.2,
+          "carbohydrateG": 24.45,
+          "proteinG": 10.29,
+          "saltG": 0.87
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 2540.3,
+          "energyKcal": 607.1,
+          "fatG": 26.2,
+          "carbohydrateG": 62.8,
+          "proteinG": 26.4,
+          "saltG": 2.2
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Snídaňová bageta",
+          "declaration": "Vaječná omeleta se šunkou a maasdamerem, pečená rajčata, grilovaná cibulka, hořčičný dresink, salát",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "eggs", "milk", "mustard", "sulphur-dioxide"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

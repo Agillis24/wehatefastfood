@@ -1,0 +1,70 @@
+{
+  "slug": "caesar-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Caesar wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 998.1,
+          "energyKcal": 238.56,
+          "fatG": 12.89,
+          "carbohydrateG": 17.55,
+          "proteinG": 12.38,
+          "saltG": 0.83
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1896.5,
+          "energyKcal": 453.3,
+          "fatG": 24.5,
+          "carbohydrateG": 33.3,
+          "proteinG": 23.5,
+          "saltG": 1.6
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Caesar wrap",
+          "declaration": "Kuřecí steak, parmezán, slanina, caesar dresink, salát little gem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "fish", "milk", "mustard", "sulphur-dioxide"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

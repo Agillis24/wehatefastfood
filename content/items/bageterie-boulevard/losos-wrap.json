@@ -1,0 +1,70 @@
+{
+  "slug": "losos-wrap",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Losos wrap",
+  "category": "wrap",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 896.3,
+          "energyKcal": 214.22,
+          "fatG": 11.94,
+          "carbohydrateG": 20.79,
+          "proteinG": 11.75,
+          "saltG": 0.48
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 1389.3,
+          "energyKcal": 332,
+          "fatG": 18.5,
+          "carbohydrateG": 32.2,
+          "proteinG": 18.2,
+          "saltG": 0.7
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Losos wrap",
+          "declaration": "Marinovaný losos, gervais, mascarpone, rukola, salát little gem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "fish", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

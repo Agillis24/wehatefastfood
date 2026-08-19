@@ -1,0 +1,70 @@
+{
+  "slug": "cockova-s-kokosovym-mlekem-ct",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Čočková s kokosovým mlékem (čt)",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-100g",
+          "servingSizeG": null,
+          "energyKJ": 145.2,
+          "energyKcal": 34.7,
+          "fatG": 2.2,
+          "carbohydrateG": 2.8,
+          "proteinG": 0.93,
+          "saltG": 0.44
+        },
+        {
+          "transFatG": null,
+          "addedSugarsG": null,
+          "sodiumMg": null,
+          "saturatesG": null,
+          "sugarsG": null,
+          "fibreG": null,
+          "sourceContradictions": [],
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": 435.6,
+          "energyKcal": 104.1,
+          "fatG": 6.6,
+          "carbohydrateG": 8.4,
+          "proteinG": 2.8,
+          "saltG": 1.3
+        }
+      ],
+      "status": "partial",
+      "components": [
+        {
+          "name": "Čočková s kokosovým mlékem (čt)",
+          "declaration": "Krém z červené čočky s kokosovým mlékem",
+          "allergens": [],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Produktové stránky bb.cz (složení, alergeny a výživové hodnoty)",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/produkty",
+          "retrievedOn": "2026-08-19",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
