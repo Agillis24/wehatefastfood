@@ -1,0 +1,54 @@
+{
+  "slug": "sweet-ribs",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Sweet ribs",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [
+        {
+          "name": "Náplň",
+          "declaration": "mléko a výrobky z něj, sójové boby a výrobky z nich, hořčice a výrobky z ní, sezamová semena a výrobky z nich",
+          "allergens": ["milk", "mustard", "sesame", "soybeans"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["milk", "mustard", "sesame", "soybeans"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Základní nabídka",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/alergeny-bagety-08-2022.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2022-08-17",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "bezlepkove",
+  "chainSlug": "bageterie-boulevard",
+  "name": "bezlepkové",
+  "category": "other",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["eggs"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Pečivo",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/alergeny-druhy-peciva-7-2019.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2019-08-05",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

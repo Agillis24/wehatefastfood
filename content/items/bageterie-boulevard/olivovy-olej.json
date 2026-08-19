@@ -1,0 +1,47 @@
+{
+  "slug": "olivovy-olej",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Olivový olej",
+  "category": "sauce",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": [],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Saláty",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/alergeny-salaty-072022.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2022-06-21",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

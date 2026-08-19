@@ -1,0 +1,60 @@
+{
+  "slug": "syrovy-sendvic-v",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Sýrový sendvič (V)",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [
+        {
+          "name": "Modrý sýr, máslo, mozzarella",
+          "declaration": "mléko a výrobky z něj",
+          "allergens": ["milk"],
+          "mayContain": []
+        },
+        {
+          "name": "Světlý toast",
+          "declaration": "obiloviny obsahující lepek (pšenice)",
+          "allergens": ["cereals-gluten-wheat"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten-wheat", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Snídaňové menu",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

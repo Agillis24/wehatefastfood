@@ -1,0 +1,72 @@
+{
+  "slug": "cedar-a-roastbeef",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Čedar&roastbeef",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [
+        {
+          "name": "Dijónská majonéza",
+          "declaration": "vejce a výrobky z nich, hořčice a výrobky jí obsahující, oxid siřičitý a siřičitany",
+          "allergens": ["eggs", "mustard", "sulphur-dioxide"],
+          "mayContain": []
+        },
+        {
+          "name": "Čedar",
+          "declaration": "mléko a výrobky z něj",
+          "allergens": ["milk"],
+          "mayContain": []
+        },
+        {
+          "name": "Maso (marinovaný roastbeef)",
+          "declaration": "výrobky obsahující lepek, celer a výrobky jej obsahující",
+          "allergens": ["celery", "cereals-gluten"],
+          "mayContain": []
+        },
+        {
+          "name": "English muffin",
+          "declaration": "obiloviny obsahující lepek(pšenice)",
+          "allergens": ["cereals-gluten-wheat"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten", "eggs", "milk", "mustard", "sulphur-dioxide"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Snídaňové menu",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "muffin-cokolada",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Muffin čokoláda",
+  "category": "dessert",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["cereals-gluten", "eggs", "milk"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Sladké pečivo a dezerty",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/alergeny-sladke-pecivo-08-2020.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2020-08-20",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}

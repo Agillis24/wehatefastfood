@@ -1,0 +1,78 @@
+{
+  "slug": "vajecna-omeleta",
+  "chainSlug": "bageterie-boulevard",
+  "name": "Vaječná omeleta",
+  "category": "breakfast",
+  "variants": [
+    {
+      "market": "CZ",
+      "verifiedOn": "2026-08-19",
+      "nutrition": [
+        {
+          "basis": "per-serving",
+          "servingSizeG": null,
+          "energyKJ": null,
+          "energyKcal": null,
+          "fatG": null,
+          "saturatesG": null,
+          "transFatG": null,
+          "carbohydrateG": null,
+          "sugarsG": null,
+          "addedSugarsG": null,
+          "fibreG": null,
+          "proteinG": null,
+          "saltG": null,
+          "sodiumMg": null,
+          "sourceContradictions": []
+        }
+      ],
+      "status": "unpublished",
+      "components": [
+        {
+          "name": "Pesto",
+          "declaration": "skořápkové plody a výrobky je obsahující, mléko a výrobky z něj",
+          "allergens": ["milk", "nuts"],
+          "mayContain": []
+        },
+        {
+          "name": "Smetana, čedar, modrý sýr, maasdamer",
+          "declaration": "mléko a výrobky z něj",
+          "allergens": ["milk"],
+          "mayContain": []
+        },
+        {
+          "name": "Vaječná melánž",
+          "declaration": "vejce a výrobky z nich",
+          "allergens": ["eggs"],
+          "mayContain": []
+        },
+        {
+          "name": "Kečup Heinz",
+          "declaration": "obsahuje celer",
+          "allergens": ["celery"],
+          "mayContain": []
+        },
+        {
+          "name": "English muffin",
+          "declaration": "obiloviny obsahující lepek (pšenice)",
+          "allergens": ["cereals-gluten-wheat"],
+          "mayContain": []
+        }
+      ],
+      "ingredientRefs": [],
+      "additiveRefs": [],
+      "allergens": ["celery", "cereals-gluten-wheat", "eggs", "milk", "nuts"],
+      "mayContain": [],
+      "sources": [
+        {
+          "title": "Alergeny – Snídaňové menu",
+          "publisher": "Bagetérie Boulevard",
+          "url": "https://www.bb.cz/files/snidanove-menu-2023-alergeny.pdf",
+          "retrievedOn": "2026-08-19",
+          "publishedOn": "2022-12-14",
+          "type": "company-disclosure"
+        }
+      ]
+    }
+  ]
+}
