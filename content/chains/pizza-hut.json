@@ -3,7 +3,7 @@
   "name": "Pizza Hut",
   "hqCountry": "US",
   "marketsCovered": ["CZ"],
-  "oneLiner": "Výživové hodnoty a alergeny vydává ve dvou dokumentech. Každý z nich popisuje jiné menu.",
+  "oneLiner": "Americký řetězec s pizzou. Výživové hodnoty a alergeny vydává ve dvou dokumentech, každý popisuje jiné menu.",
   "longIntro": "Pizza Hut má pro český trh dva dokumenty a každý mluví o jiné části nabídky. V tabulce s výživovými hodnotami je 77 položek a ani u jedné nejsou alergeny — sloupce pro ně existují, ale jsou prázdné. V samostatném seznamu alergenů je 94 záznamů, zato bez jediného čísla. Společných mají 53. Zbývajících čtyřiadvacet položek z tabulky tedy má hodnoty a žádné alergeny, a jsou mezi nimi úplně běžné pizzy jako Hawai nebo Quatro Formaggi. My tu mezeru nezaplňujeme: kde alergeny nemáme, je napsáno, že je nemáme, ne že tam žádné nejsou. Ty dva dokumenty jsou i různě staré — seznam alergenů se hlásí ke stavu k březnu 2026, výživová tabulka nese v názvu 29. listopad 2024. Seznam alergenů navíc uvádí totéž dvakrát, jednou jako mřížku značek a jednou jako výčet čísel, a u tří položek si tyhle dvě podoby odporují: u Dark garlic sauce říkají značky hořčici a výčet lepek. V takovém případě uvádíme obojí. Neuvést alergen je nebezpečná chyba, uvést navíc je jen nepohodlí, a rozhodovat za firmu, které z jejích vlastních tvrzení zahodit, nám nepřísluší. Za zmínku stojí i to, jak jsou ty podklady vedené: soubor s alergeny leží na firemním serveru pod polskou cestou, list v tabulce se jmenuje „Produkty PH - Polska“ a jedna položka se v české tabulce jmenuje „Sos pomidorowy cups“.",
   "accentToken": "accent-4",
   "dataStatus": "partial",

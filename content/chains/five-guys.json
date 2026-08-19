@@ -3,7 +3,7 @@
   "name": "Five Guys",
   "hqCountry": "US",
   "marketsCovered": ["CZ"],
-  "oneLiner": "Jako jediný tady zveřejňuje složení, ne jen čísla a alergeny. Za to si zaslouží uznání.",
+  "oneLiner": "Americký řetězec s burgery a hranolky. Jako jediný tady zveřejňuje i složení, ne jen čísla a alergeny.",
   "longIntro": "Five Guys vydává pro české provozovny tři dokumenty a jeden z nich je tu zatím jediný svého druhu: průvodce složením. Čtyři řetězce před ním zveřejňují výživové hodnoty, tři z nich alergeny — a ani jeden neřekne, co v tom jídle je. Tady to stojí černé na bílém, komponentu po komponentě, a navíc s aditivy pojmenovanými podle toho, k čemu tam jsou: „acidity regulator: Sodium Lactate“, „stabilisers: Triphosphates“, „preservative: Sodium Nitrite“. Přesně tohle je informace, kvůli které tenhle web vznikl. Alergeny jsou v tom textu vyznačené velkými písmeny, jak to ukládá evropská praxe, takže se dají číst přímo ze složení a nemusí se nikde dopočítávat. Samostatná tabulka alergenů k tomu přidává rozlišení, které jinde nevidíme: kromě „obsahuje“ má vlastní značku pro „nevhodné pro alergiky kvůli způsobu výroby, přípravy a tepelné úpravy“ — což není totéž co stopové množství, je to varování o postupu. A má sloupec navíc, pro arašídový olej, protože Five Guys v něm smaží úplně všechno. Výživové hodnoty uvádí na porci i na sto gramů, takže semafory fungují bez dopočtů. Hmotnost porce naopak neuvádí nikde; dala by se z těch dvou sad odvodit, ale odvozené číslo tu nezapisujeme. Oba dokumenty se hlásí k březnu 2026.",
   "accentToken": "accent-2",
   "dataStatus": "partial",
