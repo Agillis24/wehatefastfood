@@ -245,7 +245,7 @@ function caption(f) {
       `Referenční příjem pro dospělého je ${cz(f.reference)} g na celý den. ` +
         `Tohle je ${cz(times)}násobek, v jedné porci.`,
       '',
-      'Údaj zveřejnila sama společnost. Nepřepočítáváme ho ani nezaokrouhlujeme.',
+      'Nepřepočítáváme to ani nezaokrouhlujeme. Je to jejich číslo, tak jak ho uvádějí.',
       ...tail,
     ].join('\n');
   }
