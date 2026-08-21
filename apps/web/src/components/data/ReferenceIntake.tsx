@@ -73,7 +73,7 @@ export function ReferenceIntake({
 
   return (
     <section aria-labelledby="intake-title" className="flex flex-col gap-3">
-      <h2 id="intake-title" className="font-display text-2xl font-extrabold">
+      <h2 id="intake-title" className="font-display text-3xl font-extrabold tracking-tight">
         {t('title')}
       </h2>
       <p className="text-sm text-[var(--surface-muted)]">{t('subtitle')}</p>

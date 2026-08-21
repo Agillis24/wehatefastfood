@@ -162,7 +162,7 @@ export function RealityCheck({ rows, locale }: { rows: Row[]; locale: string }) 
 
   return (
     <section aria-labelledby="reality-title" className="flex flex-col gap-5">
-      <h2 id="reality-title" className="font-display text-2xl font-extrabold">
+      <h2 id="reality-title" className="font-display text-3xl font-extrabold tracking-tight">
         {t('title')}
       </h2>
 

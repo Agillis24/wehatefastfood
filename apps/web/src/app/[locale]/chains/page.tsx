@@ -57,7 +57,7 @@ function ChainsView({
     <>
       <SiteHeader locale={locale} />
       <main id="main" className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8">
-        <h1 className="font-display text-4xl font-black">{t('title')}</h1>
+        <h1 className="font-display text-4xl font-black tracking-tight">{t('title')}</h1>
         <p className="text-[var(--surface-muted)]">{t('subtitle')}</p>
 
         {chains.length === 0 ? (
@@ -72,7 +72,9 @@ function ChainsView({
                     href={chainPath(locale, chain.slug)}
                     className="flex h-full flex-col gap-2 card p-4"
                   >
-                    <span className="font-display text-2xl font-extrabold">{chain.name}</span>
+                    <span className="font-display text-3xl font-extrabold tracking-tight">
+                      {chain.name}
+                    </span>
                     <span className="text-sm text-[var(--surface-muted)]">{chain.oneLiner}</span>
                     <span className="font-data mt-auto flex flex-wrap gap-2 pt-2 text-xs tracking-widest uppercase">
                       <span className="pill px-2 py-1">{tStatus(chain.dataStatus)}</span>

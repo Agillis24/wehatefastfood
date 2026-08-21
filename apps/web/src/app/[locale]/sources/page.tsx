@@ -100,7 +100,7 @@ function SourcesView({
       ) : (
         groups.map((group) => (
           <section key={group.key} className="flex flex-col gap-2">
-            <h2 className="font-display text-2xl font-extrabold">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight">
               {t(group.key as 'groupChains')}
             </h2>
             <ol className="flex flex-col gap-2">

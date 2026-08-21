@@ -40,7 +40,7 @@ export function TrafficLights({ bands, locale, isDrink, provisional }: Props) {
 
   return (
     <section aria-labelledby="lights-title" className="flex flex-col gap-3">
-      <h2 id="lights-title" className="font-display text-2xl font-extrabold">
+      <h2 id="lights-title" className="font-display text-3xl font-extrabold tracking-tight">
         {t('title')}
       </h2>
       <p className="text-sm text-[var(--surface-muted)]">{t('subtitle')}</p>

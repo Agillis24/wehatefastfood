@@ -341,7 +341,9 @@ function ItemView(props: ViewProps) {
 
         {variant === undefined ? (
           <section className="flex flex-col gap-3 card p-4">
-            <h2 className="font-display text-2xl font-extrabold">{t('noDataTitle')}</h2>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight">
+              {t('noDataTitle')}
+            </h2>
             <p>{t('noDataBody')}</p>
             <p className="font-data text-sm">
               {t('marketsWeHold')} <span data-numeric>{markets.join(', ')}</span>
@@ -386,7 +388,7 @@ function ItemView(props: ViewProps) {
                 aria-labelledby="take-title"
                 className="border-s-4 border-pink bg-[var(--color-paper)] ps-4"
               >
-                <h2 id="take-title" className="font-display text-2xl font-extrabold">
+                <h2 id="take-title" className="font-display text-3xl font-extrabold tracking-tight">
                   {tTake('title')}
                 </h2>
                 <p className="font-data text-xs text-[var(--surface-muted)]">{tTake('label')}</p>

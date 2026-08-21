@@ -92,12 +92,14 @@ function ChainView({
           {t('backToChains')}
         </Link>
 
-        <h1 className="font-display text-4xl font-black sm:text-6xl">{chain.name}</h1>
+        <h1 className="font-display text-4xl font-black tracking-tight sm:text-6xl">
+          {chain.name}
+        </h1>
         <p className="max-w-prose">{chain.longIntro}</p>
 
         <div className="rule-strike" aria-hidden="true" />
 
-        <h2 className="font-display text-2xl font-extrabold">{t('items')}</h2>
+        <h2 className="font-display text-3xl font-extrabold tracking-tight">{t('items')}</h2>
         <p className="font-data text-xs tracking-widest uppercase">
           {tMarket('label')}
           {': '}
@@ -121,7 +123,9 @@ function ChainView({
                     href={itemPath(locale, chain.slug, item.slug, market)}
                     className="flex h-full flex-col gap-1 card p-4"
                   >
-                    <span className="font-display text-xl font-extrabold">{item.name}</span>
+                    <span className="font-display text-xl font-extrabold tracking-tight">
+                      {item.name}
+                    </span>
                     <span className="font-data text-sm" data-numeric>
                       {kcal === null ? t('notPublished') : `${num(locale, kcal, 0)} ${t('kcal')}`}
                     </span>

@@ -67,12 +67,16 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
 
         <section className="flex flex-col gap-4">
           <p className="eyebrow">{nav('chains')}</p>
-          <h2 className="font-display text-3xl font-extrabold">{t('hero.thesis')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">
+            {t('hero.thesis')}
+          </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {chains.map((chain) => (
               <li key={chain.slug}>
                 <Link href={chainPath(locale, chain.slug)} className="card flex flex-col gap-1 p-5">
-                  <span className="font-display text-xl font-extrabold">{chain.name}</span>
+                  <span className="font-display text-xl font-extrabold tracking-tight">
+                    {chain.name}
+                  </span>
                   <span className="text-sm text-[var(--surface-muted)]">{chain.oneLiner}</span>
                 </Link>
               </li>
@@ -93,7 +97,9 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
         */}
         <section className="band-ink flex flex-col gap-3 p-8">
           <p className="eyebrow">{nav('decoder')}</p>
-          <h2 className="font-display text-3xl font-extrabold">{t('decoder.title')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">
+            {t('decoder.title')}
+          </h2>
           <p className="max-w-prose text-[var(--color-grey-light)]">{t('decoder.body')}</p>
           <Link
             href={decoderPath(locale)}

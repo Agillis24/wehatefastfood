@@ -61,7 +61,9 @@ export function StaticPage({
 
         {sections.map((section) => (
           <section key={section.heading} className="flex flex-col gap-3">
-            <h2 className="font-display text-2xl font-extrabold">{section.heading}</h2>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight">
+              {section.heading}
+            </h2>
             {section.body.map((paragraph) => (
               <p key={paragraph} className="max-w-prose">
                 {paragraph}

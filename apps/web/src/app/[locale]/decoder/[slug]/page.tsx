@@ -111,7 +111,9 @@ function EntryView({
               {additive.eNumber}
             </span>
           ) : null}
-          <h1 className="font-display text-4xl font-black sm:text-5xl">{additive.names[0]}</h1>
+          <h1 className="font-display text-4xl font-black tracking-tight sm:text-5xl">
+            {additive.names[0]}
+          </h1>
           {additive.names.length > 1 ? (
             <p className="text-sm text-[var(--surface-muted)]">
               <span className="font-data text-xs tracking-widest uppercase">
@@ -132,17 +134,19 @@ function EntryView({
         <div className="rule-strike" aria-hidden="true" />
 
         <section className="flex flex-col gap-2">
-          <h2 className="font-display text-2xl font-extrabold">{t('whatItIs')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">{t('whatItIs')}</h2>
           <p>{additive.whatItIs}</p>
         </section>
 
         <section className="flex flex-col gap-2">
-          <h2 className="font-display text-2xl font-extrabold">{t('whyItIsHere')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">
+            {t('whyItIsHere')}
+          </h2>
           <p>{additive.whyItIsInYourFood}</p>
         </section>
 
         <section className="flex flex-col gap-2">
-          <h2 className="font-display text-2xl font-extrabold">{t('evidence')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">{t('evidence')}</h2>
           <p className="font-data text-xs tracking-widest uppercase">
             {t('evidenceStrength')}
             {': '}
@@ -155,7 +159,7 @@ function EntryView({
         </section>
 
         <section className="flex flex-col gap-2">
-          <h2 className="font-display text-2xl font-extrabold">{t('regulatory')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">{t('regulatory')}</h2>
           <dl className="flex flex-col gap-2">
             {(
               [
@@ -175,7 +179,7 @@ function EntryView({
         </section>
 
         <section className="flex flex-col gap-2">
-          <h2 className="font-display text-2xl font-extrabold">{t('foundIn')}</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">{t('foundIn')}</h2>
           {links.length === 0 ? (
             <p className="text-[var(--surface-muted)]">{t('notFoundIn')}</p>
           ) : (

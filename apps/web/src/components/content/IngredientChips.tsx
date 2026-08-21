@@ -56,7 +56,7 @@ export function IngredientChips({
 
   return (
     <section aria-labelledby="ingredients-title" className="flex flex-col gap-4">
-      <h2 id="ingredients-title" className="font-display text-2xl font-extrabold">
+      <h2 id="ingredients-title" className="font-display text-3xl font-extrabold tracking-tight">
         {t('title')}
       </h2>
 

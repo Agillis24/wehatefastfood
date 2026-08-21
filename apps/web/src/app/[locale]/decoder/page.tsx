@@ -85,7 +85,7 @@ function DecoderView({
     <>
       <SiteHeader locale={locale} />
       <main id="main" className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8">
-        <h1 className="font-display text-4xl font-black">{t('title')}</h1>
+        <h1 className="font-display text-4xl font-black tracking-tight">{t('title')}</h1>
         <p className="max-w-prose text-[var(--surface-muted)]">{t('subtitle')}</p>
 
         <div id="decoder">
@@ -173,7 +173,7 @@ function DecoderView({
                           {additive.eNumber}
                         </span>
                       ) : null}
-                      <span className="font-display text-xl font-extrabold">
+                      <span className="font-display text-xl font-extrabold tracking-tight">
                         {additive.names[0]}
                       </span>
                     </span>

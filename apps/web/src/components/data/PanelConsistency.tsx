@@ -26,7 +26,7 @@ export function PanelConsistency({
 
   return (
     <section aria-labelledby="consistency-title" className="flex flex-col gap-3 card p-4">
-      <h2 id="consistency-title" className="font-display text-xl font-extrabold">
+      <h2 id="consistency-title" className="font-display text-xl font-extrabold tracking-tight">
         {t('title')}
       </h2>
       <p className="max-w-prose text-sm text-[var(--surface-muted)]">{t('lede')}</p>
