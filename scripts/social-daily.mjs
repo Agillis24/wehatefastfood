@@ -206,12 +206,10 @@ async function findings() {
 }
 
 function caption(f) {
-  const { item, chain, variant, serving } = f.row;
-  const checked = new Date(variant.verifiedOn).toLocaleDateString('cs-CZ');
+  const { item, chain, serving } = f.row;
   const tail = [
     '',
-    `Údaje zveřejňuje ${chain.name}. Naposledy ověřeno ${checked}. ` +
-      `Výpočet i zdroj najdete na ${SITE}.`,
+    `Údaje zveřejňuje ${chain.name}. Výpočet i zdroj najdete na ${SITE}.`,
     '',
     TAGS,
   ];
@@ -286,7 +284,6 @@ async function build(date, all) {
   ).css;
 
   const { item, chain, variant, serving } = f.row;
-  const checked = new Date(variant.verifiedOn).toLocaleDateString('cs-CZ');
 
   /*
    * The slides carry the SAME finding the caption argues, which the Specimen
@@ -294,7 +291,7 @@ async function build(date, all) {
    * to hold, so a post about 838 kJ against 51 kJ was illustrated with
    * "SUGAR 0.065 g". Here picture and words come from one object.
    */
-  const attribution = `Údaje zveřejnila ${chain.name}. Naposledy ověřeno ${checked}.`;
+  const attribution = `Údaje zveřejňuje ${chain.name}.`;
   let slides;
   if (f.kind === 'contradiction') {
     const pct = Math.round((f.gap / serving.energyKJ) * 100);
@@ -316,13 +313,15 @@ async function build(date, all) {
     const times = round(f.value / f.reference, 1);
     slides = {
       hero: `${cz(times)}×`,
-      heroSub: `Tolikrát denní příjem ${n.label}. V jedné porci.`,
+      heroSub: `Tolikrát překračuje ${chain.name} denní příjem ${n.label}. ` + 'V jedné porci.',
       title: 'Jedna porce proti celému dni',
       rows: [
         { label: 'V JEDNÉ PORCI', value: `${cz(round(f.value, 1))} g`, accent: true },
         { label: 'REFERENČNÍ PŘÍJEM NA CELÝ DEN', value: `${cz(f.reference)} g` },
       ],
-      note: 'Referenční příjem je z přílohy XIII nařízení 1169/2011. Není to doporučení mířené na vás.',
+      note:
+        'Referenční příjem vychází z evropské legislativy o označování ' +
+        'potravin. Je to hodnota pro etikety, ne osobní doporučení.',
       chain: chain.name,
       item: item.name,
       source: attribution,
