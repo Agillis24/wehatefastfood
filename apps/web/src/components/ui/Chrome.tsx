@@ -75,7 +75,7 @@ export function MarketSwitcher({
             <Link
               href={itemPath(locale, chain, item, market)}
               aria-current={market === current ? 'true' : undefined}
-              className={`font-data inline-flex min-h-11 items-center border-[1.5px] border-ink px-3 text-sm ${
+              className={`font-data inline-flex min-h-11 items-center pill px-3 text-sm ${
                 market === current ? 'bg-ink text-paper' : ''
               }`}
             >
@@ -101,7 +101,7 @@ export function PlainToggle() {
       <input type="checkbox" id="plain-toggle" className="plain-toggle peer" />
       <label
         htmlFor="plain-toggle"
-        className="font-data inline-flex min-h-11 cursor-pointer items-center border-[1.5px] border-ink px-3 text-sm peer-checked:bg-ink peer-checked:text-paper"
+        className="font-data inline-flex min-h-11 cursor-pointer items-center pill px-3 text-sm peer-checked:bg-ink peer-checked:text-paper"
       >
         {t('on')}
         <span className="sr-only">{t('hint')}</span>
@@ -138,12 +138,12 @@ export function LanguagePicker({ locale, path }: { locale: string; path: string 
 
   return (
     <details className="font-data text-sm">
-      <summary className="inline-flex min-h-11 cursor-pointer list-none items-center border-[1.5px] border-ink px-3">
+      <summary className="inline-flex min-h-11 cursor-pointer list-none items-center pill px-3">
         {t('label')}
         <span className="ms-2 font-semibold">{LANGUAGE_NAMES[locale] ?? locale}</span>
       </summary>
 
-      <div className="mt-2 flex flex-col gap-2 border-[1.5px] border-ink p-3">
+      <div className="mt-2 flex flex-col gap-2 card p-3">
         <p className="text-xs tracking-widest uppercase">{t('reviewed')}</p>
         <ul className="flex flex-wrap gap-2">
           {AVAILABLE_LOCALES.map((available) => (
@@ -152,7 +152,7 @@ export function LanguagePicker({ locale, path }: { locale: string; path: string 
                 href={`/${available}${path}`}
                 hrefLang={available}
                 aria-current={available === locale ? 'true' : undefined}
-                className={`inline-flex min-h-11 items-center border-[1.5px] border-ink px-3 ${
+                className={`inline-flex min-h-11 items-center pill px-3 ${
                   available === locale ? 'bg-ink text-paper' : ''
                 }`}
               >

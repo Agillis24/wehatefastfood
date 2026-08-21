@@ -33,7 +33,7 @@ function Row({ entry, glyph }: { entry: DiffEntry; glyph: string }) {
       <span className="text-sm">
         {entry.label}
         {entry.isAdditive ? (
-          <span className="font-data ms-2 border-[1.5px] border-ink bg-pink px-1 text-xs text-ink">
+          <span className="font-data ms-2 pill bg-pink px-1 text-xs text-ink">
             {entry.slug.split('-')[0]?.toUpperCase()}
           </span>
         ) : null}
@@ -96,10 +96,7 @@ export function MarketDiff({
           const nothingDiffers = state === 'nothing-differs';
 
           return (
-            <div
-              key={comparison.otherMarket}
-              className="flex flex-col gap-3 border-[1.5px] border-ink p-4"
-            >
+            <div key={comparison.otherMarket} className="flex flex-col gap-3 card p-4">
               <h3 className="font-data text-sm tracking-widest uppercase" data-numeric>
                 {market}
                 {' / '}

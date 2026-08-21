@@ -94,7 +94,7 @@ export function TrafficLights({ bands, locale, isDrink, provisional }: Props) {
                 </td>
                 <td className="py-3 pe-3">
                   <span
-                    className={`inline-block border-[1.5px] border-ink px-2 py-1 font-data text-xs font-semibold tracking-widest ${BAND_CLASS[b.band]}`}
+                    className={`inline-block pill px-2 py-1 font-data text-xs font-semibold tracking-widest ${BAND_CLASS[b.band]}`}
                   >
                     {bandWord(b.band)}
                   </span>

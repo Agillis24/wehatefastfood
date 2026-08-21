@@ -91,7 +91,7 @@ export function IngredientChips({
       <ul className="flex flex-wrap gap-2">
         {ingredients.map((ingredient) => (
           <li key={ingredient.slug}>
-            <span className="inline-flex min-h-11 items-center border-[1.5px] border-[var(--surface-rule)] px-3 py-2 text-sm">
+            <span className="inline-flex min-h-11 items-center pill border-[var(--surface-rule)] px-3 py-2 text-sm">
               {ingredient.names[0]}
             </span>
           </li>
@@ -102,9 +102,9 @@ export function IngredientChips({
         <ul className="flex flex-col gap-2">
           {additives.map((additive) => (
             <li key={additive.slug}>
-              <details className="border-[1.5px] border-ink">
+              <details className="card">
                 <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 px-3 py-2 text-sm font-semibold">
-                  <span className="font-data border-[1.5px] border-ink bg-pink px-1 text-xs text-ink">
+                  <span className="font-data pill bg-pink px-1 text-xs text-ink">
                     {additive.eNumber ?? t('additive')}
                   </span>
                   <span>{additive.names[0]}</span>

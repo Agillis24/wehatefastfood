@@ -96,7 +96,7 @@ function DecoderView({
                 id="decoder-query"
                 type="search"
                 placeholder={t('searchHint')}
-                className="min-h-11 border-[1.5px] border-ink bg-transparent px-3"
+                className="min-h-11 pill bg-transparent px-3"
               />
             </label>
 
@@ -108,7 +108,7 @@ function DecoderView({
                 <select
                   id="decoder-class"
                   defaultValue=""
-                  className="min-h-11 border-[1.5px] border-ink bg-transparent px-2"
+                  className="min-h-11 pill bg-transparent px-2"
                 >
                   <option value="">{t('filterAll')}</option>
                   {FUNCTIONAL_CLASSES.map((value) => (
@@ -126,7 +126,7 @@ function DecoderView({
                 <select
                   id="decoder-evidence"
                   defaultValue=""
-                  className="min-h-11 border-[1.5px] border-ink bg-transparent px-2"
+                  className="min-h-11 pill bg-transparent px-2"
                 >
                   <option value="">{t('filterAll')}</option>
                   {EVIDENCE_LEVELS.map((value) => (
@@ -165,11 +165,11 @@ function DecoderView({
                 >
                   <Link
                     href={`/${locale}/decoder/${additive.slug}`}
-                    className="flex flex-col gap-2 border-[1.5px] border-ink p-4"
+                    className="flex flex-col gap-2 card p-4"
                   >
                     <span className="flex flex-wrap items-baseline gap-2">
                       {additive.eNumber !== null ? (
-                        <span className="font-data border-[1.5px] border-ink bg-pink px-1 text-sm text-ink">
+                        <span className="font-data pill bg-pink px-1 text-sm text-ink">
                           {additive.eNumber}
                         </span>
                       ) : null}
@@ -180,14 +180,11 @@ function DecoderView({
                     <span className="text-sm">{additive.whyItIsInYourFood}</span>
                     <span className="font-data flex flex-wrap gap-2 text-xs tracking-widest uppercase">
                       {additive.functionalClass.map((cls) => (
-                        <span
-                          key={cls}
-                          className="border-[1.5px] border-[var(--surface-rule)] px-2 py-1"
-                        >
+                        <span key={cls} className="pill border-[var(--surface-rule)] px-2 py-1">
                           {tClass(cls)}
                         </span>
                       ))}
-                      <span className="border-[1.5px] border-[var(--surface-rule)] px-2 py-1">
+                      <span className="pill border-[var(--surface-rule)] px-2 py-1">
                         {tEvidence(additive.evidenceStrength)}
                       </span>
                       <span className="px-2 py-1" data-numeric>

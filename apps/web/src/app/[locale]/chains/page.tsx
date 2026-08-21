@@ -70,18 +70,16 @@ function ChainsView({
                 <li key={chain.slug}>
                   <Link
                     href={chainPath(locale, chain.slug)}
-                    className="flex h-full flex-col gap-2 border-[1.5px] border-ink p-4"
+                    className="flex h-full flex-col gap-2 card p-4"
                   >
                     <span className="font-display text-2xl font-extrabold">{chain.name}</span>
                     <span className="text-sm text-[var(--surface-muted)]">{chain.oneLiner}</span>
                     <span className="font-data mt-auto flex flex-wrap gap-2 pt-2 text-xs tracking-widest uppercase">
-                      <span className="border-[1.5px] border-ink px-2 py-1">
-                        {tStatus(chain.dataStatus)}
-                      </span>
-                      <span className="border-[1.5px] border-[var(--surface-rule)] px-2 py-1">
+                      <span className="pill px-2 py-1">{tStatus(chain.dataStatus)}</span>
+                      <span className="pill border-[var(--surface-rule)] px-2 py-1">
                         {t('itemsDocumented', { count: own.length })}
                       </span>
-                      <span className="border-[1.5px] border-[var(--surface-rule)] px-2 py-1">
+                      <span className="pill border-[var(--surface-rule)] px-2 py-1">
                         {chain.marketsCovered.join(' ')}
                       </span>
                     </span>

@@ -16,6 +16,8 @@
   /* geometry */
   --angle-strike: -19deg;
   --hairline: 1.5px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
 
   /* font */
   --font-display: Archivo, Arial Black, sans-serif;

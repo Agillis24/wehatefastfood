@@ -65,71 +65,43 @@ function HomeView({ locale, chains }: { locale: string; chains: Chain[] }) {
 
         <div className="rule-strike" aria-hidden="true" />
 
-        {/*
-          The brief asks for one startling verified figure here, and for a long
-          time there was not a single real figure in the repo, so the slot said
-          so instead: "no content has been published and no figure on this page
-          is real."
-
-          That notice was correct and then stopped being correct, and it did not
-          notice - it was unconditional, with the phase number written in by
-          hand. So the site went on telling readers its figures were not real
-          while serving two chains, 298 items and numbers checked twice against
-          their sources. Understating is not modesty when it is false; a site
-          whose whole claim is that its numbers are right cannot go around
-          saying they are not.
-
-          The figure is now COMPUTED from the repo, so it cannot be stale and
-          cannot be invented, and the scaffold notice is what shows when there
-          is genuinely nothing - which is the only state in which it is true.
-        */}
         <section className="flex flex-col gap-4">
-          <h2 className="font-display text-3xl font-extrabold">{nav('chains')}</h2>
+          <p className="eyebrow">{nav('chains')}</p>
+          <h2 className="font-display text-3xl font-extrabold">{t('hero.thesis')}</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {chains.map((chain) => (
               <li key={chain.slug}>
-                <Link
-                  href={chainPath(locale, chain.slug)}
-                  className="flex flex-col gap-1 border-[1.5px] border-ink p-4"
-                >
+                <Link href={chainPath(locale, chain.slug)} className="card flex flex-col gap-1 p-5">
                   <span className="font-display text-xl font-extrabold">{chain.name}</span>
                   <span className="text-sm text-[var(--surface-muted)]">{chain.oneLiner}</span>
                 </Link>
               </li>
             ))}
           </ul>
-          <Link
-            href={chainsPath(locale)}
-            className="font-data self-start border-[1.5px] border-ink px-4 py-3 text-sm"
-          >
+          <Link href={chainsPath(locale)} className="font-data pill self-start px-5 py-3 text-sm">
             {t('hero.cta')}
           </Link>
         </section>
 
         {/*
-          The decoder section now LEADS SOMEWHERE. It used to be a heading and a
-          sentence with nothing under them, which reads as a section that failed
-          to load rather than one you are meant to click.
+          A DARK BAND, for rhythm down the page.
+
+          The page was one flat cream from the wordmark to the footer, which
+          makes every section weigh the same and gives the eye nowhere to land.
+          One inverted block breaks that, and it lands on the decoder because
+          the decoder is the part of this site nobody arrives looking for.
         */}
-        <section className="flex flex-col gap-3">
+        <section className="band-ink flex flex-col gap-3 p-8">
+          <p className="eyebrow">{nav('decoder')}</p>
           <h2 className="font-display text-3xl font-extrabold">{t('decoder.title')}</h2>
-          <p className="max-w-prose text-[var(--surface-muted)]">{t('decoder.body')}</p>
+          <p className="max-w-prose text-[var(--color-grey-light)]">{t('decoder.body')}</p>
           <Link
             href={decoderPath(locale)}
-            className="font-data self-start border-[1.5px] border-ink px-4 py-3 text-sm"
+            className="font-data mt-2 self-start rounded-[var(--radius-pill)] bg-pink px-5 py-3 text-sm text-ink"
           >
             {nav('decoder')}
           </Link>
         </section>
-
-        {/*
-          THE EMPTY SECTIONS ARE GONE, not restyled. A dashed box saying the
-          YouTube channel does not exist yet, and another saying the newsletter
-          is not connected to anything, are honest but they are also the two
-          largest things on the page - a visitor's first impression became a
-          list of what we have not built. They go back when there is something
-          to put in them.
-        */}
 
         <div className="rule-strike" aria-hidden="true" />
         <Disclaimers withMedical={false} />

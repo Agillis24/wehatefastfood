@@ -49,7 +49,7 @@ export function SocialLinks() {
           <a
             href={account.url}
             rel="me noopener external"
-            className="flex size-10 items-center justify-center border-[1.5px] border-ink"
+            className="flex size-10 items-center justify-center pill"
           >
             <svg
               width="20"

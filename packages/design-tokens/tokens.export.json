@@ -63,6 +63,16 @@
         "value": "1.5px",
         "note": "Chip and card borders. Boundaries never depend on fill contrast alone.",
         "cssVar": "--hairline"
+      },
+      "radius-card": {
+        "value": "12px",
+        "note": "Cards, images and icons. The ONE radius used on anything that is not a pill, so the shape language stays two decisions wide rather than a sliding scale nobody can hold in their head.",
+        "cssVar": "--radius-card"
+      },
+      "radius-pill": {
+        "value": "999px",
+        "note": "Buttons and other controls. Fully round ends read as \"press me\" without a shadow or a fill, which matters on a site whose surface is a single flat paper colour.",
+        "cssVar": "--radius-pill"
       }
     },
     "font": {
@@ -117,6 +127,8 @@
     "--color-tl-low": "#1B5E34",
     "--angle-strike": "-19deg",
     "--hairline": "1.5px",
+    "--radius-card": "12px",
+    "--radius-pill": "999px",
     "--font-display": "Archivo, Arial Black, sans-serif",
     "--font-body": "Public Sans, system-ui, sans-serif",
     "--font-data": "IBM Plex Mono, ui-monospace, monospace",

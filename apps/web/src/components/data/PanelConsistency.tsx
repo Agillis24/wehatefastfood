@@ -25,10 +25,7 @@ export function PanelConsistency({
   if (findings.length === 0) return null;
 
   return (
-    <section
-      aria-labelledby="consistency-title"
-      className="flex flex-col gap-3 border-[1.5px] border-ink p-4"
-    >
+    <section aria-labelledby="consistency-title" className="flex flex-col gap-3 card p-4">
       <h2 id="consistency-title" className="font-display text-xl font-extrabold">
         {t('title')}
       </h2>

@@ -107,7 +107,7 @@ function EntryView({
 
         <header className="flex flex-col gap-2">
           {additive.eNumber !== null ? (
-            <span className="font-data self-start border-[1.5px] border-ink bg-pink px-2 py-1 text-sm text-ink">
+            <span className="font-data self-start pill bg-pink px-2 py-1 text-sm text-ink">
               {additive.eNumber}
             </span>
           ) : null}
@@ -122,7 +122,7 @@ function EntryView({
           ) : null}
           <p className="font-data flex flex-wrap gap-2 text-xs tracking-widest uppercase">
             {additive.functionalClass.map((cls) => (
-              <span key={cls} className="border-[1.5px] border-ink px-2 py-1">
+              <span key={cls} className="pill px-2 py-1">
                 {tClass(cls)}
               </span>
             ))}
@@ -184,7 +184,7 @@ function EntryView({
                 <li key={`${item.chainSlug}-${item.slug}`}>
                   <Link
                     href={itemPath(locale, item.chainSlug, item.slug, market)}
-                    className="flex items-baseline gap-2 border-[1.5px] border-ink p-3"
+                    className="flex items-baseline gap-2 card p-3"
                   >
                     <span>{item.name}</span>
                     <span className="font-data ms-auto text-xs" data-numeric>

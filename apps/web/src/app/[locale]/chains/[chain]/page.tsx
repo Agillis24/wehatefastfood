@@ -119,7 +119,7 @@ function ChainView({
                 <li key={item.slug}>
                   <Link
                     href={itemPath(locale, chain.slug, item.slug, market)}
-                    className="flex h-full flex-col gap-1 border-[1.5px] border-ink p-4"
+                    className="flex h-full flex-col gap-1 card p-4"
                   >
                     <span className="font-display text-xl font-extrabold">{item.name}</span>
                     <span className="font-data text-sm" data-numeric>

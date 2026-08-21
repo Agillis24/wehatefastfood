@@ -81,6 +81,59 @@
 
 @layer components {
   /*
+   * SHAPE, in two decisions and no more.
+   *
+   * Everything on this site was square, which is a choice a hairline border
+   * makes look like a spreadsheet rather than a page. These give the same
+   * boundaries a softer edge without adding a shadow, a gradient or a second
+   * surface colour, none of which the brand has.
+   *
+   * The split is the one thing worth being strict about: controls are pills,
+   * everything else that is a box takes the card radius. A site with four
+   * radii reads as four sites.
+   */
+  .card {
+    border: var(--hairline) solid var(--color-ink);
+    border-radius: var(--radius-card);
+  }
+
+  .pill {
+    border: var(--hairline) solid var(--color-ink);
+    border-radius: var(--radius-pill);
+  }
+
+  /*
+   * The small tracked label that sits above a heading and says what kind of
+   * thing follows. Set in the data face, because on this site that face means
+   * "this is a fact, not a flourish".
+   */
+  .eyebrow {
+    font-family: var(--font-data);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  /*
+   * A section on the dark ground, for rhythm down a long page.
+   *
+   * On ink the accent is unrestricted (docs/BRAND.md §4), so this is also the
+   * only place pink may be used as a text colour rather than as a marker.
+   */
+  .band-ink {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    border-radius: var(--radius-card);
+  }
+
+  .band-ink .eyebrow {
+    color: var(--color-grey-light);
+  }
+}
+
+@layer components {
+  /*
    * Pink emphasis inside running prose. A pink marker block carrying ink text
    * measures 5.15:1 and passes AA; pink letterforms on paper measure 3.24:1 and
    * do not. This is the accessible way to do what the brand asks for, and it is

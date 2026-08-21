@@ -340,7 +340,7 @@ function ItemView(props: ViewProps) {
         <div className="rule-strike" aria-hidden="true" />
 
         {variant === undefined ? (
-          <section className="flex flex-col gap-3 border-[1.5px] border-ink p-4">
+          <section className="flex flex-col gap-3 card p-4">
             <h2 className="font-display text-2xl font-extrabold">{t('noDataTitle')}</h2>
             <p>{t('noDataBody')}</p>
             <p className="font-data text-sm">
