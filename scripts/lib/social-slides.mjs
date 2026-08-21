@@ -114,23 +114,47 @@ function footer(c, y = SLIDE.height - 64) {
  * fill the width instead of one being a wall and the other a whisper.
  */
 function hook(slide, c) {
-  const size = Math.min(320, 1900 / Math.max(String(slide.hero).length, 3));
-  const sub = block(72, 700, 52, c.paper, slide.heroSub, { perLine: 26, leading: 1.25 });
   /*
-   * THE PRODUCT IS NAMED ON THE PICTURE. A big number floating on its own is a
-   * claim about nothing, and the caption underneath is not always read. Chain
-   * above the figure, product below the sentence, so the slide answers "of
-   * what" without anybody having to scroll.
+   * THE LAYOUT FLOWS, it is not pinned to fixed y values.
+   *
+   * The product used to sit at the bottom in small grey type, which put the
+   * thing the post is ABOUT below the thing it says about it. It is now set
+   * large, directly under the chain, and everything after it is placed relative
+   * to where it ended - so a two-line name pushes the figure down instead of
+   * colliding with it.
    */
-  const who = block(72, sub.height + 830, 40, c.greyLight, slide.item, {
-    perLine: 30,
-    leading: 1.2,
+  let y = 300;
+  const chain = text(72, y, 30, c.greyLight, slide.chain.toUpperCase(), { spacing: 8 });
+
+  y += 90;
+  const name = block(72, y, 62, c.paper, slide.item, {
+    perLine: 22,
+    leading: 1.1,
+    font: DISPLAY,
+    weight: 900,
   });
+  y += name.height;
+
+  /* Sized off the length of the figure, so "94 %" and "3,1×" both fill the
+   * width instead of one being a wall and the other a whisper. */
+  const size = Math.min(300, 1800 / Math.max(String(slide.hero).length, 3));
+  y += size + 60;
+  const hero = text(72, y, size, c.pink, slide.hero, {
+    font: DISPLAY,
+    weight: 900,
+    spacing: -4,
+  });
+
+  /* A comma or a diacritic hangs below the baseline of a 300px figure, and at
+   * 90px of clearance the sentence ran into the descender of "3,1". */
+  y += 150;
+  const sub = block(72, y, 46, c.paper, slide.heroSub, { perLine: 30, leading: 1.25 });
+
   return frame(
-    text(72, 300, 32, c.greyLight, slide.chain.toUpperCase(), { spacing: 8 }) +
-      text(72, 580, size, c.pink, slide.hero, { font: DISPLAY, weight: 900, spacing: -4 }) +
+    chain +
+      name.svg +
+      hero +
       sub.svg +
-      who.svg +
       text(72, SLIDE.height - 150, 26, c.greyLight, 'PŘEJEĎTE DÁL', { spacing: 6 }) +
       footer(c),
     c,
